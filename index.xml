@@ -2,33 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>STC214</title>
-    <link>http://stc214.github.io/</link>
+    <link>https://stc214.github.io/</link>
     <description>Recent content on STC214</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Wed, 01 Jul 2020 18:33:19 +0800</lastBuildDate>
     
-	<atom:link href="http://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>http://stc214.github.io/about/</link>
-      <pubDate>Wed, 01 Jul 2020 19:19:46 +0800</pubDate>
-      
-      <guid>http://stc214.github.io/about/</guid>
-      <description>一个相当于笔记本的博客
-如果能对你有用的话
-那就是意外之喜了</description>
-    </item>
     
     <item>
       <title>共享WIFI使用指南</title>
-      <link>http://stc214.github.io/posts/2020_07_01_18_33_15/</link>
+      <link>https://stc214.github.io/posts/2020_07_01_18_33_15/</link>
       <pubDate>Wed, 01 Jul 2020 18:33:19 +0800</pubDate>
       
-      <guid>http://stc214.github.io/posts/2020_07_01_18_33_15/</guid>
+      <guid>https://stc214.github.io/posts/2020_07_01_18_33_15/</guid>
       <description>Author : @强攻共享WIFI  各位亲爱的学弟学妹们大家好啊
 欢迎使用本@强攻共享WIFI
 WIFI不限流量，根据使用人数动态调整带宽
@@ -42,99 +30,256 @@ WIFI不限流量，根据使用人数动态调整带宽
 网络设备每日凌晨四点正重启维护一分钟会导致断网
 根据各位小伙伴的使用情况
 将酌情调整带宽和添加设备以增加网速和连接信号
-支付宝（使用支付宝扫一扫 建议先领红包）
-微信(长按后扫一扫)
-QQ (扫一扫后添加)
-以上 祝大家使用开心~</description>
+支付宝（使用支付宝扫一扫 建议先领红包）</description>
+    </item>
+    
+    <item>
+      <title>Air Nation List Style</title>
+      <link>https://stc214.github.io/post/air-nation-list-style/</link>
+      <pubDate>Thu, 23 Apr 2020 22:34:49 +0530</pubDate>
+      
+      <guid>https://stc214.github.io/post/air-nation-list-style/</guid>
+      <description>Ignes poposcit feremur pone Lorem markdownum omnibus dominis quis, nymphae dixit ira operisque; in forti pollice Achille. Cursu oculorum sepulcri et malis, calescit repperit sonum: tardis iam.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://stc214.github.io/contact/</link>
+      <pubDate>Thu, 23 Apr 2020 20:03:58 +0530</pubDate>
+      
+      <guid>https://stc214.github.io/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://stc214.github.io/about/</link>
+      <pubDate>Thu, 23 Apr 2020 19:57:09 +0530</pubDate>
+      
+      <guid>https://stc214.github.io/about/</guid>
+      <description>Quidque corpore Lorem markdownum verbis. Ipso et felices curvos, interit fulmina avellere sed utendum alte, illas; sumusve huc corpora. Formam cupit, imagine cur tulerunt Ligdo laborum, elige natae, serpens distent quietis sagittas; tuo.</description>
+    </item>
+    
+    <item>
+      <title>Fire Nation - Code Blocks?</title>
+      <link>https://stc214.github.io/post/code-blocks/</link>
+      <pubDate>Sun, 22 Mar 2020 15:05:56 +0530</pubDate>
+      
+      <guid>https://stc214.github.io/post/code-blocks/</guid>
+      <description>Tuta et oras femina unda pennisque vicina Lorem markdownum tollere distincta figitur utere rarus infans mille; prima sitim mea conveniunt cessit; mihi.</description>
+    </item>
+    
+    <item>
+      <title>Fire Nation - Price Zuko</title>
+      <link>https://stc214.github.io/post/prince-zuko/</link>
+      <pubDate>Sun, 22 Mar 2020 15:05:56 +0530</pubDate>
+      
+      <guid>https://stc214.github.io/post/prince-zuko/</guid>
+      <description>Cepit pete stipe Lorem markdownum viso. Vitam et suam Minyis, haec scire plenaque volenti futuri quam inpulsu victore vidisset et. Hastam perdidit bracchia, nec mora superare placuit scelus celanda posset, et axem illuc.</description>
+    </item>
+    
+    <item>
+      <title>Water Nation pride and peace</title>
+      <link>https://stc214.github.io/post/water-nation-pride-and-peace/</link>
+      <pubDate>Sun, 22 Mar 2020 15:05:45 +0530</pubDate>
+      
+      <guid>https://stc214.github.io/post/water-nation-pride-and-peace/</guid>
+      <description>Quidque corpore Lorem markdownum verbis. Ipso et felices curvos, interit fulmina avellere sed utendum alte, illas; sumusve huc corpora. Formam cupit, imagine cur tulerunt Ligdo laborum, elige natae, serpens distent quietis sagittas; tuo.</description>
     </item>
     
     <item>
       <title>The &#34;figure&#34; Shortcode</title>
-      <link>http://stc214.github.io/posts/the-figure-shortcode/</link>
+      <link>https://stc214.github.io/posts/the-figure-shortcode/</link>
       <pubDate>Mon, 24 Dec 2018 12:29:41 +0800</pubDate>
       
-      <guid>http://stc214.github.io/posts/the-figure-shortcode/</guid>
-      <description>Hugo has figure shortcode built in, so you can easily add figcaptions or hyperlink rel attributes to images. Documentations can be found here:
-https://gohugo.io/content-management/shortcodes/#figure
-This theme has 3 CSS classes made for figure elements:
- big: images will break the width limit of main content area. left: images will float to the left. right: images will float to the right.  If a figure has no class set, the image will behave just like a normal markdown image: !</description>
+      <guid>https://stc214.github.io/posts/the-figure-shortcode/</guid>
+      <description>Hugo has figure shortcode built in, so you can easily add figcaptions or hyperlink rel attributes to images. Documentations can be found here:</description>
     </item>
     
     <item>
       <title>Post With Featured Image</title>
-      <link>http://stc214.github.io/posts/post-with-featured-image/</link>
+      <link>https://stc214.github.io/posts/post-with-featured-image/</link>
       <pubDate>Mon, 01 Oct 2018 16:15:09 +0800</pubDate>
       
-      <guid>http://stc214.github.io/posts/post-with-featured-image/</guid>
+      <guid>https://stc214.github.io/posts/post-with-featured-image/</guid>
       <description>Just define the image URL in the content’s front matter, the featured image will be displayed as the background.
-For example:
----images:- https://picsum.photos/1024/768/?random---This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
+For example:</description>
     </item>
     
     <item>
       <title>Typography</title>
-      <link>http://stc214.github.io/posts/typography/</link>
+      <link>https://stc214.github.io/posts/typography/</link>
       <pubDate>Sat, 29 Sep 2018 11:36:33 +0800</pubDate>
       
-      <guid>http://stc214.github.io/posts/typography/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
- An apple is a sweet, edible fruit produced by an apple tree (Malus pumila).</description>
+      <guid>https://stc214.github.io/posts/typography/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
     </item>
     
     <item>
       <title>Creating a New Theme</title>
-      <link>http://stc214.github.io/posts/creating-a-new-theme/</link>
+      <link>https://stc214.github.io/posts/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://stc214.github.io/posts/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+      <guid>https://stc214.github.io/posts/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content.</description>
     </item>
     
     <item>
       <title>About Hugo</title>
-      <link>http://stc214.github.io/about-hugo/</link>
+      <link>https://stc214.github.io/about-hugo/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://stc214.github.io/about-hugo/</guid>
+      <guid>https://stc214.github.io/about-hugo/</guid>
       <description>Hugo is the world’s fastest framework for building websites. It is written in Go.
-It makes use of a variety of open source projects including:
- https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper  Learn more and contribute on GitHub.</description>
+It makes use of a variety of open source projects including:</description>
     </item>
     
     <item>
       <title>(Hu)go Template Primer</title>
-      <link>http://stc214.github.io/posts/goisforlovers/</link>
+      <link>https://stc214.github.io/posts/goisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://stc214.github.io/posts/goisforlovers/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
+      <guid>https://stc214.github.io/posts/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic.</description>
     </item>
     
     <item>
       <title>Getting Started with Hugo</title>
-      <link>http://stc214.github.io/posts/hugoisforlovers/</link>
+      <link>https://stc214.github.io/posts/hugoisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://stc214.github.io/posts/hugoisforlovers/</guid>
+      <guid>https://stc214.github.io/posts/hugoisforlovers/</guid>
       <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+Save it somewhere specific as we will be using it in the next step.</description>
     </item>
     
     <item>
       <title>Migrate to Hugo from Jekyll</title>
-      <link>http://stc214.github.io/posts/migrate-from-jekyll/</link>
+      <link>https://stc214.github.io/posts/migrate-from-jekyll/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://stc214.github.io/posts/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+      <guid>https://stc214.github.io/posts/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output.</description>
+    </item>
+    
+    <item>
+      <title>Docker管理面板系列——Portainer(简单、美观、强大)</title>
+      <link>https://stc214.github.io/posts/2020_06_30_14_57_42/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_06_30_14_57_42/</guid>
+      <description>原文：http://www.senra.me/docker-management-panel-series-portainer/
+一.介绍
+Portainer是个轻量级的Docker管理面板，和Rancher这种重量级选手没法比，Portainer倾向于单机的管理(后来发现能够添加多个单机节点切换着管理)，当然，在Docker搞出Swarm之后Portainer也借此实现了集群管理。
+使用官方提供的Demo预览一下
+地址: http://demo.portainer.io/ 用户名: admin 密码: tryportainer
+你会有一种眼前一亮的感觉，美观，而且功能全面(从边上这一长列就能感受出来)
+虽然选项很多，但是其实就是命令行操作的简化，如果你用过Docker的命令行操作你能很快熟悉Portainer，和Rancher那种多了很多新花样不一样，Rancher的很多东西你看上去是摸不着头脑的，必须看着文档试一下才能大概弄清楚这是个啥。
+二.安装
+是不是眼馋了？那么就让我们装一下玩玩吧。
+这是Portainer对Docker各版本的支持情况
+Portainer的安装方式主要有两种，一个是使用Docker安装，一个是二进制文件直接跑，我建议用Docker安装，比较方便点，也不用你自己去配置自启动啥的。 其他的请参考官方文档 ——&amp;gt; 传送门
+首先，我们得先把Unix套接字或者TCP监听打开，来方便连接(不过似乎Unix套接字默认是启用的，TCP需要自己开)</description>
+    </item>
+    
+    <item>
+      <title>Win10 2004版 win terminal 下载和配色</title>
+      <link>https://stc214.github.io/posts/2020_06_30_14_56_01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_06_30_14_56_01/</guid>
+      <description>下载 本步骤可能需要梯子
+打开任务栏搜索图标
+搜索store 打开
+搜索terminal
+下载安装即可
+简单配置 打开win terminal
+点窗口标题栏的 +
+点设置打开配置文件
+对应词条修改成如下样式 &amp;ldquo;copyOnSelect&amp;rdquo;: true,
+其他选项根据需求配置
+更改配色 打开 https://atomcorp.github.io/themes/</description>
+    </item>
+    
+    <item>
+      <title>Win10下用Hugo把博客搭建到gitpages上(旧版)</title>
+      <link>https://stc214.github.io/posts/2020_06_30_02_41_35/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_06_30_02_41_35/</guid>
+      <description>环境准备 1. hugo环境 https://github.com/gohugoio/hugo/releases 如上地址下载对系统所需要的二进制文件 当然如果系统部署了包管理环境的话则可以直接使用工具安装 2. 配置系统环境变量（win） 将hugo.exe的路径放入系统环境变量的path中 重新打开终端  站点创建操作 1. 定位目录 在终端中切换到需要生成站点的目录 2. 创建初始站点 hugo new site sitename 切换到sitename目录即可进行下一步操作</description>
+    </item>
+    
+    <item>
+      <title>wordpress docker版 从ubuntu装好到打开博客01</title>
+      <link>https://stc214.github.io/posts/2020_06_30_15_04_17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_06_30_15_04_17/</guid>
+      <description>apt换源 # 备份源地址文件 cp /etc/apt/sources.list /etc/apt/sources.list.bak # 编辑源地址文件 vim /etc/apt/sources.list # 替换源地址 一般没有特别情况直接讲域名替换为国内源的域名即可 其他内容无需修改 # vim内搜索为 esc :/搜索内容 国内源： mirrors.aliyun.com 阿里云</description>
+    </item>
+    
+    <item>
+      <title>wordpress docker版 从ubuntu装好到打开博客02</title>
+      <link>https://stc214.github.io/posts/2020_06_30_15_02_26/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_06_30_15_02_26/</guid>
+      <description>docker # 以树莓派ubuntu server 20.04版为例 apt install docker.io -y linux版本不同docker安装的版本可能也不同 一般有 docker / docker-ce / docker.io 等
+换源 # 先运行一次docker命令 生成文件 docker images # 备份源文件（如果有） cp /etc/docker/daemon.</description>
+    </item>
+    
+    <item>
+      <title>wordpress docker版 从ubuntu装好到打开博客03</title>
+      <link>https://stc214.github.io/posts/2020_06_30_14_57_09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_06_30_14_57_09/</guid>
+      <description>发布 绑定域名 访问 简单的局域网环境访问 直接用过ip+设置的端口即可直接访问 如果路由器有端口转发功能也需要设置
+外网访问 1.通过ddns将设置的域名解析到路由器上
+2.设置路由器防火墙规则 品牌路由官方固件则直接无视 一般防火墙规则会在设置端口转发等相关功能之后自动设置 软路由则按照规则（不了解则默认全部选择接受）设置
+3.设置端口转发
+OK 到此应该可以正常公网使用域名访问了
+访问不了  通过命令行刷新dns缓存 检查ddns设置 检查ddns日志是否成功更新ip 检查域名是否已经更新好ip 一切正常依然无法访问再次刷新dns滑轮 步骤1-5全部检查无误依然不行则属于路由器固件问题  推荐lean的固件 下载地址在恩山论坛搜索</description>
+    </item>
+    
+    <item>
+      <title>wordpress 必备插件</title>
+      <link>https://stc214.github.io/posts/2020_06_30_15_04_54/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_06_30_15_04_54/</guid>
+      <description>WP-China-Yes  这是一个颠覆性的插件，她将全面改善中国大陆站点在访问WP官方服务时的用户体验，其原理是将位于国外的官方仓库源替换为由社区志愿者维护的国内源，以此达到加速访问的目的。
+ Autoptimize  通过优化CSS，JS，图像，Google字体等来使您的网站更快。
+ Enlighter - Customizable Syntax Highlighter  语法高亮插件
+ Really Simple CAPTCHA  验证码插件</description>
+    </item>
+    
+    <item>
+      <title>关于定时执行任务：Crontab的20个例子</title>
+      <link>https://stc214.github.io/posts/2020_06_30_15_02_59/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_06_30_15_02_59/</guid>
+      <description>简介
+Linux crontab和Windows task schedules非常的相似。Crontab可以用来在系统中定期的执行任务。比如：写了一个爬虫需要每天早上八点执行，就可以用到Crontab;安装的Tomcat服务器需要每天凌晨重启一次，也可以使用到Crontab。总之，几乎所有的定时任务，我们都可以通过Crontab这个工具来完成。 安装 yum install cronie` Crontab在Linux上的结构
+crontab结构.png
+从左到右依次为： [分钟] [小时] [每月的某一天] [每年的某一月] [每周的某一天] [执行的命令] 注意：请留意每个选项的取值范围。
+如何 添加/编辑 Crontab</description>
+    </item>
+    
+    <item>
+      <title>开启 cmd cmder 代理</title>
+      <link>https://stc214.github.io/posts/2020_06_30_14_48_30/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_06_30_14_48_30/</guid>
+      <description>win10安装了ShadowSocks软件，浏览器通过代理后就可以***，但有时候需要通过cmd科学下载安装一些组件，就需要设置一下cmd的代理
+cmd如果要设置代理的话，需要在执行其他命令之前，先执行一下
+set http_proxy=http://127.0.0.1:7008 set https_proxy=http://127.0.0.1:7008 cmder如果使用的是bash模式，则先执行一下
+export http_proxy=http://127.0.0.1:7008 export https_proxy=http://127.0.0.1:7008 PowerShell ：
+$env:http_proxy=http://127.0.0.1:7008 $env:https_proxy=http://127.0.0.1:7008 上面命令的作用是设置环境变量，不用担心，这种环境变量只会持续到cmd窗口关闭，不是系统环境变量
+测试是否成功用 curl https://www.google.com, 别用ping</description>
     </item>
     
   </channel>
