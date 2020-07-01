@@ -49,24 +49,6 @@ QQ (扫一扫后添加)
     </item>
     
     <item>
-      <title>Ubuntu - crontab 命令定时执行任务</title>
-      <link>http://stc214.github.io/posts/2020_06_30_15_03_34/</link>
-      <pubDate>Tue, 30 Jun 2020 15:03:37 +0800</pubDate>
-      
-      <guid>http://stc214.github.io/posts/2020_06_30_15_03_34/</guid>
-      <description>处理大规模数据集时，需要等待的时间有时会很久，为了能充分利用晚上时间，发现 Ubuntu 的 crontab 服务是可以定时执行任务的.
- crontab 服务启动  Ubuntu 16.04 默认有 cron，如果没有，则进行安装：
-sudo apt install cron
-查看 cron 服务是否启动：
-pgrep cron
-若输出了pid，如 883，则 cron 服务已启动.
-若没有任何输出，则cron服务未启动，需手工启动：
-service cron start
-crontab 命令说明  cron 的任务计划保存在 /etc/crontab 文件中，文件内容如：
-/etc/crontab: system-wide crontab Unlike any other crontab you don&amp;rsquo;t have to run the `crontab&amp;rsquo; command to install the new version when you edit this file and files in /etc/cron.d. These files also have username fields, that none of the other crontabs do.</description>
-    </item>
-    
-    <item>
       <title>The &#34;figure&#34; Shortcode</title>
       <link>http://stc214.github.io/posts/the-figure-shortcode/</link>
       <pubDate>Mon, 24 Dec 2018 12:29:41 +0800</pubDate>
@@ -142,6 +124,17 @@ More complete instructions are available at Install Hugo
 Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
 Follow the following steps:
  Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>http://stc214.github.io/posts/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://stc214.github.io/posts/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
   </channel>
