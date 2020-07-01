@@ -1,21 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Posts on STC214</title>
-		<link>http://stc214.github.io/posts/</link>
-		<description>Recent content in Posts on STC214</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>zh-CN</language>
-		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Wed, 01 Jul 2020 18:33:19 +0800</lastBuildDate>
-		<atom:link href="http://stc214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>共享WIFI使用指南</title>
-			<link>http://stc214.github.io/posts/2020_07_01_18_33_15/</link>
-			<pubDate>Wed, 01 Jul 2020 18:33:19 +0800</pubDate>
-			
-			<guid>http://stc214.github.io/posts/2020_07_01_18_33_15/</guid>
-			<description>Author : @强攻共享WIFI  各位亲爱的学弟学妹们大家好啊
+  <channel>
+    <title>Posts on STC214</title>
+    <link>http://stc214.github.io/posts/</link>
+    <description>Recent content in Posts on STC214</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 01 Jul 2020 18:33:19 +0800</lastBuildDate>
+    
+	<atom:link href="http://stc214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>共享WIFI使用指南</title>
+      <link>http://stc214.github.io/posts/2020_07_01_18_33_15/</link>
+      <pubDate>Wed, 01 Jul 2020 18:33:19 +0800</pubDate>
+      
+      <guid>http://stc214.github.io/posts/2020_07_01_18_33_15/</guid>
+      <description>Author : @强攻共享WIFI  各位亲爱的学弟学妹们大家好啊
 欢迎使用本@强攻共享WIFI
 WIFI不限流量，根据使用人数动态调整带宽
 价钱很便宜
@@ -32,41 +35,15 @@ WIFI不限流量，根据使用人数动态调整带宽
 微信(长按后扫一扫)
 QQ (扫一扫后添加)
 以上 祝大家使用开心~</description>
-			<content type="html"><![CDATA[<h4 id="author--强攻共享wifi">Author : @强攻共享WIFI</h4>
-<h4 id="avatarhttpsilolinet20200701wxlnkgkzhqprqwdjpg"><img src="https://i.loli.net/2020/07/01/WXLnkGKzHqpRQwD.jpg" alt="avatar"></h4>
-<p>各位亲爱的学弟学妹们大家好啊</p>
-<p>欢迎使用本@强攻共享WIFI</p>
-<p>WIFI不限流量，根据使用人数动态调整带宽</p>
-<p>价钱很便宜</p>
-<p>本WIFI收费标准为1元/24小时（从缴费开通时算起）</p>
-<p>【勉强够电费的，小伙伴们就别嫌贵了。。】</p>
-<p>一次对应一台手机</p>
-<p>开通上网权限可以通过QQ、微信、吱富宝进行</p>
-<p>缴费后加QQ 微信好友进行认证确认后激活权限</p>
-<p>目前本WIFI为试运营状态</p>
-<p>网络设备每日凌晨四点正重启维护一分钟会导致断网</p>
-<p>根据各位小伙伴的使用情况</p>
-<p>将酌情调整带宽和添加设备以增加网速和连接信号</p>
-<p>支付宝（使用支付宝扫一扫 建议先领红包）</p>
-<p><img src="https://i.loli.net/2020/07/01/9BEavqZOb3DpwNM.png" alt="1593598962079.jpg"></p>
-<p><img src="https://i.loli.net/2020/07/01/MPsuiQDxjLJTWeZ.jpg" alt="1593598972.jpg"></p>
-<p>微信(长按后扫一扫)</p>
-<p><img src="https://i.loli.net/2020/07/01/dKW1Uu687MrnApq.jpg" alt="img"><img src="https://i.loli.net/2020/07/01/pqDg4rKd6R5IZ1h.jpg" alt="img"></p>
-<p>QQ (扫一扫后添加)</p>
-<p><img src="https://i.loli.net/2020/07/01/xVSL8WbCeMuEFOR.jpg" alt="img"></p>
-<p><img src="https://i.loli.net/2020/07/01/qgzx7LSBoQaRsdA.jpg" alt="img"></p>
-<p>以上 祝大家使用开心~</p>
-<p><img src="https://i.loli.net/2020/07/01/EbesyAr3nXvGxiI.jpg" alt="img"></p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Ubuntu - crontab 命令定时执行任务</title>
-			<link>http://stc214.github.io/posts/2020_06_30_15_03_34/</link>
-			<pubDate>Tue, 30 Jun 2020 15:03:37 +0800</pubDate>
-			
-			<guid>http://stc214.github.io/posts/2020_06_30_15_03_34/</guid>
-			<description>处理大规模数据集时，需要等待的时间有时会很久，为了能充分利用晚上时间，发现 Ubuntu 的 crontab 服务是可以定时执行任务的.
+    </item>
+    
+    <item>
+      <title>Ubuntu - crontab 命令定时执行任务</title>
+      <link>http://stc214.github.io/posts/2020_06_30_15_03_34/</link>
+      <pubDate>Tue, 30 Jun 2020 15:03:37 +0800</pubDate>
+      
+      <guid>http://stc214.github.io/posts/2020_06_30_15_03_34/</guid>
+      <description>处理大规模数据集时，需要等待的时间有时会很久，为了能充分利用晚上时间，发现 Ubuntu 的 crontab 服务是可以定时执行任务的.
  crontab 服务启动  Ubuntu 16.04 默认有 cron，如果没有，则进行安装：
 sudo apt install cron
 查看 cron 服务是否启动：
@@ -76,113 +53,93 @@ pgrep cron
 service cron start
 crontab 命令说明  cron 的任务计划保存在 /etc/crontab 文件中，文件内容如：
 /etc/crontab: system-wide crontab Unlike any other crontab you don&amp;rsquo;t have to run the `crontab&amp;rsquo; command to install the new version when you edit this file and files in /etc/cron.d. These files also have username fields, that none of the other crontabs do.</description>
-			<content type="html"><![CDATA[<p>处理大规模数据集时，需要等待的时间有时会很久，为了能充分利用晚上时间，发现 Ubuntu 的 crontab 服务是可以定时执行任务的.</p>
-<ol>
-<li>crontab 服务启动</li>
-</ol>
-<p>Ubuntu 16.04 默认有 cron，如果没有，则进行安装：</p>
-<p>sudo apt install cron</p>
-<p>查看 cron 服务是否启动：</p>
-<p>pgrep cron</p>
-<p>若输出了pid，如 883，则 cron 服务已启动.</p>
-<p>若没有任何输出，则cron服务未启动，需手工启动：</p>
-<p>service cron start</p>
-<ol start="2">
-<li>crontab 命令说明</li>
-</ol>
-<p>cron 的任务计划保存在 /etc/crontab 文件中，文件内容如：</p>
-<h1 id="etccrontab-system-wide-crontab">/etc/crontab: system-wide crontab</h1>
-<h1 id="unlike-any-other-crontab-you-dont-have-to-run-the-crontab">Unlike any other crontab you don&rsquo;t have to run the `crontab&rsquo;</h1>
-<h1 id="command-to-install-the-new-version-when-you-edit-this-file">command to install the new version when you edit this file</h1>
-<h1 id="and-files-in-etccrond-these-files-also-have-username-fields">and files in /etc/cron.d. These files also have username fields,</h1>
-<h1 id="that-none-of-the-other-crontabs-do">that none of the other crontabs do.</h1>
-<p>SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</p>
-<h1 id="m-h-dom-mon-dow-user--command">m h dom mon dow user  command</h1>
-<p>17 *    * * *   root    cd / &amp;&amp; run-parts &ndash;report /etc/cron.hourly
-25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts &ndash;report /etc/cron.daily )
-47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts &ndash;report /etc/cron.weekly )
-52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts &ndash;report /etc/cron.monthly )</p>
-<h1 id="heading"></h1>
-<p>可以通过 crontab命令进行任务管理：</p>
-<h1 id="编辑用户username-的计划任务文件">编辑用户username 的计划任务文件</h1>
-<p>crontab -u username -e</p>
-<h1 id="显示某个用户的计划任务文件-默认为当前用户">显示某个用户的计划任务文件; 默认为当前用户</h1>
-<p>crontab -l
-crontab -u username -l</p>
-<h1 id="设置定时任务-编辑某个用户的计划任务文件默认为当前用户">设置定时任务, 编辑某个用户的计划任务文件；默认为当前用户</h1>
-<p>crontab -e</p>
-<h1 id="删除某个用户的计划任务文件默认为当前用户">删除某个用户的计划任务文件；默认为当前用户</h1>
-<p>crontab -r</p>
-<ol start="3">
-<li>添加任务计划</li>
-</ol>
-<p>进入 crontab编辑模式：</p>
-<p>crontab -e</p>
-<p>进行任务添加.</p>
-<p>也可以直接编辑 /etc/crontab 文件，在尾部添加计划任务.</p>
-<p>crontab 任务计划的语法格式：</p>
-<h1 id="m-h-dom-mon-dow-user-command">m h dom mon dow user command</h1>
-<h1 id="分时日月周-用户名-计划任务命令">分　时　日　月　周 用户名 计划任务命令</h1>
-<p>17 *    * * *   root    cd / &amp;&amp; run-parts &ndash;report /etc/cron.hourly</p>
-<h1 id="第1列---分钟159-每分钟用--或者-1-表示">第1列 - 分钟1～59 每分钟用 * 或者 */1 表示</h1>
-<h1 id="第2列---小时1230表示0点">第2列 - 小时1～23（0表示0点）</h1>
-<h1 id="第3列---日期131">第3列 - 日期1～31</h1>
-<h1 id="第4列---月份112">第4列 - 月份1～12</h1>
-<h1 id="第5列---星期060表示星期天">第5列 - 星期0～6（0表示星期天）</h1>
-<h1 id="第6列---用户名">第6列 - 用户名</h1>
-<h1 id="第7列---计划执行的任务命令">第7列 - 计划执行的任务命令</h1>
-<p>其中，使用run-parts 运行指定目录下的所有脚本.(编辑的脚本必须包含 #!/bin/bash). 如：</p>
-<h1 id="每天-2330-运行-homemy_scripts-目录下的所有脚本">每天 23:30 运行 /home/my_scripts/ 目录下的所有脚本</h1>
-<p>30 23 * * * run-parts /home/my_scripts/</p>
-<p>更多计划设置，如：</p>
-<h1 id="每晚的-2230-执行-cd-homeusername">每晚的 22:30 执行 cd /home/username/</h1>
-<p>30 22 * * * cd /home/username/</p>
-<h1 id="每月51525日的-630-执行-ls">每月5，15，25日的 6:30 执行 ls</h1>
-<p>30 6 5,15,25 * * ls</p>
-<h1 id="每周六周日的-2125-执行-cd-opt">每周六、周日的 21:25 执行 cd /opt/</h1>
-<p>25 21 * * 6,0 cd /opt/</p>
-<h1 id="每天300-至-600-之间每隔-30-分钟-执行-ls">每天3:00 至 6:00 之间每隔 30 分钟 执行 ls</h1>
-<p>0,30 3-6 * * * ls</p>
-<h1 id="每星期六的-2300-执行-cd-homeusername">每星期六的 23:00 执行 cd /home/username/</h1>
-<p>0 23 * * 6 cd /home/username/</p>
-<h1 id="每一小时-执行一次-ls">每一小时 执行一次 ls</h1>
-<p>0 */1 * * * ls</p>
-<h1 id="2300-至-700每隔一小时-执行-ls">23:00 至 7:00，每隔一小时 执行 ls</h1>
-<p>0 23-7/1 * * * ls</p>
-<h1 id="每月-7-号每周二到周五的-2300-执行-ls">每月 7 号、每周二到周五的 23:00 执行 ls</h1>
-<p>0 23 4 * tue-fri ls</p>
-<h1 id="1-月-1-号的-100-执行-cd-homeusername">1 月 1 号的 1:00 执行 cd /home/username/</h1>
-<p>0 1 1 jan * cd /home/username/</p>
-<h1 id="每个小时的第-20-分钟执行一次-ls">每个小时的第 20 分钟执行一次 ls</h1>
-<p>20   *  *  *  * ls</p>
-<h1 id="每天-830-执行-cd-homeusername">每天 8:30 执行 cd /home/username/</h1>
-<p>30  8  *  *  * cd /home/username/</p>
-<h1 id="每隔20分钟执行一次-ls">每隔20分钟执行一次 ls</h1>
-<p>*/20 *  *  *  * ls</p>
-<p>注：</p>
-<ul>
-<li>表示所有值
-/ 表示“每”</li>
-</ul>
-<ul>
-<li>表示区间范围
-, 表示分割数字</li>
-</ul>
-<p>例如：每一分钟执行一次字符串 &ldquo;Hello World&rdquo; 打印输出到 /home/username/log.txt 文件的计划任务.</p>
-<p>*/1 * * * * echo &ldquo;Hello World&rdquo; &raquo; /home/username/log.txt</p>
-<p>*/1 * * * * username echo &ldquo;Hello World&rdquo; &raquo; /home/username/log.txt</p>
-<p>原文：https://www.aiuai.cn/aifarm747.html</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Docker管理面板系列——Portainer(简单、美观、强大)</title>
-			<link>http://stc214.github.io/posts/2020_06_30_14_57_42/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>http://stc214.github.io/posts/2020_06_30_14_57_42/</guid>
-			<description>原文：http://www.senra.me/docker-management-panel-series-portainer/
+    </item>
+    
+    <item>
+      <title>The &#34;figure&#34; Shortcode</title>
+      <link>http://stc214.github.io/posts/the-figure-shortcode/</link>
+      <pubDate>Mon, 24 Dec 2018 12:29:41 +0800</pubDate>
+      
+      <guid>http://stc214.github.io/posts/the-figure-shortcode/</guid>
+      <description>Hugo has figure shortcode built in, so you can easily add figcaptions or hyperlink rel attributes to images. Documentations can be found here:
+https://gohugo.io/content-management/shortcodes/#figure
+This theme has 3 CSS classes made for figure elements:
+ big: images will break the width limit of main content area. left: images will float to the left. right: images will float to the right.  If a figure has no class set, the image will behave just like a normal markdown image: !</description>
+    </item>
+    
+    <item>
+      <title>Post With Featured Image</title>
+      <link>http://stc214.github.io/posts/post-with-featured-image/</link>
+      <pubDate>Mon, 01 Oct 2018 16:15:09 +0800</pubDate>
+      
+      <guid>http://stc214.github.io/posts/post-with-featured-image/</guid>
+      <description>Just define the image URL in the content’s front matter, the featured image will be displayed as the background.
+For example:
+---images:- https://picsum.photos/1024/768/?random---This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
+    </item>
+    
+    <item>
+      <title>Typography</title>
+      <link>http://stc214.github.io/posts/typography/</link>
+      <pubDate>Sat, 29 Sep 2018 11:36:33 +0800</pubDate>
+      
+      <guid>http://stc214.github.io/posts/typography/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ An apple is a sweet, edible fruit produced by an apple tree (Malus pumila).</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>http://stc214.github.io/posts/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://stc214.github.io/posts/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>http://stc214.github.io/posts/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://stc214.github.io/posts/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>http://stc214.github.io/posts/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://stc214.github.io/posts/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>http://stc214.github.io/posts/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://stc214.github.io/posts/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>Docker管理面板系列——Portainer(简单、美观、强大)</title>
+      <link>http://stc214.github.io/posts/2020_06_30_14_57_42/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://stc214.github.io/posts/2020_06_30_14_57_42/</guid>
+      <description>原文：http://www.senra.me/docker-management-panel-series-portainer/
 一.介绍
 Portainer是个轻量级的Docker管理面板，和Rancher这种重量级选手没法比，Portainer倾向于单机的管理(后来发现能够添加多个单机节点切换着管理)，当然，在Docker搞出Swarm之后Portainer也借此实现了集群管理。
 使用官方提供的Demo预览一下
@@ -205,957 +162,7 @@ vi /etc/docker/daemon.json #添加如下，这个仅允许本地连接，如果�
 准备工作做完，然后开始安装，使用Docker安装有三种连接方式
 首先是全部都需要做的操作，添加一个数据卷，当然你也可以在docker run的时候手动指定数据挂载路径，效果是一样的，将下面docker run命令中的portainer_data换成宿主机上的具体路径就OK
 docker volume create portainer_data  使用Unix套接字连接单个Docker(本地)  docker run -d -p 9000:9000 -v /var/run/docker.</description>
-			<content type="html"><![CDATA[<p>原文：http://www.senra.me/docker-management-panel-series-portainer/</p>
-<p>一.介绍</p>
-<p>Portainer是个轻量级的Docker管理面板，和Rancher这种重量级选手没法比，Portainer倾向于单机的管理(后来发现能够添加多个单机节点切换着管理)，当然，在Docker搞出Swarm之后Portainer也借此实现了集群管理。</p>
-<p>使用官方提供的Demo预览一下</p>
-<p>地址: <a href="http://demo.portainer.io/">http://demo.portainer.io/</a>
-用户名: admin
-密码: tryportainer</p>
-<p>你会有一种眼前一亮的感觉，美观，而且功能全面(从边上这一长列就能感受出来)</p>
-<p>虽然选项很多，但是其实就是命令行操作的简化，如果你用过Docker的命令行操作你能很快熟悉Portainer，和Rancher那种多了很多新花样不一样，Rancher的很多东西你看上去是摸不着头脑的，必须看着文档试一下才能大概弄清楚这是个啥。</p>
-<p>二.安装</p>
-<p>是不是眼馋了？那么就让我们装一下玩玩吧。</p>
-<p>这是Portainer对Docker各版本的支持情况</p>
-<p>Portainer的安装方式主要有两种，一个是使用Docker安装，一个是二进制文件直接跑，我建议用Docker安装，比较方便点，也不用你自己去配置自启动啥的。
-其他的请参考官方文档 ——&gt; 传送门</p>
-<p>首先，我们得先把Unix套接字或者TCP监听打开，来方便连接(不过似乎Unix套接字默认是启用的，TCP需要自己开)</p>
-<p>PS.这儿请务必注意，不能直接配0.0.0.0，因为如果不做ACL或者TLS认证会导致你的Docker被人扫到后直接控制，有可能被远程创建挖矿容器</p>
-<p>先确认你的机器中是否存在/etc/sysconfig/docker这个配置文件，如果存在的话请修改，在其中的配置选项中加入如下内容
-#这个仅允许本地连接，如果要远程的话改成0.0.0.0，但是如果是公网中远程请你自己配TLS认证或者防火墙加白名单</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">-Htcp://127.0.0.1:2375 -H unix:///var/run/docker.sock
-</code></pre></div><p>但是，很多情况下我们会不存在这个文件(较高版本的Docker不会自动创建这个)，所以我们可以选择另外一种方法，参照Docker文档——&gt;传送门</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vi /etc/docker/daemon.json
-</code></pre></div><p>#添加如下，这个仅允许本地连接，如果要远程的话改成0.0.0.0，如果添加的不在最后一行请在末尾加上逗号</p>
-<pre><code>&quot;hosts&quot;: [&quot;tcp://127.0.0.1:2375&quot;, &quot;unix:///var/run/docker.sock&quot;]
-</code></pre><p>#如果deamon.json不存在请添加完整的json格式</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
- <span class="nt">&#34;hosts&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;tcp://127.0.0.1:2375&#34;</span><span class="p">,</span> <span class="s2">&#34;unix:///var/run/docker.sock&#34;</span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vi /etc/docker/daemon.json
-</code></pre></div><p>#添加如下，这个仅允许本地连接，如果要远程的话改成0.0.0.0，如果添加的不在最后一行请在末尾加上逗号</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="s2">&#34;hosts&#34;</span>: <span class="o">[</span><span class="s2">&#34;tcp://127.0.0.1:2375&#34;</span>, <span class="s2">&#34;unix:///var/run/docker.sock&#34;</span><span class="o">]</span>
-</code></pre></div><p>#如果deamon.json不存在请添加完整的json格式</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
- <span class="nt">&#34;hosts&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;tcp://127.0.0.1:2375&#34;</span><span class="p">,</span> <span class="s2">&#34;unix:///var/run/docker.sock&#34;</span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div><p>虽然其实你修改启动脚本在dockerd命令之后添加 -H unix:///var/run/docker.sock -H tcp://127.0.0.1 也可以，但是这样终归不怎么优雅。</p>
-<p>准备工作做完，然后开始安装，使用Docker安装有三种连接方式</p>
-<p>首先是全部都需要做的操作，添加一个数据卷，当然你也可以在docker run的时候手动指定数据挂载路径，效果是一样的，将下面docker run命令中的portainer_data换成宿主机上的具体路径就OK</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker volume create portainer_data
-</code></pre></div><ol>
-<li>使用Unix套接字连接单个Docker(本地)</li>
-</ol>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">	docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
-	   
-	   
-	docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
-	<span class="sb">```</span>
-	
-	
-2. 使用TCP方式连接单个Docker<span class="o">(</span>本地或远程<span class="o">)</span>
-<span class="c1">#如果连接的是远程的docker，请把ip换掉(如果你改了dockerd监听的默认端口也记得修改2375)</span>
-
-<span class="sb">```</span>shell
-docker run -d -p 9000:9000 portainer/portainer -H tcp://127.0.0.1:2375
-	<span class="sb">```</span>
-	
-	
-
-<span class="c1">#如果连接的是远程的docker，请把ip换掉(如果你改了dockerd监听的默认端口也记得修改2375)</span>
-
-<span class="sb">```</span>shell
-docker run -d -p 9000:9000 portainer/portainer -H tcp://127.0.0.1:2375
-</code></pre></div><ol start="3">
-<li>使用Unix套接字或TCP连接Swarm集群(本地或远程)</li>
-</ol>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">	docker run -d -p 9000:9000 portainer/portainer -H tcp://SWARM集群管理IP:2375
-	
-	docker run -d -p 9000:9000 portainer/portainer -H tcp://SWARM集群管理IP:2375
-	<span class="sb">```</span>
-	
-	
-
-
-
-下面这个算是另外一种了，是将Portainer以服务的形式部署在集群中，似乎也可以借助Swarm来实现HA?
-
-<span class="sb">```</span>shell
-docker service create <span class="se">\
-</span><span class="se"></span>--name portainer <span class="se">\
-</span><span class="se"></span>--publish 9000:9000 <span class="se">\
-</span><span class="se"></span>--replicas<span class="o">=</span><span class="m">1</span> <span class="se">\
-</span><span class="se"></span>--constraint <span class="s1">&#39;node.role == manager&#39;</span> <span class="se">\
-</span><span class="se"></span>--mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>//var/run/docker.sock,dst<span class="o">=</span>/var/run/docker.sock <span class="se">\
-</span><span class="se"></span>--mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>//opt/portainer,dst<span class="o">=</span>/data <span class="se">\
-</span><span class="se"></span>portainer/portainer <span class="se">\
-</span><span class="se"></span>-H unix:///var/run/docker.sock
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker service create <span class="se">\
-</span><span class="se"></span>--name portainer <span class="se">\
-</span><span class="se"></span>--publish 9000:9000 <span class="se">\
-</span><span class="se"></span>--replicas<span class="o">=</span><span class="m">1</span> <span class="se">\
-</span><span class="se"></span>--constraint <span class="s1">&#39;node.role == manager&#39;</span> <span class="se">\
-</span><span class="se"></span>--mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>//var/run/docker.sock,dst<span class="o">=</span>/var/run/docker.sock <span class="se">\
-</span><span class="se"></span>--mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>//opt/portainer,dst<span class="o">=</span>/data <span class="se">\
-</span><span class="se"></span>portainer/portainer <span class="se">\
-</span><span class="se"></span>-H unix:///var/run/docker.sock
-</code></pre></div><p>第一次访问会让你创建账号</p>
-<p>然后选择连接的是本地还是远端的Docker</p>
-<p>全部设置完后我们就能进去了，新建容器的操作也很友好</p>
-<p>感觉还是挺棒的，至于Swarm的我就不说啥了，之后估计还有专门讲Swarm基本使用的文章，可以关注下。</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Win10 2004版 win terminal 下载和配色</title>
-			<link>http://stc214.github.io/posts/2020_06_30_14_56_01/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>http://stc214.github.io/posts/2020_06_30_14_56_01/</guid>
-			<description>下载 本步骤可能需要梯子
-打开任务栏搜索图标
-搜索store 打开
-搜索terminal
-下载安装即可
-简单配置 打开win terminal
-点窗口标题栏的 +
-点设置打开配置文件
-对应词条修改成如下样式 &amp;ldquo;copyOnSelect&amp;rdquo;: true,
-其他选项根据需求配置
-更改配色 打开 https://atomcorp.github.io/themes/
-预览和选择需要的配色
-对于满意的主题配色点copy theme
-加入配置文件的
-schemes词条中
-如：
-&amp;#34;schemes&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;Chester&amp;#34;, &amp;#34;black&amp;#34;: &amp;#34;#080200&amp;#34;, &amp;#34;red&amp;#34;: &amp;#34;#fa5e5b&amp;#34;, &amp;#34;green&amp;#34;: &amp;#34;#16c98d&amp;#34;, &amp;#34;yellow&amp;#34;: &amp;#34;#ffc83f&amp;#34;, &amp;#34;blue&amp;#34;: &amp;#34;#288ad6&amp;#34;, &amp;#34;purple&amp;#34;: &amp;#34;#d34590&amp;#34;, &amp;#34;cyan&amp;#34;: &amp;#34;#28ddde&amp;#34;, &amp;#34;white&amp;#34;: &amp;#34;#e7e7e7&amp;#34;, &amp;#34;brightBlack&amp;#34;: &amp;#34;#6f6b68&amp;#34;, &amp;#34;brightRed&amp;#34;: &amp;#34;#fa5e5b&amp;#34;, &amp;#34;brightGreen&amp;#34;: &amp;#34;#16c98d&amp;#34;, &amp;#34;brightYellow&amp;#34;: &amp;#34;#feef6d&amp;#34;, &amp;#34;brightBlue&amp;#34;: &amp;#34;#278ad6&amp;#34;, &amp;#34;brightPurple&amp;#34;: &amp;#34;#d34590&amp;#34;, &amp;#34;brightCyan&amp;#34;: &amp;#34;#27dede&amp;#34;, &amp;#34;brightWhite&amp;#34;: &amp;#34;#ffffff&amp;#34;, &amp;#34;background&amp;#34;: &amp;#34;#2c3643&amp;#34;, &amp;#34;foreground&amp;#34;: &amp;#34;#ffffff&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Hipster Green&amp;#34;, &amp;#34;black&amp;#34;: &amp;#34;#000000&amp;#34;, &amp;#34;red&amp;#34;: &amp;#34;#b6214a&amp;#34;, &amp;#34;green&amp;#34;: &amp;#34;#00a600&amp;#34;, &amp;#34;yellow&amp;#34;: &amp;#34;#bfbf00&amp;#34;, &amp;#34;blue&amp;#34;: &amp;#34;#246eb2&amp;#34;, &amp;#34;purple&amp;#34;: &amp;#34;#b200b2&amp;#34;, &amp;#34;cyan&amp;#34;: &amp;#34;#00a6b2&amp;#34;, &amp;#34;white&amp;#34;: &amp;#34;#bfbfbf&amp;#34;, &amp;#34;brightBlack&amp;#34;: &amp;#34;#666666&amp;#34;, &amp;#34;brightRed&amp;#34;: &amp;#34;#e50000&amp;#34;, &amp;#34;brightGreen&amp;#34;: &amp;#34;#86a93e&amp;#34;, &amp;#34;brightYellow&amp;#34;: &amp;#34;#e5e500&amp;#34;, &amp;#34;brightBlue&amp;#34;: &amp;#34;#0000ff&amp;#34;, &amp;#34;brightPurple&amp;#34;: &amp;#34;#e500e5&amp;#34;, &amp;#34;brightCyan&amp;#34;: &amp;#34;#00e5e5&amp;#34;, &amp;#34;brightWhite&amp;#34;: &amp;#34;#e5e5e5&amp;#34;, &amp;#34;background&amp;#34;: &amp;#34;#100b05&amp;#34;, &amp;#34;foreground&amp;#34;: &amp;#34;#84c138&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Monokai Soda&amp;#34;, &amp;#34;black&amp;#34;: &amp;#34;#1a1a1a&amp;#34;, &amp;#34;red&amp;#34;: &amp;#34;#f4005f&amp;#34;, &amp;#34;green&amp;#34;: &amp;#34;#98e024&amp;#34;, &amp;#34;yellow&amp;#34;: &amp;#34;#fa8419&amp;#34;, &amp;#34;blue&amp;#34;: &amp;#34;#9d65ff&amp;#34;, &amp;#34;purple&amp;#34;: &amp;#34;#f4005f&amp;#34;, &amp;#34;cyan&amp;#34;: &amp;#34;#58d1eb&amp;#34;, &amp;#34;white&amp;#34;: &amp;#34;#c4c5b5&amp;#34;, &amp;#34;brightBlack&amp;#34;: &amp;#34;#625e4c&amp;#34;, &amp;#34;brightRed&amp;#34;: &amp;#34;#f4005f&amp;#34;, &amp;#34;brightGreen&amp;#34;: &amp;#34;#98e024&amp;#34;, &amp;#34;brightYellow&amp;#34;: &amp;#34;#e0d561&amp;#34;, &amp;#34;brightBlue&amp;#34;: &amp;#34;#9d65ff&amp;#34;, &amp;#34;brightPurple&amp;#34;: &amp;#34;#f4005f&amp;#34;, &amp;#34;brightCyan&amp;#34;: &amp;#34;#58d1eb&amp;#34;, &amp;#34;brightWhite&amp;#34;: &amp;#34;#f6f6ef&amp;#34;, &amp;#34;background&amp;#34;: &amp;#34;#1a1a1a&amp;#34;, &amp;#34;foreground&amp;#34;: &amp;#34;#c4c5b5&amp;#34; } ], 之后在如下词条中加入对应配置即可</description>
-			<content type="html"><![CDATA[<h3 id="下载">下载</h3>
-<p>本步骤可能需要梯子</p>
-<p>打开任务栏搜索图标</p>
-<p>搜索store 打开</p>
-<p>搜索terminal</p>
-<p>下载安装即可</p>
-<h3 id="简单配置">简单配置</h3>
-<p>打开win terminal</p>
-<p>点窗口标题栏的 +</p>
-<p>点设置打开配置文件</p>
-<p>对应词条修改成如下样式
-&ldquo;copyOnSelect&rdquo;: true,</p>
-<p>其他选项根据需求配置</p>
-<h3 id="更改配色">更改配色</h3>
-<p>打开 <a href="https://atomcorp.github.io/themes/">https://atomcorp.github.io/themes/</a></p>
-<p>预览和选择需要的配色</p>
-<p>对于满意的主题配色点copy theme</p>
-<p>加入配置文件的</p>
-<p>schemes词条中</p>
-<p>如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"> <span class="s2">&#34;schemes&#34;</span><span class="err">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Chester&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;black&#34;</span><span class="p">:</span> <span class="s2">&#34;#080200&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;red&#34;</span><span class="p">:</span> <span class="s2">&#34;#fa5e5b&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;green&#34;</span><span class="p">:</span> <span class="s2">&#34;#16c98d&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;yellow&#34;</span><span class="p">:</span> <span class="s2">&#34;#ffc83f&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;blue&#34;</span><span class="p">:</span> <span class="s2">&#34;#288ad6&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;purple&#34;</span><span class="p">:</span> <span class="s2">&#34;#d34590&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;cyan&#34;</span><span class="p">:</span> <span class="s2">&#34;#28ddde&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;white&#34;</span><span class="p">:</span> <span class="s2">&#34;#e7e7e7&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightBlack&#34;</span><span class="p">:</span> <span class="s2">&#34;#6f6b68&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightRed&#34;</span><span class="p">:</span> <span class="s2">&#34;#fa5e5b&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightGreen&#34;</span><span class="p">:</span> <span class="s2">&#34;#16c98d&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightYellow&#34;</span><span class="p">:</span> <span class="s2">&#34;#feef6d&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightBlue&#34;</span><span class="p">:</span> <span class="s2">&#34;#278ad6&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightPurple&#34;</span><span class="p">:</span> <span class="s2">&#34;#d34590&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightCyan&#34;</span><span class="p">:</span> <span class="s2">&#34;#27dede&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightWhite&#34;</span><span class="p">:</span> <span class="s2">&#34;#ffffff&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;background&#34;</span><span class="p">:</span> <span class="s2">&#34;#2c3643&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;foreground&#34;</span><span class="p">:</span> <span class="s2">&#34;#ffffff&#34;</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Hipster Green&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;black&#34;</span><span class="p">:</span> <span class="s2">&#34;#000000&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;red&#34;</span><span class="p">:</span> <span class="s2">&#34;#b6214a&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;green&#34;</span><span class="p">:</span> <span class="s2">&#34;#00a600&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;yellow&#34;</span><span class="p">:</span> <span class="s2">&#34;#bfbf00&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;blue&#34;</span><span class="p">:</span> <span class="s2">&#34;#246eb2&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;purple&#34;</span><span class="p">:</span> <span class="s2">&#34;#b200b2&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;cyan&#34;</span><span class="p">:</span> <span class="s2">&#34;#00a6b2&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;white&#34;</span><span class="p">:</span> <span class="s2">&#34;#bfbfbf&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightBlack&#34;</span><span class="p">:</span> <span class="s2">&#34;#666666&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightRed&#34;</span><span class="p">:</span> <span class="s2">&#34;#e50000&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightGreen&#34;</span><span class="p">:</span> <span class="s2">&#34;#86a93e&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightYellow&#34;</span><span class="p">:</span> <span class="s2">&#34;#e5e500&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightBlue&#34;</span><span class="p">:</span> <span class="s2">&#34;#0000ff&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightPurple&#34;</span><span class="p">:</span> <span class="s2">&#34;#e500e5&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightCyan&#34;</span><span class="p">:</span> <span class="s2">&#34;#00e5e5&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightWhite&#34;</span><span class="p">:</span> <span class="s2">&#34;#e5e5e5&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;background&#34;</span><span class="p">:</span> <span class="s2">&#34;#100b05&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;foreground&#34;</span><span class="p">:</span> <span class="s2">&#34;#84c138&#34;</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Monokai Soda&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;black&#34;</span><span class="p">:</span> <span class="s2">&#34;#1a1a1a&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;red&#34;</span><span class="p">:</span> <span class="s2">&#34;#f4005f&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;green&#34;</span><span class="p">:</span> <span class="s2">&#34;#98e024&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;yellow&#34;</span><span class="p">:</span> <span class="s2">&#34;#fa8419&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;blue&#34;</span><span class="p">:</span> <span class="s2">&#34;#9d65ff&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;purple&#34;</span><span class="p">:</span> <span class="s2">&#34;#f4005f&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;cyan&#34;</span><span class="p">:</span> <span class="s2">&#34;#58d1eb&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;white&#34;</span><span class="p">:</span> <span class="s2">&#34;#c4c5b5&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightBlack&#34;</span><span class="p">:</span> <span class="s2">&#34;#625e4c&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightRed&#34;</span><span class="p">:</span> <span class="s2">&#34;#f4005f&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightGreen&#34;</span><span class="p">:</span> <span class="s2">&#34;#98e024&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightYellow&#34;</span><span class="p">:</span> <span class="s2">&#34;#e0d561&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightBlue&#34;</span><span class="p">:</span> <span class="s2">&#34;#9d65ff&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightPurple&#34;</span><span class="p">:</span> <span class="s2">&#34;#f4005f&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightCyan&#34;</span><span class="p">:</span> <span class="s2">&#34;#58d1eb&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;brightWhite&#34;</span><span class="p">:</span> <span class="s2">&#34;#f6f6ef&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;background&#34;</span><span class="p">:</span> <span class="s2">&#34;#1a1a1a&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;foreground&#34;</span><span class="p">:</span> <span class="s2">&#34;#c4c5b5&#34;</span>
-          <span class="p">}</span>
-
-    <span class="p">]</span><span class="err">,</span>
-
-</code></pre></div><p>之后在如下词条中加入对应配置即可</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json">  <span class="s2">&#34;profiles&#34;</span><span class="err">:</span>
-    <span class="p">{</span>
-        <span class="nt">&#34;defaults&#34;</span><span class="p">:</span>
-        <span class="p">{</span>
-            <span class="nt">&#34;colorScheme&#34;</span> <span class="p">:</span> <span class="s2">&#34;Chester&#34;</span><span class="p">,</span>
-
-            <span class="nt">&#34;userAcrylic&#34;</span> <span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            
-            <span class="nt">&#34;acrylicOpacity&#34;</span> <span class="p">:</span>  <span class="mf">0.75</span>
-            
-            
-            
-            <span class="err">//</span> <span class="err">Put</span> <span class="err">settings</span> <span class="err">here</span> <span class="err">that</span> <span class="err">you</span> <span class="err">want</span> <span class="err">to</span> <span class="err">apply</span> <span class="err">to</span> <span class="err">all</span> <span class="err">profiles.</span>
-        <span class="p">},</span>
-</code></pre></div><p>未完待续</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Win10下用Hugo把博客搭建到gitpages上(旧版)</title>
-			<link>http://stc214.github.io/posts/2020_06_30_02_41_35/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>http://stc214.github.io/posts/2020_06_30_02_41_35/</guid>
-			<description>环境准备 1. hugo环境 https://github.com/gohugoio/hugo/releases 如上地址下载对系统所需要的二进制文件 当然如果系统部署了包管理环境的话则可以直接使用工具安装 2. 配置系统环境变量（win） 将hugo.exe的路径放入系统环境变量的path中 重新打开终端  站点创建操作 1. 定位目录 在终端中切换到需要生成站点的目录 2. 创建初始站点 hugo new site sitename 切换到sitename目录即可进行下一步操作
-3. 选择主题文件并应用样式  https://themes.gohugo.io/ 在官方主题站拉取主题到对应主题目录 复制主题exampleSite目录内的所有内容并覆盖到根目录 打开根目录的config.toml并根据需求修改内容即可 修改完毕后在根目录使用
-hugo server 即可预览效果
- 4.部署到github  1.根目录
-&amp;gt; hugo &amp;gt; ``` &amp;gt; 即可生成需要推送到git的项目静态文件于public目录中 &amp;gt; 2.切换到public目录 &amp;gt; 在git已经配置好的情况下 &amp;gt; 打开github并创建新仓库 &amp;gt; 仓库名必须为： [当前用户名].github.io &amp;gt; ```bash &amp;gt; git init &amp;gt; git remote add origin [仓库地址].git &amp;gt; git add . &amp;gt; git commit -m &amp;#39;#&amp;#39; &amp;gt; git push -u origin master &amp;gt; ``` 之后即可访问https://[当前用户名].</description>
-			<content type="html"><![CDATA[<h2 id="环境准备">环境准备</h2>
-<h3 id="1-hugo环境">1. hugo环境</h3>
-<pre><code>https://github.com/gohugoio/hugo/releases  
-如上地址下载对系统所需要的二进制文件  
-当然如果系统部署了包管理环境的话则可以直接使用工具安装
-</code></pre><h3 id="2-配置系统环境变量win">2. 配置系统环境变量（win）</h3>
-<pre><code>将hugo.exe的路径放入系统环境变量的path中  
-重新打开终端
-</code></pre><hr>
-<h2 id="站点创建操作">站点创建操作</h2>
-<h3 id="1-定位目录">1. 定位目录</h3>
-<pre><code>在终端中切换到需要生成站点的目录
-</code></pre><h3 id="2-创建初始站点">2. 创建初始站点</h3>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo new site sitename
-</code></pre></div><p>切换到sitename目录即可进行下一步操作</p>
-<h3 id="3-选择主题文件并应用样式">3. 选择主题文件并应用样式</h3>
-<blockquote>
-<p><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a>
-在官方主题站拉取主题到对应主题目录
-复制主题exampleSite目录内的所有内容并覆盖到根目录
-打开根目录的config.toml并根据需求修改内容即可 修改完毕后在根目录使用</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo server
-</code></pre></div><p>即可预览效果</p>
-</blockquote>
-<h3 id="4部署到github">4.部署到github</h3>
-<blockquote>
-<p>1.根目录</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">&gt; hugo
-&gt; <span class="sb">```</span>
-&gt; 即可生成需要推送到git的项目静态文件于public目录中  
-
-&gt; 2.切换到public目录  
-&gt; 在git已经配置好的情况下  
-&gt; 打开github并创建新仓库  
-&gt; 仓库名必须为： <span class="o">[</span>当前用户名<span class="o">]</span>.github.io
-&gt; <span class="sb">```</span>bash
-&gt; git init
-&gt; git remote add origin <span class="o">[</span>仓库地址<span class="o">]</span>.git
-&gt; git add .
-&gt; git commit -m <span class="s1">&#39;#&#39;</span>
-&gt; git push -u origin master
-&gt; <span class="sb">```</span>
-
-之后即可访问https://<span class="o">[</span>当前用户名<span class="o">]</span>.github.io
-
----
-
-<span class="c1">## 新文章创建</span>
-1. hugo new post/content_name.md
-2. 直接于 根目录/content/post 中创建新的md文件即可
-3. 注意文章头部格式如本篇
-</code></pre></div><p>echo +++ title = “Win10下用Hugo把博客搭建到gitpages上” tags = [“hugo”, “blog”] date = “2019-08-02T20:01:56+08:00” +++</p>
-<pre><code>   主题与主题使用的格式可能不相同
-
-   每次更改主题之后先hugo一下或者hugo server一下自动生成测试文章  
-   之后参考测试模板文章更改文章头部信息即可
-4. 将更改推送到github
-</code></pre><p>bash cd public git add . git commit -m ‘#’ git push -u origin master ``` 5. 刷新浏览器缓存即可见到新文章已经在站点中了</p>
-</blockquote>
-<hr>
-<h1 id="参考资料">参考资料</h1>
-<pre><code> hugo中文资料网  https://www.gohugo.org/  
- 官方主题列表  https://themes.gohugo.io/  
-</code></pre>]]></content>
-		</item>
-		
-		<item>
-			<title>wordpress docker版 从ubuntu装好到打开博客01</title>
-			<link>http://stc214.github.io/posts/2020_06_30_15_04_17/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>http://stc214.github.io/posts/2020_06_30_15_04_17/</guid>
-			<description>apt换源 # 备份源地址文件 cp /etc/apt/sources.list /etc/apt/sources.list.bak # 编辑源地址文件 vim /etc/apt/sources.list # 替换源地址 一般没有特别情况直接讲域名替换为国内源的域名即可 其他内容无需修改 # vim内搜索为 esc :/搜索内容 国内源： mirrors.aliyun.com 阿里云
-mirrors.tuna.tsinghua.edu.cn 清华
-mirrors.ustc.edu.cn 中科大 mirrors.163.com 163
-apt update apt upgrade -y 设定静态ip 默认情况下 网络配置文件内容如下 ubuntu1804:~$ cat /etc/netplan/50-cloud-init.yaml
-network: ethernets: eth0: dhcp4: true addresses: [] version: 2 复制一份文件备份以防万一
-cp /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bak 修改文件内容
-vim /etc/netplan/50-cloud-init.yaml 关闭dhcp4
-dhcp4: false 设置静态ip 掩码网关和dns服务器（一定要填dns服务器，否则会导致docker出现莫名其妙的500错误）成品为：
-network: ethernets: eth0: dhcp4: false addresses: [192.168.1.100/24] optional: true gateway4: 192.168.1.1 nameservers: addresses: [223.</description>
-			<content type="html"><![CDATA[<h2 id="apt换源">apt换源</h2>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 备份源地址文件</span>
-cp /etc/apt/sources.list /etc/apt/sources.list.bak
-<span class="c1"># 编辑源地址文件</span>
-vim /etc/apt/sources.list
-<span class="c1"># 替换源地址 一般没有特别情况直接讲域名替换为国内源的域名即可 其他内容无需修改</span>
-<span class="c1"># vim内搜索为 esc :/搜索内容</span>
-</code></pre></div><p>国内源：
-mirrors.aliyun.com  阿里云<br>
-mirrors.tuna.tsinghua.edu.cn  清华<br>
-mirrors.ustc.edu.cn  中科大
-mirrors.163.com  163</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">apt update
-apt upgrade -y
-</code></pre></div><h5 id="设定静态ip">设定静态ip</h5>
-<p>默认情况下 网络配置文件内容如下
-ubuntu1804:~$ cat /etc/netplan/50-cloud-init.yaml</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">network:</span>
-    <span class="err">ethernets:</span>
-        <span class="err">eth</span><span class="mi">0</span><span class="err">:</span>
-            <span class="err">dhcp</span><span class="mi">4</span><span class="err">:</span> <span class="kc">true</span>
-            <span class="err">addresses:</span> <span class="p">[]</span>
- 
-    <span class="err">version:</span> <span class="mi">2</span>
-
-</code></pre></div><p>复制一份文件备份以防万一</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">cp /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bak
-</code></pre></div><p>修改文件内容</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/netplan/50-cloud-init.yaml
-</code></pre></div><p>关闭dhcp4</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">dhcp4: <span class="nb">false</span>
-</code></pre></div><p>设置静态ip 掩码网关和dns服务器（一定要填dns服务器，否则会导致docker出现莫名其妙的500错误）成品为：</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">network:</span>
-    <span class="err">ethernets:</span>
-        <span class="err">eth</span><span class="mi">0</span><span class="err">:</span>
-            <span class="err">dhcp</span><span class="mi">4</span><span class="err">:</span> <span class="kc">false</span>
-            <span class="err">addresses:</span> <span class="p">[</span><span class="mf">192.168</span><span class="err">.</span><span class="mf">1.100</span><span class="err">/</span><span class="mi">24</span><span class="p">]</span>
-            <span class="err">optional:</span> <span class="kc">true</span>
-            <span class="err">gateway</span><span class="mi">4</span><span class="err">:</span> <span class="mf">192.168</span><span class="err">.</span><span class="mf">1.1</span>
-            <span class="err">nameservers:</span>
-                    <span class="err">addresses:</span> <span class="p">[</span><span class="mf">223.5</span><span class="err">.</span><span class="mf">5.5</span><span class="p">,</span><span class="mf">223.6</span><span class="err">.</span><span class="mf">6.6</span><span class="p">]</span>
- 
-    <span class="err">version:</span> <span class="mi">2</span>
-</code></pre></div><p>不报错的话
-保存后重启网络服务</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">netplan apply
-
-<span class="c1"># 可以通过以下命令或者重新链接终端确定是否修改成功</span>
-ifconfig -a
-</code></pre></div><h2 id="设置开机启动脚本">设置开机启动脚本</h2>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/rc.local
-<span class="c1"># 在 exit 0这一行之前添加内容即可 如：</span>
-sudo docker images 
-<span class="c1"># 或者挂载磁盘的命令</span>
-</code></pre></div><p>启动脚本扩展：</p>
-<h5 id="如果没有rcloacl文件">如果没有rc.loacl文件</h5>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json">       <span class="err">ubuntu</span> <span class="mf">18.04</span> <span class="err">不再使用</span> <span class="err">inited</span> <span class="err">管理系统，改用</span> <span class="err">systemd</span> 
-       <span class="err">虽然是进步，但很多人（包括我）还是喜欢用原本简单方便的</span> <span class="err">rc.local</span> <span class="err">作为系统启动脚本</span>
-       <span class="err">systemd</span> <span class="err">里面有个</span> <span class="err">rc-local.service</span> <span class="err">文件，里面有写到</span> <span class="err">rc.local</span> <span class="err">的启动顺序和行为，但是没用写加载这个</span> <span class="err">rc-local.service</span> <span class="err">。也就是说我们需要给它写上这个。</span>
-
-<span class="err">sudo</span> <span class="err">vim</span> <span class="err">/etc/systemd/system/rc-local.service</span>
-
-<span class="err">在文件后加上如下内容：</span>
-
-    <span class="p">[</span><span class="err">Install</span><span class="p">]</span>
-    <span class="err">WantedBy=multi-user.target</span>
-    <span class="err">Alias=rc-local.service</span>
-
-<span class="err">或者直接用一行命令把内容写进去：</span>
-
-    <span class="err">sudo</span> <span class="err">echo</span> <span class="s2">&#34;
-</span><span class="s2">    [Install]
-</span><span class="s2">    WantedBy=multi-user.target
-</span><span class="s2">    Alias=rc-local.service
-</span><span class="s2">    &#34;</span> <span class="err">&gt;&gt;</span> <span class="err">etc/systemd/system/rc-local.service</span>
-
- 
-       <span class="err">接下来就创建属于我们的</span> <span class="err">`/etc/rc.local`</span> <span class="err">`bash`</span> <span class="err">脚本吧</span>
-
-    <span class="err">sudo</span> <span class="err">touch</span> <span class="err">/etc/rc.local</span>
-    <span class="err">chmod</span> <span class="mi">755</span> <span class="err">/etc/rc.local</span>
-
-<span class="err">写入</span> <span class="err">`bash`</span> <span class="err">脚本执行的编译器</span>
-
-<span class="err">sudo</span> <span class="err">echo</span> <span class="s2">&#34;#!/bin/bash&#34;</span> <span class="err">&gt;</span> <span class="err">/etc/rc.local</span>
-
-<span class="err">到此为止，和以前一样的</span> <span class="err">`rc.local`</span> <span class="err">就完成了！</span>
-
-</code></pre></div><h2 id="设置定时重启">设置定时重启</h2>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">cp /etc/crontab /etc/crontab.bak
-<span class="c1"># 在文件最后一行之前的部分添加内容即可</span>
-<span class="m">0</span> <span class="m">2</span> * * * reboot /bin/sh
-</code></pre></div><p>定时重启扩展内容
-<a href="http://stc14.top">http://stc14.top</a>:18080/?p=17<br>
-<a href="http://stc14.top">http://stc14.top</a>:18080/?p=16</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>wordpress docker版 从ubuntu装好到打开博客02</title>
-			<link>http://stc214.github.io/posts/2020_06_30_15_02_26/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>http://stc214.github.io/posts/2020_06_30_15_02_26/</guid>
-			<description>docker # 以树莓派ubuntu server 20.04版为例 apt install docker.io -y linux版本不同docker安装的版本可能也不同 一般有 docker / docker-ce / docker.io 等
-换源 # 先运行一次docker命令 生成文件 docker images # 备份源文件（如果有） cp /etc/docker/daemon.json /etc/docker/daemon.json.bak # 编辑 vim /etc/docker/daemon.json # 填入内容 { &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://docker.mirrors.ustc.edu.cn&amp;#34;] } # 保存退出并重启docker service docker restart 其他docker源参考:
-不得不说 docker的火爆程度已经达到的地步， 由于国外docker搭建太慢，国外的安装文档也很全面，这里就不在详述，详情可以点击这里： 正主：Docker 官方镜像加速：http://www.docker-cn.com/registry-mirror 在这里打算记录下使用国内源快速搭建docker的方法：Daocloud极速下载真的是快啊～～～ 在 Linux上 安装 Docker curl -sSL https://get.daocloud.io/docker | sh 适用于Ubuntu，Debian,Centos等大部分Linux，会3小时同步一次Docker官方资源 当然有时候不知道为什么daocloud响应不了，用阿里云的： 用阿里云的： 安装最新版本的Docker Engine curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet| sh - 安装1.9.1版本的Docker Engine curl -sSL http://acs-public-mirror.</description>
-			<content type="html"><![CDATA[<h2 id="docker">docker</h2>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 以树莓派ubuntu server 20.04版为例</span>
-apt install docker.io -y
-</code></pre></div><p>linux版本不同docker安装的版本可能也不同
-一般有 docker / docker-ce / docker.io 等</p>
-<h5 id="换源">换源</h5>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 先运行一次docker命令 生成文件</span>
-docker images
-
-<span class="c1"># 备份源文件（如果有）</span>
-cp /etc/docker/daemon.json /etc/docker/daemon.json.bak
-
-<span class="c1"># 编辑</span>
-vim /etc/docker/daemon.json
-
-<span class="c1"># 填入内容</span>
-<span class="o">{</span>
-
-<span class="s2">&#34;registry-mirrors&#34;</span>: <span class="o">[</span><span class="s2">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span><span class="o">]</span>
-
-<span class="o">}</span>
-
-<span class="c1"># 保存退出并重启docker</span> 
-service docker restart
-</code></pre></div><p>其他docker源参考:</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json">
-<span class="err">不得不说</span> <span class="err">docker的火爆程度已经达到的地步，</span>
-
-<span class="err">由于国外docker搭建太慢，国外的安装文档也很全面，这里就不在详述，详情可以点击这里：</span>
-
-<span class="err">正主：Docker</span> <span class="err">官方镜像加速：http://www.docker-cn.com/registry-mirror</span>
-
-<span class="err">在这里打算记录下使用国内源快速搭建docker的方法：Daocloud极速下载真的是快啊～～～</span>
-<span class="err">在</span> <span class="err">Linux上</span> <span class="err">安装</span> <span class="err">Docker</span>
-
-<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">https://get.daocloud.io/docker</span> <span class="err">|</span> <span class="err">sh</span> 
-
-<span class="err">适用于Ubuntu，Debian,Centos等大部分Linux，会</span><span class="mi">3</span><span class="err">小时同步一次Docker官方资源</span>
-
-<span class="err">当然有时候不知道为什么daocloud响应不了，用阿里云的：</span>
-
-<span class="err">用阿里云的：</span>
-
-<span class="err">安装最新版本的Docker</span> <span class="err">Engine</span>
-
-<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet|</span> <span class="err">sh</span> <span class="err">-</span>
-
-<span class="err">安装</span><span class="mf">1.9</span><span class="err">.</span><span class="mi">1</span><span class="err">版本的Docker</span> <span class="err">Engine</span>
-
-<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet|</span> <span class="err">sh</span> <span class="err">/dev/stdin</span> <span class="mf">1.9</span><span class="err">.</span><span class="mi">1</span>
-
-<span class="err">如果你的机器是阿里云主机，那么可以通过以下脚本，通过内网地址进行安装。</span>
-
-<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/intranet|</span> <span class="err">sh</span> <span class="err">-</span>
-
-
-<span class="err">安装</span> <span class="err">Docker</span> <span class="err">Compose</span>
-
-<span class="err">Docker</span> <span class="err">Compose存放在Git</span> <span class="err">Hub，不太稳定。</span>
-
-<span class="err">你可以也通过执行下面的命令，高速安装Docker</span> <span class="err">Compose。</span>
-
-<span class="err">curl</span> <span class="err">-L</span> <span class="err">https://get.daocloud.io/docker/compose/releases/download/</span><span class="mf">1.14</span><span class="err">.</span><span class="mi">0</span><span class="err">/docker-compose-`uname</span> <span class="err">-s`-`uname</span> <span class="err">-m`</span> <span class="err">&gt;</span> <span class="err">/usr/local/bin/docker-compose</span>
-
-<span class="err">chmod</span>  <span class="err">+x</span>  <span class="err">/usr/local/bin/docker-compose</span>
-
-<span class="err">你可以通过修改URL中的版本，可以自定义您的需要的版本。</span>
-<span class="err">Docker更换镜像源</span>
-
-<span class="err">有位博主说的好，国内有</span><span class="mi">4</span><span class="err">家感觉还可以的镜像源.</span>
-<span class="err">选择一：老东家的</span>  <span class="err">daocloud：</span>
-
-<span class="err">老东家提供的daocloud加速器，需要用户注册，每个用户每个月限制</span><span class="mi">10</span><span class="err">GB</span>
-
-<span class="err">不过也感觉非常快，注册也相当容器，不需要验证邮箱噢～～～&gt;-&lt;</span>
-
-<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">https://get.daocloud.io/daotools/set_mirror.sh</span> <span class="err">|</span> <span class="err">sh</span> <span class="err">-s</span> <span class="err">http://</span><span class="mf">67e93489</span><span class="err">.m.daocloud.io</span>
-
-<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">https://get.daocloud.io/daotools/set_mirror.sh</span> <span class="err">|</span> <span class="err">sh</span> <span class="err">-s</span> <span class="err">http://f</span><span class="mi">7291398</span><span class="err">.m.daocloud.io</span>
-
-<span class="err">具体来说</span>  <span class="err">daocloud的模式就是将你的id也就是shell</span><span class="mi">123</span><span class="err">转化成</span><span class="mf">67e93489</span><span class="err">，其格式为：</span>
-
-<span class="err">curl-sSL</span> <span class="err">https://get.daocloud.io/daotools/set_mirror.sh</span> <span class="err">|</span> <span class="err">sh-shttp://</span><span class="p">{</span><span class="err">your_id</span><span class="p">}</span><span class="err">.m.daocloud.io</span>
-
-<span class="err">事实上，实际改的是</span>
-
-<span class="err">ExecStart=/usr/bin/docker-current</span> <span class="err">daemon</span> <span class="err">--registry-mirror=http://</span><span class="p">{</span><span class="err">your_id</span><span class="p">}</span><span class="err">.m.daocloud.io\</span>
-
-<span class="err">记得设置后，需要重新启动</span>  <span class="err">sudo</span> <span class="err">service</span> <span class="err">docker</span> <span class="err">restart</span>
-<span class="err">选择二：ustc</span> <span class="err">中科大的docker源</span> <span class="err">也是超级好的</span>
-
-<span class="err">官方文档也写的非常好，有兴趣可以看看</span>
-
-
-<span class="err">配置方法：</span>
-
-<span class="err">新版的</span> <span class="err">Docker</span> <span class="err">使用</span> <span class="err">/etc/docker/daemon.json（Linux）</span> <span class="err">或者</span> <span class="err">%programdata%\docker\config\daemon.json（Windows）</span> <span class="err">来配置</span> <span class="err">Daemon。</span>
-
-<span class="err">请在该配置文件中加入（没有该文件的话，请先建一个）：</span>
-
-<span class="p">{</span>
-
-<span class="nt">&#34;registry-mirrors&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span><span class="p">]</span>
-
-<span class="p">}</span>
-
-<span class="err">亦即：$~</span> <span class="err">sudo</span> <span class="err">vim</span> <span class="err">/etc/docker/daemon.json</span>  <span class="err">写入：</span>
-
-<span class="p">{</span><span class="nt">&#34;registry-mirrors&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span><span class="p">]}</span><span class="err">这一行</span> <span class="err">然后重启docker服务即可.</span>
-
-<span class="err">选择三：网易蜂巢的镜像源，个人感觉上面的镜像好少，而且有时候pull他们的镜像还会失败，不过如果要写dockerfile的话，可以到上面参考参考，dockerfile他们到时写的很详细噢～</span>
-
-<span class="err">$~</span> <span class="err">sudo</span> <span class="err">echo</span><span class="s2">&#34;DOCKER_OPTS=\&#34;--registry-mirror=http://hub-mirror.c.163.com\&#34;&#34;</span><span class="err">&gt;&gt;/etc/default/docker</span>
-
-<span class="err">$~</span> <span class="err">service</span> <span class="err">docker</span> <span class="err">restart</span>
-
-<span class="err">最后一个选择：阿里的alicloud</span>
-
-<span class="err">个人感觉繁琐的是在注册上：不光要注册为阿里云的用户，还得加入开发者平台。不过提着眼睛做完这些以后，它的服务还真是不错，基本</span><span class="mi">1</span><span class="err">MB/s的pull速度(部分原因可能是因为我也在杭州吧)。配置方法跟daocloud类似，也是开通加速器以后给一个url。</span>
-
-<span class="err">ExecStart=/usr/bin/docker-current</span> <span class="err">daemon</span> <span class="err">--registry-mirror=https://</span><span class="p">{</span><span class="err">your_id</span><span class="p">}</span><span class="err">.mirror.aliyuncs.com\</span>
-
-<span class="err">阿里的你们可以去尝试，如果不是阿里云的EMS用户的话，个人不太推荐。</span>
-<span class="err">所以本人</span> <span class="err">强烈推荐！！强烈推荐！！使用ustc的！！！！</span>
-<span class="err">#Docker-machine安装</span>
-
-<span class="err">参照官网的教程：https://docs.docker.com/machine/install-machine/</span>
-
-<span class="err">linux用户安装方式为：$~</span>  <span class="err">curl-L</span> <span class="err">https://github.com/docker/machine/releases/download/v</span><span class="mf">0.10</span><span class="err">.</span><span class="mi">0</span><span class="err">/docker-machine-`uname</span> <span class="err">-s`-`uname</span> <span class="err">-m`</span> <span class="err">&gt;/tmp/docker-machine</span> <span class="err">&amp;&amp;chmod</span> <span class="err">+x</span> <span class="err">/tmp/docker-machine</span> <span class="err">&amp;&amp;</span>  <span class="err">sudo</span> <span class="err">cp</span> <span class="err">/tmp/docker-machine</span> <span class="err">/usr/local/bin/docker-machine</span>
-</code></pre></div><h4 id="拉取docker镜像">拉取docker镜像</h4>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker pull wordpress  
-
-<span class="c1"># 拉取管理工具</span>
-docker pull portainer/portainer  
-
-</code></pre></div><p>换源之后就快很多了~！</p>
-<h4 id="运行容器">运行容器</h4>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># wordpress</span>
-docker run -d --name wordpress --restart<span class="o">=</span>always -p 8880:80 wordpress
-
-
-<span class="c1"># portainer</span>
-docker volume create portainer_data
-
-docker run -d -p 9000:9000 --name pter --restart<span class="o">=</span>always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
-
-
-<span class="c1"># nextcloud</span>
-docker run -d -p 9999:80 --name nextcloud --restart<span class="o">=</span>always -v /media/hardisk1:/inside_docker/hahardisk1 nextcloud
-
-</code></pre></div><p>portainer根据所处环境选择是本地还是远程管理
-参考文章：http://www.senra.me/docker-management-panel-series-portainer/
-<a href="http://stc14.top">http://stc14.top</a>:18080/?p=19</p>
-<h2 id="后续修改">后续修改</h2>
-<p>wordpress容器默认上传限制为2M，这实在是太少了，本文介绍如何修改docker中wordpress的上传限制。
-步骤</p>
-<h6 id="1-进入wordpress容器">1. 进入wordpress容器</h6>
-<p>docker exec -it wordpress /bin/bash</p>
-<h6 id="wordpress是你wordpress的容器id或名称">wordpress是你wordpress的容器id或名称</h6>
-<h6 id="2-复制phpini">2. 复制php.ini</h6>
-<h6 id="复制配置文件以便php配置生效">复制配置文件，以便php配置生效</h6>
-<p>cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini</p>
-<h6 id="3-修改phpini">3. 修改php.ini</h6>
-<p>没有安装文本编辑软件的请参考：https://blog.csdn.net/j84491135/article/details/105938672</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vim /usr/local/etc/php/php.ini
-</code></pre></div><p>找到以下三个关键值，修改成你想要的值，注意 <br>
-memory_limit&gt;post_max_size&gt;upload_max_filesize
-PS：vim查找命令为:/要查找的字符串，n下一个，N上一个</p>
-<p>upload_max_filesize = 200M	#文件大小限制
-post_max_size = 250M	#post大小限制
-memory_limit = 500M		#内存占用限制</p>
-<p>如果还要修改其他配置如开启文件上传、上传超时等等去查配置文件即可，不再赘述。</p>
-<h6 id="4-重启容器">4. 重启容器</h6>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker restart wordpress
-</code></pre></div><h3 id="容器内没有vim的情况">容器内没有vim的情况</h3>
-<p>因为该源是不用GPG验证的，可能不安全，但因为docker容器没有验证GPG的工具所以只能先用这个源然后安装GPG验证相关软件包再更换回正式源。
-步骤</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">mv /etc/apt/sources.list /etc/apt/sources.list.bak
-
-cat <span class="s">&lt;&lt;EOF &gt;/etc/apt/sources.list
-</span><span class="s">deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
-</span><span class="s">deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
-</span><span class="s">EOF</span>
-
-apt update
-</code></pre></div><h3 id="添加docker启动项">添加docker启动项</h3>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/rc.local
-<span class="c1"># 在exit 0之前加入</span>
-
-sudo docker start <span class="k">$(</span>docker ps -a <span class="p">|</span> awk <span class="s1">&#39;{ print $1}&#39;</span> <span class="p">|</span> tail -n +2<span class="k">)</span>
-
-</code></pre></div><p>另外：
-docker中 启动所有的容器命令</p>
-<p>docker start $(docker ps -a | awk &lsquo;{ print $1}&rsquo; | tail -n +2)</p>
-<p>docker中    关闭所有的容器命令</p>
-<p>docker stop $(docker ps -a | awk &lsquo;{ print $1}&rsquo; | tail -n +2)</p>
-<p>docker中 删除所有的容器命令</p>
-<p>docker rm $(docker ps -a | awk &lsquo;{ print $1}&rsquo; | tail -n +2)</p>
-<p>docker中    删除所有的镜像</p>
-<p>docker rmi $(docker images | awk &lsquo;{print $3}&rsquo; |tail -n +2)</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>wordpress docker版 从ubuntu装好到打开博客03</title>
-			<link>http://stc214.github.io/posts/2020_06_30_14_57_09/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>http://stc214.github.io/posts/2020_06_30_14_57_09/</guid>
-			<description>发布 绑定域名 访问 简单的局域网环境访问 直接用过ip+设置的端口即可直接访问 如果路由器有端口转发功能也需要设置
-外网访问 1.通过ddns将设置的域名解析到路由器上
-2.设置路由器防火墙规则 品牌路由官方固件则直接无视 一般防火墙规则会在设置端口转发等相关功能之后自动设置 软路由则按照规则（不了解则默认全部选择接受）设置
-3.设置端口转发
-OK 到此应该可以正常公网使用域名访问了
-访问不了  通过命令行刷新dns缓存 检查ddns设置 检查ddns日志是否成功更新ip 检查域名是否已经更新好ip 一切正常依然无法访问再次刷新dns滑轮 步骤1-5全部检查无误依然不行则属于路由器固件问题  推荐lean的固件 下载地址在恩山论坛搜索
-树莓派固件项目地址： https://github.com/SuLingGG/OpenWrt-Rpi https://github.com/scenerycm/OpenWrt-Raspi</description>
-			<content type="html"><![CDATA[<h2 id="发布-绑定域名-访问">发布 绑定域名 访问</h2>
-<h5 id="简单的局域网环境访问">简单的局域网环境访问</h5>
-<p>直接用过ip+设置的端口即可直接访问
-如果路由器有端口转发功能也需要设置</p>
-<h5 id="外网访问">外网访问</h5>
-<p>1.通过ddns将设置的域名解析到路由器上</p>
-<p>2.设置路由器防火墙规则
-品牌路由官方固件则直接无视 一般防火墙规则会在设置端口转发等相关功能之后自动设置
-软路由则按照规则（不了解则默认全部选择接受）设置</p>
-<p>3.设置端口转发</p>
-<p>OK 到此应该可以正常公网使用域名访问了</p>
-<h5 id="访问不了">访问不了</h5>
-<ol>
-<li>通过命令行刷新dns缓存</li>
-<li>检查ddns设置</li>
-<li>检查ddns日志是否成功更新ip</li>
-<li>检查域名是否已经更新好ip</li>
-<li>一切正常依然无法访问再次刷新dns滑轮</li>
-<li>步骤1-5全部检查无误依然不行则属于路由器固件问题</li>
-</ol>
-<h6 id="推荐lean的固件">推荐lean的固件</h6>
-<p>下载地址在恩山论坛搜索</p>
-<h5 id="树莓派固件项目地址">树莓派固件项目地址：</h5>
-<p><a href="https://github.com/SuLingGG/OpenWrt-Rpi">https://github.com/SuLingGG/OpenWrt-Rpi</a>
-<a href="https://github.com/scenerycm/OpenWrt-Raspi">https://github.com/scenerycm/OpenWrt-Raspi</a></p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>wordpress 必备插件</title>
-			<link>http://stc214.github.io/posts/2020_06_30_15_04_54/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>http://stc214.github.io/posts/2020_06_30_15_04_54/</guid>
-			<description>WP-China-Yes  这是一个颠覆性的插件，她将全面改善中国大陆站点在访问WP官方服务时的用户体验，其原理是将位于国外的官方仓库源替换为由社区志愿者维护的国内源，以此达到加速访问的目的。
- Autoptimize  通过优化CSS，JS，图像，Google字体等来使您的网站更快。
- Enlighter - Customizable Syntax Highlighter  语法高亮插件
- Really Simple CAPTCHA  验证码插件
- WP Githuber MD  markdown编辑器 一个为 WordPress 网站提供全功能 Markdown 语法的插件。
- WP User Avatar  使用WordPress媒体库中的图片作为默认头像。请添加您自己的默认头像。
- 待补充 </description>
-			<content type="html"><![CDATA[<h1 id="wp-china-yes">WP-China-Yes</h1>
-<blockquote>
-<p>这是一个颠覆性的插件，她将全面改善中国大陆站点在访问WP官方服务时的用户体验，其原理是将位于国外的官方仓库源替换为由社区志愿者维护的国内源，以此达到加速访问的目的。</p>
-</blockquote>
-<h4 id="autoptimize">Autoptimize</h4>
-<blockquote>
-<p>通过优化CSS，JS，图像，Google字体等来使您的网站更快。</p>
-</blockquote>
-<h4 id="enlighter---customizable-syntax-highlighter">Enlighter - Customizable Syntax Highlighter</h4>
-<blockquote>
-<p>语法高亮插件</p>
-</blockquote>
-<h4 id="really-simple-captcha">Really Simple CAPTCHA</h4>
-<blockquote>
-<p>验证码插件</p>
-</blockquote>
-<h4 id="wp-githuber-md">WP Githuber MD</h4>
-<blockquote>
-<p>markdown编辑器 一个为 WordPress 网站提供全功能 Markdown 语法的插件。</p>
-</blockquote>
-<h4 id="wp-user-avatar">WP User Avatar</h4>
-<blockquote>
-<p>使用WordPress媒体库中的图片作为默认头像。请添加您自己的默认头像。</p>
-</blockquote>
-<h2 id="待补充">待补充</h2>
-]]></content>
-		</item>
-		
-		<item>
-			<title>关于定时执行任务：Crontab的20个例子</title>
-			<link>http://stc214.github.io/posts/2020_06_30_15_02_59/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>http://stc214.github.io/posts/2020_06_30_15_02_59/</guid>
-			<description>简介
-Linux crontab和Windows task schedules非常的相似。Crontab可以用来在系统中定期的执行任务。比如：写了一个爬虫需要每天早上八点执行，就可以用到Crontab;安装的Tomcat服务器需要每天凌晨重启一次，也可以使用到Crontab。总之，几乎所有的定时任务，我们都可以通过Crontab这个工具来完成。 安装 yum install cronie` Crontab在Linux上的结构
-crontab结构.png
-从左到右依次为： [分钟] [小时] [每月的某一天] [每年的某一月] [每周的某一天] [执行的命令] 注意：请留意每个选项的取值范围。
-如何 添加/编辑 Crontab
-添加或更新crontab中的命令  crontab -e
-默认情况下，系统会编辑当前登录用户的crontab命令集合。需要编辑其他用户的命令集合，需要使用到如下的命令 crontab -u username -e 查看Crontab命令集合
-查看当前系统登录用户的Crontab命令集合  crontab -l
-查看其他用户的Crontab命令集合  crontab -u username -l 20个超实用的Crontab使用实例
-每天 02:00 执行任务  0 2 * * * /bin/sh backup.sh
-每天 5:00和17:00执行任务  0 5,17 * * * /scripts/script.sh
-每分钟执行一次任务 通常情况下，我们并没有每分钟都需要执行的脚本(默默的想到了12306--)           /scripts/script.</description>
-			<content type="html"><![CDATA[<p>简介</p>
-<p>Linux crontab和Windows task schedules非常的相似。Crontab可以用来在系统中定期的执行任务。比如：写了一个爬虫需要每天早上八点执行，就可以用到Crontab;安装的Tomcat服务器需要每天凌晨重启一次，也可以使用到Crontab。总之，几乎所有的定时任务，我们都可以通过Crontab这个工具来完成。
-安装
-yum install cronie`
-Crontab在Linux上的结构</p>
-<p>crontab结构.png</p>
-<p>从左到右依次为：
-[分钟] [小时] [每月的某一天] [每年的某一月] [每周的某一天] [执行的命令]
-注意：请留意每个选项的取值范围。</p>
-<p>如何 添加/编辑 Crontab</p>
-<pre><code>添加或更新crontab中的命令
-</code></pre>
-<p>crontab -e</p>
-<p>默认情况下，系统会编辑当前登录用户的crontab命令集合。需要编辑其他用户的命令集合，需要使用到如下的命令
-crontab -u username -e
-查看Crontab命令集合</p>
-<pre><code>查看当前系统登录用户的Crontab命令集合
-</code></pre>
-<p>crontab -l</p>
-<pre><code>查看其他用户的Crontab命令集合
-</code></pre>
-<p>crontab -u username -l
-20个超实用的Crontab使用实例</p>
-<pre><code>每天 02:00 执行任务
-</code></pre>
-<p>0 2 * * * /bin/sh backup.sh</p>
-<pre><code>每天 5:00和17:00执行任务
-</code></pre>
-<p>0 5,17 * * * /scripts/script.sh</p>
-<pre><code>每分钟执行一次任务
-通常情况下，我们并没有每分钟都需要执行的脚本(默默的想到了12306--)
-</code></pre>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>/scripts/script.sh</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>每周日 17:00 执行任务</p>
-</li>
-</ul>
-<p>0 17 * * sun  /scripts/script.sh</p>
-<pre><code>每 10min 执行一次任务
-</code></pre>
-<p>*/10 * * * * /scripts/monitor.sh</p>
-<pre><code>在特定的某几个月执行任务
-</code></pre>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>jan,may,aug * /script/script.sh</li>
-</ul>
-</li>
-</ul>
-<p>在特定的某几天执行任务</p>
-</li>
-</ul>
-<p>0 17 * * sun,fri /script/scripy.sh</p>
-<p>在每周五、周日的17点执行任务</p>
-<pre><code>在某个月的第一个周日执行任务
-</code></pre>
-<p>0 2 * * sun  [ $(date +%d) -le 07 ] &amp;&amp; /script/script.sh</p>
-<pre><code>每四个小时执行一个任务
-</code></pre>
-<p>0 */4 * * * /scripts/script.sh</p>
-<pre><code>每周一、周日执行任务
-</code></pre>
-<p>0 4,17 * * sun,mon /scripts/script.sh</p>
-<pre><code>每个30秒执行一次任务
-我们没有办法直接通过上诉类似的例子去执行，因为最小的是1min。但是我们可以通过如下的方法。
-</code></pre>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>/scripts/script.sh</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>sleep 30; /scripts/script.sh</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>多个任务在一条命令中配置</p>
-</li>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>/scripts/script.sh; /scripts/scrit2.sh</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>每年执行一次任务</p>
-</li>
-</ul>
-<p>@yearly /scripts/script.sh</p>
-<p>@yearly 类似于“0 0 1 1 *”。它会在每年的第一分钟内执行，通常我们可以用这个发送新年的问候。</p>
-<pre><code>每月执行一次任务
-</code></pre>
-<p>@yearly /scripts/script.sh</p>
-<pre><code>每周执行一次任务
-</code></pre>
-<p>@yearly /scripts/script.sh</p>
-<pre><code>每天执行一次任务
-</code></pre>
-<p>@yearly /scripts/script.sh</p>
-<pre><code>每分钟执行一次任务
-</code></pre>
-<p>@yearly /scripts/script.sh</p>
-<pre><code>系统重启时执行
-</code></pre>
-<p>@reboot /scripts/script.sh</p>
-<pre><code>将 Cron 结果重定向的特定的账户
-默认情况下，cron 只会将结果详情发送给 cron 被制定的用户。如果需要发送给其他用户，可以通过如下的方式：
-</code></pre>
-<h1 id="crontab--l">crontab -l</h1>
-<p>MAIL=bob
-0 2 * * * /script/backup.sh</p>
-<pre><code>将所有的 cron 命令备份到文本文件当中
-这是一个当我们丢失了cron命令后方便快速的一个恢复方式。
-下面是利用这个方式恢复cron的一个小例子。（看看就行~）
-首先：检查当前的cron
-</code></pre>
-<h1 id="crontab--l-1">crontab -l</h1>
-<p>MAIL=rahul
-0 2 * * * /script/backup.sh</p>
-<p>然后：备份cron到文件中</p>
-<h1 id="crontab--l--cron-backuptxt">crontab -l &gt; cron-backup.txt</h1>
-<h1 id="cat-cron-backuptxt">cat cron-backup.txt</h1>
-<p>MAIL=rahul
-0 2 * * * /script/backup.sh</p>
-<p>接着：移除当前的cron</p>
-<h1 id="crontab--r">crontab -r</h1>
-<h1 id="crontab--l-2">crontab -l</h1>
-<p>no crontab for root</p>
-<p>恢复：从text file中恢复</p>
-<h1 id="crontab-cron-backuptxt">crontab cron-backup.txt</h1>
-<h1 id="crontab--l-3">crontab -l</h1>
-<p>MAIL=rahul
-0 2 * * * /script/backup.sh
-原文链接</p>
-<p>Crontab in Linux with 20 Useful Examples to Schedule Jobs</p>
-<p>作者：LeeLom
-链接：https://www.jianshu.com/p/d93e2b177814</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>开启 cmd cmder 代理</title>
-			<link>http://stc214.github.io/posts/2020_06_30_14_48_30/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>http://stc214.github.io/posts/2020_06_30_14_48_30/</guid>
-			<description>win10安装了ShadowSocks软件，浏览器通过代理后就可以***，但有时候需要通过cmd科学下载安装一些组件，就需要设置一下cmd的代理
-cmd如果要设置代理的话，需要在执行其他命令之前，先执行一下
-set http_proxy=http://127.0.0.1:7008 set https_proxy=http://127.0.0.1:7008 cmder如果使用的是bash模式，则先执行一下
-export http_proxy=http://127.0.0.1:7008 export https_proxy=http://127.0.0.1:7008 PowerShell ：
-$env:http_proxy=http://127.0.0.1:7008 $env:https_proxy=http://127.0.0.1:7008 上面命令的作用是设置环境变量，不用担心，这种环境变量只会持续到cmd窗口关闭，不是系统环境变量
-测试是否成功用 curl https://www.google.com, 别用ping</description>
-			<content type="html"><![CDATA[<p><a href="https://s2.ax1x.com/2019/08/04/e6mE60.jpg">
-<img src="https://s2.ax1x.com/2019/08/04/e6mE60.jpg" alt="img"></a></p>
-<p>win10安装了ShadowSocks软件，浏览器通过代理后就可以***，但有时候需要通过cmd科学下载安装一些组件，就需要设置一下cmd的代理</p>
-<p>cmd如果要设置代理的话，需要在执行其他命令之前，先执行一下</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">set</span> <span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:7008
-<span class="nb">set</span> <span class="nv">https_proxy</span><span class="o">=</span>http://127.0.0.1:7008
-</code></pre></div><p>cmder如果使用的是bash模式，则先执行一下</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:7008
-<span class="nb">export</span> <span class="nv">https_proxy</span><span class="o">=</span>http://127.0.0.1:7008
-</code></pre></div><p>PowerShell ：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">$env</span>:http_proxy<span class="o">=</span>http://127.0.0.1:7008
-<span class="nv">$env</span>:https_proxy<span class="o">=</span>http://127.0.0.1:7008
-</code></pre></div><p>上面命令的作用是设置环境变量，不用担心，这种环境变量只会持续到cmd窗口关闭，不是系统环境变量</p>
-<p>测试是否成功用 curl <a href="https://www.google.com/">https://www.google.com</a>, 别用ping</p>
-]]></content>
-		</item>
-		
-	</channel>
+    </item>
+    
+  </channel>
 </rss>
