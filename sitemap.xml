@@ -3,22 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://stc214.github.io/posts/2020_07_02_01_20_56/</loc>
+    <lastmod>2020-07-02T01:20:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/</loc>
+    <lastmod>2020-07-02T01:20:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/</loc>
+    <lastmod>2020-07-02T01:20:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/2020_07_01_18_33_15/</loc>
+    <lastmod>2020-07-01T18:33:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/2020_06_30_15_03_34/</loc>
+    <lastmod>2020-06-30T15:03:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/contact/</loc>
+    <lastmod>2020-04-23T20:03:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/about/</loc>
+    <lastmod>2020-04-23T19:57:09+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stc214.github.io/tags/demo/</loc>
     <lastmod>2018-12-24T12:29:41+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://stc214.github.io/tags/image/</loc>
-    <lastmod>2018-12-24T12:29:41+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stc214.github.io/posts/</loc>
-    <lastmod>2018-12-24T12:29:41+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stc214.github.io/</loc>
     <lastmod>2018-12-24T12:29:41+08:00</lastmod>
   </url>
   
@@ -100,6 +125,46 @@
   <url>
     <loc>https://stc214.github.io/posts/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/2020_06_30_14_57_42/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/tags/note/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/2020_06_30_14_56_01/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/2020_06_30_02_41_35/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/2020_06_30_15_04_17/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/2020_06_30_15_02_26/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/2020_06_30_14_57_09/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/2020_06_30_15_04_54/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/2020_06_30_15_02_59/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/posts/2020_06_30_14_48_30/</loc>
   </url>
   
 </urlset>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="wordpress docker版 从ubuntu装好到打开博客02">
+<meta itemprop="description" content="docker # 以树莓派ubuntu server 20.04版为例 apt install docker.io -y linux版本不同docker安装的版本可能也不同 一般有 docker / docker-ce / docker.io 等
+换源 # 先运行一次docker命令 生成文件 docker images # 备份源文件（如果有） cp /etc/docker/daemon.json /etc/docker/daemon.json.bak # 编辑 vim /etc/docker/daemon.json # 填入内容 { &#34;registry-mirrors&#34;: [&#34;https://docker.mirrors.ustc.edu.cn&#34;] } # 保存退出并重启docker service docker restart 其他docker源参考:
+不得不说 docker的火爆程度已经达到的地步， 由于国外docker搭建太慢，国外的安装文档也很全面，这里就不在详述，详情可以点击这里： 正主：Docker 官方镜像加速：http://www.docker-cn.com/registry-mirror 在这里打算记录下使用国内源快速搭建docker的方法：Daocloud极速下载真的是快啊～～～ 在 Linux上 安装 Docker curl -sSL https://get.daocloud.io/docker | sh 适用于Ubuntu，Debian,Centos等大部分Linux，会3小时同步一次Docker官方资源 当然有时候不知道为什么daocloud响应不了，用阿里云的： 用阿里云的： 安装最新版本的Docker Engine curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet| sh - 安装1.9.1版本的Docker Engine curl -sSL http://acs-public-mirror.">
+
+<meta itemprop="wordCount" content="402">
+
+
+
+<meta itemprop="keywords" content="note," /><meta property="og:title" content="wordpress docker版 从ubuntu装好到打开博客02" />
+<meta property="og:description" content="docker # 以树莓派ubuntu server 20.04版为例 apt install docker.io -y linux版本不同docker安装的版本可能也不同 一般有 docker / docker-ce / docker.io 等
+换源 # 先运行一次docker命令 生成文件 docker images # 备份源文件（如果有） cp /etc/docker/daemon.json /etc/docker/daemon.json.bak # 编辑 vim /etc/docker/daemon.json # 填入内容 { &#34;registry-mirrors&#34;: [&#34;https://docker.mirrors.ustc.edu.cn&#34;] } # 保存退出并重启docker service docker restart 其他docker源参考:
+不得不说 docker的火爆程度已经达到的地步， 由于国外docker搭建太慢，国外的安装文档也很全面，这里就不在详述，详情可以点击这里： 正主：Docker 官方镜像加速：http://www.docker-cn.com/registry-mirror 在这里打算记录下使用国内源快速搭建docker的方法：Daocloud极速下载真的是快啊～～～ 在 Linux上 安装 Docker curl -sSL https://get.daocloud.io/docker | sh 适用于Ubuntu，Debian,Centos等大部分Linux，会3小时同步一次Docker官方资源 当然有时候不知道为什么daocloud响应不了，用阿里云的： 用阿里云的： 安装最新版本的Docker Engine curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet| sh - 安装1.9.1版本的Docker Engine curl -sSL http://acs-public-mirror." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://stc214.github.io/posts/2020_06_30_15_02_26/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="wordpress docker版 从ubuntu装好到打开博客02"/>
+<meta name="twitter:description" content="docker # 以树莓派ubuntu server 20.04版为例 apt install docker.io -y linux版本不同docker安装的版本可能也不同 一般有 docker / docker-ce / docker.io 等
+换源 # 先运行一次docker命令 生成文件 docker images # 备份源文件（如果有） cp /etc/docker/daemon.json /etc/docker/daemon.json.bak # 编辑 vim /etc/docker/daemon.json # 填入内容 { &#34;registry-mirrors&#34;: [&#34;https://docker.mirrors.ustc.edu.cn&#34;] } # 保存退出并重启docker service docker restart 其他docker源参考:
+不得不说 docker的火爆程度已经达到的地步， 由于国外docker搭建太慢，国外的安装文档也很全面，这里就不在详述，详情可以点击这里： 正主：Docker 官方镜像加速：http://www.docker-cn.com/registry-mirror 在这里打算记录下使用国内源快速搭建docker的方法：Daocloud极速下载真的是快啊～～～ 在 Linux上 安装 Docker curl -sSL https://get.daocloud.io/docker | sh 适用于Ubuntu，Debian,Centos等大部分Linux，会3小时同步一次Docker官方资源 当然有时候不知道为什么daocloud响应不了，用阿里云的： 用阿里云的： 安装最新版本的Docker Engine curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet| sh - 安装1.9.1版本的Docker Engine curl -sSL http://acs-public-mirror."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>wordpress docker版 从ubuntu装好到打开博客02</title>
+	<link rel="stylesheet" href="https://stc214.github.io/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css" integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://stc214.github.io/">STC214</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://stc214.github.io/posts/">Posts</a>
+				<a href="https://stc214.github.io/about-hugo/">About</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a><a href="https://github.com/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://stc214.github.io/posts/">Posts</a></li>
+			<li><a href="https://stc214.github.io/about-hugo/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Jan 1, 0001</span></div>
+				<h1>wordpress docker版 从ubuntu装好到打开博客02</h1>
+			</header>
+			<div class="content">
+				<h2 id="docker">docker<a href="#docker" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 以树莓派ubuntu server 20.04版为例</span>
+apt install docker.io -y
+</code></pre></div><p>linux版本不同docker安装的版本可能也不同
+一般有 docker / docker-ce / docker.io 等</p>
+<h5 id="换源">换源<a href="#换源" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h5>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 先运行一次docker命令 生成文件</span>
+docker images
+
+<span class="c1"># 备份源文件（如果有）</span>
+cp /etc/docker/daemon.json /etc/docker/daemon.json.bak
+
+<span class="c1"># 编辑</span>
+vim /etc/docker/daemon.json
+
+<span class="c1"># 填入内容</span>
+<span class="o">{</span>
+
+<span class="s2">&#34;registry-mirrors&#34;</span>: <span class="o">[</span><span class="s2">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span><span class="o">]</span>
+
+<span class="o">}</span>
+
+<span class="c1"># 保存退出并重启docker</span> 
+service docker restart
+</code></pre></div><p>其他docker源参考:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json">
+<span class="err">不得不说</span> <span class="err">docker的火爆程度已经达到的地步，</span>
+
+<span class="err">由于国外docker搭建太慢，国外的安装文档也很全面，这里就不在详述，详情可以点击这里：</span>
+
+<span class="err">正主：Docker</span> <span class="err">官方镜像加速：http://www.docker-cn.com/registry-mirror</span>
+
+<span class="err">在这里打算记录下使用国内源快速搭建docker的方法：Daocloud极速下载真的是快啊～～～</span>
+<span class="err">在</span> <span class="err">Linux上</span> <span class="err">安装</span> <span class="err">Docker</span>
+
+<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">https://get.daocloud.io/docker</span> <span class="err">|</span> <span class="err">sh</span> 
+
+<span class="err">适用于Ubuntu，Debian,Centos等大部分Linux，会</span><span class="mi">3</span><span class="err">小时同步一次Docker官方资源</span>
+
+<span class="err">当然有时候不知道为什么daocloud响应不了，用阿里云的：</span>
+
+<span class="err">用阿里云的：</span>
+
+<span class="err">安装最新版本的Docker</span> <span class="err">Engine</span>
+
+<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet|</span> <span class="err">sh</span> <span class="err">-</span>
+
+<span class="err">安装</span><span class="mf">1.9</span><span class="err">.</span><span class="mi">1</span><span class="err">版本的Docker</span> <span class="err">Engine</span>
+
+<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet|</span> <span class="err">sh</span> <span class="err">/dev/stdin</span> <span class="mf">1.9</span><span class="err">.</span><span class="mi">1</span>
+
+<span class="err">如果你的机器是阿里云主机，那么可以通过以下脚本，通过内网地址进行安装。</span>
+
+<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/intranet|</span> <span class="err">sh</span> <span class="err">-</span>
+
+
+<span class="err">安装</span> <span class="err">Docker</span> <span class="err">Compose</span>
+
+<span class="err">Docker</span> <span class="err">Compose存放在Git</span> <span class="err">Hub，不太稳定。</span>
+
+<span class="err">你可以也通过执行下面的命令，高速安装Docker</span> <span class="err">Compose。</span>
+
+<span class="err">curl</span> <span class="err">-L</span> <span class="err">https://get.daocloud.io/docker/compose/releases/download/</span><span class="mf">1.14</span><span class="err">.</span><span class="mi">0</span><span class="err">/docker-compose-`uname</span> <span class="err">-s`-`uname</span> <span class="err">-m`</span> <span class="err">&gt;</span> <span class="err">/usr/local/bin/docker-compose</span>
+
+<span class="err">chmod</span>  <span class="err">+x</span>  <span class="err">/usr/local/bin/docker-compose</span>
+
+<span class="err">你可以通过修改URL中的版本，可以自定义您的需要的版本。</span>
+<span class="err">Docker更换镜像源</span>
+
+<span class="err">有位博主说的好，国内有</span><span class="mi">4</span><span class="err">家感觉还可以的镜像源.</span>
+<span class="err">选择一：老东家的</span>  <span class="err">daocloud：</span>
+
+<span class="err">老东家提供的daocloud加速器，需要用户注册，每个用户每个月限制</span><span class="mi">10</span><span class="err">GB</span>
+
+<span class="err">不过也感觉非常快，注册也相当容器，不需要验证邮箱噢～～～&gt;-&lt;</span>
+
+<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">https://get.daocloud.io/daotools/set_mirror.sh</span> <span class="err">|</span> <span class="err">sh</span> <span class="err">-s</span> <span class="err">http://</span><span class="mf">67e93489</span><span class="err">.m.daocloud.io</span>
+
+<span class="err">curl</span> <span class="err">-sSL</span> <span class="err">https://get.daocloud.io/daotools/set_mirror.sh</span> <span class="err">|</span> <span class="err">sh</span> <span class="err">-s</span> <span class="err">http://f</span><span class="mi">7291398</span><span class="err">.m.daocloud.io</span>
+
+<span class="err">具体来说</span>  <span class="err">daocloud的模式就是将你的id也就是shell</span><span class="mi">123</span><span class="err">转化成</span><span class="mf">67e93489</span><span class="err">，其格式为：</span>
+
+<span class="err">curl-sSL</span> <span class="err">https://get.daocloud.io/daotools/set_mirror.sh</span> <span class="err">|</span> <span class="err">sh-shttp://</span><span class="p">{</span><span class="err">your_id</span><span class="p">}</span><span class="err">.m.daocloud.io</span>
+
+<span class="err">事实上，实际改的是</span>
+
+<span class="err">ExecStart=/usr/bin/docker-current</span> <span class="err">daemon</span> <span class="err">--registry-mirror=http://</span><span class="p">{</span><span class="err">your_id</span><span class="p">}</span><span class="err">.m.daocloud.io\</span>
+
+<span class="err">记得设置后，需要重新启动</span>  <span class="err">sudo</span> <span class="err">service</span> <span class="err">docker</span> <span class="err">restart</span>
+<span class="err">选择二：ustc</span> <span class="err">中科大的docker源</span> <span class="err">也是超级好的</span>
+
+<span class="err">官方文档也写的非常好，有兴趣可以看看</span>
+
+
+<span class="err">配置方法：</span>
+
+<span class="err">新版的</span> <span class="err">Docker</span> <span class="err">使用</span> <span class="err">/etc/docker/daemon.json（Linux）</span> <span class="err">或者</span> <span class="err">%programdata%\docker\config\daemon.json（Windows）</span> <span class="err">来配置</span> <span class="err">Daemon。</span>
+
+<span class="err">请在该配置文件中加入（没有该文件的话，请先建一个）：</span>
+
+<span class="p">{</span>
+
+<span class="nt">&#34;registry-mirrors&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span><span class="p">]</span>
+
+<span class="p">}</span>
+
+<span class="err">亦即：$~</span> <span class="err">sudo</span> <span class="err">vim</span> <span class="err">/etc/docker/daemon.json</span>  <span class="err">写入：</span>
+
+<span class="p">{</span><span class="nt">&#34;registry-mirrors&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span><span class="p">]}</span><span class="err">这一行</span> <span class="err">然后重启docker服务即可.</span>
+
+<span class="err">选择三：网易蜂巢的镜像源，个人感觉上面的镜像好少，而且有时候pull他们的镜像还会失败，不过如果要写dockerfile的话，可以到上面参考参考，dockerfile他们到时写的很详细噢～</span>
+
+<span class="err">$~</span> <span class="err">sudo</span> <span class="err">echo</span><span class="s2">&#34;DOCKER_OPTS=\&#34;--registry-mirror=http://hub-mirror.c.163.com\&#34;&#34;</span><span class="err">&gt;&gt;/etc/default/docker</span>
+
+<span class="err">$~</span> <span class="err">service</span> <span class="err">docker</span> <span class="err">restart</span>
+
+<span class="err">最后一个选择：阿里的alicloud</span>
+
+<span class="err">个人感觉繁琐的是在注册上：不光要注册为阿里云的用户，还得加入开发者平台。不过提着眼睛做完这些以后，它的服务还真是不错，基本</span><span class="mi">1</span><span class="err">MB/s的pull速度(部分原因可能是因为我也在杭州吧)。配置方法跟daocloud类似，也是开通加速器以后给一个url。</span>
+
+<span class="err">ExecStart=/usr/bin/docker-current</span> <span class="err">daemon</span> <span class="err">--registry-mirror=https://</span><span class="p">{</span><span class="err">your_id</span><span class="p">}</span><span class="err">.mirror.aliyuncs.com\</span>
+
+<span class="err">阿里的你们可以去尝试，如果不是阿里云的EMS用户的话，个人不太推荐。</span>
+<span class="err">所以本人</span> <span class="err">强烈推荐！！强烈推荐！！使用ustc的！！！！</span>
+<span class="err">#Docker-machine安装</span>
+
+<span class="err">参照官网的教程：https://docs.docker.com/machine/install-machine/</span>
+
+<span class="err">linux用户安装方式为：$~</span>  <span class="err">curl-L</span> <span class="err">https://github.com/docker/machine/releases/download/v</span><span class="mf">0.10</span><span class="err">.</span><span class="mi">0</span><span class="err">/docker-machine-`uname</span> <span class="err">-s`-`uname</span> <span class="err">-m`</span> <span class="err">&gt;/tmp/docker-machine</span> <span class="err">&amp;&amp;chmod</span> <span class="err">+x</span> <span class="err">/tmp/docker-machine</span> <span class="err">&amp;&amp;</span>  <span class="err">sudo</span> <span class="err">cp</span> <span class="err">/tmp/docker-machine</span> <span class="err">/usr/local/bin/docker-machine</span>
+</code></pre></div><h4 id="拉取docker镜像">拉取docker镜像<a href="#拉取docker镜像" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker pull wordpress  
+
+<span class="c1"># 拉取管理工具</span>
+docker pull portainer/portainer  
+
+</code></pre></div><p>换源之后就快很多了~！</p>
+<h4 id="运行容器">运行容器<a href="#运行容器" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># wordpress</span>
+docker run -d --name wordpress --restart<span class="o">=</span>always -p 8880:80 wordpress
+
+
+<span class="c1"># portainer</span>
+docker volume create portainer_data
+
+docker run -d -p 9000:9000 --name pter --restart<span class="o">=</span>always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+
+
+<span class="c1"># nextcloud</span>
+docker run -d -p 9999:80 --name nextcloud --restart<span class="o">=</span>always -v /media/hardisk1:/inside_docker/hahardisk1 nextcloud
+
+</code></pre></div><p>portainer根据所处环境选择是本地还是远程管理
+参考文章：http://www.senra.me/docker-management-panel-series-portainer/
+<a href="http://stc14.top">http://stc14.top</a>:18080/?p=19</p>
+<h2 id="后续修改">后续修改<a href="#后续修改" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>wordpress容器默认上传限制为2M，这实在是太少了，本文介绍如何修改docker中wordpress的上传限制。
+步骤</p>
+<h6 id="1-进入wordpress容器">1. 进入wordpress容器<a href="#1-进入wordpress容器" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h6>
+<p>docker exec -it wordpress /bin/bash</p>
+<h6 id="wordpress是你wordpress的容器id或名称">wordpress是你wordpress的容器id或名称<a href="#wordpress是你wordpress的容器id或名称" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h6>
+<h6 id="2-复制phpini">2. 复制php.ini<a href="#2-复制phpini" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h6>
+<h6 id="复制配置文件以便php配置生效">复制配置文件，以便php配置生效<a href="#复制配置文件以便php配置生效" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h6>
+<p>cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini</p>
+<h6 id="3-修改phpini">3. 修改php.ini<a href="#3-修改phpini" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h6>
+<p>没有安装文本编辑软件的请参考：https://blog.csdn.net/j84491135/article/details/105938672</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vim /usr/local/etc/php/php.ini
+</code></pre></div><p>找到以下三个关键值，修改成你想要的值，注意 <br>
+memory_limit&gt;post_max_size&gt;upload_max_filesize
+PS：vim查找命令为:/要查找的字符串，n下一个，N上一个</p>
+<p>upload_max_filesize = 200M	#文件大小限制
+post_max_size = 250M	#post大小限制
+memory_limit = 500M		#内存占用限制</p>
+<p>如果还要修改其他配置如开启文件上传、上传超时等等去查配置文件即可，不再赘述。</p>
+<h6 id="4-重启容器">4. 重启容器<a href="#4-重启容器" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h6>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker restart wordpress
+</code></pre></div><h3 id="容器内没有vim的情况">容器内没有vim的情况<a href="#容器内没有vim的情况" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>因为该源是不用GPG验证的，可能不安全，但因为docker容器没有验证GPG的工具所以只能先用这个源然后安装GPG验证相关软件包再更换回正式源。
+步骤</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">mv /etc/apt/sources.list /etc/apt/sources.list.bak
+
+cat <span class="s">&lt;&lt;EOF &gt;/etc/apt/sources.list
+</span><span class="s">deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
+</span><span class="s">deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
+</span><span class="s">EOF</span>
+
+apt update
+</code></pre></div><h3 id="添加docker启动项">添加docker启动项<a href="#添加docker启动项" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/rc.local
+<span class="c1"># 在exit 0之前加入</span>
+
+sudo docker start <span class="k">$(</span>docker ps -a <span class="p">|</span> awk <span class="s1">&#39;{ print $1}&#39;</span> <span class="p">|</span> tail -n +2<span class="k">)</span>
+
+</code></pre></div><p>另外：
+docker中 启动所有的容器命令</p>
+<p>docker start $(docker ps -a | awk &lsquo;{ print $1}&rsquo; | tail -n +2)</p>
+<p>docker中    关闭所有的容器命令</p>
+<p>docker stop $(docker ps -a | awk &lsquo;{ print $1}&rsquo; | tail -n +2)</p>
+<p>docker中 删除所有的容器命令</p>
+<p>docker rm $(docker ps -a | awk &lsquo;{ print $1}&rsquo; | tail -n +2)</p>
+<p>docker中    删除所有的镜像</p>
+<p>docker rmi $(docker images | awk &lsquo;{print $3}&rsquo; |tail -n +2)</p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://stc214.github.io/tags/note">note</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>0001-01-01 08:00 &#43;0800</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="https://stc214.github.io/posts/2020_06_30_15_04_17/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;</span><br><span>wordpress docker版 从ubuntu装好到打开博客01</span>
+			</a>
+			<a class="prev-post" href="https://stc214.github.io/posts/2020_06_30_14_57_09/">
+				<span class="post-nav-label">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>wordpress docker版 从ubuntu装好到打开博客03</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="https://stc214.github.io/">John Doe</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://stc214.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://stc214.github.io/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>

@@ -7,10 +7,81 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 24 Dec 2018 12:29:41 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2020 01:20:58 +0800</lastBuildDate>
     
 	<atom:link href="https://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2020_07_02_01_20_56</title>
+      <link>https://stc214.github.io/posts/2020_07_02_01_20_56/</link>
+      <pubDate>Thu, 02 Jul 2020 01:20:58 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_07_02_01_20_56/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>共享WIFI使用指南</title>
+      <link>https://stc214.github.io/posts/2020_07_01_18_33_15/</link>
+      <pubDate>Wed, 01 Jul 2020 18:33:19 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_07_01_18_33_15/</guid>
+      <description>Author : @强攻共享WIFI  各位亲爱的学弟学妹们大家好啊
+欢迎使用本@强攻共享WIFI
+WIFI不限流量，根据使用人数动态调整带宽
+价钱很便宜
+本WIFI收费标准为1元/24小时（从缴费开通时算起）
+【勉强够电费的，小伙伴们就别嫌贵了。。】
+一次对应一台手机
+开通上网权限可以通过QQ、微信、吱富宝进行
+缴费后加QQ 微信好友进行认证确认后激活权限
+目前本WIFI为试运营状态
+网络设备每日凌晨四点正重启维护一分钟会导致断网
+根据各位小伙伴的使用情况
+将酌情调整带宽和添加设备以增加网速和连接信号
+支付宝（使用支付宝扫一扫 建议先领红包）
+微信(长按后扫一扫)
+QQ (扫一扫后添加)
+以上 祝大家使用开心~</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu - crontab 命令定时执行任务</title>
+      <link>https://stc214.github.io/posts/2020_06_30_15_03_34/</link>
+      <pubDate>Tue, 30 Jun 2020 15:03:37 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_06_30_15_03_34/</guid>
+      <description>处理大规模数据集时，需要等待的时间有时会很久，为了能充分利用晚上时间，发现 Ubuntu 的 crontab 服务是可以定时执行任务的.
+ crontab 服务启动  Ubuntu 16.04 默认有 cron，如果没有，则进行安装：
+sudo apt install cron
+查看 cron 服务是否启动：
+pgrep cron
+若输出了pid，如 883，则 cron 服务已启动.
+若没有任何输出，则cron服务未启动，需手工启动：
+service cron start
+crontab 命令说明  cron 的任务计划保存在 /etc/crontab 文件中，文件内容如：
+/etc/crontab: system-wide crontab Unlike any other crontab you don&amp;rsquo;t have to run the `crontab&amp;rsquo; command to install the new version when you edit this file and files in /etc/cron.d. These files also have username fields, that none of the other crontabs do.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://stc214.github.io/contact/</link>
+      <pubDate>Thu, 23 Apr 2020 20:03:58 +0530</pubDate>
+      
+      <guid>https://stc214.github.io/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://stc214.github.io/about/</link>
+      <pubDate>Thu, 23 Apr 2020 19:57:09 +0530</pubDate>
+      
+      <guid>https://stc214.github.io/about/</guid>
+      <description>Quidque corpore Lorem markdownum verbis. Ipso et felices curvos, interit fulmina avellere sed utendum alte, illas; sumusve huc corpora. Formam cupit, imagine cur tulerunt Ligdo laborum, elige natae, serpens distent quietis sagittas; tuo. Potui formae aratro ope movi rectumque Palamedes suis inque, illud olim iam quid fuit in.
+Sive aeno, coronas illo. Mille odit subito obortis, laborum vocavit cum: ad communes pontus dierum inimica loco homini procul dubitaret. Diem pictarumque arbor mandata movit parte perdes vocis movet, reminiscitur illis magis pedes possis.</description>
+    </item>
     
     <item>
       <title>The &#34;figure&#34; Shortcode</title>
@@ -64,41 +135,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Hugo is the world’s fastest framework for building websites. It is written in Go.
 It makes use of a variety of open source projects including:
  https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper  Learn more and contribute on GitHub.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://stc214.github.io/posts/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://stc214.github.io/posts/goisforlovers/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://stc214.github.io/posts/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://stc214.github.io/posts/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>https://stc214.github.io/posts/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://stc214.github.io/posts/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
   </channel>
