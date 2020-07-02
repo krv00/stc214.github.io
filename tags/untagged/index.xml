@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>untagged on STC214</title>
+    <link>https://stc214.github.io/tags/untagged/</link>
+    <description>Recent content in untagged on STC214</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 01 Jul 2020 22:13:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://stc214.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>用hugo把个人博客建立到gitpages上</title>
+      <link>https://stc214.github.io/posts/2020_07_01_22_13_49/</link>
+      <pubDate>Wed, 01 Jul 2020 22:13:53 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_07_01_22_13_49/</guid>
+      <description>环境准备 1. hugo环境 https://github.com/gohugoio/hugo/releases 如上地址下载对系统所需要的二进制文件 当然如果系统部署了包管理环境的话则可以直接使用工具安装 2. 配置系统环境变量（win） 将hugo.exe的路径放入系统环境变量的path中 重新打开终端  站点创建操作 1. 定位目录 在终端中切换到需要生成站点的目录 2. 创建初始站点 hugo new site sitename 切换到sitename目录即可进行下一步操作
+3. 选择主题文件并应用样式  https://themes.gohugo.io/ 在官方主题站拉取主题到对应主题目录 复制主题exampleSite目录内的所有内容并覆盖到根目录 打开根目录的config.toml并根据需求修改内容即可 修改完毕后在根目录使用
+ 如：https://github.com/Track3/hermit
+使用主题需要注意以下要点否则可能会导致主题在服务器端不生效 命令输入顺序如下：
+cd sitename git init git submodule add https://github.com/Track3/hermit.git themes/hermit hugo -D hugo --theme=hermit --baseUrl=&amp;#39;xxx.github.io&amp;#39; --buildDrafts (注意命令等号左右不加空格) 进入主题文件夹后将配置模板（一般在exampleSite文件夹中）的配置文件config.toml修改，备份主站点主目录的config.toml后贴上修改后的配置文件。 配置模板文件夹中的其他文件复制到主目录
+# 编译 hugo -D #测试 hugo server  即可预览效果
+ 4.部署到github  1.根目录
+&amp;gt; hugo &amp;gt; ``` &amp;gt; 即可生成需要推送到git的项目静态文件于public目录中 &amp;gt; 2.</description>
+    </item>
+    
+  </channel>
+</rss>
