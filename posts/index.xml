@@ -6,8 +6,20 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-CN</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Wed, 01 Jul 2020 22:13:53 +0800</lastBuildDate>
+		<lastBuildDate>Mon, 13 Jul 2020 22:21:58 +0800</lastBuildDate>
 		<atom:link href="https://stc214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>topaz全家桶</title>
+			<link>https://stc214.github.io/posts/2020_07_13_22_21_50/</link>
+			<pubDate>Mon, 13 Jul 2020 22:21:58 +0800</pubDate>
+			
+			<guid>https://stc214.github.io/posts/2020_07_13_22_21_50/</guid>
+			<description>Topaz Video Enhance AI https://cloud.189.cn/t/A7fUzyFzYfMf</description>
+			<content type="html"><![CDATA[<p>Topaz Video Enhance AI
+<a href="https://cloud.189.cn/t/A7fUzyFzYfMf">https://cloud.189.cn/t/A7fUzyFzYfMf</a></p>
+]]></content>
+		</item>
 		
 		<item>
 			<title>用hugo把个人博客建立到gitpages上</title>

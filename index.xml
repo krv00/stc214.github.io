@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 01 Jul 2020 22:13:53 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2020 22:21:58 +0800</lastBuildDate>
     
 	<atom:link href="https://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>topaz全家桶</title>
+      <link>https://stc214.github.io/posts/2020_07_13_22_21_50/</link>
+      <pubDate>Mon, 13 Jul 2020 22:21:58 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_07_13_22_21_50/</guid>
+      <description>Topaz Video Enhance AI https://cloud.189.cn/t/A7fUzyFzYfMf</description>
+    </item>
     
     <item>
       <title>用hugo把个人博客建立到gitpages上</title>
@@ -131,17 +140,6 @@ For example:
       <guid>https://stc214.github.io/posts/creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>About Hugo</title>
-      <link>https://stc214.github.io/about-hugo/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://stc214.github.io/about-hugo/</guid>
-      <description>Hugo is the world’s fastest framework for building websites. It is written in Go.
-It makes use of a variety of open source projects including:
- https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper  Learn more and contribute on GitHub.</description>
     </item>
     
   </channel>
