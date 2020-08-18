@@ -16,7 +16,8 @@
 
 
 
-<meta itemprop="keywords" content="note," /><meta property="og:title" content="wordpress docker版 从ubuntu装好到打开博客02" />
+<meta itemprop="keywords" content="note," />
+<meta property="og:title" content="wordpress docker版 从ubuntu装好到打开博客02" />
 <meta property="og:description" content="docker # 以树莓派ubuntu server 20.04版为例 apt install docker.io -y linux版本不同docker安装的版本可能也不同 一般有 docker / docker-ce / docker.io 等
 换源 # 先运行一次docker命令 生成文件 docker images # 备份源文件（如果有） cp /etc/docker/daemon.json /etc/docker/daemon.json.bak # 编辑 vim /etc/docker/daemon.json # 填入内容 { &#34;registry-mirrors&#34;: [&#34;https://docker.mirrors.ustc.edu.cn&#34;] } # 保存退出并重启docker service docker restart 其他docker源参考:
 不得不说 docker的火爆程度已经达到的地步， 由于国外docker搭建太慢，国外的安装文档也很全面，这里就不在详述，详情可以点击这里： 正主：Docker 官方镜像加速：http://www.docker-cn.com/registry-mirror 在这里打算记录下使用国内源快速搭建docker的方法：Daocloud极速下载真的是快啊～～～ 在 Linux上 安装 Docker curl -sSL https://get.daocloud.io/docker | sh 适用于Ubuntu，Debian,Centos等大部分Linux，会3小时同步一次Docker官方资源 当然有时候不知道为什么daocloud响应不了，用阿里云的： 用阿里云的： 安装最新版本的Docker Engine curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet| sh - 安装1.9.1版本的Docker Engine curl -sSL http://acs-public-mirror." />
