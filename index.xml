@@ -7,14 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Mon, 11 Jan 2021 18:43:34 +0800</lastBuildDate><atom:link href="https://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jan 2021 21:54:52 +0800</lastBuildDate><atom:link href="https://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>2021年1月11日01</title>
+      <title>Gitclone速度太慢的解决方法</title>
+      <link>https://stc214.github.io/posts/gitclone%E9%80%9F%E5%BA%A6%E5%A4%AA%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 11 Jan 2021 21:54:52 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/gitclone%E9%80%9F%E5%BA%A6%E5%A4%AA%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+      <description>原文参考 https://mp.weixin.qq.com/s/ptFBjWXj88fsI3Oh6PghRA 1. GitHub 镜像访问(强烈建议，测试有效) 这里提供两个最常用的镜像地址： https://github.com.cnpmjs.org https://hub.fastgit.org 也就是说上面的镜像就是一个克隆版的Github，你可以访问上面</description>
+    </item>
+    
+    <item>
+      <title>2021年 加油吧</title>
       <link>https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/</link>
       <pubDate>Mon, 11 Jan 2021 18:43:34 +0800</pubDate>
       
       <guid>https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+      <description>2021年 加油吧</description>
     </item>
     
     <item>

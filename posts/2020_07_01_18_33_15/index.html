@@ -37,27 +37,43 @@
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/icomoon.css" />
 <link rel="stylesheet" href="/css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="/css/github-markdown.css" />
 <link rel="stylesheet" href="/css/site.css" />
 
-
 <style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
   a {
     color: seagreen !important;
   }
-</style>
+  
 
-
-
-<style>
-  .inverted a {
+  
+  .inverted a,
+  .inverted a:hover {
      color: darkseagreen !important;
   }
-</style>
+  
 
+  
+  body.default {
+    
+    background-color: black;
+    
 
     
-<link rel="stylesheet" href="/css/github-markdown.css" />
+  }
+  
+
+  
+</style>
+
+    
 
 
   
@@ -66,15 +82,12 @@
 
 
 
+
+
   </head>
 
-  
-  <body style="background: black;">
-  
-    <div class="flip-container">
-      <div class="flipper">
-        <section class="front">
-          
+  <body class="default">
+    
 <nav class="ui secondary inverted menu dream-menu">
 
   <div class="item">
@@ -86,14 +99,19 @@
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
   </div>
+  
 </nav>
 
-          
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
-
-    <section class="ui top attached segment" id="dream-save-post-as-img">
-      <header style="margin-top: 0 !important;">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui attached segment">
+      <header>
         <h1 class="ui large header">
           共享WIFI使用指南
           <div class="sub header">
@@ -101,18 +119,22 @@
             
               STC214
             
-            · Thursday, Jul 2, 2020
-            · 1 分钟阅读
-            · 更新于 Jul 2, 2020
+
+            | 
+                星期四，七月 2 日，2020 年
+              
+
+            | 1 分钟阅读
+
+            | 更新于
+              
+                星期四，七月 2 日，2020 年
+              
           </div>
         </h1>
       </header>
 
-      
-        <img class="ui image" style="margin-top: 2rem;" src="" />
-      
-
-      <article style="margin-top: 2rem;"><h4 id="author--强攻共享wifi">Author : @强攻共享WIFI</h4>
+      <article class="main"><h4 id="author--强攻共享wifi">Author : @强攻共享WIFI</h4>
 <h4 id="avatarhttpsilolinet20200701wxlnkgkzhqprqwdjpg"><img src="https://i.loli.net/2020/07/01/WXLnkGKzHqpRQwD.jpg" alt="avatar"></h4>
 <p>各位亲爱的学弟学妹们大家好啊</p>
 <p>欢迎使用本@强攻共享WIFI</p>
@@ -141,7 +163,7 @@
 </article>
     </section>
 
-    <footer class="ui attached segment dream-tags">
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
       
           <a class="ui label">暂无标签</a>
       
@@ -154,13 +176,13 @@
     </footer>
 
     
-      <footer class="ui attached segment">
+      <footer class="ui attached segment" data-html2canvas-ignore>
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
       </footer>
     
 
     
-      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
         <div id="disqus_thread"></div>
         <script>
           
@@ -183,7 +205,7 @@
     
     
     
-      <div class="ui segment utterances-comments">
+      <div class="ui segment utterances-comments" data-html2canvas-ignore>
         <script src="https://utteranc.es/client.js"
           repo="g1eny0ung/g1eny0ung.github.io"
           issue-term="og:title"
@@ -194,8 +216,25 @@
       </div>
     
 
+    
+
   </div>
-  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+  <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
+    
+    
+      <div class="ui segment toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -205,7 +244,11 @@
     </div>
 
     
-    <div class="ui medium header">STC214 的博客<div class="sub header" style="margin-top: 0.5rem;">多记，就少忘。</div>
+    <div class="ui medium header">
+    
+      STC214 的博客
+      <div class="sub header" style="margin-top: 0.5rem;">多记，就少忘。</div>
+    
     </div>
     
 
@@ -227,13 +270,29 @@
   
   <section class="ui attached center aligned segment dream-tags">
     
-      <a class="ui label" href="/tags/note" title="note">note</a>
+      
+      
+      <a class="ui label" href="/tags/note/" title="Note">
+        Note
+      </a>
     
-      <a class="ui label" href="/tags/tag1" title="tag1">tag1</a>
+      
+      
+      <a class="ui label" href="/tags/tag1/" title="Tag1">
+        Tag1
+      </a>
     
-      <a class="ui label" href="/tags/tag2" title="tag2">tag2</a>
+      
+      
+      <a class="ui label" href="/tags/tag2/" title="Tag2">
+        Tag2
+      </a>
     
-      <a class="ui label" href="/tags/untagged" title="untagged">untagged</a>
+      
+      
+      <a class="ui label" href="/tags/untagged/" title="Untagged">
+        Untagged
+      </a>
     
   </section>
   
@@ -253,32 +312,36 @@
         
           <div class="title">
             <i class="dropdown icon"></i>
-            <a href="/categories/category1" class="item">category1</a>
+            
+            
+            <a class="item" href="/categories/category1/" title="Category1">
+              Category1
+            </a>
           </div>
           <div class="content">
             <div class="ui list">
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/" class="item">2021年1月11日01</a>
+                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/">2021年 加油吧</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_09_06_15_00_36_%E6%AD%A30800/" class="item">ADOBE 2021 下载方式</a>
+                  <a class="item" href="/posts/2020_09_06_15_00_36_%E6%AD%A30800/">ADOBE 2021 下载方式</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_08_30_21_03_10_%E6%AD%A30800/" class="item">小内存手机润滑一法</a>
+                  <a class="item" href="/posts/2020_08_30_21_03_10_%E6%AD%A30800/">小内存手机润滑一法</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_08_25_19_29_02_%E6%AD%A30800/" class="item">数据清理 分手吧 毒瘤的垃圾</a>
+                  <a class="item" href="/posts/2020_08_25_19_29_02_%E6%AD%A30800/">数据清理 分手吧 毒瘤的垃圾</a>
                 </div>
               </div>
             
@@ -291,56 +354,60 @@
         
           <div class="title">
             <i class="dropdown icon"></i>
-            <a href="/categories/note" class="item">note</a>
+            
+            
+            <a class="item" href="/categories/note/" title="Note">
+              Note
+            </a>
           </div>
           <div class="content">
             <div class="ui list">
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_57_42/" class="item">Docker管理面板系列——Portainer(简单、美观、强大)</a>
+                  <a class="item" href="/posts/2020_06_30_14_57_42/">Docker管理面板系列——Portainer(简单、美观、强大)</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_56_01/" class="item">Win10 2004版 win terminal 下载和配色</a>
+                  <a class="item" href="/posts/2020_06_30_14_56_01/">Win10 2004版 win terminal 下载和配色</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_04_17/" class="item">wordpress docker版 从ubuntu装好到打开博客01</a>
+                  <a class="item" href="/posts/2020_06_30_15_04_17/">wordpress docker版 从ubuntu装好到打开博客01</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_02_26/" class="item">wordpress docker版 从ubuntu装好到打开博客02</a>
+                  <a class="item" href="/posts/2020_06_30_15_02_26/">wordpress docker版 从ubuntu装好到打开博客02</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_57_09/" class="item">wordpress docker版 从ubuntu装好到打开博客03</a>
+                  <a class="item" href="/posts/2020_06_30_14_57_09/">wordpress docker版 从ubuntu装好到打开博客03</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_04_54/" class="item">wordpress 必备插件</a>
+                  <a class="item" href="/posts/2020_06_30_15_04_54/">wordpress 必备插件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_02_59/" class="item">关于定时执行任务：Crontab的20个例子</a>
+                  <a class="item" href="/posts/2020_06_30_15_02_59/">关于定时执行任务：Crontab的20个例子</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_48_30/" class="item">开启 cmd cmder 代理</a>
+                  <a class="item" href="/posts/2020_06_30_14_48_30/">开启 cmd cmder 代理</a>
                 </div>
               </div>
             
@@ -396,6 +463,8 @@
   
 
   
+
+  
     <div class="item">
       <a href="https://www.linkedin.com/in/None" target="_blank">
         <i class=" linkedin icon" title="Linkedin"></i>
@@ -441,26 +510,14 @@
   </section>
 </article>
 
-  </div>
+  </aside>
 </div>
 
+          </div>
         </section>
         <section class="back">
-          
-<nav class="ui secondary inverted menu dream-menu">
-
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
-  </div>
-  <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/stc214.github.io\/'"></i>
-  </div>
-  <div class="item">
-    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
-  </div>
-</nav>
-
-          <div class="ui centered relaxed grid dream-grid dream-back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
   
   
   
@@ -512,6 +569,8 @@
   
 
   
+
+  
     <div class="item">
       <a href="https://www.linkedin.com/in/None" target="_blank">
         <i class="large linkedin icon" title="Linkedin"></i>
@@ -560,11 +619,40 @@
   
 </div>
 
+          </div>
         </section>
       </div>
     </div>
 
-    <script src="/js/jquery.min.js"></script>
+    <script>
+  window.defaultDark =  null 
+  window.backgroundDark =  null 
+  window.backgroundImageDark =  null 
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  null 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="/js/jquery.min.js"></script>
 <script src="/js/semantic.min.js"></script>
 <script src="/js/jquery.overlayScrollbars.min.js"></script>
 <script src="/js/header.js"></script>
@@ -590,18 +678,22 @@
 
   function setHighlightTheme() {
     var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    isDark = isDark ? isDark : window.defaultDark ? 'y' : isDark
+
     var lightTheme = "gruvbox-light"
     var darkTheme = "gruvbox-dark"
-    var theme = isDark ? darkTheme : lightTheme
+    var theme = isDark === 'y' ? darkTheme : lightTheme
 
     $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
-    $('pre').css('background', isDark ? '#333' : '')
+    $('pre').css('background', isDark === 'y' ? '#333' : '')
   }
 </script>
 
 
 
 
+
+    
 
     
       

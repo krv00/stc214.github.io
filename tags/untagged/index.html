@@ -36,35 +36,47 @@
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/icomoon.css" />
 <link rel="stylesheet" href="/css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="/css/github-markdown.css" />
 <link rel="stylesheet" href="/css/site.css" />
 
-
 <style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
   a {
     color: seagreen !important;
   }
-</style>
+  
 
-
-
-<style>
-  .inverted a {
+  
+  .inverted a,
+  .inverted a:hover {
      color: darkseagreen !important;
   }
-</style>
+  
 
+  
+  body.default {
+    
+    background-color: black;
+    
+
+    
+  }
+  
+
+  
+</style>
 
      
   </head>
 
-  
-  <body style="background: black;">
-  
-    <div class="flip-container">
-      <div class="flipper">
-        <section class="front">
-          
+  <body class="default">
+    
 <nav class="ui secondary inverted menu dream-menu">
 
   <div class="item">
@@ -76,11 +88,16 @@
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
   </div>
+  
 </nav>
 
-          
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -90,7 +107,11 @@
     </div>
 
     
-    <div class="ui medium header">STC214 的博客<div class="sub header" style="margin-top: 0.5rem;">多记，就少忘。</div>
+    <div class="ui medium header">
+    
+      STC214 的博客
+      <div class="sub header" style="margin-top: 0.5rem;">多记，就少忘。</div>
+    
     </div>
     
 
@@ -112,13 +133,29 @@
   
   <section class="ui attached center aligned segment dream-tags">
     
-      <a class="ui label" href="/tags/note" title="note">note</a>
+      
+      
+      <a class="ui label" href="/tags/note/" title="Note">
+        Note
+      </a>
     
-      <a class="ui label" href="/tags/tag1" title="tag1">tag1</a>
+      
+      
+      <a class="ui label" href="/tags/tag1/" title="Tag1">
+        Tag1
+      </a>
     
-      <a class="ui label" href="/tags/tag2" title="tag2">tag2</a>
+      
+      
+      <a class="ui label" href="/tags/tag2/" title="Tag2">
+        Tag2
+      </a>
     
-      <a class="ui label" href="/tags/untagged" title="untagged">untagged</a>
+      
+      
+      <a class="ui label" href="/tags/untagged/" title="Untagged">
+        Untagged
+      </a>
     
   </section>
   
@@ -138,32 +175,36 @@
         
           <div class="title">
             <i class="dropdown icon"></i>
-            <a href="/categories/category1" class="item">category1</a>
+            
+            
+            <a class="item" href="/categories/category1/" title="Category1">
+              Category1
+            </a>
           </div>
           <div class="content">
             <div class="ui list">
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/" class="item">2021年1月11日01</a>
+                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/">2021年 加油吧</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_09_06_15_00_36_%E6%AD%A30800/" class="item">ADOBE 2021 下载方式</a>
+                  <a class="item" href="/posts/2020_09_06_15_00_36_%E6%AD%A30800/">ADOBE 2021 下载方式</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_08_30_21_03_10_%E6%AD%A30800/" class="item">小内存手机润滑一法</a>
+                  <a class="item" href="/posts/2020_08_30_21_03_10_%E6%AD%A30800/">小内存手机润滑一法</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_08_25_19_29_02_%E6%AD%A30800/" class="item">数据清理 分手吧 毒瘤的垃圾</a>
+                  <a class="item" href="/posts/2020_08_25_19_29_02_%E6%AD%A30800/">数据清理 分手吧 毒瘤的垃圾</a>
                 </div>
               </div>
             
@@ -176,56 +217,60 @@
         
           <div class="title">
             <i class="dropdown icon"></i>
-            <a href="/categories/note" class="item">note</a>
+            
+            
+            <a class="item" href="/categories/note/" title="Note">
+              Note
+            </a>
           </div>
           <div class="content">
             <div class="ui list">
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_57_42/" class="item">Docker管理面板系列——Portainer(简单、美观、强大)</a>
+                  <a class="item" href="/posts/2020_06_30_14_57_42/">Docker管理面板系列——Portainer(简单、美观、强大)</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_56_01/" class="item">Win10 2004版 win terminal 下载和配色</a>
+                  <a class="item" href="/posts/2020_06_30_14_56_01/">Win10 2004版 win terminal 下载和配色</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_04_17/" class="item">wordpress docker版 从ubuntu装好到打开博客01</a>
+                  <a class="item" href="/posts/2020_06_30_15_04_17/">wordpress docker版 从ubuntu装好到打开博客01</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_02_26/" class="item">wordpress docker版 从ubuntu装好到打开博客02</a>
+                  <a class="item" href="/posts/2020_06_30_15_02_26/">wordpress docker版 从ubuntu装好到打开博客02</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_57_09/" class="item">wordpress docker版 从ubuntu装好到打开博客03</a>
+                  <a class="item" href="/posts/2020_06_30_14_57_09/">wordpress docker版 从ubuntu装好到打开博客03</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_04_54/" class="item">wordpress 必备插件</a>
+                  <a class="item" href="/posts/2020_06_30_15_04_54/">wordpress 必备插件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_02_59/" class="item">关于定时执行任务：Crontab的20个例子</a>
+                  <a class="item" href="/posts/2020_06_30_15_02_59/">关于定时执行任务：Crontab的20个例子</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_48_30/" class="item">开启 cmd cmder 代理</a>
+                  <a class="item" href="/posts/2020_06_30_14_48_30/">开启 cmd cmder 代理</a>
                 </div>
               </div>
             
@@ -281,6 +326,8 @@
   
 
   
+
+  
     <div class="item">
       <a href="https://www.linkedin.com/in/None" target="_blank">
         <i class=" linkedin icon" title="Linkedin"></i>
@@ -330,30 +377,20 @@
 
   
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_08_18_17_24_27_%E6%AD%A30800/">
     
-      <img src="/img/default3.jpg" alt="K30U答疑暂定" />
+      <img src="/img/default1.jpg" alt="K30U答疑暂定" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_08_18_17_24_27_%E6%AD%A30800/">K30U答疑暂定</a>
+      <a href="/posts/2020_08_18_17_24_27_%E6%AD%A30800/">K30U答疑暂定</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期二，八月 18 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期二，八月 18 日，2020 年</p>
     </div>
     <div class="description">
       K30至尊版 热不热 跑游戏怎么样 续航如何 (暂定下个视频) 001 小米手机为什么难抢 首先要明白为什么小米可以这么有性价比。 不是因为便宜没好货，小米的所
@@ -361,39 +398,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      5 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>5 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_08_15_17_10_52/">
     
-      <img src="/img/default2.jpg" alt="K30U 从小米之家入手开箱" />
+      <img src="/img/default1.jpg" alt="K30U 从小米之家入手开箱" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
+      <a href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期六，八月 15 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期六，八月 15 日，2020 年</p>
     </div>
     <div class="description">
       00 片头1 2 01 发布会视频 K30至尊纪念版对很多小伙伴来说都相当香了~ 辣么肯定看上的小伙伴们都经历了一波血拼抢货。 02 购机小票 而我，作为除了媒体之
@@ -401,39 +427,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      3 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>3 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_08_13_16_44_25/">
     
-      <img src="/img/default2.jpg" alt="朱孝天患基因疾病，朱孝天目前身体状况如何？" />
+      <img src="/img/default1.jpg" alt="朱孝天患基因疾病，朱孝天目前身体状况如何？" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
+      <a href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期四，八月 13 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期四，八月 13 日，2020 年</p>
     </div>
     <div class="description">
       如何防止盗窃？ 入室行窃在生活中很普遍，是一种让人措手不及的犯罪，常发生于夜晚。那么在生活中，就以下几点希望对大家有用 二、增强防盗意识 1、离家
@@ -441,16 +456,15 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      4 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>4 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_08_13_16_03_33/">
     
@@ -460,20 +474,10 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_08_13_16_03_33/">百度长回答000003</a>
+      <a href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期四，八月 13 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期四，八月 13 日，2020 年</p>
     </div>
     <div class="description">
       家长陪伴青春期孩子有以下几个要点 以身作则。枯燥说教会让敏感青春少年出现逆反心理，家长以身作则，自律才是最好教材和老师。 以诚相待。诚实、及时沟
@@ -481,39 +485,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      2 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>2 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_08_13_15_08_22/">
     
-      <img src="/img/default3.jpg" alt="给孩子购买童书时，是否有必要买带拼音的？" />
+      <img src="/img/default2.jpg" alt="给孩子购买童书时，是否有必要买带拼音的？" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
+      <a href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期四，八月 13 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期四，八月 13 日，2020 年</p>
     </div>
     <div class="description">
       如果儿童已经上了小学三年级，答案是没必要。如果是三年级以下，那么有必要。 孩子最佳识字年龄 一般来说，孩子在三四岁的时候（加粗），词汇量会显著增
@@ -521,39 +514,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      2 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>2 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_08_11_15_33_40/">
     
-      <img src="/img/default2.jpg" alt="小米十周年K30U" />
+      <img src="/img/default4.jpg" alt="小米十周年K30U" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
+      <a href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期二，八月 11 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期二，八月 11 日，2020 年</p>
     </div>
     <div class="description">
       各位小伙伴们大家好啊,8月11日也就是昨天是小米10周年的演讲，相信很多小伙伴已经看了直播。 风风雨雨十年才迎来了今天的小米。那么雷军雷总这个
@@ -561,16 +543,15 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      2 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>2 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_08_08_16_18_09/">
     
@@ -580,20 +561,10 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_08_08_16_18_09/">PS系列01</a>
+      <a href="/posts/2020_08_08_16_18_09/">PS系列01</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期六，八月 8 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期六，八月 8 日，2020 年</p>
     </div>
     <div class="description">
       PS系列 PS吧九级小哥帮朋友求女友的后果 001: https://tieba.baidu.com/p/6866007036 002: https://tieba.baidu.com/p/6860264129 003: https://tieba.baidu.com/p/6866259646 004: https://tieba.baidu.com/p/6862977101 005: https://tieba.baidu.com/p/6854968997
@@ -601,39 +572,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_08_02_23_59_12/">
     
-      <img src="/img/default4.jpg" alt="推推乐脚本" />
+      <img src="/img/default3.jpg" alt="推推乐脚本" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_08_02_23_59_12/">推推乐脚本</a>
+      <a href="/posts/2020_08_02_23_59_12/">推推乐脚本</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          ，八月 2 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期日，八月 2 日，2020 年</p>
     </div>
     <div class="description">
       标题预备： 【GTA5】我已经失去理智啦~！！！ 为了更多的输出(撒气)，UP不惜多次复活 op: 暑假计划 op1 BGM待定 加速倍数待定 愉快表情包 无表情表情
@@ -641,39 +601,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_07_13_22_21_50/">
     
-      <img src="/img/default3.jpg" alt="topaz全家桶" />
+      <img src="/img/default4.jpg" alt="topaz全家桶" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_07_13_22_21_50/">topaz全家桶</a>
+      <a href="/posts/2020_07_13_22_21_50/">topaz全家桶</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期一，七月 13 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期一，七月 13 日，2020 年</p>
     </div>
     <div class="description">
       Topaz Video Enhance AI https://cloud.189.cn/t/A7fUzyFzYfMf Topaz AI Gigapixel https://cloud.189.cn/t/buUbqumANFjm Topaz Mask AI https://cloud.189.cn/t/e2QzIzeueI7b Topaz Sharpen AI https://cloud.189.cn/t/V7vaIvAvu2qa Topaz DeNoise AI https://cloud.189.cn/t/naqUbmbeUzyu Topaz Adjust AI https://cloud.189.cn/t/ZviiMzrMnaee Topaz JPEG to RAW AI https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336 Office2016四合一绿色精简版 https://cloud.189.cn/t/Jrqi63UrAvMb QQ 9.3.6 破解版 https://www.lanzous.com/b1004538
@@ -681,39 +630,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_07_01_22_13_49/">
     
-      <img src="/img/default4.jpg" alt="用hugo把个人博客建立到gitpages上" />
+      <img src="/img/default1.jpg" alt="用hugo把个人博客建立到gitpages上" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
+      <a href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期三，七月 1 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期三，七月 1 日，2020 年</p>
     </div>
     <div class="description">
       环境准备 1. hugo环境 https://github.com/gohugoio/hugo/releases 如上地址下载对系统所需要的二进制文件 当然如果系统部署了包管理环境的话则可以直接使用工具安装 2. 配置系统环境变量（win
@@ -721,41 +659,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      2 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>2 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
+
+  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+    
+
+
+
+  </div>
 </div>
 
-<div class="ui secondary menu dream-menu dream-paginator">
-  
-
-  
-</div>
-
-
+          </div>
         </section>
         <section class="back">
-          
-<nav class="ui secondary inverted menu dream-menu">
-
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
-  </div>
-  <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/stc214.github.io\/'"></i>
-  </div>
-  <div class="item">
-    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
-  </div>
-</nav>
-
-          <div class="ui centered relaxed grid dream-grid dream-back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
   
   
   
@@ -804,6 +729,8 @@
         <i class="large instagram icon" title="Instagram"></i>
       </a>
     </div>
+  
+
   
 
   
@@ -879,11 +806,40 @@
   
 </div>
 
+          </div>
         </section>
       </div>
     </div>
 
-    <script src="/js/jquery.min.js"></script>
+    <script>
+  window.defaultDark =  null 
+  window.backgroundDark =  null 
+  window.backgroundImageDark =  null 
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  null 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="/js/jquery.min.js"></script>
 <script src="/js/semantic.min.js"></script>
 <script src="/js/jquery.overlayScrollbars.min.js"></script>
 <script src="/js/header.js"></script>
@@ -895,6 +851,8 @@
 <script src="/js/masonry.pkgd.min.js"></script>
 <script src="/js/grid.js"></script>
 
+
+    
 
     
       

@@ -36,35 +36,47 @@
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/icomoon.css" />
 <link rel="stylesheet" href="/css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="/css/github-markdown.css" />
 <link rel="stylesheet" href="/css/site.css" />
 
-
 <style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
   a {
     color: seagreen !important;
   }
-</style>
+  
 
-
-
-<style>
-  .inverted a {
+  
+  .inverted a,
+  .inverted a:hover {
      color: darkseagreen !important;
   }
-</style>
+  
 
+  
+  body.default {
+    
+    background-color: black;
+    
+
+    
+  }
+  
+
+  
+</style>
 
      
   </head>
 
-  
-  <body style="background: black;">
-  
-    <div class="flip-container">
-      <div class="flipper">
-        <section class="front">
-          
+  <body class="default">
+    
 <nav class="ui secondary inverted menu dream-menu">
 
   <div class="item">
@@ -76,11 +88,16 @@
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
   </div>
+  
 </nav>
 
-          
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -90,7 +107,11 @@
     </div>
 
     
-    <div class="ui medium header">STC214 的博客<div class="sub header" style="margin-top: 0.5rem;">多记，就少忘。</div>
+    <div class="ui medium header">
+    
+      STC214 的博客
+      <div class="sub header" style="margin-top: 0.5rem;">多记，就少忘。</div>
+    
     </div>
     
 
@@ -112,13 +133,29 @@
   
   <section class="ui attached center aligned segment dream-tags">
     
-      <a class="ui label" href="/tags/note" title="note">note</a>
+      
+      
+      <a class="ui label" href="/tags/note/" title="Note">
+        Note
+      </a>
     
-      <a class="ui label" href="/tags/tag1" title="tag1">tag1</a>
+      
+      
+      <a class="ui label" href="/tags/tag1/" title="Tag1">
+        Tag1
+      </a>
     
-      <a class="ui label" href="/tags/tag2" title="tag2">tag2</a>
+      
+      
+      <a class="ui label" href="/tags/tag2/" title="Tag2">
+        Tag2
+      </a>
     
-      <a class="ui label" href="/tags/untagged" title="untagged">untagged</a>
+      
+      
+      <a class="ui label" href="/tags/untagged/" title="Untagged">
+        Untagged
+      </a>
     
   </section>
   
@@ -138,32 +175,36 @@
         
           <div class="title">
             <i class="dropdown icon"></i>
-            <a href="/categories/category1" class="item">category1</a>
+            
+            
+            <a class="item" href="/categories/category1/" title="Category1">
+              Category1
+            </a>
           </div>
           <div class="content">
             <div class="ui list">
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/" class="item">2021年1月11日01</a>
+                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/">2021年 加油吧</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_09_06_15_00_36_%E6%AD%A30800/" class="item">ADOBE 2021 下载方式</a>
+                  <a class="item" href="/posts/2020_09_06_15_00_36_%E6%AD%A30800/">ADOBE 2021 下载方式</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_08_30_21_03_10_%E6%AD%A30800/" class="item">小内存手机润滑一法</a>
+                  <a class="item" href="/posts/2020_08_30_21_03_10_%E6%AD%A30800/">小内存手机润滑一法</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_08_25_19_29_02_%E6%AD%A30800/" class="item">数据清理 分手吧 毒瘤的垃圾</a>
+                  <a class="item" href="/posts/2020_08_25_19_29_02_%E6%AD%A30800/">数据清理 分手吧 毒瘤的垃圾</a>
                 </div>
               </div>
             
@@ -176,56 +217,60 @@
         
           <div class="title">
             <i class="dropdown icon"></i>
-            <a href="/categories/note" class="item">note</a>
+            
+            
+            <a class="item" href="/categories/note/" title="Note">
+              Note
+            </a>
           </div>
           <div class="content">
             <div class="ui list">
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_57_42/" class="item">Docker管理面板系列——Portainer(简单、美观、强大)</a>
+                  <a class="item" href="/posts/2020_06_30_14_57_42/">Docker管理面板系列——Portainer(简单、美观、强大)</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_56_01/" class="item">Win10 2004版 win terminal 下载和配色</a>
+                  <a class="item" href="/posts/2020_06_30_14_56_01/">Win10 2004版 win terminal 下载和配色</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_04_17/" class="item">wordpress docker版 从ubuntu装好到打开博客01</a>
+                  <a class="item" href="/posts/2020_06_30_15_04_17/">wordpress docker版 从ubuntu装好到打开博客01</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_02_26/" class="item">wordpress docker版 从ubuntu装好到打开博客02</a>
+                  <a class="item" href="/posts/2020_06_30_15_02_26/">wordpress docker版 从ubuntu装好到打开博客02</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_57_09/" class="item">wordpress docker版 从ubuntu装好到打开博客03</a>
+                  <a class="item" href="/posts/2020_06_30_14_57_09/">wordpress docker版 从ubuntu装好到打开博客03</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_04_54/" class="item">wordpress 必备插件</a>
+                  <a class="item" href="/posts/2020_06_30_15_04_54/">wordpress 必备插件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_02_59/" class="item">关于定时执行任务：Crontab的20个例子</a>
+                  <a class="item" href="/posts/2020_06_30_15_02_59/">关于定时执行任务：Crontab的20个例子</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_48_30/" class="item">开启 cmd cmder 代理</a>
+                  <a class="item" href="/posts/2020_06_30_14_48_30/">开启 cmd cmder 代理</a>
                 </div>
               </div>
             
@@ -281,6 +326,8 @@
   
 
   
+
+  
     <div class="item">
       <a href="https://www.linkedin.com/in/None" target="_blank">
         <i class=" linkedin icon" title="Linkedin"></i>
@@ -330,49 +377,36 @@
 
   
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/">
     
-      <img src="/img/cover.jpg" alt="2021年1月11日01" />
+      <img src="/img/cover.jpg" alt="2021年 加油吧" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/">2021年1月11日01</a>
+      <a href="/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/">2021年 加油吧</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期一，一月 11 日，2021 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          
-            Author Name
-          
-        
-      </p>
+      <p class="date">星期一，一月 11 日，2021 年</p>
     </div>
     <div class="description">
-      <p>Cut out summary from your post content here.</p>
+      2021年 加油吧
     </div>
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
+    <div class="author">@&nbsp;Author Name</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_09_06_15_00_36_%E6%AD%A30800/">
     
@@ -382,22 +416,10 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_09_06_15_00_36_%E6%AD%A30800/">ADOBE 2021 下载方式</a>
+      <a href="/posts/2020_09_06_15_00_36_%E6%AD%A30800/">ADOBE 2021 下载方式</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          ，九月 6 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          
-            Author Name
-          
-        
-      </p>
+      <p class="date">星期日，九月 6 日，2020 年</p>
     </div>
     <div class="description">
       ADOBE 2021 开场 小伙伴们大家好。 昨天也就是9月5日。 vposy大神放出了ADOBE系列的两个2021元素版。 PS E 二零二一 和 PR E 二零二一。 这是安装文件
@@ -405,16 +427,15 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
+    <div class="author">@&nbsp;Author Name</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_08_30_21_03_10_%E6%AD%A30800/">
     
@@ -424,22 +445,10 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_08_30_21_03_10_%E6%AD%A30800/">小内存手机润滑一法</a>
+      <a href="/posts/2020_08_30_21_03_10_%E6%AD%A30800/">小内存手机润滑一法</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          ，八月 30 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          
-            Author Name
-          
-        
-      </p>
+      <p class="date">星期日，八月 30 日，2020 年</p>
     </div>
     <div class="description">
       小内存手机润滑一法 今天和大家分享让手机变得更流畅的诸多方法之中， 其中一个小技巧。 应用冻结。 目前比较常见的冻结类APP有。 黑洞， 冰箱， 小黑屋，
@@ -447,16 +456,15 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
+    <div class="author">@&nbsp;Author Name</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_08_25_19_29_02_%E6%AD%A30800/">
     
@@ -466,22 +474,10 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_08_25_19_29_02_%E6%AD%A30800/">数据清理 分手吧 毒瘤的垃圾</a>
+      <a href="/posts/2020_08_25_19_29_02_%E6%AD%A30800/">数据清理 分手吧 毒瘤的垃圾</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期二，八月 25 日，2020 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          
-            Author Name
-          
-        
-      </p>
+      <p class="date">星期二，八月 25 日，2020 年</p>
     </div>
     <div class="description">
       小明独自走在街上。 看着身边一对对年轻人结伴而过。 或异性结伴，或同性执手。 在恋爱的酸臭味中，小明渐感不适。。。 没错，今天是2020年8月25日
@@ -489,41 +485,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      2 分钟阅读
-    </a>
+    <div class="author">@&nbsp;Author Name</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>2 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
+
+  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+    
+
+
+
+  </div>
 </div>
 
-<div class="ui secondary menu dream-menu dream-paginator">
-  
-
-  
-</div>
-
-
+          </div>
         </section>
         <section class="back">
-          
-<nav class="ui secondary inverted menu dream-menu">
-
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
-  </div>
-  <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/stc214.github.io\/'"></i>
-  </div>
-  <div class="item">
-    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
-  </div>
-</nav>
-
-          <div class="ui centered relaxed grid dream-grid dream-back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
   
   
   
@@ -572,6 +555,8 @@
         <i class="large instagram icon" title="Instagram"></i>
       </a>
     </div>
+  
+
   
 
   
@@ -647,11 +632,40 @@
   
 </div>
 
+          </div>
         </section>
       </div>
     </div>
 
-    <script src="/js/jquery.min.js"></script>
+    <script>
+  window.defaultDark =  null 
+  window.backgroundDark =  null 
+  window.backgroundImageDark =  null 
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  null 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="/js/jquery.min.js"></script>
 <script src="/js/semantic.min.js"></script>
 <script src="/js/jquery.overlayScrollbars.min.js"></script>
 <script src="/js/header.js"></script>
@@ -663,6 +677,8 @@
 <script src="/js/masonry.pkgd.min.js"></script>
 <script src="/js/grid.js"></script>
 
+
+    
 
     
       

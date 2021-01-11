@@ -36,35 +36,47 @@
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/icomoon.css" />
 <link rel="stylesheet" href="/css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="/css/github-markdown.css" />
 <link rel="stylesheet" href="/css/site.css" />
 
-
 <style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
   a {
     color: seagreen !important;
   }
-</style>
+  
 
-
-
-<style>
-  .inverted a {
+  
+  .inverted a,
+  .inverted a:hover {
      color: darkseagreen !important;
   }
-</style>
+  
 
+  
+  body.default {
+    
+    background-color: black;
+    
+
+    
+  }
+  
+
+  
+</style>
 
      
   </head>
 
-  
-  <body style="background: black;">
-  
-    <div class="flip-container">
-      <div class="flipper">
-        <section class="front">
-          
+  <body class="default">
+    
 <nav class="ui secondary inverted menu dream-menu">
 
   <div class="item">
@@ -76,11 +88,16 @@
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
   </div>
+  
 </nav>
 
-          
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -90,7 +107,11 @@
     </div>
 
     
-    <div class="ui medium header">STC214 的博客<div class="sub header" style="margin-top: 0.5rem;">多记，就少忘。</div>
+    <div class="ui medium header">
+    
+      STC214 的博客
+      <div class="sub header" style="margin-top: 0.5rem;">多记，就少忘。</div>
+    
     </div>
     
 
@@ -112,13 +133,29 @@
   
   <section class="ui attached center aligned segment dream-tags">
     
-      <a class="ui label" href="/tags/note" title="note">note</a>
+      
+      
+      <a class="ui label" href="/tags/note/" title="Note">
+        Note
+      </a>
     
-      <a class="ui label" href="/tags/tag1" title="tag1">tag1</a>
+      
+      
+      <a class="ui label" href="/tags/tag1/" title="Tag1">
+        Tag1
+      </a>
     
-      <a class="ui label" href="/tags/tag2" title="tag2">tag2</a>
+      
+      
+      <a class="ui label" href="/tags/tag2/" title="Tag2">
+        Tag2
+      </a>
     
-      <a class="ui label" href="/tags/untagged" title="untagged">untagged</a>
+      
+      
+      <a class="ui label" href="/tags/untagged/" title="Untagged">
+        Untagged
+      </a>
     
   </section>
   
@@ -138,32 +175,36 @@
         
           <div class="title">
             <i class="dropdown icon"></i>
-            <a href="/categories/category1" class="item">category1</a>
+            
+            
+            <a class="item" href="/categories/category1/" title="Category1">
+              Category1
+            </a>
           </div>
           <div class="content">
             <div class="ui list">
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/" class="item">2021年1月11日01</a>
+                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8811%E6%97%A501/">2021年 加油吧</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_09_06_15_00_36_%E6%AD%A30800/" class="item">ADOBE 2021 下载方式</a>
+                  <a class="item" href="/posts/2020_09_06_15_00_36_%E6%AD%A30800/">ADOBE 2021 下载方式</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_08_30_21_03_10_%E6%AD%A30800/" class="item">小内存手机润滑一法</a>
+                  <a class="item" href="/posts/2020_08_30_21_03_10_%E6%AD%A30800/">小内存手机润滑一法</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_08_25_19_29_02_%E6%AD%A30800/" class="item">数据清理 分手吧 毒瘤的垃圾</a>
+                  <a class="item" href="/posts/2020_08_25_19_29_02_%E6%AD%A30800/">数据清理 分手吧 毒瘤的垃圾</a>
                 </div>
               </div>
             
@@ -176,56 +217,60 @@
         
           <div class="title">
             <i class="dropdown icon"></i>
-            <a href="/categories/note" class="item">note</a>
+            
+            
+            <a class="item" href="/categories/note/" title="Note">
+              Note
+            </a>
           </div>
           <div class="content">
             <div class="ui list">
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_57_42/" class="item">Docker管理面板系列——Portainer(简单、美观、强大)</a>
+                  <a class="item" href="/posts/2020_06_30_14_57_42/">Docker管理面板系列——Portainer(简单、美观、强大)</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_56_01/" class="item">Win10 2004版 win terminal 下载和配色</a>
+                  <a class="item" href="/posts/2020_06_30_14_56_01/">Win10 2004版 win terminal 下载和配色</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_04_17/" class="item">wordpress docker版 从ubuntu装好到打开博客01</a>
+                  <a class="item" href="/posts/2020_06_30_15_04_17/">wordpress docker版 从ubuntu装好到打开博客01</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_02_26/" class="item">wordpress docker版 从ubuntu装好到打开博客02</a>
+                  <a class="item" href="/posts/2020_06_30_15_02_26/">wordpress docker版 从ubuntu装好到打开博客02</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_57_09/" class="item">wordpress docker版 从ubuntu装好到打开博客03</a>
+                  <a class="item" href="/posts/2020_06_30_14_57_09/">wordpress docker版 从ubuntu装好到打开博客03</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_04_54/" class="item">wordpress 必备插件</a>
+                  <a class="item" href="/posts/2020_06_30_15_04_54/">wordpress 必备插件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_15_02_59/" class="item">关于定时执行任务：Crontab的20个例子</a>
+                  <a class="item" href="/posts/2020_06_30_15_02_59/">关于定时执行任务：Crontab的20个例子</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/2020_06_30_14_48_30/" class="item">开启 cmd cmder 代理</a>
+                  <a class="item" href="/posts/2020_06_30_14_48_30/">开启 cmd cmder 代理</a>
                 </div>
               </div>
             
@@ -281,6 +326,8 @@
   
 
   
+
+  
     <div class="item">
       <a href="https://www.linkedin.com/in/None" target="_blank">
         <i class=" linkedin icon" title="Linkedin"></i>
@@ -330,30 +377,20 @@
 
   
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_06_30_14_57_42/">
     
-      <img src="/img/default1.jpg" alt="Docker管理面板系列——Portainer(简单、美观、强大)" />
+      <img src="/img/default4.jpg" alt="Docker管理面板系列——Portainer(简单、美观、强大)" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_06_30_14_57_42/">Docker管理面板系列——Portainer(简单、美观、强大)</a>
+      <a href="/posts/2020_06_30_14_57_42/">Docker管理面板系列——Portainer(简单、美观、强大)</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期一，一月 1 日，1 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期一，一月 1 日，1 年</p>
     </div>
     <div class="description">
       原文：http://www.senra.me/docker-management-panel-series-portainer/ 一.介绍 Po
@@ -361,39 +398,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      4 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>4 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_06_30_14_56_01/">
     
-      <img src="/img/default1.jpg" alt="Win10 2004版 win terminal 下载和配色" />
+      <img src="/img/default3.jpg" alt="Win10 2004版 win terminal 下载和配色" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_06_30_14_56_01/">Win10 2004版 win terminal 下载和配色</a>
+      <a href="/posts/2020_06_30_14_56_01/">Win10 2004版 win terminal 下载和配色</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期一，一月 1 日，1 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期一，一月 1 日，1 年</p>
     </div>
     <div class="description">
       下载 本步骤可能需要梯子 打开任务栏搜索图标 搜索store 打开 搜索terminal 下载安装即可 简单配置 打开win terminal 点窗口标题栏的 + 点设置打开配置
@@ -401,16 +427,15 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_06_30_15_04_17/">
     
@@ -420,20 +445,10 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_06_30_15_04_17/">wordpress docker版 从ubuntu装好到打开博客01</a>
+      <a href="/posts/2020_06_30_15_04_17/">wordpress docker版 从ubuntu装好到打开博客01</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期一，一月 1 日，1 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期一，一月 1 日，1 年</p>
     </div>
     <div class="description">
       apt换源 # 备份源地址文件 cp /etc/apt/sources.list /etc/apt/sources.list.bak # 编辑源地址文件 vim /etc/apt/sources.list # 替换源地址 一般没有特别情况直接讲域名替换为国内源的域名即可 其他内容无需修改 # vim内搜
@@ -441,16 +456,15 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      2 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>2 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_06_30_15_02_26/">
     
@@ -460,20 +474,10 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_06_30_15_02_26/">wordpress docker版 从ubuntu装好到打开博客02</a>
+      <a href="/posts/2020_06_30_15_02_26/">wordpress docker版 从ubuntu装好到打开博客02</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期一，一月 1 日，1 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期一，一月 1 日，1 年</p>
     </div>
     <div class="description">
       docker # 以树莓派ubuntu server 20.04版为例 apt install docker.io -y linux版本不同docker安装的版本可能也不同 一般有 docker / docker-ce / docker.io 等 换源 # 先运行一次doc
@@ -481,39 +485,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      5 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>5 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_06_30_14_57_09/">
     
-      <img src="/img/default3.jpg" alt="wordpress docker版 从ubuntu装好到打开博客03" />
+      <img src="/img/default1.jpg" alt="wordpress docker版 从ubuntu装好到打开博客03" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_06_30_14_57_09/">wordpress docker版 从ubuntu装好到打开博客03</a>
+      <a href="/posts/2020_06_30_14_57_09/">wordpress docker版 从ubuntu装好到打开博客03</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期一，一月 1 日，1 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期一，一月 1 日，1 年</p>
     </div>
     <div class="description">
       发布 绑定域名 访问 简单的局域网环境访问 直接用过ip+设置的端口即可直接访问 如果路由器有端口转发功能也需要设置 外网访问 1.通过ddns将设置的域
@@ -521,16 +514,15 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_06_30_15_04_54/">
     
@@ -540,20 +532,10 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_06_30_15_04_54/">wordpress 必备插件</a>
+      <a href="/posts/2020_06_30_15_04_54/">wordpress 必备插件</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期一，一月 1 日，1 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期一，一月 1 日，1 年</p>
     </div>
     <div class="description">
       WP-China-Yes 这是一个颠覆性的插件，她将全面改善中国大陆站点在访问WP官方服务时的用户体验，其原理是将位于国外的官方仓库源替换为由社区志愿者维护的国内源
@@ -561,39 +543,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_06_30_15_02_59/">
     
-      <img src="/img/default3.jpg" alt="关于定时执行任务：Crontab的20个例子" />
+      <img src="/img/default1.jpg" alt="关于定时执行任务：Crontab的20个例子" />
     
   </a>
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_06_30_15_02_59/">关于定时执行任务：Crontab的20个例子</a>
+      <a href="/posts/2020_06_30_15_02_59/">关于定时执行任务：Crontab的20个例子</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期一，一月 1 日，1 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期一，一月 1 日，1 年</p>
     </div>
     <div class="description">
       简介 Linux crontab和Windows task schedules非常的相似。Crontab可以用来在系统中定期的执行任务。比如：写了一个爬虫需要每天
@@ -601,16 +572,15 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      3 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>3 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://stc214.github.io/posts/2020_06_30_14_48_30/">
     
@@ -620,20 +590,10 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://stc214.github.io/posts/2020_06_30_14_48_30/">开启 cmd cmder 代理</a>
+      <a href="/posts/2020_06_30_14_48_30/">开启 cmd cmder 代理</a>
     </h2>
     <div class="meta">
-      <p class="date">
-        
-          星期一，一月 1 日，1 年
-        
-      </p>
-      <p class="author">
-        @
-        
-          STC214
-        
-      </p>
+      <p class="date">星期一，一月 1 日，1 年</p>
     </div>
     <div class="description">
       win10安装了ShadowSocks软件，浏览器通过代理后就可以***，但有时候需要通过cmd科学下载安装一些组件，就需要设置一下cmd的
@@ -641,41 +601,28 @@
   </div>
 
   <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 分钟阅读</div>
   </div>
 </article>
 
     </div>
   
+
+  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+    
+
+
+
+  </div>
 </div>
 
-<div class="ui secondary menu dream-menu dream-paginator">
-  
-
-  
-</div>
-
-
+          </div>
         </section>
         <section class="back">
-          
-<nav class="ui secondary inverted menu dream-menu">
-
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
-  </div>
-  <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/stc214.github.io\/'"></i>
-  </div>
-  <div class="item">
-    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
-  </div>
-</nav>
-
-          <div class="ui centered relaxed grid dream-grid dream-back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
   
   
   
@@ -724,6 +671,8 @@
         <i class="large instagram icon" title="Instagram"></i>
       </a>
     </div>
+  
+
   
 
   
@@ -799,11 +748,40 @@
   
 </div>
 
+          </div>
         </section>
       </div>
     </div>
 
-    <script src="/js/jquery.min.js"></script>
+    <script>
+  window.defaultDark =  null 
+  window.backgroundDark =  null 
+  window.backgroundImageDark =  null 
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  null 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="/js/jquery.min.js"></script>
 <script src="/js/semantic.min.js"></script>
 <script src="/js/jquery.overlayScrollbars.min.js"></script>
 <script src="/js/header.js"></script>
@@ -815,6 +793,8 @@
 <script src="/js/masonry.pkgd.min.js"></script>
 <script src="/js/grid.js"></script>
 
+
+    
 
     
       
