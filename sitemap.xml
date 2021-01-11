@@ -28,31 +28,6 @@
   </url>
   
   <url>
-    <loc>https://stc214.github.io/categories/</loc>
-    <lastmod>2020-09-06T15:00:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stc214.github.io/categories/category1/</loc>
-    <lastmod>2020-09-06T15:00:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stc214.github.io/tags/tag1/</loc>
-    <lastmod>2020-09-06T15:00:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stc214.github.io/tags/tag2/</loc>
-    <lastmod>2020-09-06T15:00:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stc214.github.io/tags/</loc>
-    <lastmod>2020-09-06T15:00:39+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stc214.github.io/posts/2020_08_30_21_03_10_%E6%AD%A30800/</loc>
     <lastmod>2020-08-30T21:03:14+08:00</lastmod>
   </url>
@@ -69,6 +44,11 @@
   
   <url>
     <loc>https://stc214.github.io/posts/2020_08_18_17_24_27_%E6%AD%A30800/</loc>
+    <lastmod>2020-08-18T17:24:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/tags/</loc>
     <lastmod>2020-08-18T17:24:30+08:00</lastmod>
   </url>
   
@@ -130,6 +110,10 @@
   <url>
     <loc>https://stc214.github.io/posts/2020_06_30_15_03_34/</loc>
     <lastmod>2020-06-30T15:03:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stc214.github.io/categories/</loc>
   </url>
   
   <url>
