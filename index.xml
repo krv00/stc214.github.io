@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Mon, 11 Jan 2021 21:54:52 +0800</lastBuildDate><atom:link href="https://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jan 2021 18:17:06 +0800</lastBuildDate><atom:link href="https://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx_反向代理达到科学上网的目的</title>
+      <link>https://stc214.github.io/posts/nginx_%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%BE%BE%E5%88%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E7%9B%AE%E7%9A%84/</link>
+      <pubDate>Tue, 12 Jan 2021 18:17:06 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/nginx_%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%BE%BE%E5%88%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E7%9B%AE%E7%9A%84/</guid>
+      <description>需要科学但是尚未进入名单的地址 1.打开 https://www.ipaddress.com/ 2.填入目标域名获取目标ip 3.得到的结果写入host 4.刷新dns缓存（重启，清理浏览器缓存,ip</description>
+    </item>
+    
     <item>
       <title>Gitclone速度太慢的解决方法</title>
       <link>https://stc214.github.io/posts/gitclone%E9%80%9F%E5%BA%A6%E5%A4%AA%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
@@ -140,7 +149,7 @@
       <pubDate>Mon, 13 Jul 2020 22:21:58 +0800</pubDate>
       
       <guid>https://stc214.github.io/posts/2020_07_13_22_21_50/</guid>
-      <description>Topaz Video Enhance AI https://cloud.189.cn/t/A7fUzyFzYfMf Topaz AI Gigapixel https://cloud.189.cn/t/buUbqumANFjm Topaz Mask AI https://cloud.189.cn/t/e2QzIzeueI7b Topaz Sharpen AI https://cloud.189.cn/t/V7vaIvAvu2qa Topaz DeNoise AI https://cloud.189.cn/t/naqUbmbeUzyu Topaz Adjust AI https://cloud.189.cn/t/ZviiMzrMnaee Topaz JPEG to RAW AI https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336 Office2016四合一绿色精简版 https://cloud.189.cn/t/Jrqi63UrAvMb QQ 9.3.6 破解版 https://www.lanzous.com/b1004538</description>
+      <description>Topaz Video Enhance AI https://cloud.189.cn/t/A7fUzyFzYfMf Topaz AI Gigapixel https://cloud.189.cn/t/buUbqumANFjm Topaz Mask AI https://cloud.189.cn/t/e2QzIzeueI7b Topaz Sharpen AI https://cloud.189.cn/t/V7vaIvAvu2qa Topaz DeNoise AI https://cloud.189.cn/t/naqUbmbeUzyu Topaz Adjust AI https://cloud.189.cn/t/ZviiMzrMnaee Topaz JPEG to RAW AI https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336 Office2016四合一绿色精简版 https://cloud.189.cn/t/Jrqi63UrAvMb QQ 9.3.6 破解版 https://www.lanzous.com/b1004538 如果需要密码就是ccava</description>
     </item>
     
     <item>
