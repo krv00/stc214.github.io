@@ -27,15 +27,6 @@
     </item>
     
     <item>
-      <title>Gitclone速度太慢的解决方法</title>
-      <link>https://stc214.github.io/posts/gitclone%E9%80%9F%E5%BA%A6%E5%A4%AA%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Mon, 11 Jan 2021 21:54:52 +0800</pubDate>
-      
-      <guid>https://stc214.github.io/posts/gitclone%E9%80%9F%E5%BA%A6%E5%A4%AA%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
-      <description>原文参考 https://mp.weixin.qq.com/s/ptFBjWXj88fsI3Oh6PghRA 1. GitHub 镜像访问(强烈建议，测试有效) 这里提供两个最常用的镜像地址： https://github.com.cnpmjs.org https://hub.fastgit.org 也就是说上面的镜像就是一个克隆版的Github，你可以访问上面</description>
-    </item>
-    
-    <item>
       <title>开启 cmd cmder 代理</title>
       <link>https://stc214.github.io/posts/2020_06_30_14_48_30/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
