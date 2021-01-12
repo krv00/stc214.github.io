@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>wordpress docker版 从ubuntu装好到打开博客03 | STC214</title>
+    <title>2021年1月12日03 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -12,27 +12,28 @@
 
 
 
-<meta name="author" content="STC214" />
-<meta name="description" content="发布 绑定域名 访问 简单的局域网环境访问 直接用过ip&#43;设置的端口即可直接访问 如果路由器有端口转发功能也需要设置 外网访问 1.通过ddns将设置的域" />
+<meta name="author" content="Author Name" />
+<meta name="description" content="原文链接： https://www.jianshu.com/p/280c6a6f2594 插图最基础的格式就是： ![Alt text](图片链接 &amp;quot;optional title&amp;quot;) Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2020_06_30_14_57_09/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/" />
 
 
-<meta property="og:title" content="wordpress docker版 从ubuntu装好到打开博客03" />
-<meta property="og:description" content="发布 绑定域名 访问 简单的局域网环境访问 直接用过ip&#43;设置的端口即可直接访问 如果路由器有端口转发功能也需要设置 外网访问 1.通过ddns将设置的域" />
+<meta property="og:title" content="2021年1月12日03" />
+<meta property="og:description" content="原文链接： https://www.jianshu.com/p/280c6a6f2594 插图最基础的格式就是： ![Alt text](图片链接 &quot;optional title&quot;) Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2020_06_30_14_57_09/" />
-
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/" />
+<meta property="article:published_time" content="2021-01-12T23:47:12+08:00" />
+<meta property="article:modified_time" content="2021-01-12T23:47:12+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="wordpress docker版 从ubuntu装好到打开博客03"/>
-<meta name="twitter:description" content="发布 绑定域名 访问 简单的局域网环境访问 直接用过ip&#43;设置的端口即可直接访问 如果路由器有端口转发功能也需要设置 外网访问 1.通过ddns将设置的域"/>
+<meta name="twitter:title" content="2021年1月12日03"/>
+<meta name="twitter:description" content="原文链接： https://www.jianshu.com/p/280c6a6f2594 插图最基础的格式就是： ![Alt text](图片链接 &quot;optional title&quot;) Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -109,62 +110,89 @@
 <div class="ui centered relaxed grid dream-grid">
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
+    <section class="ui top attached segment cover">
+      <div class="cover-img" style="background-image: url(/img/cover.jpg);"></div>
+    </section>
+    
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          wordpress docker版 从ubuntu装好到打开博客03
+          2021年1月12日03
           <div class="sub header">
             @
             
-              STC214
+              
+                Author Name
+              
             
 
             | 
-                星期一，一月 1 日，1 年
+                星期二，一月 12 日，2021 年
               
 
-            | 1 分钟阅读
+            | 2 分钟阅读
 
             | 更新于
               
-                星期一，一月 1 日，1 年
+                星期二，一月 12 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><h2 id="发布-绑定域名-访问">发布 绑定域名 访问</h2>
-<h5 id="简单的局域网环境访问">简单的局域网环境访问</h5>
-<p>直接用过ip+设置的端口即可直接访问
-如果路由器有端口转发功能也需要设置</p>
-<h5 id="外网访问">外网访问</h5>
-<p>1.通过ddns将设置的域名解析到路由器上</p>
-<p>2.设置路由器防火墙规则
-品牌路由官方固件则直接无视 一般防火墙规则会在设置端口转发等相关功能之后自动设置
-软路由则按照规则（不了解则默认全部选择接受）设置</p>
-<p>3.设置端口转发</p>
-<p>OK 到此应该可以正常公网使用域名访问了</p>
-<h5 id="访问不了">访问不了</h5>
-<ol>
-<li>通过命令行刷新dns缓存</li>
-<li>检查ddns设置</li>
-<li>检查ddns日志是否成功更新ip</li>
-<li>检查域名是否已经更新好ip</li>
-<li>一切正常依然无法访问再次刷新dns滑轮</li>
-<li>步骤1-5全部检查无误依然不行则属于路由器固件问题</li>
-</ol>
-<h6 id="推荐lean的固件">推荐lean的固件</h6>
-<p>下载地址在恩山论坛搜索</p>
-<h5 id="树莓派固件项目地址">树莓派固件项目地址：</h5>
-<p><a href="https://github.com/SuLingGG/OpenWrt-Rpi">https://github.com/SuLingGG/OpenWrt-Rpi</a>
-<a href="https://github.com/scenerycm/OpenWrt-Raspi">https://github.com/scenerycm/OpenWrt-Raspi</a></p>
-</article>
+      <article class="main"><p>原文链接： <a href="https://www.jianshu.com/p/280c6a6f2594">https://www.jianshu.com/p/280c6a6f2594</a></p>
+<h2 id="插图最基础的格式就是">插图最基础的格式就是：</h2>
+<pre><code>![Alt text](图片链接 &quot;optional title&quot;)
+
+Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 图片链接：可以是图片的本地地址或者是网址。&quot;optional title&quot;：鼠标悬置于图片上会出现的标题文字，可以不写。
+</code></pre>
+<h3 id="插入本地图片">插入本地图片</h3>
+<p>只需要在基础语法的括号中填入图片的位置路径即可，支持绝对路径和相对路径。
+例如：</p>
+<pre><code>![avatar](/home/picture/1.png)
+
+不灵活不好分享，本地图片的路径更改或丢失都会造成markdown文件调不出图。
+</code></pre>
+<h3 id="插入网络图片">插入网络图片</h3>
+<p>只需要在基础语法的括号中填入图片的网络链接即可，现在已经有很多免费/收费图床和方便传图的小工具可选。
+例如：</p>
+<pre><code>![avatar](http://baidu.com/pic/doge.png)
+
+将图片存在网络服务器上，非常依赖网络。
+</code></pre>
+<h3 id="把图片存入markdown文件">把图片存入markdown文件</h3>
+<p>用base64转码工具把图片转成一段字符串，然后把字符串填到基础格式中链接的那个位置。</p>
+<pre><code>基础用法：
+![avatar](data:image/png;base64,iVBORw0......)
+这个时候会发现插入的这一长串字符串会把整个文章分割开，非常影响编写文章时的体验。如果能够把大段的base64字符串放在文章末尾，然后在文章中通过一个id来调用，文章就不会被分割的这么乱了。
+高级用法
+比如：
+![avatar][base64str]
+[base64str]:data:image/png;base64,iVBORw0......
+</code></pre>
+<p>最后，base64的图片编码如何得来？</p>
+<h3 id="使用python将图片转化为base64字符串">使用python将图片转化为base64字符串</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> base64
+f<span style="color:#f92672">=</span>open(<span style="color:#e6db74">&#39;723.png&#39;</span>,<span style="color:#e6db74">&#39;rb&#39;</span>) <span style="color:#75715e">#二进制方式打开图文件</span>
+ls_f<span style="color:#f92672">=</span>base64<span style="color:#f92672">.</span>b64encode(f<span style="color:#f92672">.</span>read()) <span style="color:#75715e">#读取文件内容，转换为base64编码</span>
+f<span style="color:#f92672">.</span>close()
+<span style="color:#66d9ef">print</span>(ls_f)
+</code></pre></div><h3 id="base64字符串转化为图片">base64字符串转化为图片</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> base64
+bs<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;iVBORw0KGgoAAAANSUhEUg....&#39;</span> <span style="color:#75715e"># 太长了省略</span>
+imgdata<span style="color:#f92672">=</span>base64<span style="color:#f92672">.</span>b64decode(bs)
+file<span style="color:#f92672">=</span>open(<span style="color:#e6db74">&#39;2.jpg&#39;</span>,<span style="color:#e6db74">&#39;wb&#39;</span>)
+file<span style="color:#f92672">.</span>write(imgdata)
+file<span style="color:#f92672">.</span>close()
+</code></pre></div></article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
       
         
-          <a class="ui label" href="/tags/note" title="note">note</a>
+          <a class="ui label" href="/tags/note" title="Note">Note</a>
+        
+          <a class="ui label" href="/tags/%E7%AC%94%E8%AE%B0" title="笔记">笔记</a>
         
       
       <div
@@ -189,8 +217,8 @@
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2020_06_30_14_57_09\/';  
-            this.page.identifier = '\/posts\/2020_06_30_14_57_09\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B41%E6%9C%8812%E6%97%A503\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B41%E6%9C%8812%E6%97%A503\/'; 
           };
 
           (function() { 
@@ -225,9 +253,13 @@
       <div class="ui segment toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#发布-绑定域名-访问">发布 绑定域名 访问</a>
+    <li><a href="#插图最基础的格式就是">插图最基础的格式就是：</a>
       <ul>
-        <li></li>
+        <li><a href="#插入本地图片">插入本地图片</a></li>
+        <li><a href="#插入网络图片">插入网络图片</a></li>
+        <li><a href="#把图片存入markdown文件">把图片存入markdown文件</a></li>
+        <li><a href="#使用python将图片转化为base64字符串">使用python将图片转化为base64字符串</a></li>
+        <li><a href="#base64字符串转化为图片">base64字符串转化为图片</a></li>
       </ul>
     </li>
   </ul>
