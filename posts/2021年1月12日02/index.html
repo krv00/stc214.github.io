@@ -13,7 +13,7 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="原文： https://blog.csdn.net/weixin_44903718/article/details/108541002 前言 Hugo 这种静态站点默认没有搜索功能，大概因为没了数据库实现反而不方便。Search for your Hugo Website 列出了一些可选项，要么自己生成索引用开源的" />
+<meta name="description" content="原文： https://blog.humblepg.com/post/2019/06/hugo-search.html Hugo 这种静态站点默认没有搜索功能，大概因为没了数据库实现反而不方便。Search for your Hugo Website 列出了一些可选项，要么自己生成索引用开源的工具" />
 
 
 
@@ -23,7 +23,7 @@
 
 
 <meta property="og:title" content="给hugo增加搜索功能" />
-<meta property="og:description" content="原文： https://blog.csdn.net/weixin_44903718/article/details/108541002 前言 Hugo 这种静态站点默认没有搜索功能，大概因为没了数据库实现反而不方便。Search for your Hugo Website 列出了一些可选项，要么自己生成索引用开源的" />
+<meta property="og:description" content="原文： https://blog.humblepg.com/post/2019/06/hugo-search.html Hugo 这种静态站点默认没有搜索功能，大概因为没了数据库实现反而不方便。Search for your Hugo Website 列出了一些可选项，要么自己生成索引用开源的工具" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A502/" />
 <meta property="article:published_time" content="2021-01-12T23:15:58+08:00" />
@@ -33,7 +33,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="给hugo增加搜索功能"/>
-<meta name="twitter:description" content="原文： https://blog.csdn.net/weixin_44903718/article/details/108541002 前言 Hugo 这种静态站点默认没有搜索功能，大概因为没了数据库实现反而不方便。Search for your Hugo Website 列出了一些可选项，要么自己生成索引用开源的"/>
+<meta name="twitter:description" content="原文： https://blog.humblepg.com/post/2019/06/hugo-search.html Hugo 这种静态站点默认没有搜索功能，大概因为没了数据库实现反而不方便。Search for your Hugo Website 列出了一些可选项，要么自己生成索引用开源的工具"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -140,34 +140,33 @@
         </h1>
       </header>
 
-      <article class="main"><p>原文： <a href="https://blog.csdn.net/weixin_44903718/article/details/108541002">https://blog.csdn.net/weixin_44903718/article/details/108541002</a></p>
-<p>前言</p>
+      <article class="main"><p>原文： <a href="https://blog.humblepg.com/post/2019/06/hugo-search.html">https://blog.humblepg.com/post/2019/06/hugo-search.html</a></p>
 <p>Hugo 这种静态站点默认没有搜索功能，大概因为没了数据库实现反而不方便。Search for your Hugo Website 列出了一些可选项，要么自己生成索引用开源的工具搜索，要么用第三方搜索服务如 algolia。</p>
-<p>自己来的方案里我选择 Github Gist for Fuse.js integration，因为它不需要另外引入 Node.js、 Grunt 或 Gulp，而是利用 Hugo 内置的功能在 build 的时候生成索引输出到 JSON，看起来更简单的样子。
+<p>其实 algolia 也是运营几年的熟脸，提供的免费方案小网站也够用，但是还是第三方依赖，配置的动作同样还是要做的，不如自己来。</p>
+<p>自己来的方案里我选择 Github Gist for Fuse.js integration，因为它不需要另外引入 Node.js、 Grunt 或 Gulp，而是利用 Hugo 内置的功能在 build 的时候生成索引输出到 JSON，看起来更简单的样子。</p>
+<p>以下内容参照以上链接，我重新演绎一下。
 输出索引文件
-第一步</p>
-<p>修改配置文件 Config.toml，添加以下内容</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[outputs]
+第一步：修改配置文件 Config.toml，添加以下内容</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">[outputs]
   home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
-</code></pre></div><p>第二步</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- $.Scratch.Add &#34;index&#34; slice -}}
-{{- range .Site.RegularPages -}}
-    {{- $.Scratch.Add &#34;index&#34; (dict &#34;title&#34; .Title &#34;tags&#34; .Params.tags &#34;categories&#34; .Params.categories &#34;contents&#34; .Plain &#34;permalink&#34; .Permalink) -}}
-{{- end -}}
-{{- $.Scratch.Get &#34;index&#34; | jsonify -}}
+</code></pre></div><p>第二步：创建 layouts/_default/index.json</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">$.Scratch.Add</span> <span style="color:#f92672">&#34;index&#34;</span> <span style="color:#960050;background-color:#1e0010">slice</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
+{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">range</span> <span style="color:#960050;background-color:#1e0010">.Site.RegularPages</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
+    {<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">$.Scratch.Add</span> <span style="color:#f92672">&#34;index&#34;</span> <span style="color:#960050;background-color:#1e0010">(dict</span> <span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#960050;background-color:#1e0010">.Title</span> <span style="color:#e6db74">&#34;tags&#34;</span> <span style="color:#960050;background-color:#1e0010">.Params.tags</span> <span style="color:#e6db74">&#34;categories&#34;</span> <span style="color:#960050;background-color:#1e0010">.Params.categories</span> <span style="color:#e6db74">&#34;contents&#34;</span> <span style="color:#960050;background-color:#1e0010">.Plain</span> <span style="color:#e6db74">&#34;permalink&#34;</span> <span style="color:#960050;background-color:#1e0010">.Permalink)</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
+{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">end</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
+{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">$.Scratch.Get</span> <span style="color:#f92672">&#34;index&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">jsonify</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
 </code></pre></div><p>完成后可以从 /index.json 打开索引文件</p>
 <p>注：layouts/ 目录里保存的是 Hugo 的模板文件。layouts/ 是站点级别的模板， themes/<theme name>/layouts/ 是主题级别的模板，站点级别模板的设置优先于主题级别的模板。
 创建搜索页面
-第一步</p>
-<p>创建 content/search.md</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
-title: &#34;搜索功能&#34;
+第一步：创建 content/search.md</p>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">title: &#34;Search Results&#34;
 sitemap:
   priority : 0.1
+layout: &#34;search&#34;
 ---
-</code></pre></div><p>根据 URL 规则，Hugo 会生成 /search/index.html 或 /search.html。但是因为 content/ 里的内容不支持插入 JS。
-第二步</p>
-<p>创建 layouts/_default/search.html</p>
+</code></pre></div><p>根据 URL 规则，Hugo 会生成 /search/index.html 或 /search.html。但是因为 content/ 里的内容不支持插入 JS，所以此处的关键是 layout: &ldquo;search&rdquo; 指定模板文件，之后在模板文件中实现搜索功能。
+第二步：创建 layouts/_default/search.html</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">section</span>&gt;
   &lt;<span style="color:#f92672">div</span>&gt;
     &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#a6e22e">search</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;
@@ -186,16 +185,16 @@ sitemap:
     <span style="color:#a6e22e">$</span>{ <span style="color:#a6e22e">isset</span> <span style="color:#a6e22e">categories</span> }<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">p</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Categories</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">$</span>{<span style="color:#a6e22e">categories</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/p&gt;${ end }</span>
   <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
 &lt;/<span style="color:#f92672">script</span>&gt;
-&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/foxscallion11/webp/static/hugo/jquery-3.3.1.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://code.jquery.com/jquery-3.3.1.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
 &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
 &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
 &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#a6e22e">js</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">search</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">js</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
 </code></pre></div><p>和原链相比去掉了 {{ define &ldquo;main&rdquo; }} … {{ end }} 之类的代码。</p>
 <p>此处的 define 其实更像是 implement，或者说 define 这个 block 内的内容，而前提是你已经定义过这个 block。一般是在 Base Template 里，以 {{ block &ldquo;main&rdquo; . }} … {{ end }} 的格式定义。</p>
 <p>这个例子是基于 Hugo Resume Theme，它在 layouts/_default/baseof.html 里定义了 block，而我使用的主题没有，结果就是直接使用原链的代码搜索页面会跳白板。</p>
-<p>然后，没有 Base Template 可以引用的结果就是搜索界面比较丑，慢慢美化吧。
-第三步</p>
-<p>创建 static/js/search.js</p>
+<p>然后，没有 Base Template 可以引用的结果就是搜索界面比较丑，慢慢美化吧。</p>
+<p>我就加个简单搜索功能，结果被迫学习了 Hugo 的模板布局“架构”，嗯，人间正道是沧桑。
+第三步：创建 static/js/search.js</p>
 <p>这是具体实现搜索功能的 JS 函数，search.html 中被引用，照抄即可。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">summaryInclude=60;
 var fuseOptions = {
@@ -306,24 +305,10 @@ function populateResults(result){
   <span style="color:#a6e22e">return</span> <span style="color:#a6e22e">templateString</span><span style="color:#960050;background-color:#1e0010">;</span>
 <span style="color:#960050;background-color:#1e0010">}</span>
 </code></pre></div><p>注：Hugo 的 static/ 目录存放需要应用的图片、CSS、JS 文件，build 时会直接生成于站点根目录。
-优化</p>
-<p>如果你按照上方的操作，文章的搜索会跳出博客的框架，</p>
-<p>因此需要完善。
-第一步</p>
-<p>找到你博客显眼的位置，如我的是在Blogs下方，也就是博客标题下方</p>
-<p>image-20200909171946421</p>
-<p>image-20200909172413645</p>
-<p>如图</p>
-<p>image-20200909172138685</p>
-<p>我的标题代码是在这里</p>
-<p>找一个恰当的位置插入代码</p>
-<p>image-20200909172254632
-效果</p>
-<p>我把它加在标题下方</p>
-<p>image-20200909171609449</p>
-<p>搜索一下</p>
-<p>image-20200909171655472</p>
-<p><img src="/imgs/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2021-01-12T15-26-41.308Z.png" alt="原页面截图"></p>
+后</p>
+<p>配置完成发现中文搜索有问题（中文分词问题，不奇怪），之后再慢慢研究吧。</p>
+<p>这个例子使用的是 Fuse.js，但按照这个结构替换为其它 JS 库（Lunr.js …）也是可以的。</p>
+<p><img src="/imgs/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2021-01-12T15-26-41.308Z.png" alt="不完整的页面截图"></p>
 </article>
     </section>
 
