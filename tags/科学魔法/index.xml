@@ -26,5 +26,14 @@
       <description>需要科学但是尚未进入名单的地址 1.打开 https://www.ipaddress.com/ 2.填入目标域名获取目标ip 3.得到的结果写入host 4.刷新dns缓存（重启，清理浏览器缓存,ip</description>
     </item>
     
+    <item>
+      <title>开启 cmd cmder 代理</title>
+      <link>https://stc214.github.io/posts/2020_06_30_14_48_30/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2020_06_30_14_48_30/</guid>
+      <description>win10安装了ShadowSocks软件，浏览器通过代理后就可以***，但有时候需要通过cmd科学下载安装一些组件，就需要设置一下cmd的</description>
+    </item>
+    
   </channel>
 </rss>
