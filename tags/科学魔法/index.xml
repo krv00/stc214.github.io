@@ -19,19 +19,19 @@
     
     <item>
       <title>Nginx_反向代理达到科学上网的目的</title>
-      <link>https://stc214.github.io/posts/nginx_%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%BE%BE%E5%88%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E7%9B%AE%E7%9A%84/</link>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8810%E6%97%A502/</link>
       <pubDate>Tue, 12 Jan 2021 18:17:06 +0800</pubDate>
       
-      <guid>https://stc214.github.io/posts/nginx_%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%BE%BE%E5%88%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E7%9B%AE%E7%9A%84/</guid>
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8810%E6%97%A502/</guid>
       <description>需要科学但是尚未进入名单的地址 1.打开 https://www.ipaddress.com/ 2.填入目标域名获取目标ip 3.得到的结果写入host 4.刷新dns缓存（重启，清理浏览器缓存,ip</description>
     </item>
     
     <item>
       <title>Gitclone速度太慢的解决方法</title>
-      <link>https://stc214.github.io/posts/gitclone%E9%80%9F%E5%BA%A6%E5%A4%AA%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8810%E6%97%A501/</link>
       <pubDate>Mon, 11 Jan 2021 21:54:52 +0800</pubDate>
       
-      <guid>https://stc214.github.io/posts/gitclone%E9%80%9F%E5%BA%A6%E5%A4%AA%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8810%E6%97%A501/</guid>
       <description>原文参考 https://mp.weixin.qq.com/s/ptFBjWXj88fsI3Oh6PghRA 1. GitHub 镜像访问(强烈建议，测试有效) 这里提供两个最常用的镜像地址： https://github.com.cnpmjs.org https://hub.fastgit.org 也就是说上面的镜像就是一个克隆版的Github，你可以访问上面</description>
     </item>
     

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>小米十周年K30U | STC214</title>
+    <title>Gitclone速度太慢的解决方法 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,27 +13,27 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="各位小伙伴们大家好啊,8月11日也就是昨天是小米10周年的演讲，相信很多小伙伴已经看了直播。 风风雨雨十年才迎来了今天的小米。那么雷军雷总这个" />
+<meta name="description" content="原文参考 https://mp.weixin.qq.com/s/ptFBjWXj88fsI3Oh6PghRA 1. GitHub 镜像访问(强烈建议，测试有效) 这里提供两个最常用的镜像地址： https://github.com.cnpmjs.org https://hub.fastgit.org 也就是说上面的镜像就是一个克隆版的Github，你可以访问上面" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2020_08_11_15_33_40/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8810%E6%97%A501/" />
 
 
-<meta property="og:title" content="小米十周年K30U" />
-<meta property="og:description" content="各位小伙伴们大家好啊,8月11日也就是昨天是小米10周年的演讲，相信很多小伙伴已经看了直播。 风风雨雨十年才迎来了今天的小米。那么雷军雷总这个" />
+<meta property="og:title" content="Gitclone速度太慢的解决方法" />
+<meta property="og:description" content="原文参考 https://mp.weixin.qq.com/s/ptFBjWXj88fsI3Oh6PghRA 1. GitHub 镜像访问(强烈建议，测试有效) 这里提供两个最常用的镜像地址： https://github.com.cnpmjs.org https://hub.fastgit.org 也就是说上面的镜像就是一个克隆版的Github，你可以访问上面" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2020_08_11_15_33_40/" />
-<meta property="article:published_time" content="2020-08-11T15:33:44+08:00" />
-<meta property="article:modified_time" content="2020-08-11T15:33:44+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8810%E6%97%A501/" />
+<meta property="article:published_time" content="2021-01-11T21:54:52+08:00" />
+<meta property="article:modified_time" content="2021-01-11T21:54:52+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="小米十周年K30U"/>
-<meta name="twitter:description" content="各位小伙伴们大家好啊,8月11日也就是昨天是小米10周年的演讲，相信很多小伙伴已经看了直播。 风风雨雨十年才迎来了今天的小米。那么雷军雷总这个"/>
+<meta name="twitter:title" content="Gitclone速度太慢的解决方法"/>
+<meta name="twitter:description" content="原文参考 https://mp.weixin.qq.com/s/ptFBjWXj88fsI3Oh6PghRA 1. GitHub 镜像访问(强烈建议，测试有效) 这里提供两个最常用的镜像地址： https://github.com.cnpmjs.org https://hub.fastgit.org 也就是说上面的镜像就是一个克隆版的Github，你可以访问上面"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -114,10 +114,14 @@
 <div class="ui centered relaxed grid dream-grid">
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
+    <section class="ui top attached segment cover">
+      <div class="cover-img" style="background-image: url(/img/0003.jpg);"></div>
+    </section>
+    
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          小米十周年K30U
+          Gitclone速度太慢的解决方法
           <div class="sub header">
             @
             
@@ -125,92 +129,91 @@
             
 
             | 
-                星期二，八月 11 日，2020 年
+                星期一，一月 11 日，2021 年
               
 
-            | 2 分钟阅读
+            | 3 分钟阅读
 
             | 更新于
               
-                星期二，八月 11 日，2020 年
+                星期一，一月 11 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>各位小伙伴们大家好啊,8月11日也就是昨天是小米10周年的演讲，相信很多小伙伴已经看了直播。
-风风雨雨十年才迎来了今天的小米。那么雷军雷总这个湖北男人给我们讲了什么故事，我们就一起来听听看吧。</p>
-<h2 id="fragment-零-一往无前-一往无前图-进度条">Fragment. 零 一往无前 一往无前图 进度条</h2>
-<p>2020年是特殊的一年。
-没错，每个人都这么说。
-但无论如何，日子总是要过的。
-对很多百姓来说，这只是一个缺乏收入又冗长的假期罢了。大多数家庭里当家的，都在上个世纪经历过不少大风大浪。面对疫情，
-无非是换个心态，积极面对就是了。。。<br>
-那么，雷军呢？</p>
-<p>他们没有在享受
-他们只是在生活</p>
-<p>mix 透明屏</p>
+      <article class="main"><h4 id="原文参考-httpsmpweixinqqcomsptfbjwxj88fsi3oh6pghra">原文参考 <a href="https://mp.weixin.qq.com/s/ptFBjWXj88fsI3Oh6PghRA">https://mp.weixin.qq.com/s/ptFBjWXj88fsI3Oh6PghRA</a></h4>
 <hr>
-<h2 id="重量213g">Redmi K30 Ultra<br>
-屏幕参数：<br>
-6.67英寸升降屏<br>
-三星AMOLED E3<br>
-120Hz刷新率<br>
-240Hz触控采样率<br>
-1080×2400 FHD+<br>
-HDR10+高动态范围视频播放<br>
-100%覆盖 DC-P3和 sRGB色域<br>
-典型/高亮/峰值亮度：500nit/800nit/1200nit<br>
-360超光感屏幕亮度调节 <br>
-PPI标准/钻石：395/322PPI<br>
-对比度：5000000:1<br>
-尺寸：163.3×75.4×9.1mm<br>
-重量：213G</h2>
-<p>电池参数：<br>
-4500mAh<br>
-33w快充<br>
-QC4+/PD快充<br>
--&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; <br>
-相机参数：<br>
-20MP<br>
-Ai美颜</p>
-<p>索尼iMX686<br>
-64MP主摄<br>
-1/1.7&quot;超大感光元件,16 um<br>
-4合1超大像素</p>
-<p>13MP超广角<br>
-119超广角镜头<br>
-Ai边缘防畸变</p>
-<p>5MP长焦微距<br>
-等效50mm 焦段3cm～7cm 自动对焦</p>
-<p>Ai魔法分身|前后双景|Ai魔法万花筒|超级夜景文档模式I电影模式|身份证影印模式l萌拍2.0 4K 视频拍 摄|VLOG视频|语音字幕|运动跟拍<br>
-视频超级防料|96ofps慢动作拍摄<br>
-微距视频拍摄|短视频录制|人像模式背景虚化<br>
--&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br>
-处理器参数：<br>
-MTK 天玑1000+ 7nm处理器<br>
-4×2.6GHz A77<br>
-4×2.0GHz A55<br>
--&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br>
-其他参数：<br>
-WiFi6<br>
-多功能NFC<br>
-红外遥控<br>
-线性马达<br>
-立体声双超线性扬声器<br>
-Hi-Res Audio认证<br>
--&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br>
-价格<br>
-6GB+128GB ￥1999<br>
-8GB+128GB ￥2199<br>
-8GB+512GB ￥2499</p>
+<h2 id="1-github-镜像访问强烈建议测试有效">1. GitHub 镜像访问(强烈建议，测试有效)</h2>
+<p>这里提供两个最常用的镜像地址：</p>
+<p>　　https://github.com.cnpmjs.org</p>
+<p>　　https://hub.fastgit.org</p>
+<p>　　也就是说上面的镜像就是一个克隆版的Github，你可以访问上面的镜像网站，网站的内容跟Github是完整同步的镜像，然后在这个网站里面进行下载克隆等操作。</p>
+<hr>
+<h2 id="2-github文件加速">2. GitHub文件加速</h2>
+<p>　　利用 Cloudflare Workers 对 github release 、 archive 以及项目文件进行加速，部署无需服务器且自带CDN.</p>
+<p>　　https://gh.api.99988866.xyz <a href="https://g.ioiox.com">https://g.ioiox.com</a></p>
+<p>　　以上网站为演示站点，如无法打开可以查看开源项目：gh-proxy-GitHub 文件加速自行部署。</p>
+<hr>
+<h2 id="3-github-加速下载">3. Github 加速下载</h2>
+<p>只需要复制当前 GitHub 地址粘贴到输入框中就可以代理加速下载！</p>
+<p>地址：http://toolwa.com/github</p>
+<hr>
+<h2 id="4-加速你的-github">4. 加速你的 Github</h2>
+<p><a href="https://github.zhlh6.cn">https://github.zhlh6.cn</a></p>
+<p>输入 Github 仓库地址，使用生成的地址进行 git ssh 等操作</p>
+<hr>
+<h2 id="5-谷歌浏览器github加速插件推荐">5. 谷歌浏览器GitHub加速插件(推荐)</h2>
+<p>谷歌浏览器Github加速插件.crx 下载</p>
+<p>百度网盘:</p>
+<p><a href="https://pan.baidu.com/s/1qGiIUzqNlN1ZczTNFbPg0A">https://pan.baidu.com/s/1qGiIUzqNlN1ZczTNFbPg0A</a></p>
+<p>提取码：stsv</p>
+<p>如果可以直接访问谷歌商店，可以访问GitHub 加速谷歌商店安装。</p>
+<hr>
+<h2 id="6-github-raw-加速">6. GitHub raw 加速</h2>
+<p>GitHub raw 域名并非 github.com 而是 raw.githubusercontent.com，上方的 GitHub 加速如果不能加速这个域名，那么可以使用 Static CDN 提供的反代服务。</p>
+<p>将 raw.githubusercontent.com 替换为 raw.staticdn.net 即可加速。</p>
+<hr>
+<h2 id="7-github--jsdelivr">7. GitHub + Jsdelivr</h2>
+<p>jsdelivr 唯一美中不足的就是它不能获取 exe 文件以及 Release 处附加的 exe 和 dmg 文件。</p>
+<p>也就是说如果 exe 文件是附加在 Release 处但是没有在 code 里面的话是无法获取的。所以只能当作静态文件 cdn 用途，而不能作为 Release 加速下载的用途。</p>
+<hr>
+<h2 id="8-通过gitee中转fork仓库下载">8. 通过Gitee中转fork仓库下载</h2>
+<p>网上有很多相关的教程，这里简要的说明下操作。</p>
+<p>1、访问gitee网站：https://gitee.com/ 并登录，在顶部选择“从GitHub/GitLab导入仓库” 如下：</p>
+<p>2、在导入页面中粘贴你的Github仓库地址，点击导入即可：</p>
+<p>3、等待导入操作完成，然后在导入的仓库中下载浏览对应的该GitHub仓库代码，你也可以点击仓库顶部的“刷新”按钮进行Github代码仓库的同步。</p>
+<hr>
+<h2 id="9-通过修改hosts文件进行加速">9. 通过修改HOSTS文件进行加速</h2>
+<p>参考如下详细介绍
+为什么github下载速度这么慢？</p>
+<p>GitHub 我们都知道是世界上最大的开源及私有软件项目的托管平台，全世界每天有海量优秀的开源软件在这里产生，而 GitHub 在国内很多时候获取到的下载链接是亚马逊的服务器。</p>
+<p>中国因为不可言说的原因，经常抽疯或龟速。想要加快 GitHub 下载速度就需要用到 GitHub 国内加速服务，对于有条件的可以使用代理加快访问速度，而没有条件的就可以用到网上热心人士维护的加速服务了。
+如何提高github的下载速度？</p>
+<p>手动把cdn和ip地址绑定。
+第一步：获取github的global.ssl.fastly地址</p>
+<p>访问：https://www.ipaddress.com/ 获取cdn和ip域名：</p>
+<p>得到：199.232.69.194 <a href="https://github.global.ssl.fastly.net">https://github.global.ssl.fastly.net</a>
+第二步：获取github.com地址</p>
+<p>访问：https://github.com.ipaddress.com/#ipinfo 获取cdn和ip：</p>
+<p>得到：140.82.112.4 <a href="http://github.com">http://github.com</a>
+第三步：修改host文件映射上面查找到的IP</p>
+<p>windows系统：</p>
+<p>1、修改C:\Windows\System32\drivers\etc\hosts文件的权限，指定可写入：</p>
+<p>右击-&gt;hosts-&gt;属性-&gt;安全-&gt;编辑-&gt;点击Users-&gt;在Users的权限“写入”后面打勾：</p>
+<p>然后点击确定。</p>
+<p>2、右击-&gt;hosts-&gt;打开方式-&gt;选定记事本（或者你喜欢的编辑器）-&gt;在末尾处添加以下内容：</p>
+<pre><code>199.232.69.194 github.global.ssl.fastly.net
+
+140.82.112.4 github.com
+</code></pre>
 </article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
       
         
-          <a class="ui label" href="/tags/note" title="note">note</a>
+          <a class="ui label" href="/tags/%E7%A7%91%E5%AD%A6%E9%AD%94%E6%B3%95" title="科学魔法">科学魔法</a>
         
       
       <div
@@ -235,8 +238,8 @@ Hi-Res Audio认证<br>
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2020_08_11_15_33_40\/';  
-            this.page.identifier = '\/posts\/2020_08_11_15_33_40\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B41%E6%9C%8810%E6%97%A501\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B41%E6%9C%8810%E6%97%A501\/'; 
           };
 
           (function() { 
@@ -271,22 +274,20 @@ Hi-Res Audio认证<br>
       <div class="ui segment toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#fragment-零-一往无前-一往无前图-进度条">Fragment. 零 一往无前 一往无前图 进度条</a></li>
-    <li><a href="#重量213g">Redmi K30 Ultra<br>
-屏幕参数：<br>
-6.67英寸升降屏<br>
-三星AMOLED E3<br>
-120Hz刷新率<br>
-240Hz触控采样率<br>
-1080×2400 FHD+<br>
-HDR10+高动态范围视频播放<br>
-100%覆盖 DC-P3和 sRGB色域<br>
-典型/高亮/峰值亮度：500nit/800nit/1200nit<br>
-360超光感屏幕亮度调节 <br>
-PPI标准/钻石：395/322PPI<br>
-对比度：5000000:1<br>
-尺寸：163.3×75.4×9.1mm<br>
-重量：213G</a></li>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#1-github-镜像访问强烈建议测试有效">1. GitHub 镜像访问(强烈建议，测试有效)</a></li>
+    <li><a href="#2-github文件加速">2. GitHub文件加速</a></li>
+    <li><a href="#3-github-加速下载">3. Github 加速下载</a></li>
+    <li><a href="#4-加速你的-github">4. 加速你的 Github</a></li>
+    <li><a href="#5-谷歌浏览器github加速插件推荐">5. 谷歌浏览器GitHub加速插件(推荐)</a></li>
+    <li><a href="#6-github-raw-加速">6. GitHub raw 加速</a></li>
+    <li><a href="#7-github--jsdelivr">7. GitHub + Jsdelivr</a></li>
+    <li><a href="#8-通过gitee中转fork仓库下载">8. 通过Gitee中转fork仓库下载</a></li>
+    <li><a href="#9-通过修改hosts文件进行加速">9. 通过修改HOSTS文件进行加速</a></li>
   </ul>
 </nav>
       </div>
@@ -422,54 +423,6 @@ PPI标准/钻石：395/322PPI<br>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020_08_25_19_29_02/">数据清理 分手吧 毒瘤的垃圾</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_18_17_24_27/">K30U答疑暂定</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
                   <a class="item" href="/posts/2020_08_02_23_59_12/">推推乐脚本</a>
                 </div>
               </div>
@@ -489,12 +442,6 @@ PPI标准/钻石：395/322PPI<br>
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             
