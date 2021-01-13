@@ -100,6 +100,10 @@
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
   </div>
   
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
+  
 </nav>
 
     <div class="flip-container">
@@ -320,7 +324,13 @@
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/">2021年1月12日03</a>
+                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8813%E6%97%A501/">使用Hugo建立的博客使用Dream主题时开启搜索功能</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/">把图片放入markdown文档中</a>
                 </div>
               </div>
             
@@ -614,6 +624,19 @@
   
   
   
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">Me</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>目前这个程序还挺不错的</p>
+<p>那就多用用试试看吧</p>
+
+        </div>
+      </article>
+    </section>
+  
 
   <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
     <article>
@@ -785,6 +808,28 @@
 
 
 
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="搜索" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/stc214.github.io\//index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/js/search.js"></script>
 
     
 

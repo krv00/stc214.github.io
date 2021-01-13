@@ -26,7 +26,7 @@
 <meta property="og:description" content="STC214的笔记" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stc214.github.io/posts/" />
-<meta property="og:updated_time" content="2021-01-12T23:47:12+08:00" />
+<meta property="og:updated_time" content="2021-01-13T18:13:37+08:00" />
 
 
 
@@ -87,6 +87,10 @@
   </div>
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
   </div>
   
 </nav>
@@ -192,7 +196,13 @@
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/">2021年1月12日03</a>
+                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8813%E6%97%A501/">使用Hugo建立的博客使用Dream主题时开启搜索功能</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/">把图片放入markdown文档中</a>
                 </div>
               </div>
             
@@ -301,6 +311,12 @@
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/nginx_%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%BE%BE%E5%88%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E7%9B%AE%E7%9A%84/">Nginx_反向代理达到科学上网的目的</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/gitclone%E9%80%9F%E5%BA%A6%E5%A4%AA%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">Gitclone速度太慢的解决方法</a>
                 </div>
               </div>
             
@@ -422,7 +438,11 @@
         <ul>
           
             <li>
-              <a href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/">2021年1月12日03</a>
+              <a href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8813%E6%97%A501/">使用Hugo建立的博客使用Dream主题时开启搜索功能</a>
+            </li>
+          
+            <li>
+              <a href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/">把图片放入markdown文档中</a>
             </li>
           
             <li>
@@ -435,6 +455,10 @@
           
             <li>
               <a href="https://stc214.github.io/posts/nginx_%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%BE%BE%E5%88%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E7%9B%AE%E7%9A%84/">Nginx_反向代理达到科学上网的目的</a>
+            </li>
+          
+            <li>
+              <a href="https://stc214.github.io/posts/gitclone%E9%80%9F%E5%BA%A6%E5%A4%AA%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">Gitclone速度太慢的解决方法</a>
             </li>
           
         </ul>
@@ -513,6 +537,19 @@
             <div class="ui centered relaxed grid dream-grid dream-back">
   
   
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">Me</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>目前这个程序还挺不错的</p>
+<p>那就多用用试试看吧</p>
+
+        </div>
+      </article>
+    </section>
   
 
   <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
@@ -677,6 +714,28 @@
 <script src="/js/theme.js"></script>
 
      
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="搜索" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/stc214.github.io\//index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/js/search.js"></script>
 
     
 

@@ -100,6 +100,10 @@
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
   </div>
   
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
+  
 </nav>
 
     <div class="flip-container">
@@ -204,7 +208,9 @@
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
       
-          <a class="ui label">暂无标签</a>
+        
+          <a class="ui label" href="/tags/%E7%A7%91%E5%AD%A6%E9%AD%94%E6%B3%95" title="科学魔法">科学魔法</a>
+        
       
       <div
         class="ui label"
@@ -377,7 +383,13 @@
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/">2021年1月12日03</a>
+                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8813%E6%97%A501/">使用Hugo建立的博客使用Dream主题时开启搜索功能</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/">把图片放入markdown文档中</a>
                 </div>
               </div>
             
@@ -390,60 +402,6 @@
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_09_06_15_00_36_%E6%AD%A30800/">ADOBE 2021 下载方式</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_30_21_03_10_%E6%AD%A30800/">小内存手机润滑一法</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_25_19_29_02_%E6%AD%A30800/">数据清理 分手吧 毒瘤的垃圾</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_18_17_24_27_%E6%AD%A30800/">K30U答疑暂定</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
                 </div>
               </div>
             
@@ -468,12 +426,6 @@
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             
@@ -671,6 +623,19 @@
   
   
   
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">Me</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>目前这个程序还挺不错的</p>
+<p>那就多用用试试看吧</p>
+
+        </div>
+      </article>
+    </section>
+  
 
   <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
     <article>
@@ -842,6 +807,28 @@
 
 
 
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="搜索" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/stc214.github.io\//index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/js/search.js"></script>
 
     
 
