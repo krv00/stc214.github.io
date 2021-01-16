@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>关于定时执行任务：Crontab的20个例子 | STC214</title>
+    <title>ADOBE全家桶下载地址（跟随原作者更新） | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,26 +13,27 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="简介 Linux crontab和Windows task schedules非常的相似。Crontab可以用来在系统中定期的执行任务。比如：写了一个爬虫需要每天" />
+<meta name="description" content="全家桶下载地址 原帖： https://weibo.com/vposy?is_all=1 2020/2021 WIN/MAC 大师版/独立SP版 均会长期更新。 默认解压密码为：@vposy 百度: pan.baidu.com/s/1r3DezqdsUhnfaJb0ob2Iww 提取码: 9yi4 天翼: cloud.189.cn/t/rUN3En7JNZ7j 访问码：d3ag 打不开链接的" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2020_06_30_15_02_59/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8816%E6%97%A501/" />
 
 
-<meta property="og:title" content="关于定时执行任务：Crontab的20个例子" />
-<meta property="og:description" content="简介 Linux crontab和Windows task schedules非常的相似。Crontab可以用来在系统中定期的执行任务。比如：写了一个爬虫需要每天" />
+<meta property="og:title" content="ADOBE全家桶下载地址（跟随原作者更新）" />
+<meta property="og:description" content="全家桶下载地址 原帖： https://weibo.com/vposy?is_all=1 2020/2021 WIN/MAC 大师版/独立SP版 均会长期更新。 默认解压密码为：@vposy 百度: pan.baidu.com/s/1r3DezqdsUhnfaJb0ob2Iww 提取码: 9yi4 天翼: cloud.189.cn/t/rUN3En7JNZ7j 访问码：d3ag 打不开链接的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2020_06_30_15_02_59/" />
-
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8816%E6%97%A501/" />
+<meta property="article:published_time" content="2021-01-16T12:22:58+08:00" />
+<meta property="article:modified_time" content="2021-01-16T12:22:58+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="关于定时执行任务：Crontab的20个例子"/>
-<meta name="twitter:description" content="简介 Linux crontab和Windows task schedules非常的相似。Crontab可以用来在系统中定期的执行任务。比如：写了一个爬虫需要每天"/>
+<meta name="twitter:title" content="ADOBE全家桶下载地址（跟随原作者更新）"/>
+<meta name="twitter:description" content="全家桶下载地址 原帖： https://weibo.com/vposy?is_all=1 2020/2021 WIN/MAC 大师版/独立SP版 均会长期更新。 默认解压密码为：@vposy 百度: pan.baidu.com/s/1r3DezqdsUhnfaJb0ob2Iww 提取码: 9yi4 天翼: cloud.189.cn/t/rUN3En7JNZ7j 访问码：d3ag 打不开链接的"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -113,225 +114,52 @@
 <div class="ui centered relaxed grid dream-grid">
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
+    <section class="ui top attached segment cover">
+      <div class="cover-img" style="background-image: url(/img/0026.jpg);"></div>
+    </section>
+    
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          关于定时执行任务：Crontab的20个例子
+          ADOBE全家桶下载地址（跟随原作者更新）
           <div class="sub header">
             @
             
-              STC214
+              
+                STC214
+              
             
 
             | 
-                星期一，一月 1 日，1 年
+                星期六，一月 16 日，2021 年
               
 
-            | 3 分钟阅读
+            | 1 分钟阅读
 
             | 更新于
               
-                星期一，一月 1 日，1 年
+                星期六，一月 16 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>简介</p>
-<p>Linux crontab和Windows task schedules非常的相似。Crontab可以用来在系统中定期的执行任务。比如：写了一个爬虫需要每天早上八点执行，就可以用到Crontab;安装的Tomcat服务器需要每天凌晨重启一次，也可以使用到Crontab。总之，几乎所有的定时任务，我们都可以通过Crontab这个工具来完成。
-安装
-yum install cronie`
-Crontab在Linux上的结构</p>
-<p>crontab结构.png</p>
-<p>从左到右依次为：
-[分钟] [小时] [每月的某一天] [每年的某一月] [每周的某一天] [执行的命令]
-注意：请留意每个选项的取值范围。</p>
-<p>如何 添加/编辑 Crontab</p>
-<pre><code>添加或更新crontab中的命令
-</code></pre>
-<p>crontab -e</p>
-<p>默认情况下，系统会编辑当前登录用户的crontab命令集合。需要编辑其他用户的命令集合，需要使用到如下的命令
-crontab -u username -e
-查看Crontab命令集合</p>
-<pre><code>查看当前系统登录用户的Crontab命令集合
-</code></pre>
-<p>crontab -l</p>
-<pre><code>查看其他用户的Crontab命令集合
-</code></pre>
-<p>crontab -u username -l
-20个超实用的Crontab使用实例</p>
-<pre><code>每天 02:00 执行任务
-</code></pre>
-<p>0 2 * * * /bin/sh backup.sh</p>
-<pre><code>每天 5:00和17:00执行任务
-</code></pre>
-<p>0 5,17 * * * /scripts/script.sh</p>
-<pre><code>每分钟执行一次任务
-通常情况下，我们并没有每分钟都需要执行的脚本(默默的想到了12306--)
-</code></pre>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>/scripts/script.sh</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>每周日 17:00 执行任务</p>
-</li>
-</ul>
-<p>0 17 * * sun  /scripts/script.sh</p>
-<pre><code>每 10min 执行一次任务
-</code></pre>
-<p>*/10 * * * * /scripts/monitor.sh</p>
-<pre><code>在特定的某几个月执行任务
-</code></pre>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>jan,may,aug * /script/script.sh</li>
-</ul>
-</li>
-</ul>
-<p>在特定的某几天执行任务</p>
-</li>
-</ul>
-<p>0 17 * * sun,fri /script/scripy.sh</p>
-<p>在每周五、周日的17点执行任务</p>
-<pre><code>在某个月的第一个周日执行任务
-</code></pre>
-<p>0 2 * * sun  [ $(date +%d) -le 07 ] &amp;&amp; /script/script.sh</p>
-<pre><code>每四个小时执行一个任务
-</code></pre>
-<p>0 */4 * * * /scripts/script.sh</p>
-<pre><code>每周一、周日执行任务
-</code></pre>
-<p>0 4,17 * * sun,mon /scripts/script.sh</p>
-<pre><code>每个30秒执行一次任务
-我们没有办法直接通过上诉类似的例子去执行，因为最小的是1min。但是我们可以通过如下的方法。
-</code></pre>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>/scripts/script.sh</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>sleep 30; /scripts/script.sh</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>多个任务在一条命令中配置</p>
-</li>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>/scripts/script.sh; /scripts/scrit2.sh</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>每年执行一次任务</p>
-</li>
-</ul>
-<p>@yearly /scripts/script.sh</p>
-<p>@yearly 类似于“0 0 1 1 *”。它会在每年的第一分钟内执行，通常我们可以用这个发送新年的问候。</p>
-<pre><code>每月执行一次任务
-</code></pre>
-<p>@yearly /scripts/script.sh</p>
-<pre><code>每周执行一次任务
-</code></pre>
-<p>@yearly /scripts/script.sh</p>
-<pre><code>每天执行一次任务
-</code></pre>
-<p>@yearly /scripts/script.sh</p>
-<pre><code>每分钟执行一次任务
-</code></pre>
-<p>@yearly /scripts/script.sh</p>
-<pre><code>系统重启时执行
-</code></pre>
-<p>@reboot /scripts/script.sh</p>
-<pre><code>将 Cron 结果重定向的特定的账户
-默认情况下，cron 只会将结果详情发送给 cron 被制定的用户。如果需要发送给其他用户，可以通过如下的方式：
-</code></pre>
-<h1 id="crontab--l">crontab -l</h1>
-<p>MAIL=bob
-0 2 * * * /script/backup.sh</p>
-<pre><code>将所有的 cron 命令备份到文本文件当中
-这是一个当我们丢失了cron命令后方便快速的一个恢复方式。
-下面是利用这个方式恢复cron的一个小例子。（看看就行~）
-首先：检查当前的cron
-</code></pre>
-<h1 id="crontab--l-1">crontab -l</h1>
-<p>MAIL=rahul
-0 2 * * * /script/backup.sh</p>
-<p>然后：备份cron到文件中</p>
-<h1 id="crontab--l--cron-backuptxt">crontab -l &gt; cron-backup.txt</h1>
-<h1 id="cat-cron-backuptxt">cat cron-backup.txt</h1>
-<p>MAIL=rahul
-0 2 * * * /script/backup.sh</p>
-<p>接着：移除当前的cron</p>
-<h1 id="crontab--r">crontab -r</h1>
-<h1 id="crontab--l-2">crontab -l</h1>
-<p>no crontab for root</p>
-<p>恢复：从text file中恢复</p>
-<h1 id="crontab-cron-backuptxt">crontab cron-backup.txt</h1>
-<h1 id="crontab--l-3">crontab -l</h1>
-<p>MAIL=rahul
-0 2 * * * /script/backup.sh
-原文链接</p>
-<p>Crontab in Linux with 20 Useful Examples to Schedule Jobs</p>
-<p>作者：LeeLom
-链接：https://www.jianshu.com/p/d93e2b177814</p>
+      <article class="main"><h1 id="全家桶下载地址">全家桶下载地址</h1>
+<p>原帖： <a href="https://weibo.com/vposy?is_all=1">https://weibo.com/vposy?is_all=1</a></p>
+<p>2020/2021 WIN/MAC 大师版/独立SP版 均会长期更新。</p>
+<p>默认解压密码为：@vposy
+百度: pan.baidu.com/s/1r3DezqdsUhnfaJb0ob2Iww 提取码: 9yi4<br>
+天翼: <a href="https://cloud.189.cn/t/rUN3En7JNZ7j">cloud.189.cn/t/rUN3En7JNZ7j</a> 访问码：d3ag<br>
+打不开链接的自行检查DNS解析，切换电信或移动卡再试。外网恕暂无可靠高效网盘。</p>
+<p>其他网盘近期会考虑增加。</p>
+<p>除微博标明的地址外，任何公众号、微信、QQ、马云家、网站均不是本人，避免上当受骗。</p>
 </article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
       
         
-          <a class="ui label" href="/tags/note" title="note">note</a>
+          <a class="ui label" href="/tags/%E8%B5%84%E6%BA%90" title="资源">资源</a>
         
       
       <div
@@ -356,8 +184,8 @@ crontab -u username -e
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2020_06_30_15_02_59\/';  
-            this.page.identifier = '\/posts\/2020_06_30_15_02_59\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B41%E6%9C%8816%E6%97%A501\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B41%E6%9C%8816%E6%97%A501\/'; 
           };
 
           (function() { 
