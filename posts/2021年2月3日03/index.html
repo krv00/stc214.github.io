@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>topaz全家桶_等软件汇总 | STC214</title>
+    <title>对openwrt系统分区进行扩容 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,27 +13,27 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="绿色版 Topaz Video Enhance AI https://cloud.189.cn/t/A7fUzyFzYfMf Topaz AI Gigapixel https://cloud.189.cn/t/buUbqumANFjm Topaz Mask AI https://cloud.189.cn/t/e2QzIzeueI7b Topaz Sharpen AI https://cloud.189.cn/t/V7vaIvAvu2qa Topaz DeNoise AI https://cloud.189.cn/t/naqUbmbeUzyu Topaz Adjust AI https://cloud.189.cn/t/ZviiMzrMnaee Topaz JPEG to RAW AI https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336 安装版： Topaz DeNoise AI https://cloud.189.cn/t/zyaMNvQrInyy Topaz AI Gigapixel https://cloud.189.cn/t/3auER3zQnmem Topaz Video Enhance AI https://cloud.189.cn/t/b6R3aq7B7rEj Office2016四合一绿色精简版 https://cloud.189.cn/t/Jrqi63UrAvMb" />
+<meta name="description" content="原文链接： https://blog.csdn.net/zhangzejin3883/article/details/108904399 OpenWrt全硬盘安装方法（免Overlay扩容） 写在前面 正常我们硬盘安装OpenWrt是将img文件写入硬盘就结束了，但是进" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2020_07_13_22_21_50/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%883%E6%97%A503/" />
 
 
-<meta property="og:title" content="topaz全家桶_等软件汇总" />
-<meta property="og:description" content="绿色版 Topaz Video Enhance AI https://cloud.189.cn/t/A7fUzyFzYfMf Topaz AI Gigapixel https://cloud.189.cn/t/buUbqumANFjm Topaz Mask AI https://cloud.189.cn/t/e2QzIzeueI7b Topaz Sharpen AI https://cloud.189.cn/t/V7vaIvAvu2qa Topaz DeNoise AI https://cloud.189.cn/t/naqUbmbeUzyu Topaz Adjust AI https://cloud.189.cn/t/ZviiMzrMnaee Topaz JPEG to RAW AI https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336 安装版： Topaz DeNoise AI https://cloud.189.cn/t/zyaMNvQrInyy Topaz AI Gigapixel https://cloud.189.cn/t/3auER3zQnmem Topaz Video Enhance AI https://cloud.189.cn/t/b6R3aq7B7rEj Office2016四合一绿色精简版 https://cloud.189.cn/t/Jrqi63UrAvMb" />
+<meta property="og:title" content="对openwrt系统分区进行扩容" />
+<meta property="og:description" content="原文链接： https://blog.csdn.net/zhangzejin3883/article/details/108904399 OpenWrt全硬盘安装方法（免Overlay扩容） 写在前面 正常我们硬盘安装OpenWrt是将img文件写入硬盘就结束了，但是进" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2020_07_13_22_21_50/" />
-<meta property="article:published_time" content="2020-07-13T22:21:58+08:00" />
-<meta property="article:modified_time" content="2020-07-13T22:21:58+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%883%E6%97%A503/" />
+<meta property="article:published_time" content="2021-02-03T02:09:29+08:00" />
+<meta property="article:modified_time" content="2021-02-03T02:09:29+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="topaz全家桶_等软件汇总"/>
-<meta name="twitter:description" content="绿色版 Topaz Video Enhance AI https://cloud.189.cn/t/A7fUzyFzYfMf Topaz AI Gigapixel https://cloud.189.cn/t/buUbqumANFjm Topaz Mask AI https://cloud.189.cn/t/e2QzIzeueI7b Topaz Sharpen AI https://cloud.189.cn/t/V7vaIvAvu2qa Topaz DeNoise AI https://cloud.189.cn/t/naqUbmbeUzyu Topaz Adjust AI https://cloud.189.cn/t/ZviiMzrMnaee Topaz JPEG to RAW AI https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336 安装版： Topaz DeNoise AI https://cloud.189.cn/t/zyaMNvQrInyy Topaz AI Gigapixel https://cloud.189.cn/t/3auER3zQnmem Topaz Video Enhance AI https://cloud.189.cn/t/b6R3aq7B7rEj Office2016四合一绿色精简版 https://cloud.189.cn/t/Jrqi63UrAvMb"/>
+<meta name="twitter:title" content="对openwrt系统分区进行扩容"/>
+<meta name="twitter:description" content="原文链接： https://blog.csdn.net/zhangzejin3883/article/details/108904399 OpenWrt全硬盘安装方法（免Overlay扩容） 写在前面 正常我们硬盘安装OpenWrt是将img文件写入硬盘就结束了，但是进"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -114,10 +114,14 @@
 <div class="ui centered relaxed grid dream-grid">
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
+    <section class="ui top attached segment cover">
+      <div class="cover-img" style="background-image: url(/img/0039.jpg);"></div>
+    </section>
+    
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          topaz全家桶_等软件汇总
+          对openwrt系统分区进行扩容
           <div class="sub header">
             @
             
@@ -125,56 +129,74 @@
             
 
             | 
-                星期一，七月 13 日，2020 年
+                星期三，二月 3 日，2021 年
               
 
-            | 1 分钟阅读
+            | 2 分钟阅读
 
             | 更新于
               
-                星期一，七月 13 日，2020 年
+                星期三，二月 3 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><h1 id="绿色版">绿色版</h1>
-<p>Topaz Video Enhance AI
-<a href="https://cloud.189.cn/t/A7fUzyFzYfMf">https://cloud.189.cn/t/A7fUzyFzYfMf</a></p>
-<p>Topaz AI Gigapixel
-<a href="https://cloud.189.cn/t/buUbqumANFjm">https://cloud.189.cn/t/buUbqumANFjm</a></p>
-<p>Topaz Mask AI
-<a href="https://cloud.189.cn/t/e2QzIzeueI7b">https://cloud.189.cn/t/e2QzIzeueI7b</a></p>
-<p>Topaz Sharpen AI
-<a href="https://cloud.189.cn/t/V7vaIvAvu2qa">https://cloud.189.cn/t/V7vaIvAvu2qa</a></p>
-<p>Topaz DeNoise AI
-<a href="https://cloud.189.cn/t/naqUbmbeUzyu">https://cloud.189.cn/t/naqUbmbeUzyu</a></p>
-<p>Topaz Adjust AI
-<a href="https://cloud.189.cn/t/ZviiMzrMnaee">https://cloud.189.cn/t/ZviiMzrMnaee</a></p>
-<p>Topaz JPEG to RAW AI
-<a href="https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336">https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336</a></p>
-<h1 id="安装版">安装版：</h1>
-<p>Topaz DeNoise AI
-<a href="https://cloud.189.cn/t/zyaMNvQrInyy">https://cloud.189.cn/t/zyaMNvQrInyy</a></p>
-<p>Topaz AI Gigapixel
-<a href="https://cloud.189.cn/t/3auER3zQnmem">https://cloud.189.cn/t/3auER3zQnmem</a></p>
-<p>Topaz Video Enhance AI
-<a href="https://cloud.189.cn/t/b6R3aq7B7rEj">https://cloud.189.cn/t/b6R3aq7B7rEj</a></p>
-<h1 id="office2016四合一绿色精简版">Office2016四合一绿色精简版</h1>
-<p><a href="https://cloud.189.cn/t/Jrqi63UrAvMb">https://cloud.189.cn/t/Jrqi63UrAvMb</a></p>
-<h1 id="qq-936-破解版">QQ 9.3.6 破解版</h1>
-<p><a href="https://www.lanzous.com/b1004538">https://www.lanzous.com/b1004538</a></p>
-<p>如果需要密码就是ccava</p>
-<p><a href="http://www.ccava.net">www.ccava.net</a></p>
-<h1 id="vmware系列">VMware系列</h1>
-<p><a href="https://cloud.189.cn/t/MfmE73ARFBZb">https://cloud.189.cn/t/MfmE73ARFBZb</a></p>
+      <article class="main"><p>原文链接：
+<a href="https://blog.csdn.net/zhangzejin3883/article/details/108904399">https://blog.csdn.net/zhangzejin3883/article/details/108904399</a></p>
+<h1 id="openwrt全硬盘安装方法免overlay扩容">OpenWrt全硬盘安装方法（免Overlay扩容）</h1>
+<p>写在前面</p>
+<p>正常我们硬盘安装OpenWrt是将img文件写入硬盘就结束了，但是进入到OpenWrt系统中会发现系统分区只有几百兆的大小，安装几个插件还好说，一旦打开各种日志写入功能就会发现，硬盘空间完全不够用；之后找到的方法只能是利用未分区的空间新建分区，然后将Overlay挂载到新的分区，将体积大的目录用软链接的方式转移到新分区里面，但是这样治标不治本，久而久之你的系统分区早晚会爆满的。</p>
+<p>因此本篇将介绍一个全硬盘安装OpenWrt的方法，实现系统分区大小等于你的硬盘大小，从此一劳永逸的解决空间不够用的烦恼。</p>
+<pre><code>需要注意的是，此方法为硬盘全新安装，已安装过的将格盘重新安装，请注意数据备份。
+</code></pre>
+<p>准备工作</p>
+<p>首先需要有一个带有PE的启动U盘，然后将一下文件放入U盘中：</p>
+<pre><code>DiskGenius V5.3.0 PE免费版
+physdiskwrite V0.5.3
+openwrt-x86-64-generic-squashfs-combined.img
+</code></pre>
+<p>这里需要说明的是DiskGenius需要使用新版本，有些PE自带的DiskGenius比较旧可能没有对应的菜单，可以在DiskGenius官网下载PE免费版即可。
+安装OpenWrt镜像</p>
+<p>使用PE启动U盘进入PE系统，然后用管理员全新运行CMD：
+CMD</p>
+<p>进入你U盘的目录下：
+U盘目录</p>
+<p>输入以下命令进入写盘工具：（这里替换成你自己的IMG文件名）</p>
+<p>physdiskwrite.exe -u openwrt-x86-64-generic-squashfs-combined.img</p>
+<p>physdiskwrite</p>
+<p>接下来选择你要写入的硬盘序号，我这里是0，你要看好自己要写入的硬盘需要再填写
+输入硬盘序号</p>
+<p>最后确认填写的信息正确，然后输入y
+确认信息</p>
+<p>等待写入结束，如下图界面：
+写入完成
+扩容系统分区</p>
+<p>打开DiskGenius软件，选择你的刚刚写入的硬盘，然后再选中上面灰色未使用的分区，右击菜单中选择 “将空间分配给” -&gt; “分区：未格式化(D:)”
+DiskGenius</p>
+<p>确认选择正确的分区，然后点击“是”
+确认分区</p>
+<p>调整分区完成后点击“完成”
+调整分区完成</p>
+<p>完成后如下图所示表示成功扩容系统分区
+成功扩容</p>
+<p>最后重启计算机并拔掉PE启动U盘。
+查看系统分区情况</p>
+<p>重启软路由并等待代码跑完后，按回车进入命令行模式，输入df -h，如下图overlayfs:overlay已经为硬盘体积。</p>
+<p>查看系统分区情况
+总结</p>
+<p>整个过程相比于挂载新分区简单很多，只是再写入img文件后马上进行分区扩容即可。</p>
+<p>另外需要说明的是，将img文件写入硬盘后必须马上去扩容分区，如果你重启进入过OpenWrt系统后再进行分区将不会有任何效果。</p>
+<p><img src="/imgs/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2021-02-02T18-12-13.877Z.png" alt="原文截图"></p>
 </article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
       
         
-          <a class="ui label" href="/tags/note" title="note">note</a>
+          <a class="ui label" href="/tags/note" title="Note">Note</a>
+        
+          <a class="ui label" href="/tags/%E7%AC%94%E8%AE%B0" title="笔记">笔记</a>
         
       
       <div
@@ -199,8 +221,8 @@
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2020_07_13_22_21_50\/';  
-            this.page.identifier = '\/posts\/2020_07_13_22_21_50\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%883%E6%97%A503\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%883%E6%97%A503\/'; 
           };
 
           (function() { 

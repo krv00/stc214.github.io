@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>topaz全家桶_等软件汇总 | STC214</title>
+    <title>使用docker打包python程序 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,27 +13,27 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="绿色版 Topaz Video Enhance AI https://cloud.189.cn/t/A7fUzyFzYfMf Topaz AI Gigapixel https://cloud.189.cn/t/buUbqumANFjm Topaz Mask AI https://cloud.189.cn/t/e2QzIzeueI7b Topaz Sharpen AI https://cloud.189.cn/t/V7vaIvAvu2qa Topaz DeNoise AI https://cloud.189.cn/t/naqUbmbeUzyu Topaz Adjust AI https://cloud.189.cn/t/ZviiMzrMnaee Topaz JPEG to RAW AI https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336 安装版： Topaz DeNoise AI https://cloud.189.cn/t/zyaMNvQrInyy Topaz AI Gigapixel https://cloud.189.cn/t/3auER3zQnmem Topaz Video Enhance AI https://cloud.189.cn/t/b6R3aq7B7rEj Office2016四合一绿色精简版 https://cloud.189.cn/t/Jrqi63UrAvMb" />
+<meta name="description" content="准备工作 一个可以正常执行的py文件 docker环境 python环境 进入项目文件夹 运行一次py文件对程序进行打包前的测试 在项目主目录下编写Do" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2020_07_13_22_21_50/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%883%E6%97%A501/" />
 
 
-<meta property="og:title" content="topaz全家桶_等软件汇总" />
-<meta property="og:description" content="绿色版 Topaz Video Enhance AI https://cloud.189.cn/t/A7fUzyFzYfMf Topaz AI Gigapixel https://cloud.189.cn/t/buUbqumANFjm Topaz Mask AI https://cloud.189.cn/t/e2QzIzeueI7b Topaz Sharpen AI https://cloud.189.cn/t/V7vaIvAvu2qa Topaz DeNoise AI https://cloud.189.cn/t/naqUbmbeUzyu Topaz Adjust AI https://cloud.189.cn/t/ZviiMzrMnaee Topaz JPEG to RAW AI https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336 安装版： Topaz DeNoise AI https://cloud.189.cn/t/zyaMNvQrInyy Topaz AI Gigapixel https://cloud.189.cn/t/3auER3zQnmem Topaz Video Enhance AI https://cloud.189.cn/t/b6R3aq7B7rEj Office2016四合一绿色精简版 https://cloud.189.cn/t/Jrqi63UrAvMb" />
+<meta property="og:title" content="使用docker打包python程序" />
+<meta property="og:description" content="准备工作 一个可以正常执行的py文件 docker环境 python环境 进入项目文件夹 运行一次py文件对程序进行打包前的测试 在项目主目录下编写Do" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2020_07_13_22_21_50/" />
-<meta property="article:published_time" content="2020-07-13T22:21:58+08:00" />
-<meta property="article:modified_time" content="2020-07-13T22:21:58+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%883%E6%97%A501/" />
+<meta property="article:published_time" content="2021-02-03T01:14:03+08:00" />
+<meta property="article:modified_time" content="2021-02-03T01:14:03+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="topaz全家桶_等软件汇总"/>
-<meta name="twitter:description" content="绿色版 Topaz Video Enhance AI https://cloud.189.cn/t/A7fUzyFzYfMf Topaz AI Gigapixel https://cloud.189.cn/t/buUbqumANFjm Topaz Mask AI https://cloud.189.cn/t/e2QzIzeueI7b Topaz Sharpen AI https://cloud.189.cn/t/V7vaIvAvu2qa Topaz DeNoise AI https://cloud.189.cn/t/naqUbmbeUzyu Topaz Adjust AI https://cloud.189.cn/t/ZviiMzrMnaee Topaz JPEG to RAW AI https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336 安装版： Topaz DeNoise AI https://cloud.189.cn/t/zyaMNvQrInyy Topaz AI Gigapixel https://cloud.189.cn/t/3auER3zQnmem Topaz Video Enhance AI https://cloud.189.cn/t/b6R3aq7B7rEj Office2016四合一绿色精简版 https://cloud.189.cn/t/Jrqi63UrAvMb"/>
+<meta name="twitter:title" content="使用docker打包python程序"/>
+<meta name="twitter:description" content="准备工作 一个可以正常执行的py文件 docker环境 python环境 进入项目文件夹 运行一次py文件对程序进行打包前的测试 在项目主目录下编写Do"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -114,10 +114,14 @@
 <div class="ui centered relaxed grid dream-grid">
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
+    <section class="ui top attached segment cover">
+      <div class="cover-img" style="background-image: url(/img/0035.jpg);"></div>
+    </section>
+    
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          topaz全家桶_等软件汇总
+          使用docker打包python程序
           <div class="sub header">
             @
             
@@ -125,56 +129,118 @@
             
 
             | 
-                星期一，七月 13 日，2020 年
+                星期三，二月 3 日，2021 年
               
 
-            | 1 分钟阅读
+            | 2 分钟阅读
 
             | 更新于
               
-                星期一，七月 13 日，2020 年
+                星期三，二月 3 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><h1 id="绿色版">绿色版</h1>
-<p>Topaz Video Enhance AI
-<a href="https://cloud.189.cn/t/A7fUzyFzYfMf">https://cloud.189.cn/t/A7fUzyFzYfMf</a></p>
-<p>Topaz AI Gigapixel
-<a href="https://cloud.189.cn/t/buUbqumANFjm">https://cloud.189.cn/t/buUbqumANFjm</a></p>
-<p>Topaz Mask AI
-<a href="https://cloud.189.cn/t/e2QzIzeueI7b">https://cloud.189.cn/t/e2QzIzeueI7b</a></p>
-<p>Topaz Sharpen AI
-<a href="https://cloud.189.cn/t/V7vaIvAvu2qa">https://cloud.189.cn/t/V7vaIvAvu2qa</a></p>
-<p>Topaz DeNoise AI
-<a href="https://cloud.189.cn/t/naqUbmbeUzyu">https://cloud.189.cn/t/naqUbmbeUzyu</a></p>
-<p>Topaz Adjust AI
-<a href="https://cloud.189.cn/t/ZviiMzrMnaee">https://cloud.189.cn/t/ZviiMzrMnaee</a></p>
-<p>Topaz JPEG to RAW AI
-<a href="https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336">https://quqi.com/s/1231760/rnBkd1jqO9fkCsO5/336</a></p>
-<h1 id="安装版">安装版：</h1>
-<p>Topaz DeNoise AI
-<a href="https://cloud.189.cn/t/zyaMNvQrInyy">https://cloud.189.cn/t/zyaMNvQrInyy</a></p>
-<p>Topaz AI Gigapixel
-<a href="https://cloud.189.cn/t/3auER3zQnmem">https://cloud.189.cn/t/3auER3zQnmem</a></p>
-<p>Topaz Video Enhance AI
-<a href="https://cloud.189.cn/t/b6R3aq7B7rEj">https://cloud.189.cn/t/b6R3aq7B7rEj</a></p>
-<h1 id="office2016四合一绿色精简版">Office2016四合一绿色精简版</h1>
-<p><a href="https://cloud.189.cn/t/Jrqi63UrAvMb">https://cloud.189.cn/t/Jrqi63UrAvMb</a></p>
-<h1 id="qq-936-破解版">QQ 9.3.6 破解版</h1>
-<p><a href="https://www.lanzous.com/b1004538">https://www.lanzous.com/b1004538</a></p>
-<p>如果需要密码就是ccava</p>
-<p><a href="http://www.ccava.net">www.ccava.net</a></p>
-<h1 id="vmware系列">VMware系列</h1>
-<p><a href="https://cloud.189.cn/t/MfmE73ARFBZb">https://cloud.189.cn/t/MfmE73ARFBZb</a></p>
+      <article class="main"><h2 id="准备工作">准备工作</h2>
+<ol>
+<li>一个可以正常执行的py文件</li>
+<li>docker环境</li>
+<li>python环境</li>
+</ol>
+<h2 id="进入项目文件夹">进入项目文件夹</h2>
+<ol>
+<li>
+<p>运行一次py文件对程序进行打包前的测试</p>
+</li>
+<li>
+<p>在项目主目录下编写Dockerfile文件
+内容模板如下：</p>
+</li>
+</ol>
+<blockquote>
+<p>需要注意的是这个文件的写法并非如此固定，根据需要可以自行编辑</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
+# Use an official Python runtime as a parent image
+FROM python:3.7.6
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any needed packages specified in requirements.txt
+# 此部分使用了清华源加快了速度
+# 清华源使用只需要将域名改成 pypi.tuna.tsinghua.edu.cn/simple 即可
+# 如果是手动敲命令
+RUN pip install --trusted-host pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+# Define environment variable
+ENV NAME daily189
+
+# Run app.py when the container launches
+CMD [&#34;python&#34;, &#34;Run_all.py&#34;]
+
+
+</code></pre></div><ol start="3">
+<li>对项目使用的库进行备份</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+pip freeze &gt; requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+</code></pre></div><ol start="4">
+<li>对requirements.txt文件中非必要的库进行删减（如格式标准相关的库）</li>
+</ol>
+<h2 id="制作镜像">制作镜像</h2>
+<p>1.在项目根目录运行：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+docker build -t imagename Dockerfilepath 
+
+<span style="color:#75715e"># Dockerfilepath：Dockerfile 所在文件夹名称，当前名录为 “.” </span>
+
+如：
+docker build -t ccpy .
+
+</code></pre></div><h2 id="对镜像进行运行测试">对镜像进行运行测试</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<span style="color:#75715e"># 仅仅是本地运行的程序无需联网任务简单如此运行即可</span>
+docker run -d --name c_name imagename
+
+<span style="color:#75715e"># 如果需要联网则需要用 -p 指令将容器中的端口映射出来</span>
+docker run -it -p 80:80 --name c_name imagename
+
+</code></pre></div><p>如果没问题则可以继续下一步
+否则可以通过修改程序源文件代码修正后重新打包</p>
+<h2 id="拷贝运行正常的容器镜像文件">拷贝运行正常的容器镜像文件</h2>
+<blockquote>
+<p>命令格式为： docker save ID &gt; xxx.tar<br>
+docker load &lt; xxx.tar<br>
+ID可以为自己指定的名字 也可以是docker自动分配的编码</p>
+</blockquote>
+<h4 id="保存容器">保存容器</h4>
+<blockquote>
+<p>docker export ID &gt;xxx.tar<br>
+docker import xxx.tar containr:v1<br>
+然后再docker run -it containr:v1 bash</p>
+</blockquote>
+<h1 id="最后在自己部署了docker环境的服务器上运行即可">最后在自己部署了docker环境的服务器上运行即可</h1>
+<p>将制作好的容器文件 ***.tar 拷贝到运行机上</p>
+<p>docker load &lt; ***.tar</p>
+<p>之后运行即可</p>
 </article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
       
         
-          <a class="ui label" href="/tags/note" title="note">note</a>
+          <a class="ui label" href="/tags/note" title="Note">Note</a>
+        
+          <a class="ui label" href="/tags/%E7%AC%94%E8%AE%B0" title="笔记">笔记</a>
         
       
       <div
@@ -199,8 +265,8 @@
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2020_07_13_22_21_50\/';  
-            this.page.identifier = '\/posts\/2020_07_13_22_21_50\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%883%E6%97%A501\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%883%E6%97%A501\/'; 
           };
 
           (function() { 
@@ -231,6 +297,22 @@
   </div>
   <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
     
+    
+      <div class="ui segment toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#准备工作">准备工作</a></li>
+    <li><a href="#进入项目文件夹">进入项目文件夹</a></li>
+    <li><a href="#制作镜像">制作镜像</a></li>
+    <li><a href="#对镜像进行运行测试">对镜像进行运行测试</a></li>
+    <li><a href="#拷贝运行正常的容器镜像文件">拷贝运行正常的容器镜像文件</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
     
 
     <article class="dream-header">
