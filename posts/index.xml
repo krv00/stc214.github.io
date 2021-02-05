@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Sat, 06 Feb 2021 01:24:25 +0800</lastBuildDate><atom:link href="https://stc214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Feb 2021 02:11:15 +0800</lastBuildDate><atom:link href="https://stc214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSCode 多行批量添加内容</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A508/</link>
+      <pubDate>Sat, 06 Feb 2021 02:11:15 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A508/</guid>
+      <description>原文链接：https://blog.csdn.net/helpmsg/article/details/105931038 问题描述：有一个js</description>
+    </item>
+    
+    <item>
+      <title>使用QEMU扩展树莓派镜像增加剩余使用空间</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A507/</link>
+      <pubDate>Sat, 06 Feb 2021 02:02:39 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A507/</guid>
+      <description>原文链接：https://blog.csdn.net/talkxin/article/details/81264605 https://blog.csdn.net/weixin_34124939/article/details/92783554 前言 当我们使用qem</description>
+    </item>
+    
+    <item>
+      <title>使用QEMU模拟树莓派Raspberry Pi</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A506/</link>
+      <pubDate>Sat, 06 Feb 2021 01:35:37 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A506/</guid>
+      <description>原文： https://cloud.tencent.com/developer/article/1685107 如果在ubuntu中提示vnc的部分出错 那就使用下边这条删掉相关设置项的已编辑好的命令 qemu-system-arm -M versatilepb -cpu arm1176 -m 256 -hda /home/ustc/debian_img/2021-01-11-raspios-buster-armhf-lite.img -dtb /home/ustc/debian_img/versatile-pb-buster.dtb -kernel /home/ustc/debian_img/kernel-qemu-4.19.50-buster -append &amp;#39;root=/dev/sda2 panic=1&amp;#39; -no-reboot -netdev user,id=unet -device virtio-net-pci,netdev=unet 原文</description>
+    </item>
+    
     <item>
       <title>Docker 镜像加速</title>
       <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A505/</link>
