@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Sat, 06 Feb 2021 02:11:15 +0800</lastBuildDate><atom:link href="https://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Feb 2021 02:24:20 +0800</lastBuildDate><atom:link href="https://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian(Linux)系统Samba安装和配置</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A509/</link>
+      <pubDate>Sat, 06 Feb 2021 02:24:20 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A509/</guid>
+      <description>原文链接： https://blog.csdn.net/jinzhu1911/article/details/100592496 samba安装 root用户下直接使用以下命令 apt-get install samba 若是普通用户下使用以下命令 sudo apt-get install smaba samba配置 samba的配置文件在/etc</description>
+    </item>
+    
     <item>
       <title>VSCode 多行批量添加内容</title>
       <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A508/</link>
