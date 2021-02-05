@@ -7,7 +7,61 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Fri, 05 Feb 2021 23:07:22 +0800</lastBuildDate><atom:link href="https://stc214.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Feb 2021 01:24:25 +0800</lastBuildDate><atom:link href="https://stc214.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker 镜像加速</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A505/</link>
+      <pubDate>Sat, 06 Feb 2021 01:24:25 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A505/</guid>
+      <description>原文链接：https://www.runoob.com/docker/docker-mirror-acceleration.html 国内从 DockerHub</description>
+    </item>
+    
+    <item>
+      <title>MacOS Docker 安装</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A504/</link>
+      <pubDate>Sat, 06 Feb 2021 01:23:24 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A504/</guid>
+      <description>原文链接：https://www.runoob.com/docker/macos-docker-install.html 使用 Homebrew 安装 macOS 我们可以</description>
+    </item>
+    
+    <item>
+      <title>Windows Docker 安装</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A503/</link>
+      <pubDate>Sat, 06 Feb 2021 01:19:19 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A503/</guid>
+      <description>原文链接： https://www.runoob.com/docker/windows-docker-install.html Docker 并非是一个通用的容器工具，它依赖于已存在并运行的 Linux 内核环境。 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，因此它执行的效</description>
+    </item>
+    
+    <item>
+      <title>CentOS Docker 安装</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A502/</link>
+      <pubDate>Sat, 06 Feb 2021 01:19:15 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A502/</guid>
+      <description>原文链接：https://www.runoob.com/docker/centos-docker-install.html Docker 支持以下的 64 位 CentOS</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu Docker 安装</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A501/</link>
+      <pubDate>Sat, 06 Feb 2021 01:19:10 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A501/</guid>
+      <description>原文： https://www.runoob.com/docker/ubuntu-docker-install.html Docker Engine-Community 支持以下的 Ubuntu 版本： Xenial 16.04 (LTS) Bionic 18.04 (LTS) Cosmic 18.10 Disco 19.04 其他更新的版本…… Docker Engine - Community 支持上 x86_64（或 amd64）armhf，arm64，s39</description>
+    </item>
+    
+    <item>
+      <title>Debian Docker 安装</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%885%E6%97%A508/</link>
+      <pubDate>Fri, 05 Feb 2021 23:37:57 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%885%E6%97%A508/</guid>
+      <description>原文： https://www.runoob.com/docker/debian-docker-install.html Docker 支持以下的 Debian 版本： Buster 10 Stretch 9 (stable) / Raspbian Stretch Docker Engine-Community 在 x86_64（或 amd64 ）armhf，和 arm64 体系结构上受支持。 使用官方安装脚本自动安装 安装命令如下</description>
+    </item>
+    
     <item>
       <title>树莓派磁盘扩容</title>
       <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%885%E6%97%A507/</link>
