@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>使用QEMU模拟树莓派Raspberry Pi | STC214</title>
+    <title>linux smbclient命令参数及用法详解--linux访问samba共享资源命 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,27 +13,27 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="原文： https://cloud.tencent.com/developer/article/1685107 如果在ubuntu中提示vnc的部分出错 那就使用下边这条删掉相关设置项的已编辑好的命令 qemu-system-arm -M versatilepb -cpu arm1176 -m 256 -hda /home/ustc/debian_img/2021-01-11-raspios-buster-armhf-lite.img -dtb /home/ustc/debian_img/versatile-pb-buster.dtb -kernel /home/ustc/debian_img/kernel-qemu-4.19.50-buster -append &amp;#39;root=/dev/sda2 panic=1&amp;#39; -no-reboot -netdev user,id=unet -device virtio-net-pci,netdev=unet 原文" />
+<meta name="description" content="smbclient命令属于samba套件，它提供一种命令行使用交互式方式访问samba服务器的共享资源。 语法 smbclient(选项)(参数" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A506/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A513/" />
 
 
-<meta property="og:title" content="使用QEMU模拟树莓派Raspberry Pi" />
-<meta property="og:description" content="原文： https://cloud.tencent.com/developer/article/1685107 如果在ubuntu中提示vnc的部分出错 那就使用下边这条删掉相关设置项的已编辑好的命令 qemu-system-arm -M versatilepb -cpu arm1176 -m 256 -hda /home/ustc/debian_img/2021-01-11-raspios-buster-armhf-lite.img -dtb /home/ustc/debian_img/versatile-pb-buster.dtb -kernel /home/ustc/debian_img/kernel-qemu-4.19.50-buster -append &#39;root=/dev/sda2 panic=1&#39; -no-reboot -netdev user,id=unet -device virtio-net-pci,netdev=unet 原文" />
+<meta property="og:title" content="linux smbclient命令参数及用法详解--linux访问samba共享资源命" />
+<meta property="og:description" content="smbclient命令属于samba套件，它提供一种命令行使用交互式方式访问samba服务器的共享资源。 语法 smbclient(选项)(参数" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A506/" />
-<meta property="article:published_time" content="2021-02-06T01:35:37+08:00" />
-<meta property="article:modified_time" content="2021-02-06T01:35:37+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A513/" />
+<meta property="article:published_time" content="2021-02-06T03:52:49+08:00" />
+<meta property="article:modified_time" content="2021-02-06T03:52:49+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用QEMU模拟树莓派Raspberry Pi"/>
-<meta name="twitter:description" content="原文： https://cloud.tencent.com/developer/article/1685107 如果在ubuntu中提示vnc的部分出错 那就使用下边这条删掉相关设置项的已编辑好的命令 qemu-system-arm -M versatilepb -cpu arm1176 -m 256 -hda /home/ustc/debian_img/2021-01-11-raspios-buster-armhf-lite.img -dtb /home/ustc/debian_img/versatile-pb-buster.dtb -kernel /home/ustc/debian_img/kernel-qemu-4.19.50-buster -append &#39;root=/dev/sda2 panic=1&#39; -no-reboot -netdev user,id=unet -device virtio-net-pci,netdev=unet 原文"/>
+<meta name="twitter:title" content="linux smbclient命令参数及用法详解--linux访问samba共享资源命"/>
+<meta name="twitter:description" content="smbclient命令属于samba套件，它提供一种命令行使用交互式方式访问samba服务器的共享资源。 语法 smbclient(选项)(参数"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -115,13 +115,13 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0057.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0064.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          使用QEMU模拟树莓派Raspberry Pi
+          linux smbclient命令参数及用法详解--linux访问samba共享资源命
           <div class="sub header">
             @
             
@@ -132,7 +132,7 @@
                 星期六，二月 6 日，2021 年
               
 
-            | 3 分钟阅读
+            | 6 分钟阅读
 
             | 更新于
               
@@ -142,89 +142,180 @@
         </h1>
       </header>
 
-      <article class="main"><p>原文： <a href="https://cloud.tencent.com/developer/article/1685107">https://cloud.tencent.com/developer/article/1685107</a></p>
-<p>如果在ubuntu中提示vnc的部分出错<br>
-那就使用下边这条删掉相关设置项的已编辑好的命令</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
-qemu-system-arm   -M versatilepb   -cpu arm1176  -m <span style="color:#ae81ff">256</span>   -hda /home/ustc/debian_img/2021-01-11-raspios-buster-armhf-lite.img  -dtb /home/ustc/debian_img/versatile-pb-buster.dtb   -kernel /home/ustc/debian_img/kernel-qemu-4.19.50-buster   -append <span style="color:#e6db74">&#39;root=/dev/sda2 panic=1&#39;</span>   -no-reboot -netdev user,id<span style="color:#f92672">=</span>unet -device virtio-net-pci,netdev<span style="color:#f92672">=</span>unet  
-  
-</code></pre></div><hr>
-<p>原文：</p>
-<p>被誉为 “世界上最流行最便宜的小型电脑” 的「树莓派」Raspberry Pi 是一款性价比超高的迷你电脑主机 (仅有信用卡大小)， 深受全球开发者、极客、技术爱好者们的追捧和喜爱</p>
-<p>树莓派可以安装多种 Linux 系统发行版 (官方为 Debian 的衍生版)，可当服务器搭建各种网站、应用服务来使用， 也能用来学习编程、控制硬件或日常办公。由于树莓派的体积很小很轻，并且功能极其丰富强大，这也使得它的应用范围和潜力几乎是无限的</p>
-<p>下面介绍在之前的编译安装Qemu5.1的文章基础下安装raspberrypi树莓派</p>
-<p>Fedora32下编译安装Qemu5.1并创建ARM版本Linux虚拟机<br>
-1、下载树莓派系统</p>
-<p>最新版本下载地址 <a href="http://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip">http://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip</a><br>
-2、下载kernel-qemu</p>
-<p><a href="https://github.com/dhruvvyas90/qemu-rpi-kernel">https://github.com/dhruvvyas90/qemu-rpi-kernel</a></p>
-<p>下载如下这两个文件</p>
-<p>kernel-qemu-4.19.50-buster</p>
-<p>versatile-pb-buster.dtb<br>
-3、qemu命令行启动</p>
-<p>qemu-system-arm   -M versatilepb   -cpu arm1176   -m 256   -hda ./2020-02-13-raspbian-buster.img  -dtb ./versatile-pb-buster.dtb   -kernel ./kernel-qemu-4.19.50-buster   -append &lsquo;root=/dev/sda2 panic=1&rsquo;   -no-reboot -display vnc=10.20.90.56:1  -netdev user,id=unet -device virtio-net-pci,netdev=unet</p>
-<p>-M versatilepb</p>
-<p>-cpu arm1176</p>
-<p>-m 256</p>
-<p>-hda ./2020-02-13-raspbian-buster.img</p>
-<p>-dtb ./versatile-pb-buster.dtb</p>
-<p>-kernel ./kernel-qemu-4.19.50-buster   -append &lsquo;root=/dev/sda2 panic=1&rsquo;</p>
-<p>-no-reboot</p>
-<p>-display vnc=10.20.90.56:1</p>
-<p>-netdev user,id=unet -device virtio-net-pci,netdev=unet<br>
-4、体验树莓派系统</p>
-<p>vnc登录5901端口</p>
-<p>lscpu+uname -a可以看到cpu为arm架构，内核也为arm版本内核<br>
-5、当然你也可以下载x86架构的镜像</p>
-<p><a href="https://www.raspberrypi.org/downloads/raspberry-pi-desktop/">https://www.raspberrypi.org/downloads/raspberry-pi-desktop/</a></p>
-<p>本文分享自微信公众号 - WalkingCloud（WalkingCloud2018），作者：yuanfan2012</p>
-<p>原文出处及转载信息见文内详细说明，如有侵权，请联系 <a href="mailto:yunjia_community@tencent.com">yunjia_community@tencent.com</a> 删除。</p>
-<p>原始发表时间：2020-08-21</p>
-<p>本文参与腾讯云自媒体分享计划，欢迎正在阅读的你也加入，一起分享。<br>
-举报<br>
-我来说两句<br>
-0 条评论<br>
-登录 后参与评论<br>
-相关文章</p>
-<pre><code>【CentOS7操作系统安全加固系列】第(1)篇  
-
-规则描述：设置口令认证失败后的锁定策略 为了保障用户系统的安全，建议用户设置口令出错次数的阈值，以及由于口令尝试被锁定用户的自动解锁时间。用户锁定期间，任何输入...  
-yuanfan2012  
-Kali Linux的安装与初体验  
-
-Kali Linux 在渗透测试和白帽子方面是业界领先的 Linux 发行版。默认情况下，该发行版附带了大量入侵和渗透的工具和软件,集合了许多优秀的安全工具  
-yuanfan2012  
-Centos7下使用SSM管理LVM卷  
-
-SSM系统存储管理器系（简称ssm）是RHEL7/CentOS7 新增的功能，是一种统一的存储管理命令界面，由红帽公司开发，用于管理各种各样的存储设备。目前，有...  
-yuanfan2012  
-菜鸟手册（2）：给Jetson Nano安装树莓派摄像头  
-
-因为JetBot上用的是树莓派摄像头，所以我们也首选考虑使用树莓派摄像头，当然USB摄像头是亲测可用的。  
-GPUS Lady  
-.NET Core TDD 前传: 编写易于测试的代码 -- 全局状态  
-
-全局状态, 也可以叫做应用程序状态, 它是一组变量, 这些变量维护着应用程序的高级状态.  
-solenovex  
-记一次uboot升级过程的两个坑  
-
-之前做过一次uboot的升级，当时留下了一些记录，本文摘录其中比较有意思的两个问题。  
-zqb_all  
-Pycharm中无法导入(import)自己写的模块或脚本  
-Aidol  
-HDU 3746 Cyclic Nacklace(KMP求循环节)  
-
-题目链接：http://acm.hdu.edu.cn/showproblem.php?pid=3746  
-Ch_Zaqdt  
-创新工场汪华：移动支付与人工智能助推，中国互联网进入OMO时代  
-
-转载自 创新工场公众号 很多人说，中国互联网已经进入下半场，人口红利消失，留给创业者的机会不多了。 但在我看来，中国互联网的下半场还远没到来，我们仍在上半场的开...  
-量子位  
-JVM（一）史上最佳入门指南  
-
-提到Java虚拟机（JVM），可能大部分人的第一印象是“难”，但当让我们真正走入“JVM世界”的时候，会发现其实问题并不像我们想象中的那么复杂。唯一真正令我们恐...  
-Java中文社群-磊哥  
+      <article class="main"><p>smbclient命令属于samba套件，它提供一种命令行使用交互式方式访问samba服务器的共享资源。<br>
+语法</p>
+<p>smbclient(选项)(参数)</p>
+<p>选项</p>
+<pre><code>-B&lt;ip地址&gt;：传送广播数据包时所用的IP地址；  
+-d&lt;排错层级&gt;：指定记录文件所记载事件的详细程度；  
+-E：将信息送到标准错误输出设备；  
+-h：显示帮助；  
+-i&lt;范围&gt;：设置NetBIOS名称范围；  
+-I&lt;IP地址&gt;：指定服务器的IP地址；  
+-l&lt;记录文件&gt;：指定记录文件的名称；  
+-L：显示服务器端所分享出来的所有资源；  
+-M&lt;NetBIOS名称&gt;：可利用WinPopup协议，将信息送给选项中所指定的主机；  
+-n&lt;NetBIOS名称&gt;：指定用户端所要使用的NetBIOS名称；  
+-N：不用询问密码；  
+-O&lt;连接槽选项&gt;：设置用户端TCP连接槽的选项；  
+-p&lt;TCP连接端口&gt;：指定服务器端TCP连接端口编号；  
+-R&lt;名称解析顺序&gt;：设置NetBIOS名称解析的顺序；  
+-s&lt;目录&gt;：指定smb.conf所在的目录；  
+-t&lt;服务器字码&gt;：设置用何种字符码来解析服务器端的文件名称；  
+-T&lt;tar选项&gt;：备份服务器端分享的全部文件，并打包成tar格式的文件；  
+-U&lt;用户名称&gt;：指定用户名称；  
+-w&lt;工作群组&gt;：指定工作群组名称。  
 </code></pre>
+<p>参数</p>
+<p>smb服务器：指定要连接的smb服务器。<br>
+实例</p>
+<p>列出某个IP地址所提供的共享文件夹</p>
+<p>smbclient -L 198.168.0.1 -U username%password</p>
+<p>像ftp客户端一样使用smbclient</p>
+<p>smbclient //192.168.0.1/tmp  -U username%password</p>
+<p>执行smbclient命令成功后，进入smbclient环境，出现提示符：smb:/&gt;</p>
+<p>这里有许多命令和ftp命令相似，如cd 、lcd、get、megt、put、mput等。通过这些命令，我们可以访问远程主机的共享资源。</p>
+<p>直接一次性使用smbclient命令</p>
+<p>smbclient -c &ldquo;ls&rdquo;  //192.168.0.1/tmp  -U username%password</p>
+<p>和</p>
+<pre><code>smbclient //192.168.0.1/tmp  -U username%password  
+smb:/&gt;ls  
+</code></pre>
+<p>功能一样的。</p>
+<p>创建一个共享文件夹</p>
+<p>smbclient -c &ldquo;mkdir share1&rdquo; //192.168.0.1/tmp -U username%password</p>
+<p>如果用户共享//192.168.0.1/tmp的方式是只读的，会提示NT_STATUS_ACCESS_DENIED making remote directory /share1</p>
+<hr>
+<p>smbclient用法 :</p>
+<p>参　　数： <br>
+[网络资源]  [网络资源]的格式为//服务器名称/资源分享名称。 <br>
+[密码]   输入存取网络资源所需的密码。 <br>
+-B&lt;IP地址&gt;   传送广播数据包时所用的IP地址。 <br>
+-d&lt;排错层级&gt;   指定记录文件所记载事件的详细程度。 <br>
+-E   将信息送到标准错误输出设备。 <br>
+-h   显示帮助。 <br>
+-i&lt;范围&gt;   设置NetBIOS名称范围。 <br>
+-I&lt;IP地址&gt;   指定服务器的IP地址。 <br>
+-l&lt;记录文件&gt;   指定记录文件的名称。 <br>
+-L   显示服务器端所分享出来的所有资源。 <br>
+-M&lt;NetBIOS名称&gt;   可利用WinPopup协议，将信息送给选项中所指定的主机。 <br>
+-n&lt;NetBIOS名称&gt;   指定用户端所要使用的NetBIOS名称。 <br>
+-N   不用询问密码。 <br>
+-O&lt;连接槽选项&gt;   设置用户端TCP连接槽的选项。 <br>
+-p&lt;TCP连接端口&gt;   指定服务器端TCP连接端口编号。 <br>
+-R&lt;名称解析顺序&gt;   设置NetBIOS名称解析的顺序。 <br>
+-s&lt;目录&gt;   指定smb.conf所在的目录。 <br>
+-t&lt;服务器字码&gt;   设置用何种字符码来解析服务器端的文件名称。 <br>
+-T&lt;tar选项&gt;   备份服务器端分享的全部文件，并打包成tar格式的文件。 <br>
+-U&lt;用户名称&gt;   指定用户名称。 <br>
+-W&lt;工作群组&gt;   指定工作群组名称。</p>
+<p>smbclient //192.168.0.100/share -Uadministrator 回车后,会提示输入admin的密码. <br>
+之后就可以通过get获取了 192.168.0.100是我在windows主机的IP,share为共享名,-U后面是用户名</p>
+<p>命令 说明  <br>
+?或help [command] 提供关于帮助或某个命令的帮助  <br>
+![shell command]   执行所用的SHELL命令，或让用户进入 SHELL提示符  <br>
+cd [目录]  切换到服务器端的指定目录，如未指定，则 smbclient 返回当前本地目录  <br>
+lcd [目录]  切换到客户端指定的目录；  <br>
+dir 或ls   列出当前目录下的文件；  <br>
+exit 或quit    退出smbclient  <br>
+get file1  file2 从服务器上下载file1，并以文件名file2存在本地机上；如果不想改名，可以把file2省略  <br>
+mget file1 file2 file3  filen 从服务器上下载多个文件；  <br>
+md或mkdir 目录 在服务器上创建目录  <br>
+rd或rmdir.html' target='_blank'&gt;rmdir 目录 删除服务器上的目录  <br>
+put file1 [file2] 向服务器上传一个文件file1,传到服务器上改名为file2；  <br>
+mput file1 file2 filen 向服务器上传多个文件</p>
+<p>若windows中有一个共享文件夹Share,Windows用作服务器</p>
+<p>要设置可以写的权限.</p>
+<p>一):与Windows服务器建立连接   <a href="http://www.linuxso.com">www.linuxso.com</a>收集 谢绝转载.</p>
+<p>smbclient  //192.168.0.100/Share  -u  administrator</p>
+<p>回车后,会提示输入admin的密码.</p>
+<p>通过密码验证之后,</p>
+<p>会出现:</p>
+<p>smb:&gt;</p>
+<p>这样子状态等待输入.</p>
+<p>1.1  列出文件状态</p>
+<p>smb:&gt;ls</p>
+<p>通过ls就可以看出当前所有文件状态</p>
+<p>1.2 从windows中取得文件</p>
+<p>若有文件bbb.log</p>
+<p>则输入:</p>
+<p>smb:&gt;get bbb.log</p>
+<p>1.3若要所linux中的文件传输到windows之中</p>
+<p>则文件在根目录下  文件名:linuxso.log</p>
+<p>则输入:</p>
+<p>smb:.&gt;put /linuxso.log    linuxso.log</p>
+<p>常用功能： 资料由linuxso.com收集</p>
+<p>1，列出某个IP地址所提供的共享文件夹 <br>
+smbclient -L 198.168.0.1 -U username%password</p>
+<p>2,像FTP客户端一样使用smbclient <br>
+smbclient //192.168.0.1/tmp  -U username%password</p>
+<p>执行smbclient命令成功后，进入smbclient环境，出现提示符： smb:&gt; <br>
+这里有许多命令和ftp命令相似，如cd 、lcd、get、megt、put、mput等。通过这些命令，我们可以访问远程主机的共享资源。</p>
+<p>3,直接一次性使用smbclient命令 <br>
+smbclient -c &ldquo;ls&rdquo;  //192.168.0.1/tmp  -U username%password <br>
+和 <br>
+smbclient //192.168.0.1/tmp  -U username%password <br>
+smb:&gt;ls <br>
+功能一样的</p>
+<p>例，创建一个共享文件夹 <br>
+smbclient -c &ldquo;mkdir share1&rdquo;  //192.168.0.1/tmp  -U username%password <br>
+如果用户共享//192.168.0.1/tmp的方式是只读的，会提示 <br>
+NT_STATUS_ACCESS_DENIED making remote directory \share1</p>
+<p>推荐阅读一:Linux系统上使用smbclient访问Windows共享资源</p>
+<p>在Linux下，可以通过smbclient命令来实现相似的功能，访问Windows的某个共享目录。</p>
+<p>使用平台: <br>
+Red Hat Enterprise Linux AS release 4 <br>
+IP:192.168.1.197</p>
+<p>Windows XP Professional SP2 <br>
+IP:192.168.1.198 <br>
+windows下的共享文件夹hello里面有个1.txt的文本文件</p>
+<p>前提条件: <br>
+1、Windows和Linux共处于同一个局域网中，可以互相ping通，都未设置防火墙 <br>
+2、Linux上安装有samba-client的RPM包，它是Samba客户端工具</p>
+<p>在Linux下输入 <br>
+#smbclient -L 192.168.1.198 -U administrator <br>
+Password:（输入windows系统所需要的密码） <br>
+列举出windows系统192.168.1.198上的所有共享目录</p>
+<p>#smbclient //192.168.1.198/hello -U administrator <br>
+Password:（输入windows系统所需要的密码） <br>
+访问hello目录</p>
+<p>#ls 列举出hello目录下的所有文件</p>
+<p>#get 1.txt /opt/share/1.txt <br>
+将得到的文件复制到Linux系统的/opt/share/路径下。</p>
+<p>将所有的文件获取完成后 <br>
+#q  退出。</p>
+<p>下面是RHCE考试题目中一道关于samba配置的题目</p>
+<p>通过配置SMB共享/common目录:</p>
+<ol>
+<li>
+<p>必须是STAFF工作组的一员</p>
+</li>
+<li>
+<p>共享名是common</p>
+</li>
+<li>
+<p>common只对example.com可用</p>
+</li>
+<li>
+<p>用户harry可在example.com域内访问</p>
+</li>
+</ol>
+<p>5)用户harry的password为123abc</p>
+<p>#yum install samba*</p>
+<p>#chkconfig samba on</p>
+<p>#service samba start</p>
+<p>#smbpasswd -a harry</p>
+<p>#setsebool -P samba_enable_home_dirs on（要不是共享家目录的话就不会影响）</p>
+<p>#getsebool –l</p>
+<p>#chcon -t samba_share_t /common</p>
+<p>#vim /etc/samba/smb.conf</p>
+<p>workgroup = STAFF</p>
+<p>[common]</p>
+<p>comment = this is a test smb</p>
+<p>path= /common</p>
+<p>public=no</p>
+<p>write list = harry</p>
+<p>browseable = yes</p>
 </article>
     </section>
 
@@ -258,8 +349,8 @@ Java中文社群-磊哥
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A506\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A506\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A513\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A513\/'; 
           };
 
           (function() { 
