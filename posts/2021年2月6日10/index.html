@@ -12,8 +12,8 @@
 
 
 
-<meta name="author" content="Author Name" />
-<meta name="description" content="原文地址： https://www.cnblogs.com/-xuan/p/10293859.html 安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器 smbclient //{smbserverip}/{foldername} 实现Linux系统之间共享文件资源以及在Linux系" />
+<meta name="author" content="STC214" />
+<meta name="description" content="原文地址： https://www.cnblogs.com/-xuan/p/10293859.html 安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器 smbclient //{smbserverip}/{foldername} sudo mount -t cifs //ip地址/path/to/share path/to/mount 命" />
 
 
 
@@ -23,7 +23,7 @@
 
 
 <meta property="og:title" content="linux搭建smb、挂载smb、Windows共享" />
-<meta property="og:description" content="原文地址： https://www.cnblogs.com/-xuan/p/10293859.html 安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器 smbclient //{smbserverip}/{foldername} 实现Linux系统之间共享文件资源以及在Linux系" />
+<meta property="og:description" content="原文地址： https://www.cnblogs.com/-xuan/p/10293859.html 安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器 smbclient //{smbserverip}/{foldername} sudo mount -t cifs //ip地址/path/to/share path/to/mount 命" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A510/" />
 <meta property="article:published_time" content="2021-02-06T02:45:32+08:00" />
@@ -33,7 +33,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="linux搭建smb、挂载smb、Windows共享"/>
-<meta name="twitter:description" content="原文地址： https://www.cnblogs.com/-xuan/p/10293859.html 安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器 smbclient //{smbserverip}/{foldername} 实现Linux系统之间共享文件资源以及在Linux系"/>
+<meta name="twitter:description" content="原文地址： https://www.cnblogs.com/-xuan/p/10293859.html 安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器 smbclient //{smbserverip}/{foldername} sudo mount -t cifs //ip地址/path/to/share path/to/mount 命"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -125,9 +125,7 @@
           <div class="sub header">
             @
             
-              
-                Author Name
-              
+              STC214
             
 
             | 
@@ -149,15 +147,28 @@
 <blockquote>
 <p>smbclient //{smbserverip}/{foldername}</p>
 </blockquote>
-<p>实现Linux系统之间共享文件资源以及在Linux系统与Windows系统之间共享文件<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+sudo mount -t cifs //ip地址/path/to/share path/to/mount  
+  
+  
+命令行解释：  
+  
+mount：挂载命令  
+-t cifs： 用cifs文件系统挂载samba共享文件，如果提示错误的文件系统的话，可能是没有cifs，需要自己安装。【centos：  
+yum install nfs-utils】  
+  
+//ip地址/path/to/share：共享目录路径  
+path/to/mount：要挂载的路径，需要自己创建一个  
+  
+</code></pre></div><p>实现Linux系统之间共享文件资源以及在Linux系统与Windows系统之间共享文件   <br>
 Samba软件包的构成</p>
-<pre><code>服务端：samba  
-客户端：samba-client  
-公共组件：samba-common  
-Smbd：负责为客户机提供服务器中共享资源（目录和文件）的访问，监听139端口（smb协议）,445端口（cifs协议）  
-Nmbd：负责提供基于netblos协议的主机名称解析，以便为windows网络中的主机进行查询服务，监听137-138端口（netblos协议）  
+<pre><code>服务端：samba      
+客户端：samba-client      
+公共组件：samba-common      
+Smbd：负责为客户机提供服务器中共享资源（目录和文件）的访问，监听139端口（smb协议）,445端口（cifs协议）      
+Nmbd：负责提供基于netblos协议的主机名称解析，以便为windows网络中的主机进行查询服务，监听137-138端口（netblos协议）      
 </code></pre>
-<p>Samba服务的程序组件<br>
+<p>Samba服务的程序组件   <br>
 主配置文件路径</p>
 <p>/etc/samba/smb.conf</p>
 <p>配置文件参数解释</p>
@@ -211,7 +222,7 @@ Nmbd：负责提供基于netblos协议的主机名称解析，以便为windows�
 <p>writable = no</p>
 <p>#是否允许写入</p>
 <p>printable = yes</p>
-<p>u  部署samba服务<br>
+<p>u  部署samba服务   <br>
 匿名方式访问</p>
 <p>准备环境</p>
 <p>setenforce 0                      //关闭selinux</p>
@@ -219,39 +230,39 @@ Nmbd：负责提供基于netblos协议的主机名称解析，以便为windows�
 <p>1.搭建本地yum源。</p>
 <p>2.使用yum方式安装samba服务程序</p>
 <p>yum install -y samba*             //yum方式安装samba服务</p>
-<pre><code>创建共享的目录  
-编辑主配置文件设置匿名共享，设置共享目录  
-重启服务，使用windos访问验证，无法访问请检查iptable 防火墙  
+<pre><code>创建共享的目录      
+编辑主配置文件设置匿名共享，设置共享目录      
+重启服务，使用windos访问验证，无法访问请检查iptable 防火墙      
 </code></pre>
 <p>mkdir -p /var/public              //创建要共享目录</p>
 <p>vim /etc/samba/smb.conf                   //编辑samba主配置文件</p>
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;添加或者修改红色部分的参数&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
 <p>[global]</p>
-<pre><code>    workgroup = SAMBA  
-
-    security = user            //7.0以下系统将user改为share  
-
-    passdb backend = tdbsam  
-
-    map to guest = bad user            //7.0以上匿名访问必加  
+<pre><code>    workgroup = SAMBA      
+  
+    security = user            //7.0以下系统将user改为share      
+  
+    passdb backend = tdbsam      
+  
+    map to guest = bad user            //7.0以上匿名访问必加      
 </code></pre>
 <p>[public]                                  //共享目录名称</p>
-<pre><code>    comment = public                  //共享描述  
-
-    path = /var/public                //共享目录路径  
-
-    guest ok = yes                     //共享目录是否所有人可见  
-
-    read only = yes                    //是否只读  
-
-    browseable = yes                   //网络发现是否可见  
+<pre><code>    comment = public                  //共享描述      
+  
+    path = /var/public                //共享目录路径      
+  
+    guest ok = yes                     //共享目录是否所有人可见      
+  
+    read only = yes                    //是否只读      
+  
+    browseable = yes                   //网络发现是否可见      
 </code></pre>
 <p>systemctl restart smb                     //重启samba服务</p>
 <p>用户验证的共享</p>
 <p>案例：创建一个共享目录/var/yonghu/，只有zhangsan和lisi可以访问共享，只有zhangsan有可以写入的权限</p>
 <p>注意：创建共享用户前需要有对应的系统用户</p>
-<pre><code>创建共享用户zhangsan、lisi，创建共享的目录  
-修改smb配置文件，设置共享目录  
+<pre><code>创建共享用户zhangsan、lisi，创建共享的目录      
+修改smb配置文件，设置共享目录      
 </code></pre>
 <p>Useradd zhangsan          //创建系统用户zhangsan</p>
 <p>Useradd lisi              //创建系统用户lisi</p>
@@ -261,37 +272,37 @@ Nmbd：负责提供基于netblos协议的主机名称解析，以便为windows�
 <p>vim /etc/samba/smb.conf           //编辑samba主配置文件</p>
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;添加或修改红色部分参数&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
 <p>[global]</p>
-<pre><code>    workgroup = MYGROUP  
-
-    security = user  
-
-    passdb backend = tdbsam  
-
-    map to guest = bad user    //匿名访问必加，否则需要密码  
+<pre><code>    workgroup = MYGROUP      
+  
+    security = user      
+  
+    passdb backend = tdbsam      
+  
+    map to guest = bad user    //匿名访问必加，否则需要密码      
 </code></pre>
 <p>[public]</p>
-<pre><code>    comment = public  
-
-    path = /var/public  
-
-    guest ok = yes  
+<pre><code>    comment = public      
+  
+    path = /var/public      
+  
+    guest ok = yes      
 </code></pre>
 <p>[yonghu]                          //共享目录名称</p>
-<pre><code>    comment = yonghu           //描述  
-
-    path = /var/yonghu         //共享目录路径  
-
-    public = no        //是否所有人可见  
-
-    read only = yes            //是否只读  
-
-    valid users = zhangsan,lisi       //哪些用户可以访问  
-
-    write list = zhangsan      //哪些用户可以写入，组加“@组名”  
-
-    directory mask = 0755      //用户上传目录权限为755  
-
-    create mask = 0644         //用户上传文件权限为644  
+<pre><code>    comment = yonghu           //描述      
+  
+    path = /var/yonghu         //共享目录路径      
+  
+    public = no        //是否所有人可见      
+  
+    read only = yes            //是否只读      
+  
+    valid users = zhangsan,lisi       //哪些用户可以访问      
+  
+    write list = zhangsan      //哪些用户可以写入，组加“@组名”      
+  
+    directory mask = 0755      //用户上传目录权限为755      
+  
+    create mask = 0644         //用户上传文件权限为644      
 </code></pre>
 <p>3.给予共享目录777权限</p>
 <p>Chmod -R 777 /var/yonghu          //更改共享目录的权限为777</p>
@@ -325,11 +336,11 @@ Nmbd：负责提供基于netblos协议的主机名称解析，以便为windows�
 <p>smbclient -L 192.168.2.224                //查询2.224的共享目录</p>
 <p>匿名挂载方法</p>
 <p>mount.cifs //192.168.2.223/public /ceshi</p>
-<pre><code>                      //将public目录挂载到本地ceshi目录  
+<pre><code>                      //将public目录挂载到本地ceshi目录      
 </code></pre>
 <p>指定用户挂载</p>
 <p>mount.cifs //192.168.2.223/yonghu /ceshi/ -o username=zhangsan,password=aaa</p>
-<pre><code>       //将yonghu目录挂载到本地ceshi目录，指定用户名zhangsan  
+<pre><code>       //将yonghu目录挂载到本地ceshi目录，指定用户名zhangsan      
 </code></pre>
 <p>Linux下挂载windos共享目录</p>
 <p>1.使用smbclient工具查询共享目录</p>
@@ -519,6 +530,18 @@ Nmbd：负责提供基于netblos协议的主机名称解析，以便为windows�
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A512/">如何从主机粘贴到KVM客户机？</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A511/">树莓派备份系统镜像并压缩</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">

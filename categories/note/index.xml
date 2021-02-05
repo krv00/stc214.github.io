@@ -7,14 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Sat, 06 Feb 2021 02:45:32 +0800</lastBuildDate><atom:link href="https://stc214.github.io/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Feb 2021 03:20:52 +0800</lastBuildDate><atom:link href="https://stc214.github.io/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何从主机粘贴到KVM客户机？</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A512/</link>
+      <pubDate>Sat, 06 Feb 2021 03:20:52 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A512/</guid>
+      <description>原文：https://www.kutu66.com/ubuntu/article_165749 我有一个使用Virtual Machine Manager创建</description>
+    </item>
+    
+    <item>
+      <title>树莓派备份系统镜像并压缩</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A511/</link>
+      <pubDate>Sat, 06 Feb 2021 03:14:51 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A511/</guid>
+      <description>原文：https://cloud.tencent.com/developer/article/1731767 前言 手上的pi zero w用了一段时间,</description>
+    </item>
+    
     <item>
       <title>linux搭建smb、挂载smb、Windows共享</title>
       <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A510/</link>
       <pubDate>Sat, 06 Feb 2021 02:45:32 +0800</pubDate>
       
       <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A510/</guid>
-      <description>原文地址： https://www.cnblogs.com/-xuan/p/10293859.html 安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器 smbclient //{smbserverip}/{foldername} 实现Linux系统之间共享文件资源以及在Linux系</description>
+      <description>原文地址： https://www.cnblogs.com/-xuan/p/10293859.html 安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器 smbclient //{smbserverip}/{foldername} sudo mount -t cifs //ip地址/path/to/share path/to/mount 命</description>
     </item>
     
     <item>
