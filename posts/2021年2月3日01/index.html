@@ -154,78 +154,78 @@
 <p>运行一次py文件对程序进行打包前的测试</p>
 </li>
 <li>
-<p>在项目主目录下编写Dockerfile文件
+<p>在项目主目录下编写Dockerfile文件<br>
 内容模板如下：</p>
 </li>
 </ol>
 <blockquote>
 <p>需要注意的是这个文件的写法并非如此固定，根据需要可以自行编辑</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
-# Use an official Python runtime as a parent image
-FROM python:3.7.6
-
-# Set the working directory to /app
-WORKDIR /app
-
-# Copy the current directory contents into the container at /app
-COPY . /app
-
-# Install any needed packages specified in requirements.txt
-# 此部分使用了清华源加快了速度
-# 清华源使用只需要将域名改成 pypi.tuna.tsinghua.edu.cn/simple 即可
-# 如果是手动敲命令
-RUN pip install --trusted-host pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
-
-# Make port 80 available to the world outside this container
-EXPOSE 80
-
-# Define environment variable
-ENV NAME daily189
-
-# Run app.py when the container launches
-CMD [&#34;python&#34;, &#34;Run_all.py&#34;]
-
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  
+# Use an official Python runtime as a parent image  
+FROM python:3.7.6  
+  
+# Set the working directory to /app  
+WORKDIR /app  
+  
+# Copy the current directory contents into the container at /app  
+COPY . /app  
+  
+# Install any needed packages specified in requirements.txt  
+# 此部分使用了清华源加快了速度  
+# 清华源使用只需要将域名改成 pypi.tuna.tsinghua.edu.cn/simple 即可  
+# 如果是手动敲命令  
+RUN pip install --trusted-host pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt  
+  
+# Make port 80 available to the world outside this container  
+EXPOSE 80  
+  
+# Define environment variable  
+ENV NAME daily189  
+  
+# Run app.py when the container launches  
+CMD [&#34;python&#34;, &#34;Run_all.py&#34;]  
+  
+  
 </code></pre></div><ol start="3">
 <li>对项目使用的库进行备份</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-pip freeze &gt; requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+pip freeze &gt; requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple  
+  
 </code></pre></div><ol start="4">
 <li>对requirements.txt文件中非必要的库进行删减（如格式标准相关的库）</li>
 </ol>
 <h2 id="制作镜像">制作镜像</h2>
 <p>1.在项目根目录运行：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-docker build -t imagename Dockerfilepath 
-
-<span style="color:#75715e"># Dockerfilepath：Dockerfile 所在文件夹名称，当前名录为 “.” </span>
-
-如：
-docker build -t ccpy .
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+docker build -t imagename Dockerfilepath   
+  
+<span style="color:#75715e"># Dockerfilepath：Dockerfile 所在文件夹名称，当前名录为 “.”   </span>
+  
+如：  
+docker build -t ccpy .  
+  
 </code></pre></div><h2 id="对镜像进行运行测试">对镜像进行运行测试</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-<span style="color:#75715e"># 仅仅是本地运行的程序无需联网任务简单如此运行即可</span>
-docker run -d --name c_name imagename
-
-<span style="color:#75715e"># 如果需要联网则需要用 -p 指令将容器中的端口映射出来</span>
-docker run -it -p 80:80 --name c_name imagename
-
-</code></pre></div><p>如果没问题则可以继续下一步
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<span style="color:#75715e"># 仅仅是本地运行的程序无需联网任务简单如此运行即可  </span>
+docker run -d --name c_name imagename  
+  
+<span style="color:#75715e"># 如果需要联网则需要用 -p 指令将容器中的端口映射出来  </span>
+docker run -it -p 80:80 --name c_name imagename  
+  
+</code></pre></div><p>如果没问题则可以继续下一步<br>
 否则可以通过修改程序源文件代码修正后重新打包</p>
 <h2 id="拷贝运行正常的容器镜像文件">拷贝运行正常的容器镜像文件</h2>
 <blockquote>
-<p>命令格式为： docker save ID &gt; xxx.tar<br>
-docker load &lt; xxx.tar<br>
+<p>命令格式为： docker save ID &gt; xxx.tar <br>
+docker load &lt; xxx.tar <br>
 ID可以为自己指定的名字 也可以是docker自动分配的编码</p>
 </blockquote>
 <h4 id="保存容器">保存容器</h4>
 <blockquote>
-<p>docker export ID &gt;xxx.tar<br>
-docker import xxx.tar containr:v1<br>
+<p>docker export ID &gt;xxx.tar <br>
+docker import xxx.tar containr:v1 <br>
 然后再docker run -it containr:v1 bash</p>
 </blockquote>
 <h1 id="最后在自己部署了docker环境的服务器上运行即可">最后在自己部署了docker环境的服务器上运行即可</h1>

@@ -144,45 +144,45 @@
 
       <article class="main"><p>原文链接：https://blog.csdn.net/zhshh123/article/details/85065035</p>
 <p>盘启动步骤</p>
-<pre><code>简述
-方法一
-方法二
-注意事项
+<pre><code>简述  
+方法一  
+方法二  
+注意事项  
 </code></pre>
 <p>简述</p>
-<p>如果需要从U盘启动，需要向树莓派的SOC里的OTP（One Time Programmable一次性编程器）设置修复位，使之支持usb boot mode模式。该过程是不可逆的。
+<p>如果需要从U盘启动，需要向树莓派的SOC里的OTP（One Time Programmable一次性编程器）设置修复位，使之支持usb boot mode模式。该过程是不可逆的。<br>
 方法一</p>
-<pre><code>连接树莓派，执行命令：
+<pre><code>连接树莓派，执行命令：  
 </code></pre>
 <blockquote>
 <p>echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt</p>
 </blockquote>
 <p>这行代码将program_usb_boot_mode=1插入到/boot/cinfig.txt文件的末尾。</p>
-<pre><code>检查设置是否成功,输入命令：
+<pre><code>检查设置是否成功,输入命令：  
 </code></pre>
 <blockquote>
 <p>vcgencmd otp_dump | grep 17</p>
 </blockquote>
-<p>如果输出的结果和下图一直，说明设置成功
-在这里插入图片描述
+<p>如果输出的结果和下图一直，说明设置成功<br>
+在这里插入图片描述<br>
 方法二</p>
 <p>在sd卡boot盘的cmdline.txt文件中追加一行命令：</p>
 <blockquote>
 <p>program_usb_boot_mode=1</p>
 </blockquote>
-<p>然后插入树莓派，通电60s，便设置成功了。以后就可以不使用sd卡，直接把镜像写到u盘中。
+<p>然后插入树莓派，通电60s，便设置成功了。以后就可以不使用sd卡，直接把镜像写到u盘中。<br>
 注意事项</p>
-<p>1、USB Boot Mode模式实质是向SOC里的OTP（One Time Programmable）设置修复位使之支持，该操作是不可逆的；
-2、该模式仅支持树莓派3B机型；
-3、因为仍然优先检测SD卡是否存在，所以usb boot会有5~10秒延迟来启动usb设备；可以插上一张空白sd卡来减低延迟。
-4、因为usb和网卡共用smsc lan9514芯片，所以该模式同时打开network boot模式，即允许通过网络安装启动系统；
+<p>1、USB Boot Mode模式实质是向SOC里的OTP（One Time Programmable）设置修复位使之支持，该操作是不可逆的；<br>
+2、该模式仅支持树莓派3B机型；<br>
+3、因为仍然优先检测SD卡是否存在，所以usb boot会有5~10秒延迟来启动usb设备；可以插上一张空白sd卡来减低延迟。<br>
+4、因为usb和网卡共用smsc lan9514芯片，所以该模式同时打开network boot模式，即允许通过网络安装启动系统；<br>
 5、有些U盘可能不支持，以下是官方测试通过的U盘：</p>
-<pre><code>Sandisk Cruzer Fit 16GB
-Sandisk Cruzer Blade 16Gb
-三星32GB USB 3.0硬盘
-MeCo 16GB USB 3.0
+<pre><code>Sandisk Cruzer Fit 16GB  
+Sandisk Cruzer Blade 16Gb  
+三星32GB USB 3.0硬盘  
+MeCo 16GB USB 3.0  
 </code></pre>
-<p><a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md">https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md</a>
+<p><a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md">https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md</a><br>
 <a href="https://www.raspberrypi.org/blog/pi-3-booting-part-i-usb-mass-storage-boot/">https://www.raspberrypi.org/blog/pi-3-booting-part-i-usb-mass-storage-boot/</a></p>
 </article>
     </section>

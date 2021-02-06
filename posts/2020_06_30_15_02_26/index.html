@@ -138,160 +138,160 @@
       </header>
 
       <article class="main"><h2 id="docker">docker</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 以树莓派ubuntu server 20.04版为例</span>
-apt install docker.io -y
-</code></pre></div><p>linux版本不同docker安装的版本可能也不同
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 以树莓派ubuntu server 20.04版为例  </span>
+apt install docker.io -y  
+</code></pre></div><p>linux版本不同docker安装的版本可能也不同<br>
 一般有 docker / docker-ce / docker.io 等</p>
 <h5 id="换源">换源</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 先运行一次docker命令 生成文件</span>
-docker images
-
-<span style="color:#75715e"># 备份源文件（如果有）</span>
-cp /etc/docker/daemon.json /etc/docker/daemon.json.bak
-
-<span style="color:#75715e"># 编辑</span>
-vim /etc/docker/daemon.json
-
-<span style="color:#75715e"># 填入内容</span>
-<span style="color:#f92672">{</span>
-
-<span style="color:#e6db74">&#34;registry-mirrors&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span><span style="color:#f92672">]</span>
-
-<span style="color:#f92672">}</span>
-
-<span style="color:#75715e"># 保存退出并重启docker </span>
-service docker restart
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 先运行一次docker命令 生成文件  </span>
+docker images  
+  
+<span style="color:#75715e"># 备份源文件（如果有）  </span>
+cp /etc/docker/daemon.json /etc/docker/daemon.json.bak  
+  
+<span style="color:#75715e"># 编辑  </span>
+vim /etc/docker/daemon.json  
+  
+<span style="color:#75715e"># 填入内容  </span>
+<span style="color:#f92672">{</span>  
+  
+<span style="color:#e6db74">&#34;registry-mirrors&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span><span style="color:#f92672">]</span>  
+  
+<span style="color:#f92672">}</span>  
+  
+<span style="color:#75715e"># 保存退出并重启docker   </span>
+service docker restart  
 </code></pre></div><p>其他docker源参考:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">
-<span style="color:#960050;background-color:#1e0010">不得不说</span> <span style="color:#960050;background-color:#1e0010">docker的火爆程度已经达到的地步，</span>
-
-<span style="color:#960050;background-color:#1e0010">由于国外docker搭建太慢，国外的安装文档也很全面，这里就不在详述，详情可以点击这里：</span>
-
-<span style="color:#960050;background-color:#1e0010">正主：Docker</span> <span style="color:#960050;background-color:#1e0010">官方镜像加速：http://www.docker-cn.com/registry-mirror</span>
-
-<span style="color:#960050;background-color:#1e0010">在这里打算记录下使用国内源快速搭建docker的方法：Daocloud极速下载真的是快啊～～～</span>
-<span style="color:#960050;background-color:#1e0010">在</span> <span style="color:#960050;background-color:#1e0010">Linux上</span> <span style="color:#960050;background-color:#1e0010">安装</span> <span style="color:#960050;background-color:#1e0010">Docker</span>
-
-<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">https://get.daocloud.io/docker</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">sh</span> 
-
-<span style="color:#960050;background-color:#1e0010">适用于Ubuntu，Debian,Centos等大部分Linux，会</span><span style="color:#ae81ff">3</span><span style="color:#960050;background-color:#1e0010">小时同步一次Docker官方资源</span>
-
-<span style="color:#960050;background-color:#1e0010">当然有时候不知道为什么daocloud响应不了，用阿里云的：</span>
-
-<span style="color:#960050;background-color:#1e0010">用阿里云的：</span>
-
-<span style="color:#960050;background-color:#1e0010">安装最新版本的Docker</span> <span style="color:#960050;background-color:#1e0010">Engine</span>
-
-<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet|</span> <span style="color:#960050;background-color:#1e0010">sh</span> <span style="color:#960050;background-color:#1e0010">-</span>
-
-<span style="color:#960050;background-color:#1e0010">安装</span><span style="color:#ae81ff">1.9</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">版本的Docker</span> <span style="color:#960050;background-color:#1e0010">Engine</span>
-
-<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet|</span> <span style="color:#960050;background-color:#1e0010">sh</span> <span style="color:#960050;background-color:#1e0010">/dev/stdin</span> <span style="color:#ae81ff">1.9</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">1</span>
-
-<span style="color:#960050;background-color:#1e0010">如果你的机器是阿里云主机，那么可以通过以下脚本，通过内网地址进行安装。</span>
-
-<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/intranet|</span> <span style="color:#960050;background-color:#1e0010">sh</span> <span style="color:#960050;background-color:#1e0010">-</span>
-
-
-<span style="color:#960050;background-color:#1e0010">安装</span> <span style="color:#960050;background-color:#1e0010">Docker</span> <span style="color:#960050;background-color:#1e0010">Compose</span>
-
-<span style="color:#960050;background-color:#1e0010">Docker</span> <span style="color:#960050;background-color:#1e0010">Compose存放在Git</span> <span style="color:#960050;background-color:#1e0010">Hub，不太稳定。</span>
-
-<span style="color:#960050;background-color:#1e0010">你可以也通过执行下面的命令，高速安装Docker</span> <span style="color:#960050;background-color:#1e0010">Compose。</span>
-
-<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-L</span> <span style="color:#960050;background-color:#1e0010">https://get.daocloud.io/docker/compose/releases/download/</span><span style="color:#ae81ff">1.14</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">/docker-compose-`uname</span> <span style="color:#960050;background-color:#1e0010">-s`-`uname</span> <span style="color:#960050;background-color:#1e0010">-m`</span> <span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#960050;background-color:#1e0010">/usr/local/bin/docker-compose</span>
-
-<span style="color:#960050;background-color:#1e0010">chmod</span>  <span style="color:#960050;background-color:#1e0010">+x</span>  <span style="color:#960050;background-color:#1e0010">/usr/local/bin/docker-compose</span>
-
-<span style="color:#960050;background-color:#1e0010">你可以通过修改URL中的版本，可以自定义您的需要的版本。</span>
-<span style="color:#960050;background-color:#1e0010">Docker更换镜像源</span>
-
-<span style="color:#960050;background-color:#1e0010">有位博主说的好，国内有</span><span style="color:#ae81ff">4</span><span style="color:#960050;background-color:#1e0010">家感觉还可以的镜像源.</span>
-<span style="color:#960050;background-color:#1e0010">选择一：老东家的</span>  <span style="color:#960050;background-color:#1e0010">daocloud：</span>
-
-<span style="color:#960050;background-color:#1e0010">老东家提供的daocloud加速器，需要用户注册，每个用户每个月限制</span><span style="color:#ae81ff">10</span><span style="color:#960050;background-color:#1e0010">GB</span>
-
-<span style="color:#960050;background-color:#1e0010">不过也感觉非常快，注册也相当容器，不需要验证邮箱噢～～～&gt;-&lt;</span>
-
-<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">https://get.daocloud.io/daotools/set_mirror.sh</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">sh</span> <span style="color:#960050;background-color:#1e0010">-s</span> <span style="color:#960050;background-color:#1e0010">http://</span><span style="color:#ae81ff">67e93489</span><span style="color:#960050;background-color:#1e0010">.m.daocloud.io</span>
-
-<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">https://get.daocloud.io/daotools/set_mirror.sh</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">sh</span> <span style="color:#960050;background-color:#1e0010">-s</span> <span style="color:#960050;background-color:#1e0010">http://f</span><span style="color:#ae81ff">7291398</span><span style="color:#960050;background-color:#1e0010">.m.daocloud.io</span>
-
-<span style="color:#960050;background-color:#1e0010">具体来说</span>  <span style="color:#960050;background-color:#1e0010">daocloud的模式就是将你的id也就是shell</span><span style="color:#ae81ff">123</span><span style="color:#960050;background-color:#1e0010">转化成</span><span style="color:#ae81ff">67e93489</span><span style="color:#960050;background-color:#1e0010">，其格式为：</span>
-
-<span style="color:#960050;background-color:#1e0010">curl-sSL</span> <span style="color:#960050;background-color:#1e0010">https://get.daocloud.io/daotools/set_mirror.sh</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">sh-shttp://</span>{<span style="color:#960050;background-color:#1e0010">your_id</span>}<span style="color:#960050;background-color:#1e0010">.m.daocloud.io</span>
-
-<span style="color:#960050;background-color:#1e0010">事实上，实际改的是</span>
-
-<span style="color:#960050;background-color:#1e0010">ExecStart=/usr/bin/docker-current</span> <span style="color:#960050;background-color:#1e0010">daemon</span> <span style="color:#960050;background-color:#1e0010">--registry-mirror=http://</span>{<span style="color:#960050;background-color:#1e0010">your_id</span>}<span style="color:#960050;background-color:#1e0010">.m.daocloud.io\</span>
-
-<span style="color:#960050;background-color:#1e0010">记得设置后，需要重新启动</span>  <span style="color:#960050;background-color:#1e0010">sudo</span> <span style="color:#960050;background-color:#1e0010">service</span> <span style="color:#960050;background-color:#1e0010">docker</span> <span style="color:#960050;background-color:#1e0010">restart</span>
-<span style="color:#960050;background-color:#1e0010">选择二：ustc</span> <span style="color:#960050;background-color:#1e0010">中科大的docker源</span> <span style="color:#960050;background-color:#1e0010">也是超级好的</span>
-
-<span style="color:#960050;background-color:#1e0010">官方文档也写的非常好，有兴趣可以看看</span>
-
-
-<span style="color:#960050;background-color:#1e0010">配置方法：</span>
-
-<span style="color:#960050;background-color:#1e0010">新版的</span> <span style="color:#960050;background-color:#1e0010">Docker</span> <span style="color:#960050;background-color:#1e0010">使用</span> <span style="color:#960050;background-color:#1e0010">/etc/docker/daemon.json（Linux）</span> <span style="color:#960050;background-color:#1e0010">或者</span> <span style="color:#960050;background-color:#1e0010">%programdata%\docker\config\daemon.json（Windows）</span> <span style="color:#960050;background-color:#1e0010">来配置</span> <span style="color:#960050;background-color:#1e0010">Daemon。</span>
-
-<span style="color:#960050;background-color:#1e0010">请在该配置文件中加入（没有该文件的话，请先建一个）：</span>
-
-{
-
-<span style="color:#f92672">&#34;registry-mirrors&#34;</span>: [<span style="color:#e6db74">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span>]
-
-}
-
-<span style="color:#960050;background-color:#1e0010">亦即：$~</span> <span style="color:#960050;background-color:#1e0010">sudo</span> <span style="color:#960050;background-color:#1e0010">vim</span> <span style="color:#960050;background-color:#1e0010">/etc/docker/daemon.json</span>  <span style="color:#960050;background-color:#1e0010">写入：</span>
-
-{<span style="color:#f92672">&#34;registry-mirrors&#34;</span>: [<span style="color:#e6db74">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span>]}<span style="color:#960050;background-color:#1e0010">这一行</span> <span style="color:#960050;background-color:#1e0010">然后重启docker服务即可.</span>
-
-<span style="color:#960050;background-color:#1e0010">选择三：网易蜂巢的镜像源，个人感觉上面的镜像好少，而且有时候pull他们的镜像还会失败，不过如果要写dockerfile的话，可以到上面参考参考，dockerfile他们到时写的很详细噢～</span>
-
-<span style="color:#960050;background-color:#1e0010">$~</span> <span style="color:#960050;background-color:#1e0010">sudo</span> <span style="color:#960050;background-color:#1e0010">echo</span><span style="color:#e6db74">&#34;DOCKER_OPTS=\&#34;--registry-mirror=http://hub-mirror.c.163.com\&#34;&#34;</span><span style="color:#960050;background-color:#1e0010">&gt;&gt;/etc/default/docker</span>
-
-<span style="color:#960050;background-color:#1e0010">$~</span> <span style="color:#960050;background-color:#1e0010">service</span> <span style="color:#960050;background-color:#1e0010">docker</span> <span style="color:#960050;background-color:#1e0010">restart</span>
-
-<span style="color:#960050;background-color:#1e0010">最后一个选择：阿里的alicloud</span>
-
-<span style="color:#960050;background-color:#1e0010">个人感觉繁琐的是在注册上：不光要注册为阿里云的用户，还得加入开发者平台。不过提着眼睛做完这些以后，它的服务还真是不错，基本</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">MB/s的pull速度(部分原因可能是因为我也在杭州吧)。配置方法跟daocloud类似，也是开通加速器以后给一个url。</span>
-
-<span style="color:#960050;background-color:#1e0010">ExecStart=/usr/bin/docker-current</span> <span style="color:#960050;background-color:#1e0010">daemon</span> <span style="color:#960050;background-color:#1e0010">--registry-mirror=https://</span>{<span style="color:#960050;background-color:#1e0010">your_id</span>}<span style="color:#960050;background-color:#1e0010">.mirror.aliyuncs.com\</span>
-
-<span style="color:#960050;background-color:#1e0010">阿里的你们可以去尝试，如果不是阿里云的EMS用户的话，个人不太推荐。</span>
-<span style="color:#960050;background-color:#1e0010">所以本人</span> <span style="color:#960050;background-color:#1e0010">强烈推荐！！强烈推荐！！使用ustc的！！！！</span>
-<span style="color:#960050;background-color:#1e0010">#Docker-machine安装</span>
-
-<span style="color:#960050;background-color:#1e0010">参照官网的教程：https://docs.docker.com/machine/install-machine/</span>
-
-<span style="color:#960050;background-color:#1e0010">linux用户安装方式为：$~</span>  <span style="color:#960050;background-color:#1e0010">curl-L</span> <span style="color:#960050;background-color:#1e0010">https://github.com/docker/machine/releases/download/v</span><span style="color:#ae81ff">0.10</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">/docker-machine-`uname</span> <span style="color:#960050;background-color:#1e0010">-s`-`uname</span> <span style="color:#960050;background-color:#1e0010">-m`</span> <span style="color:#960050;background-color:#1e0010">&gt;/tmp/docker-machine</span> <span style="color:#960050;background-color:#1e0010">&amp;&amp;chmod</span> <span style="color:#960050;background-color:#1e0010">+x</span> <span style="color:#960050;background-color:#1e0010">/tmp/docker-machine</span> <span style="color:#960050;background-color:#1e0010">&amp;&amp;</span>  <span style="color:#960050;background-color:#1e0010">sudo</span> <span style="color:#960050;background-color:#1e0010">cp</span> <span style="color:#960050;background-color:#1e0010">/tmp/docker-machine</span> <span style="color:#960050;background-color:#1e0010">/usr/local/bin/docker-machine</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">  
+<span style="color:#960050;background-color:#1e0010">不得不说</span> <span style="color:#960050;background-color:#1e0010">docker的火爆程度已经达到的地步，</span>  
+  
+<span style="color:#960050;background-color:#1e0010">由于国外docker搭建太慢，国外的安装文档也很全面，这里就不在详述，详情可以点击这里：</span>  
+  
+<span style="color:#960050;background-color:#1e0010">正主：Docker</span> <span style="color:#960050;background-color:#1e0010">官方镜像加速：http://www.docker-cn.com/registry-mirror</span>  
+  
+<span style="color:#960050;background-color:#1e0010">在这里打算记录下使用国内源快速搭建docker的方法：Daocloud极速下载真的是快啊～～～</span>  
+<span style="color:#960050;background-color:#1e0010">在</span> <span style="color:#960050;background-color:#1e0010">Linux上</span> <span style="color:#960050;background-color:#1e0010">安装</span> <span style="color:#960050;background-color:#1e0010">Docker</span>  
+  
+<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">https://get.daocloud.io/docker</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">sh</span>   
+  
+<span style="color:#960050;background-color:#1e0010">适用于Ubuntu，Debian,Centos等大部分Linux，会</span><span style="color:#ae81ff">3</span><span style="color:#960050;background-color:#1e0010">小时同步一次Docker官方资源</span>  
+  
+<span style="color:#960050;background-color:#1e0010">当然有时候不知道为什么daocloud响应不了，用阿里云的：</span>  
+  
+<span style="color:#960050;background-color:#1e0010">用阿里云的：</span>  
+  
+<span style="color:#960050;background-color:#1e0010">安装最新版本的Docker</span> <span style="color:#960050;background-color:#1e0010">Engine</span>  
+  
+<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet|</span> <span style="color:#960050;background-color:#1e0010">sh</span> <span style="color:#960050;background-color:#1e0010">-</span>  
+  
+<span style="color:#960050;background-color:#1e0010">安装</span><span style="color:#ae81ff">1.9</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">版本的Docker</span> <span style="color:#960050;background-color:#1e0010">Engine</span>  
+  
+<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet|</span> <span style="color:#960050;background-color:#1e0010">sh</span> <span style="color:#960050;background-color:#1e0010">/dev/stdin</span> <span style="color:#ae81ff">1.9</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">1</span>  
+  
+<span style="color:#960050;background-color:#1e0010">如果你的机器是阿里云主机，那么可以通过以下脚本，通过内网地址进行安装。</span>  
+  
+<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/intranet|</span> <span style="color:#960050;background-color:#1e0010">sh</span> <span style="color:#960050;background-color:#1e0010">-</span>  
+  
+  
+<span style="color:#960050;background-color:#1e0010">安装</span> <span style="color:#960050;background-color:#1e0010">Docker</span> <span style="color:#960050;background-color:#1e0010">Compose</span>  
+  
+<span style="color:#960050;background-color:#1e0010">Docker</span> <span style="color:#960050;background-color:#1e0010">Compose存放在Git</span> <span style="color:#960050;background-color:#1e0010">Hub，不太稳定。</span>  
+  
+<span style="color:#960050;background-color:#1e0010">你可以也通过执行下面的命令，高速安装Docker</span> <span style="color:#960050;background-color:#1e0010">Compose。</span>  
+  
+<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-L</span> <span style="color:#960050;background-color:#1e0010">https://get.daocloud.io/docker/compose/releases/download/</span><span style="color:#ae81ff">1.14</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">/docker-compose-`uname</span> <span style="color:#960050;background-color:#1e0010">-s`-`uname</span> <span style="color:#960050;background-color:#1e0010">-m`</span> <span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#960050;background-color:#1e0010">/usr/local/bin/docker-compose</span>  
+  
+<span style="color:#960050;background-color:#1e0010">chmod</span>  <span style="color:#960050;background-color:#1e0010">+x</span>  <span style="color:#960050;background-color:#1e0010">/usr/local/bin/docker-compose</span>  
+  
+<span style="color:#960050;background-color:#1e0010">你可以通过修改URL中的版本，可以自定义您的需要的版本。</span>  
+<span style="color:#960050;background-color:#1e0010">Docker更换镜像源</span>  
+  
+<span style="color:#960050;background-color:#1e0010">有位博主说的好，国内有</span><span style="color:#ae81ff">4</span><span style="color:#960050;background-color:#1e0010">家感觉还可以的镜像源.</span>  
+<span style="color:#960050;background-color:#1e0010">选择一：老东家的</span>  <span style="color:#960050;background-color:#1e0010">daocloud：</span>  
+  
+<span style="color:#960050;background-color:#1e0010">老东家提供的daocloud加速器，需要用户注册，每个用户每个月限制</span><span style="color:#ae81ff">10</span><span style="color:#960050;background-color:#1e0010">GB</span>  
+  
+<span style="color:#960050;background-color:#1e0010">不过也感觉非常快，注册也相当容器，不需要验证邮箱噢～～～&gt;-&lt;</span>  
+  
+<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">https://get.daocloud.io/daotools/set_mirror.sh</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">sh</span> <span style="color:#960050;background-color:#1e0010">-s</span> <span style="color:#960050;background-color:#1e0010">http://</span><span style="color:#ae81ff">67e93489</span><span style="color:#960050;background-color:#1e0010">.m.daocloud.io</span>  
+  
+<span style="color:#960050;background-color:#1e0010">curl</span> <span style="color:#960050;background-color:#1e0010">-sSL</span> <span style="color:#960050;background-color:#1e0010">https://get.daocloud.io/daotools/set_mirror.sh</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">sh</span> <span style="color:#960050;background-color:#1e0010">-s</span> <span style="color:#960050;background-color:#1e0010">http://f</span><span style="color:#ae81ff">7291398</span><span style="color:#960050;background-color:#1e0010">.m.daocloud.io</span>  
+  
+<span style="color:#960050;background-color:#1e0010">具体来说</span>  <span style="color:#960050;background-color:#1e0010">daocloud的模式就是将你的id也就是shell</span><span style="color:#ae81ff">123</span><span style="color:#960050;background-color:#1e0010">转化成</span><span style="color:#ae81ff">67e93489</span><span style="color:#960050;background-color:#1e0010">，其格式为：</span>  
+  
+<span style="color:#960050;background-color:#1e0010">curl-sSL</span> <span style="color:#960050;background-color:#1e0010">https://get.daocloud.io/daotools/set_mirror.sh</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">sh-shttp://</span>{<span style="color:#960050;background-color:#1e0010">your_id</span>}<span style="color:#960050;background-color:#1e0010">.m.daocloud.io</span>  
+  
+<span style="color:#960050;background-color:#1e0010">事实上，实际改的是</span>  
+  
+<span style="color:#960050;background-color:#1e0010">ExecStart=/usr/bin/docker-current</span> <span style="color:#960050;background-color:#1e0010">daemon</span> <span style="color:#960050;background-color:#1e0010">--registry-mirror=http://</span>{<span style="color:#960050;background-color:#1e0010">your_id</span>}<span style="color:#960050;background-color:#1e0010">.m.daocloud.io\</span>  
+  
+<span style="color:#960050;background-color:#1e0010">记得设置后，需要重新启动</span>  <span style="color:#960050;background-color:#1e0010">sudo</span> <span style="color:#960050;background-color:#1e0010">service</span> <span style="color:#960050;background-color:#1e0010">docker</span> <span style="color:#960050;background-color:#1e0010">restart</span>  
+<span style="color:#960050;background-color:#1e0010">选择二：ustc</span> <span style="color:#960050;background-color:#1e0010">中科大的docker源</span> <span style="color:#960050;background-color:#1e0010">也是超级好的</span>  
+  
+<span style="color:#960050;background-color:#1e0010">官方文档也写的非常好，有兴趣可以看看</span>  
+  
+  
+<span style="color:#960050;background-color:#1e0010">配置方法：</span>  
+  
+<span style="color:#960050;background-color:#1e0010">新版的</span> <span style="color:#960050;background-color:#1e0010">Docker</span> <span style="color:#960050;background-color:#1e0010">使用</span> <span style="color:#960050;background-color:#1e0010">/etc/docker/daemon.json（Linux）</span> <span style="color:#960050;background-color:#1e0010">或者</span> <span style="color:#960050;background-color:#1e0010">%programdata%\docker\config\daemon.json（Windows）</span> <span style="color:#960050;background-color:#1e0010">来配置</span> <span style="color:#960050;background-color:#1e0010">Daemon。</span>  
+  
+<span style="color:#960050;background-color:#1e0010">请在该配置文件中加入（没有该文件的话，请先建一个）：</span>  
+  
+{  
+  
+<span style="color:#f92672">&#34;registry-mirrors&#34;</span>: [<span style="color:#e6db74">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span>]  
+  
+}  
+  
+<span style="color:#960050;background-color:#1e0010">亦即：$~</span> <span style="color:#960050;background-color:#1e0010">sudo</span> <span style="color:#960050;background-color:#1e0010">vim</span> <span style="color:#960050;background-color:#1e0010">/etc/docker/daemon.json</span>  <span style="color:#960050;background-color:#1e0010">写入：</span>  
+  
+{<span style="color:#f92672">&#34;registry-mirrors&#34;</span>: [<span style="color:#e6db74">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span>]}<span style="color:#960050;background-color:#1e0010">这一行</span> <span style="color:#960050;background-color:#1e0010">然后重启docker服务即可.</span>  
+  
+<span style="color:#960050;background-color:#1e0010">选择三：网易蜂巢的镜像源，个人感觉上面的镜像好少，而且有时候pull他们的镜像还会失败，不过如果要写dockerfile的话，可以到上面参考参考，dockerfile他们到时写的很详细噢～</span>  
+  
+<span style="color:#960050;background-color:#1e0010">$~</span> <span style="color:#960050;background-color:#1e0010">sudo</span> <span style="color:#960050;background-color:#1e0010">echo</span><span style="color:#e6db74">&#34;DOCKER_OPTS=\&#34;--registry-mirror=http://hub-mirror.c.163.com\&#34;&#34;</span><span style="color:#960050;background-color:#1e0010">&gt;&gt;/etc/default/docker</span>  
+  
+<span style="color:#960050;background-color:#1e0010">$~</span> <span style="color:#960050;background-color:#1e0010">service</span> <span style="color:#960050;background-color:#1e0010">docker</span> <span style="color:#960050;background-color:#1e0010">restart</span>  
+  
+<span style="color:#960050;background-color:#1e0010">最后一个选择：阿里的alicloud</span>  
+  
+<span style="color:#960050;background-color:#1e0010">个人感觉繁琐的是在注册上：不光要注册为阿里云的用户，还得加入开发者平台。不过提着眼睛做完这些以后，它的服务还真是不错，基本</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">MB/s的pull速度(部分原因可能是因为我也在杭州吧)。配置方法跟daocloud类似，也是开通加速器以后给一个url。</span>  
+  
+<span style="color:#960050;background-color:#1e0010">ExecStart=/usr/bin/docker-current</span> <span style="color:#960050;background-color:#1e0010">daemon</span> <span style="color:#960050;background-color:#1e0010">--registry-mirror=https://</span>{<span style="color:#960050;background-color:#1e0010">your_id</span>}<span style="color:#960050;background-color:#1e0010">.mirror.aliyuncs.com\</span>  
+  
+<span style="color:#960050;background-color:#1e0010">阿里的你们可以去尝试，如果不是阿里云的EMS用户的话，个人不太推荐。</span>  
+<span style="color:#960050;background-color:#1e0010">所以本人</span> <span style="color:#960050;background-color:#1e0010">强烈推荐！！强烈推荐！！使用ustc的！！！！</span>  
+<span style="color:#960050;background-color:#1e0010">#Docker-machine安装</span>  
+  
+<span style="color:#960050;background-color:#1e0010">参照官网的教程：https://docs.docker.com/machine/install-machine/</span>  
+  
+<span style="color:#960050;background-color:#1e0010">linux用户安装方式为：$~</span>  <span style="color:#960050;background-color:#1e0010">curl-L</span> <span style="color:#960050;background-color:#1e0010">https://github.com/docker/machine/releases/download/v</span><span style="color:#ae81ff">0.10</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">/docker-machine-`uname</span> <span style="color:#960050;background-color:#1e0010">-s`-`uname</span> <span style="color:#960050;background-color:#1e0010">-m`</span> <span style="color:#960050;background-color:#1e0010">&gt;/tmp/docker-machine</span> <span style="color:#960050;background-color:#1e0010">&amp;&amp;chmod</span> <span style="color:#960050;background-color:#1e0010">+x</span> <span style="color:#960050;background-color:#1e0010">/tmp/docker-machine</span> <span style="color:#960050;background-color:#1e0010">&amp;&amp;</span>  <span style="color:#960050;background-color:#1e0010">sudo</span> <span style="color:#960050;background-color:#1e0010">cp</span> <span style="color:#960050;background-color:#1e0010">/tmp/docker-machine</span> <span style="color:#960050;background-color:#1e0010">/usr/local/bin/docker-machine</span>  
 </code></pre></div><h4 id="拉取docker镜像">拉取docker镜像</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull wordpress  
-
-<span style="color:#75715e"># 拉取管理工具</span>
-docker pull portainer/portainer  
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull wordpress    
+  
+<span style="color:#75715e"># 拉取管理工具  </span>
+docker pull portainer/portainer    
+  
 </code></pre></div><p>换源之后就快很多了~！</p>
 <h4 id="运行容器">运行容器</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># wordpress</span>
-docker run -d --name wordpress --restart<span style="color:#f92672">=</span>always -p 8880:80 wordpress
-
-
-<span style="color:#75715e"># portainer</span>
-docker volume create portainer_data
-
-docker run -d -p 9000:9000 --name pter --restart<span style="color:#f92672">=</span>always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
-
-
-<span style="color:#75715e"># nextcloud</span>
-docker run -d -p 9999:80 --name nextcloud --restart<span style="color:#f92672">=</span>always -v /media/hardisk1:/inside_docker/hahardisk1 nextcloud
-
-</code></pre></div><p>portainer根据所处环境选择是本地还是远程管理
-参考文章：http://www.senra.me/docker-management-panel-series-portainer/
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># wordpress  </span>
+docker run -d --name wordpress --restart<span style="color:#f92672">=</span>always -p 8880:80 wordpress  
+  
+  
+<span style="color:#75715e"># portainer  </span>
+docker volume create portainer_data  
+  
+docker run -d -p 9000:9000 --name pter --restart<span style="color:#f92672">=</span>always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer  
+  
+  
+<span style="color:#75715e"># nextcloud  </span>
+docker run -d -p 9999:80 --name nextcloud --restart<span style="color:#f92672">=</span>always -v /media/hardisk1:/inside_docker/hahardisk1 nextcloud  
+  
+</code></pre></div><p>portainer根据所处环境选择是本地还是远程管理<br>
+参考文章：http://www.senra.me/docker-management-panel-series-portainer/<br>
 <a href="http://stc14.top">http://stc14.top</a>:18080/?p=19</p>
 <h2 id="后续修改">后续修改</h2>
-<p>wordpress容器默认上传限制为2M，这实在是太少了，本文介绍如何修改docker中wordpress的上传限制。
+<p>wordpress容器默认上传限制为2M，这实在是太少了，本文介绍如何修改docker中wordpress的上传限制。<br>
 步骤</p>
 <h6 id="1-进入wordpress容器">1. 进入wordpress容器</h6>
 <p>docker exec -it wordpress /bin/bash</p>
@@ -301,34 +301,34 @@ docker run -d -p 9999:80 --name nextcloud --restart<span style="color:#f92672">=
 <p>cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini</p>
 <h6 id="3-修改phpini">3. 修改php.ini</h6>
 <p>没有安装文本编辑软件的请参考：https://blog.csdn.net/j84491135/article/details/105938672</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /usr/local/etc/php/php.ini
-</code></pre></div><p>找到以下三个关键值，修改成你想要的值，注意 <br>
-memory_limit&gt;post_max_size&gt;upload_max_filesize
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /usr/local/etc/php/php.ini  
+</code></pre></div><p>找到以下三个关键值，修改成你想要的值，注意   <br>
+memory_limit&gt;post_max_size&gt;upload_max_filesize<br>
 PS：vim查找命令为:/要查找的字符串，n下一个，N上一个</p>
-<p>upload_max_filesize = 200M	#文件大小限制
-post_max_size = 250M	#post大小限制
+<p>upload_max_filesize = 200M	#文件大小限制<br>
+post_max_size = 250M	#post大小限制<br>
 memory_limit = 500M		#内存占用限制</p>
 <p>如果还要修改其他配置如开启文件上传、上传超时等等去查配置文件即可，不再赘述。</p>
 <h6 id="4-重启容器">4. 重启容器</h6>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker restart wordpress
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker restart wordpress  
 </code></pre></div><h3 id="容器内没有vim的情况">容器内没有vim的情况</h3>
-<p>因为该源是不用GPG验证的，可能不安全，但因为docker容器没有验证GPG的工具所以只能先用这个源然后安装GPG验证相关软件包再更换回正式源。
+<p>因为该源是不用GPG验证的，可能不安全，但因为docker容器没有验证GPG的工具所以只能先用这个源然后安装GPG验证相关软件包再更换回正式源。<br>
 步骤</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mv /etc/apt/sources.list /etc/apt/sources.list.bak
-
-cat <span style="color:#e6db74">&lt;&lt;EOF &gt;/etc/apt/sources.list
-</span><span style="color:#e6db74">deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
-</span><span style="color:#e6db74">deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
-</span><span style="color:#e6db74">EOF</span>
-
-apt update
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mv /etc/apt/sources.list /etc/apt/sources.list.bak  
+  
+cat <span style="color:#e6db74">&lt;&lt;EOF &gt;/etc/apt/sources.list  
+</span><span style="color:#e6db74">deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free  
+</span><span style="color:#e6db74">deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free  
+</span><span style="color:#e6db74">EOF</span>  
+  
+apt update  
 </code></pre></div><h3 id="添加docker启动项">添加docker启动项</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /etc/rc.local
-<span style="color:#75715e"># 在exit 0之前加入</span>
-
-sudo docker start <span style="color:#66d9ef">$(</span>docker ps -a | awk <span style="color:#e6db74">&#39;{ print $1}&#39;</span> | tail -n +2<span style="color:#66d9ef">)</span>
-
-</code></pre></div><p>另外：
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /etc/rc.local  
+<span style="color:#75715e"># 在exit 0之前加入  </span>
+  
+sudo docker start <span style="color:#66d9ef">$(</span>docker ps -a | awk <span style="color:#e6db74">&#39;{ print $1}&#39;</span> | tail -n +2<span style="color:#66d9ef">)</span>  
+  
+</code></pre></div><p>另外：<br>
 docker中 启动所有的容器命令</p>
 <p>docker start $(docker ps -a | awk &lsquo;{ print $1}&rsquo; | tail -n +2)</p>
 <p>docker中    关闭所有的容器命令</p>

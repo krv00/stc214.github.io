@@ -144,71 +144,71 @@
 
       <article class="main"><p>原文地址：https://blog.csdn.net/zhshh123/article/details/85064579</p>
 <p>树莓派基本设置</p>
-<pre><code>更改时区
-修改root、pi密码
-更换apt为阿里云源
-使用lrzsz，上传下载文件
+<pre><code>更改时区  
+修改root、pi密码  
+更换apt为阿里云源  
+使用lrzsz，上传下载文件  
 </code></pre>
 <p>更改时区</p>
-<pre><code>输入命令
+<pre><code>输入命令  
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-sudo dpkg-reconfigure tzdata
-
-</code></pre></div><pre><code>上下箭头移动光标，选择Asia亚洲，回车进入下一项。
-在这里插入图片描述
-选择Shanghai地区，回车确认。
-在这里插入图片描述
-成功更改为北京时间
-在这里插入图片描述
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+sudo dpkg-reconfigure tzdata  
+  
+</code></pre></div><pre><code>上下箭头移动光标，选择Asia亚洲，回车进入下一项。  
+在这里插入图片描述  
+选择Shanghai地区，回车确认。  
+在这里插入图片描述  
+成功更改为北京时间  
+在这里插入图片描述  
 </code></pre>
 <p>修改root、pi密码</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    默认密码：
-    账户：root，密码：raspberry
-    账户：pi，密码：raspberry
-    修改密码：
-
-sudo passwd root
-sudo passwd pi
-
-</code></pre></div><pre><code>输入两次密码，修改成功
-在这里插入图片描述
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    默认密码：  
+    账户：root，密码：raspberry  
+    账户：pi，密码：raspberry  
+    修改密码：  
+  
+sudo passwd root  
+sudo passwd pi  
+  
+</code></pre></div><pre><code>输入两次密码，修改成功  
+在这里插入图片描述  
 </code></pre>
 <p>更换apt为阿里云源</p>
-<pre><code>编辑文件
+<pre><code>编辑文件  
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-sudo vim /etc/apt/sources.list
-
-
-    用#注释掉原理的源地址，输入阿里云源的地址
-
-deb http://mirrors.aliyun.com/raspbian/raspbian/ jessie main contrib non-free rpi
-deb-src http://mirrors.aliyun.com/raspbian/raspbian/ jessie main contrib non-free rpi
-
-
-    更新一下
-
-sudo apt-get update
-sudo apt-get upgrade -y
-
-
-
-    第一步中，也可以不用vim，直接写入新的源
-
-echo -e <span style="color:#e6db74">&#34;deb http://mirrors.aliyun.com/raspbian/raspbian/ jessie main contrib non-free rpi\ndeb-src http://mirrors.aliyun.com/raspbian/raspbian/ jessie main contrib non-free rpi&#34;</span> | sudo tee /etc/apt/sources.list
-
-
-
-使用lrzsz，上传下载文件
-
-    安装lrzsz
-
-sudo apt-get install -y lrzsz
-
-</code></pre></div><pre><code>设置xshell
-在这里插入图片描述
-使用rz命令上传，sz命名下载</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+sudo vim /etc/apt/sources.list  
+  
+  
+    用#注释掉原理的源地址，输入阿里云源的地址  
+  
+deb http://mirrors.aliyun.com/raspbian/raspbian/ jessie main contrib non-free rpi  
+deb-src http://mirrors.aliyun.com/raspbian/raspbian/ jessie main contrib non-free rpi  
+  
+  
+    更新一下  
+  
+sudo apt-get update  
+sudo apt-get upgrade -y  
+  
+  
+  
+    第一步中，也可以不用vim，直接写入新的源  
+  
+echo -e <span style="color:#e6db74">&#34;deb http://mirrors.aliyun.com/raspbian/raspbian/ jessie main contrib non-free rpi\ndeb-src http://mirrors.aliyun.com/raspbian/raspbian/ jessie main contrib non-free rpi&#34;</span> | sudo tee /etc/apt/sources.list  
+  
+  
+  
+使用lrzsz，上传下载文件  
+  
+    安装lrzsz  
+  
+sudo apt-get install -y lrzsz  
+  
+</code></pre></div><pre><code>设置xshell  
+在这里插入图片描述  
+使用rz命令上传，sz命名下载  </code></pre>
 </article>
     </section>
 

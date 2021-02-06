@@ -185,27 +185,27 @@
 <p>3、等待导入操作完成，然后在导入的仓库中下载浏览对应的该GitHub仓库代码，你也可以点击仓库顶部的“刷新”按钮进行Github代码仓库的同步。</p>
 <hr>
 <h2 id="9-通过修改hosts文件进行加速">9. 通过修改HOSTS文件进行加速</h2>
-<p>参考如下详细介绍
+<p>参考如下详细介绍<br>
 为什么github下载速度这么慢？</p>
 <p>GitHub 我们都知道是世界上最大的开源及私有软件项目的托管平台，全世界每天有海量优秀的开源软件在这里产生，而 GitHub 在国内很多时候获取到的下载链接是亚马逊的服务器。</p>
-<p>中国因为不可言说的原因，经常抽疯或龟速。想要加快 GitHub 下载速度就需要用到 GitHub 国内加速服务，对于有条件的可以使用代理加快访问速度，而没有条件的就可以用到网上热心人士维护的加速服务了。
+<p>中国因为不可言说的原因，经常抽疯或龟速。想要加快 GitHub 下载速度就需要用到 GitHub 国内加速服务，对于有条件的可以使用代理加快访问速度，而没有条件的就可以用到网上热心人士维护的加速服务了。<br>
 如何提高github的下载速度？</p>
-<p>手动把cdn和ip地址绑定。
+<p>手动把cdn和ip地址绑定。<br>
 第一步：获取github的global.ssl.fastly地址</p>
 <p>访问：https://www.ipaddress.com/ 获取cdn和ip域名：</p>
-<p>得到：199.232.69.194 <a href="https://github.global.ssl.fastly.net">https://github.global.ssl.fastly.net</a>
+<p>得到：199.232.69.194 <a href="https://github.global.ssl.fastly.net">https://github.global.ssl.fastly.net</a><br>
 第二步：获取github.com地址</p>
 <p>访问：https://github.com.ipaddress.com/#ipinfo 获取cdn和ip：</p>
-<p>得到：140.82.112.4 <a href="http://github.com">http://github.com</a>
+<p>得到：140.82.112.4 <a href="http://github.com">http://github.com</a><br>
 第三步：修改host文件映射上面查找到的IP</p>
 <p>windows系统：</p>
 <p>1、修改C:\Windows\System32\drivers\etc\hosts文件的权限，指定可写入：</p>
 <p>右击-&gt;hosts-&gt;属性-&gt;安全-&gt;编辑-&gt;点击Users-&gt;在Users的权限“写入”后面打勾：</p>
 <p>然后点击确定。</p>
 <p>2、右击-&gt;hosts-&gt;打开方式-&gt;选定记事本（或者你喜欢的编辑器）-&gt;在末尾处添加以下内容：</p>
-<pre><code>199.232.69.194 github.global.ssl.fastly.net
+<pre><code>199.232.69.194 github.global.ssl.fastly.net  
 
-140.82.112.4 github.com
+140.82.112.4 github.com  
 </code></pre>
 </article>
     </section>

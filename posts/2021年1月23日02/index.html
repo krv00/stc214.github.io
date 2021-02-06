@@ -145,50 +145,50 @@
       </header>
 
       <article class="main"><p>关键命令</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge 
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/  
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge   
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/  
+  
 </code></pre></div><h1 id="方法-httpsblogcsdnnetqq_43198568articledetails105626024">方法 <a href="https://blog.csdn.net/qq_43198568/article/details/105626024">https://blog.csdn.net/qq_43198568/article/details/105626024</a></h1>
 <p>Anaconda之conda换国内源</p>
-<pre><code>前言
-方法一：使用 Anaconda Navigator 换源（最简单）
-方法二：使用 Anaconda Prompt 换源（最常用）
-方法三：修改 .condarc 文件（最强硬）
+<pre><code>前言  
+方法一：使用 Anaconda Navigator 换源（最简单）  
+方法二：使用 Anaconda Prompt 换源（最常用）  
+方法三：修改 .condarc 文件（最强硬）  
 </code></pre>
 <p>前言</p>
 <p>我知道，网上的教 conda 换国内源的教程数不胜数，但是很多都是一个方法翻来覆去的讲。</p>
-<p>本文，一共讲述的 conda 换源的三种方法，非常简单易懂。
+<p>本文，一共讲述的 conda 换源的三种方法，非常简单易懂。<br>
 方法一：使用 Anaconda Navigator 换源（最简单）</p>
-<p>打开 Anaconda Navigator
-在这里插入图片描述
-出现如下界面，点击 Channels
-在这里插入图片描述
-点击 Add…，输入 <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a>，点击 Enter
-在这里插入图片描述
-在这里插入图片描述
-相同的操作，输入 <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a> 与 <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a>，最终得到如下效果，并点击 Update channels
-在这里插入图片描述
-等待更新完毕即可。
+<p>打开 Anaconda Navigator<br>
+在这里插入图片描述<br>
+出现如下界面，点击 Channels<br>
+在这里插入图片描述<br>
+点击 Add…，输入 <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a>，点击 Enter<br>
+在这里插入图片描述<br>
+在这里插入图片描述<br>
+相同的操作，输入 <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a> 与 <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a>，最终得到如下效果，并点击 Update channels<br>
+在这里插入图片描述<br>
+等待更新完毕即可。<br>
 方法二：使用 Anaconda Prompt 换源（最常用）</p>
-<p>打开 Anaconda Prompt
-在这里插入图片描述
+<p>打开 Anaconda Prompt<br>
+在这里插入图片描述<br>
 在命令行输入以下命令，即可</p>
-<p>conda config &ndash;add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a>
-conda config &ndash;add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a> 
+<p>conda config &ndash;add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>
+conda config &ndash;add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a><br>
 conda config &ndash;add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a></p>
 <p>conda config &ndash;set show_channel_urls yes</p>
-<p>在这里插入图片描述
+<p>在这里插入图片描述<br>
 方法三：修改 .condarc 文件（最强硬）</p>
-<p>Windows 中，该文件的位置在：C:\Users(你的用户名).condarc
-Linux 中，该文件的位置在：~/.condarc
-在这里插入图片描述
-如果，没有该文件，应该是你没有选择查看隐藏项目，点击 查看，打开 隐藏的项目 栏；若还是没有，则自己创建一个**.condarc**文本文件，输入以下内容，然后删除文件后缀名即可
-在这里插入图片描述
+<p>Windows 中，该文件的位置在：C:\Users(你的用户名).condarc<br>
+Linux 中，该文件的位置在：~/.condarc<br>
+在这里插入图片描述<br>
+如果，没有该文件，应该是你没有选择查看隐藏项目，点击 查看，打开 隐藏的项目 栏；若还是没有，则自己创建一个**.condarc**文本文件，输入以下内容，然后删除文件后缀名即可<br>
+在这里插入图片描述<br>
 然后，以记事本打开该文件 .condarc，将以下内容复制粘贴到该文件中即可</p>
-<p>show_channel_urls: true
-ssl_verify: true
+<p>show_channel_urls: true<br>
+ssl_verify: true<br>
 channels:</p>
 <ul>
 <li><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a></li>

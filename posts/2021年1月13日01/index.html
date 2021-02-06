@@ -144,39 +144,39 @@
         </h1>
       </header>
 
-      <article class="main"><p>其他详细设置看官方说明：<br>
+      <article class="main"><p>其他详细设置看官方说明： <br>
 <a href="https://g1eny0ung.site/hugo-theme-dream/">https://g1eny0ung.site/hugo-theme-dream/</a></p>
 <h1 id="dream主题中内置了搜索功能">Dream主题中内置了搜索功能</h1>
 <p>只需要简单的设置即可开启这个功能</p>
 <p>打开根目录下的 config.toml</p>
 <p>在配置项中加入如下内容</p>
 <p>原来配置文件中有[params]则在其中加入第二行即可</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
-[params]
-  enableSearch = true
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  
+[params]  
+  enableSearch = true  
+  
 </code></pre></div><p>之后添加如下内容</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
-[outputs]
-  home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  
+[outputs]  
+  home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]  
+  
 </code></pre></div><p>原文：https://g1eny0ung.site/hugo-theme-dream/#/search</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
-Search
-
-You can enable the search feature by setting the enableSeach param to true in [params]
-
-[params]
-  enableSearch = true
-
-Also, you need to set Hugo outputs to include JSON:
-
-# in your config.toml
-[outputs]
-  home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
-
-Then you will see a search icon appear on the top of the nav. Click it or type Win+/(Windows) or CMD+/(macOS) to start searching.
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  
+Search  
+  
+You can enable the search feature by setting the enableSeach param to true in [params]  
+  
+[params]  
+  enableSearch = true  
+  
+Also, you need to set Hugo outputs to include JSON:  
+  
+# in your config.toml  
+[outputs]  
+  home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]  
+  
+Then you will see a search icon appear on the top of the nav. Click it or type Win+/(Windows) or CMD+/(macOS) to start searching.  
+  
 </code></pre></div></article>
     </section>
 

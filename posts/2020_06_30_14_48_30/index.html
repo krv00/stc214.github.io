@@ -137,18 +137,18 @@
         </h1>
       </header>
 
-      <article class="main"><p><a href="https://s2.ax1x.com/2019/08/04/e6mE60.jpg">
+      <article class="main"><p><a href="https://s2.ax1x.com/2019/08/04/e6mE60.jpg"><br>
 <img src="https://s2.ax1x.com/2019/08/04/e6mE60.jpg" alt="img"></a></p>
 <p>win10安装了ShadowSocks软件，浏览器通过代理后就可以***，但有时候需要通过cmd科学下载安装一些组件，就需要设置一下cmd的代理</p>
 <p>cmd如果要设置代理的话，需要在执行其他命令之前，先执行一下</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">set http_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008
-set https_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">set http_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008  
+set https_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008  
 </code></pre></div><p>cmder如果使用的是bash模式，则先执行一下</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export http_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008
-export https_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export http_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008  
+export https_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008  
 </code></pre></div><p>PowerShell ：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$env:http_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008
-$env:https_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$env:http_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008  
+$env:https_proxy<span style="color:#f92672">=</span>http://127.0.0.1:7008  
 </code></pre></div><p>上面命令的作用是设置环境变量，不用担心，这种环境变量只会持续到cmd窗口关闭，不是系统环境变量</p>
 <p>测试是否成功用 curl <a href="https://www.google.com/">https://www.google.com</a>, 别用ping</p>
 </article>

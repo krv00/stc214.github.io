@@ -147,26 +147,26 @@
 <p>sudo apt install python3-pip</p>
 <p>验证安装是否成功</p>
 <p>pip3 &ndash;version</p>
-<pre><code>guoyz@debian:~/pip-9.0.1$ pip3 --version
-pip 18.1 from /usr/lib/python3/dist-packages/pip (python 3.7)
+<pre><code>guoyz@debian:~/pip-9.0.1$ pip3 --version  
+pip 18.1 from /usr/lib/python3/dist-packages/pip (python 3.7)  
 </code></pre>
 <p>然后安装构建python 模块所需的开发工具，</p>
 <p>sudo  apt install build-essential python3-dev python3-setuptools</p>
 <p>2，新建pip.conf文件</p>
-<pre><code>guoyanzhang@debian:~$ pwd
-/home/guoyanzhang
-guoyanzhang@debian:~$ mkdir .pip
-guoyanzhang@debian:~$ vim .pip/pip.conf
+<pre><code>guoyanzhang@debian:~$ pwd  
+/home/guoyanzhang  
+guoyanzhang@debian:~$ mkdir .pip  
+guoyanzhang@debian:~$ vim .pip/pip.conf  
 </code></pre>
 <p>添加内容：</p>
-<pre><code>[global]
-index-url=http://mirrors.aliyun.com/pypi/simple/
- 
-[install]
-trusted-host=mirrors.aliyun.com
+<pre><code>[global]  
+index-url=http://mirrors.aliyun.com/pypi/simple/  
+   
+[install]  
+trusted-host=mirrors.aliyun.com  
 </code></pre>
 <p>参考：https://www.cnblogs.com/yanxiatingyu/p/10160712.html</p>
-<p>ubuntu 下安装pip3
+<p>ubuntu 下安装pip3<br>
 <a href="https://www.cnblogs.com/yanxiatingyu/p/10160712.html">https://www.cnblogs.com/yanxiatingyu/p/10160712.html</a></p>
 </article>
     </section>

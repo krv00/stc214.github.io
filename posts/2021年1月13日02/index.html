@@ -144,27 +144,27 @@
         </h1>
       </header>
 
-      <article class="main"><p>运行
+      <article class="main"><p>运行<br>
 cmd/powershell,执行</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">netstat -aon|findstr :80|findstr LISTEN
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">netstat -aon|findstr :80|findstr LISTEN  
 </code></pre></div><p>同理,查找占用443端口的进程也是相同操作,将80换成443即可</p>
 <p>得到返回,最右一列为进程PID 19892.接下来打开任务管理器</p>
 <p>可以看到进程PID为19892的进程即为占用该端口的进程,将其结束</p>
 <p>有时候会遇到比较棘手的情况,就是占用的进程为PID 4 即系统服务(SYSTEM)</p>
 <p>可以自行搜索并查找出相关服务,或者干脆直接用以下命令直接停用常见的相关服务</p>
 <p>管理员权限运行cmd/powershell,直接粘贴进去运行即可</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">net stop ReportServer /y
-net stop MsDepSvc /y
-net stop PeerDistSvc /y
-net stop SyncShareSvc /y
-net stop W3SVC /y
-net stop WAS /y
-net stop IISADMIN /y
-net stop http /y
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">net stop ReportServer /y  
+net stop MsDepSvc /y  
+net stop PeerDistSvc /y  
+net stop SyncShareSvc /y  
+net stop W3SVC /y  
+net stop WAS /y  
+net stop IISADMIN /y  
+net stop http /y  
+  
 </code></pre></div><hr>
-<p>443端口若被vmware-hostd.exe占用,可以直接打开vmwre-&gt;首选项-&gt;共享虚拟机-&gt;禁用共享,或者自行修改为其他端口
-针对VMWARE16/更新版本,可以编辑C:\ProgramData\VMware\hostd\proxy.xml
+<p>443端口若被vmware-hostd.exe占用,可以直接打开vmwre-&gt;首选项-&gt;共享虚拟机-&gt;禁用共享,或者自行修改为其他端口<br>
+针对VMWARE16/更新版本,可以编辑C:\ProgramData\VMware\hostd\proxy.xml<br>
 httpsPort改成非443/80即可</p>
 <h3 id="手动排查端口占用可参考">手动排查端口占用可参考:</h3>
 <p><a href="https://www.devside.net/wamp-server/opening-up-port-80-for-apache-to-use-on-windows">https://www.devside.net/wamp-server/opening-up-port-80-for-apache-to-use-on-windows</a></p>
@@ -173,7 +173,7 @@ httpsPort改成非443/80即可</p>
 <p>netstat -aon|findstr :80|findstr LISTEN</p>
 </blockquote>
 <p>查询不到端口被任何进程占用,且仍然无法监听,可能是LSP被劫持的原因</p>
-<p>管理员权限运行cmd/powershell , 输入netsh winsock reset
+<p>管理员权限运行cmd/powershell , 输入netsh winsock reset<br>
 回车后一般就OK了.如果出现断网重启电脑即可</p>
 <h3 id="原文地址">原文地址：</h3>
 <p><a href="https://www.dogfight360.com/blog/knowledge-base/%e8%a7%a3%e5%86%b3%e5%b8%b8%e8%a7%81%e7%9a%8480-443%e7%ab%af%e5%8f%a3%e8%a2%ab%e5%8d%a0%e7%94%a8%e9%97%ae%e9%a2%98/">https://www.dogfight360.com/blog/knowledge-base/%e8%a7%a3%e5%86%b3%e5%b8%b8%e8%a7%81%e7%9a%8480-443%e7%ab%af%e5%8f%a3%e8%a2%ab%e5%8d%a0%e7%94%a8%e9%97%ae%e9%a2%98/</a></p>

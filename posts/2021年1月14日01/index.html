@@ -151,35 +151,35 @@
 </blockquote>
 <p>eval() 函数用来执行一个字符串表达式，并返回表达式的值。</p>
 <p>参数</p>
-<pre><code>expression -- 表达式。
-globals -- 变量作用域，全局命名空间，如果被提供，则必须是一个字典对象。
-locals -- 变量作用域，局部命名空间，如果被提供，可以是任何映射对象。
+<pre><code>expression -- 表达式。  
+globals -- 变量作用域，全局命名空间，如果被提供，则必须是一个字典对象。  
+locals -- 变量作用域，局部命名空间，如果被提供，可以是任何映射对象。  
 </code></pre>
 <p>列子：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#f92672">&gt;&gt;&gt;</span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> eval( <span style="color:#e6db74">&#39;3 * x&#39;</span> )
-<span style="color:#ae81ff">21</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> eval(<span style="color:#e6db74">&#39;pow(2,2)&#39;</span>)
-<span style="color:#ae81ff">4</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> eval(<span style="color:#e6db74">&#39;2 + 2&#39;</span>)
-<span style="color:#ae81ff">4</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> n<span style="color:#f92672">=</span><span style="color:#ae81ff">81</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> eval(<span style="color:#e6db74">&#34;n + 4&#34;</span>)
-<span style="color:#ae81ff">85</span>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  
+<span style="color:#f92672">&gt;&gt;&gt;</span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>  
+<span style="color:#f92672">&gt;&gt;&gt;</span> eval( <span style="color:#e6db74">&#39;3 * x&#39;</span> )  
+<span style="color:#ae81ff">21</span>  
+<span style="color:#f92672">&gt;&gt;&gt;</span> eval(<span style="color:#e6db74">&#39;pow(2,2)&#39;</span>)  
+<span style="color:#ae81ff">4</span>  
+<span style="color:#f92672">&gt;&gt;&gt;</span> eval(<span style="color:#e6db74">&#39;2 + 2&#39;</span>)  
+<span style="color:#ae81ff">4</span>  
+<span style="color:#f92672">&gt;&gt;&gt;</span> n<span style="color:#f92672">=</span><span style="color:#ae81ff">81</span>  
+<span style="color:#f92672">&gt;&gt;&gt;</span> eval(<span style="color:#e6db74">&#34;n + 4&#34;</span>)  
+<span style="color:#ae81ff">85</span>  
+  
 </code></pre></div><hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;[1,2,3]&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> eval(a)
-[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  
+<span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;[1,2,3]&#39;</span>  
+<span style="color:#f92672">&gt;&gt;&gt;</span> eval(a)  
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]  
+  
 </code></pre></div><hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{a:1,c:2}&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> eval(b)
-{a:<span style="color:#ae81ff">1</span>,c:<span style="color:#ae81ff">2</span>}
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  
+<span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{a:1,c:2}&#39;</span>  
+<span style="color:#f92672">&gt;&gt;&gt;</span> eval(b)  
+{a:<span style="color:#ae81ff">1</span>,c:<span style="color:#ae81ff">2</span>}  
+  
 </code></pre></div></article>
     </section>
 

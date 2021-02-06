@@ -142,48 +142,48 @@
         </h1>
       </header>
 
-      <article class="main"><p>原文链接：
+      <article class="main"><p>原文链接：<br>
 <a href="https://blog.csdn.net/zhangzejin3883/article/details/108904399">https://blog.csdn.net/zhangzejin3883/article/details/108904399</a></p>
 <h1 id="openwrt全硬盘安装方法免overlay扩容">OpenWrt全硬盘安装方法（免Overlay扩容）</h1>
 <p>写在前面</p>
 <p>正常我们硬盘安装OpenWrt是将img文件写入硬盘就结束了，但是进入到OpenWrt系统中会发现系统分区只有几百兆的大小，安装几个插件还好说，一旦打开各种日志写入功能就会发现，硬盘空间完全不够用；之后找到的方法只能是利用未分区的空间新建分区，然后将Overlay挂载到新的分区，将体积大的目录用软链接的方式转移到新分区里面，但是这样治标不治本，久而久之你的系统分区早晚会爆满的。</p>
 <p>因此本篇将介绍一个全硬盘安装OpenWrt的方法，实现系统分区大小等于你的硬盘大小，从此一劳永逸的解决空间不够用的烦恼。</p>
-<pre><code>需要注意的是，此方法为硬盘全新安装，已安装过的将格盘重新安装，请注意数据备份。
+<pre><code>需要注意的是，此方法为硬盘全新安装，已安装过的将格盘重新安装，请注意数据备份。  
 </code></pre>
 <p>准备工作</p>
 <p>首先需要有一个带有PE的启动U盘，然后将一下文件放入U盘中：</p>
-<pre><code>DiskGenius V5.3.0 PE免费版
-physdiskwrite V0.5.3
-openwrt-x86-64-generic-squashfs-combined.img
+<pre><code>DiskGenius V5.3.0 PE免费版  
+physdiskwrite V0.5.3  
+openwrt-x86-64-generic-squashfs-combined.img  
 </code></pre>
-<p>这里需要说明的是DiskGenius需要使用新版本，有些PE自带的DiskGenius比较旧可能没有对应的菜单，可以在DiskGenius官网下载PE免费版即可。
+<p>这里需要说明的是DiskGenius需要使用新版本，有些PE自带的DiskGenius比较旧可能没有对应的菜单，可以在DiskGenius官网下载PE免费版即可。<br>
 安装OpenWrt镜像</p>
-<p>使用PE启动U盘进入PE系统，然后用管理员全新运行CMD：
+<p>使用PE启动U盘进入PE系统，然后用管理员全新运行CMD：<br>
 CMD</p>
-<p>进入你U盘的目录下：
+<p>进入你U盘的目录下：<br>
 U盘目录</p>
 <p>输入以下命令进入写盘工具：（这里替换成你自己的IMG文件名）</p>
 <p>physdiskwrite.exe -u openwrt-x86-64-generic-squashfs-combined.img</p>
 <p>physdiskwrite</p>
-<p>接下来选择你要写入的硬盘序号，我这里是0，你要看好自己要写入的硬盘需要再填写
+<p>接下来选择你要写入的硬盘序号，我这里是0，你要看好自己要写入的硬盘需要再填写<br>
 输入硬盘序号</p>
-<p>最后确认填写的信息正确，然后输入y
+<p>最后确认填写的信息正确，然后输入y<br>
 确认信息</p>
-<p>等待写入结束，如下图界面：
-写入完成
+<p>等待写入结束，如下图界面：<br>
+写入完成<br>
 扩容系统分区</p>
-<p>打开DiskGenius软件，选择你的刚刚写入的硬盘，然后再选中上面灰色未使用的分区，右击菜单中选择 “将空间分配给” -&gt; “分区：未格式化(D:)”
+<p>打开DiskGenius软件，选择你的刚刚写入的硬盘，然后再选中上面灰色未使用的分区，右击菜单中选择 “将空间分配给” -&gt; “分区：未格式化(D:)”<br>
 DiskGenius</p>
-<p>确认选择正确的分区，然后点击“是”
+<p>确认选择正确的分区，然后点击“是”<br>
 确认分区</p>
-<p>调整分区完成后点击“完成”
+<p>调整分区完成后点击“完成”<br>
 调整分区完成</p>
-<p>完成后如下图所示表示成功扩容系统分区
+<p>完成后如下图所示表示成功扩容系统分区<br>
 成功扩容</p>
-<p>最后重启计算机并拔掉PE启动U盘。
+<p>最后重启计算机并拔掉PE启动U盘。<br>
 查看系统分区情况</p>
 <p>重启软路由并等待代码跑完后，按回车进入命令行模式，输入df -h，如下图overlayfs:overlay已经为硬盘体积。</p>
-<p>查看系统分区情况
+<p>查看系统分区情况<br>
 总结</p>
 <p>整个过程相比于挂载新分区简单很多，只是再写入img文件后马上进行分区扩容即可。</p>
 <p>另外需要说明的是，将img文件写入硬盘后必须马上去扩容分区，如果你重启进入过OpenWrt系统后再进行分区将不会有任何效果。</p>

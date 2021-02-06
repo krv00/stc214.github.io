@@ -158,19 +158,19 @@
 <h1 id="command-to-install-the-new-version-when-you-edit-this-file">command to install the new version when you edit this file</h1>
 <h1 id="and-files-in-etccrond-these-files-also-have-username-fields">and files in /etc/cron.d. These files also have username fields,</h1>
 <h1 id="that-none-of-the-other-crontabs-do">that none of the other crontabs do.</h1>
-<p>SHELL=/bin/sh
+<p>SHELL=/bin/sh<br>
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</p>
 <h1 id="m-h-dom-mon-dow-user--command">m h dom mon dow user  command</h1>
-<p>17 *    * * *   root    cd / &amp;&amp; run-parts &ndash;report /etc/cron.hourly
-25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts &ndash;report /etc/cron.daily )
-47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts &ndash;report /etc/cron.weekly )
+<p>17 *    * * *   root    cd / &amp;&amp; run-parts &ndash;report /etc/cron.hourly<br>
+25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts &ndash;report /etc/cron.daily )<br>
+47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts &ndash;report /etc/cron.weekly )<br>
 52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts &ndash;report /etc/cron.monthly )</p>
 <h1 id="heading"></h1>
 <p>可以通过 crontab命令进行任务管理：</p>
 <h1 id="编辑用户username-的计划任务文件">编辑用户username 的计划任务文件</h1>
 <p>crontab -u username -e</p>
 <h1 id="显示某个用户的计划任务文件-默认为当前用户">显示某个用户的计划任务文件; 默认为当前用户</h1>
-<p>crontab -l
+<p>crontab -l<br>
 crontab -u username -l</p>
 <h1 id="设置定时任务-编辑某个用户的计划任务文件默认为当前用户">设置定时任务, 编辑某个用户的计划任务文件；默认为当前用户</h1>
 <p>crontab -e</p>
@@ -224,11 +224,11 @@ crontab -u username -l</p>
 <p>*/20 *  *  *  * ls</p>
 <p>注：</p>
 <ul>
-<li>表示所有值
+<li>表示所有值<br>
 / 表示“每”</li>
 </ul>
 <ul>
-<li>表示区间范围
+<li>表示区间范围<br>
 , 表示分割数字</li>
 </ul>
 <p>例如：每一分钟执行一次字符串 &ldquo;Hello World&rdquo; 打印输出到 /home/username/log.txt 文件的计划任务.</p>

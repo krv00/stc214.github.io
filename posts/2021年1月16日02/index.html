@@ -151,12 +151,12 @@
 <p><a href="https://www.rizonesoft.com/download/3939/">https://www.rizonesoft.com/download/3939/</a></p>
 <p>1.使用安装选项中的替换功能替换</p>
 <p>2.修改注册表替换</p>
-<pre><code>win+R 输入 regedit 打开注册表
-输入计算机\HKEY_CLASSES_ROOT\txtfile\shell\open\command 进入记事本的注册表
-修改默认的值,原来的值是 %SystemRoot%\system32\NOTEPAD.EXE %1 ,改为自己解压后的exe的位置(中间不要有中文和空格)
-我改后是 E:\software\Notepad3\Notepad3.exe %1
+<pre><code>win+R 输入 regedit 打开注册表  
+输入计算机\HKEY_CLASSES_ROOT\txtfile\shell\open\command 进入记事本的注册表  
+修改默认的值,原来的值是 %SystemRoot%\system32\NOTEPAD.EXE %1 ,改为自己解压后的exe的位置(中间不要有中文和空格)  
+我改后是 E:\software\Notepad3\Notepad3.exe %1  
 
-在路径输入 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options,设置默认值为软件路径,比如我是 E:\software\Notepad3\Notepad3.exe
+在路径输入 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options,设置默认值为软件路径,比如我是 E:\software\Notepad3\Notepad3.exe  
 </code></pre>
 <h2 id="ps使用系统优化软件可能会导致系统修复的时候修复记事本替换项目-重新安装notepad3进行替换即可">PS：使用系统优化软件可能会导致系统修复的时候修复记事本替换项目 重新安装notepad3进行替换即可。</h2>
 </article>
