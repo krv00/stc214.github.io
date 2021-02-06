@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Sat, 06 Feb 2021 03:52:49 +0800</lastBuildDate><atom:link href="https://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Feb 2021 12:39:29 +0800</lastBuildDate><atom:link href="https://stc214.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 rpi-backup 脚本进行备份</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A514/</link>
+      <pubDate>Sat, 06 Feb 2021 12:39:29 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A514/</guid>
+      <description>原文链接：https://shumeipai.nxez.com/2020/10/28/backup-the-raspberry-pi-sys</description>
+    </item>
+    
     <item>
       <title>linux smbclient命令参数及用法详解--linux访问samba共享资源命</title>
       <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A513/</link>

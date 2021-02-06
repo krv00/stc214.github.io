@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>80or443等端口被占用解决方法 | STC214</title>
+    <title>使用 rpi-backup 脚本进行备份 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,27 +13,27 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="运行 cmd/powershell,执行 netstat -aon|findstr :80|findstr LISTEN 同理,查找占用443端口的进程也是相同操作,将80换成443即可 得到返回,最右一列为进程PID" />
+<meta name="description" content="原文链接：https://shumeipai.nxez.com/2020/10/28/backup-the-raspberry-pi-sys" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8813%E6%97%A502/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A514/" />
 
 
-<meta property="og:title" content="80or443等端口被占用解决方法" />
-<meta property="og:description" content="运行 cmd/powershell,执行 netstat -aon|findstr :80|findstr LISTEN 同理,查找占用443端口的进程也是相同操作,将80换成443即可 得到返回,最右一列为进程PID" />
+<meta property="og:title" content="使用 rpi-backup 脚本进行备份" />
+<meta property="og:description" content="原文链接：https://shumeipai.nxez.com/2020/10/28/backup-the-raspberry-pi-sys" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8813%E6%97%A502/" />
-<meta property="article:published_time" content="2021-01-13T22:25:48+08:00" />
-<meta property="article:modified_time" content="2021-01-13T22:25:48+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A514/" />
+<meta property="article:published_time" content="2021-02-06T12:39:29+08:00" />
+<meta property="article:modified_time" content="2021-02-06T12:39:29+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="80or443等端口被占用解决方法"/>
-<meta name="twitter:description" content="运行 cmd/powershell,执行 netstat -aon|findstr :80|findstr LISTEN 同理,查找占用443端口的进程也是相同操作,将80换成443即可 得到返回,最右一列为进程PID"/>
+<meta name="twitter:title" content="使用 rpi-backup 脚本进行备份"/>
+<meta name="twitter:description" content="原文链接：https://shumeipai.nxez.com/2020/10/28/backup-the-raspberry-pi-sys"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -115,68 +115,53 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0024.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0065.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          80or443等端口被占用解决方法
+          使用 rpi-backup 脚本进行备份
           <div class="sub header">
             @
             
-              
-                STC214
-              
+              STC214
             
 
             | 
-                星期三，一月 13 日，2021 年
+                星期六，二月 6 日，2021 年
               
 
             | 2 分钟阅读
 
             | 更新于
               
-                星期三，一月 13 日，2021 年
+                星期六，二月 6 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>运行
-cmd/powershell,执行</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">netstat -aon|findstr :80|findstr LISTEN
-</code></pre></div><p>同理,查找占用443端口的进程也是相同操作,将80换成443即可</p>
-<p>得到返回,最右一列为进程PID 19892.接下来打开任务管理器</p>
-<p>可以看到进程PID为19892的进程即为占用该端口的进程,将其结束</p>
-<p>有时候会遇到比较棘手的情况,就是占用的进程为PID 4 即系统服务(SYSTEM)</p>
-<p>可以自行搜索并查找出相关服务,或者干脆直接用以下命令直接停用常见的相关服务</p>
-<p>管理员权限运行cmd/powershell,直接粘贴进去运行即可</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">net stop ReportServer /y
-net stop MsDepSvc /y
-net stop PeerDistSvc /y
-net stop SyncShareSvc /y
-net stop W3SVC /y
-net stop WAS /y
-net stop IISADMIN /y
-net stop http /y
-
-</code></pre></div><hr>
-<p>443端口若被vmware-hostd.exe占用,可以直接打开vmwre-&gt;首选项-&gt;共享虚拟机-&gt;禁用共享,或者自行修改为其他端口
-针对VMWARE16/更新版本,可以编辑C:\ProgramData\VMware\hostd\proxy.xml
-httpsPort改成非443/80即可</p>
-<h3 id="手动排查端口占用可参考">手动排查端口占用可参考:</h3>
-<p><a href="https://www.devside.net/wamp-server/opening-up-port-80-for-apache-to-use-on-windows">https://www.devside.net/wamp-server/opening-up-port-80-for-apache-to-use-on-windows</a></p>
-<p>若使用</p>
-<blockquote>
-<p>netstat -aon|findstr :80|findstr LISTEN</p>
-</blockquote>
-<p>查询不到端口被任何进程占用,且仍然无法监听,可能是LSP被劫持的原因</p>
-<p>管理员权限运行cmd/powershell , 输入netsh winsock reset
-回车后一般就OK了.如果出现断网重启电脑即可</p>
-<h3 id="原文地址">原文地址：</h3>
-<p><a href="https://www.dogfight360.com/blog/knowledge-base/%e8%a7%a3%e5%86%b3%e5%b8%b8%e8%a7%81%e7%9a%8480-443%e7%ab%af%e5%8f%a3%e8%a2%ab%e5%8d%a0%e7%94%a8%e9%97%ae%e9%a2%98/">https://www.dogfight360.com/blog/knowledge-base/%e8%a7%a3%e5%86%b3%e5%b8%b8%e8%a7%81%e7%9a%8480-443%e7%ab%af%e5%8f%a3%e8%a2%ab%e5%8d%a0%e7%94%a8%e9%97%ae%e9%a2%98/</a></p>
+      <article class="main"><p>原文链接：https://shumeipai.nxez.com/2020/10/28/backup-the-raspberry-pi-system-as-an-img-file.html</p>
+<p>只进行部分提取</p>
+<p>最好的树莓派系统备份解决方案，解决了备份文件体积大，恢复也方便，这个脚本备份文件的体积为 已用空间×1.2，我的系统占用了不到 10G 的空间，备份文件大概是 11G 多一些，这相比于全盘备份的 128G 已经小太多了，在使用7z进行极限压缩后甚至只有 1.7G，进行日常归档备份完全可以接受。</p>
+<p>该脚本进行系统恢复时也很方便，将 img 文件像安装系统一样刷入 tf卡 后对分区进行简单拓展后即可。接下来就来演示怎么使用该脚本进行备份。
+备份演示</p>
+<p>首先 clone 该脚本：</p>
+<p>git clone <a href="https://github.com/nanhantianyi/rpi-backup.git">https://github.com/nanhantianyi/rpi-backup.git</a> &amp;&amp; cd rpi-backup</p>
+<p>然后要安装依赖项，这里我用的是 Manjaro-arm 系统。在 Manjaro 系统中该脚本无法自动安装依赖项，需要运行这行命令 sudo pacman -Sy &amp;&amp; pacman -S dosfstools parted multipath-tools rsync 来安装依赖。
+如果你是用 apt 进行安装软件的系统，可以跳过这一步，该脚本会自动安装依赖项。</p>
+<p>然后运行</p>
+<p>sudo ./back.sh youImageName.img</p>
+<p>该脚本就会开始备份，如果不指定文件名则会自动命名。
+如果你的内存卡剩余空间不够的话就挂载 U 盘，将 img 直接保存在 U 盘中，要注意U盘务必挂载到 /media 目录下，不要挂载到 /mnt，因为脚本会对 /mnt 目录进行备份操作，会导致递归性的备份，总之就是不要挂载到 /mnt 目录，切记！</p>
+<p>脚本运行结束后就得到了备份镜像。
+备份的恢复</p>
+<p>备份镜像恢复可以直接用烧录软件直接烧录，这里我使用的是 Etcher，我也推荐大家使用这个软件，站内有这个软件的文章：使用 Etcher 给 SD 卡安装树莓派系统，界面简洁明了，选择镜像，选择要刷入的磁盘，Flash！</p>
+<p>在烧录完毕后不要着急，我们还要一项操作没有做，打开 DiskGenius 后查看 tf 卡的分区可以看到有一部分空闲分区没有被分配。</p>
+<p>这会导致进入系统后可用空间变少，在这里我直接用 DiskGenius 将空闲分区分配给 root 分区，这样不用在进入系统后做其他操作。
+也可以进入系统后执行 git clone 来的 resize.sh 脚本进行扩容操作：sudo resize.sh，脚本运行完毕后会自动重启，两个步骤效果一样（但在部分系统会无法运行，还是推荐用 DiskGenius 弄好再开机）。</p>
+<p>最后也不要忘了给该项目点一个 Star。</p>
 </article>
     </section>
 
@@ -210,8 +195,8 @@ httpsPort改成非443/80即可</p>
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B41%E6%9C%8813%E6%97%A502\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B41%E6%9C%8813%E6%97%A502\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A514\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A514\/'; 
           };
 
           (function() { 
@@ -242,19 +227,6 @@ httpsPort改成非443/80即可</p>
   </div>
   <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
     
-    
-      <div class="ui segment toc">
-        <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#手动排查端口占用可参考">手动排查端口占用可参考:</a></li>
-        <li><a href="#原文地址">原文地址：</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-      </div>
     
 
     <article class="dream-header">
