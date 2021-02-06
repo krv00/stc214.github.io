@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Debian(Linux)系统Samba安装和配置 | STC214</title>
+    <title>笔记 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,27 +13,26 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="原文链接： https://blog.csdn.net/jinzhu1911/article/details/100592496 samba安装 root用户下直接使用以下命令 apt-get install samba 若是普通用户下使用以下命令 sudo apt-get install smaba samba配置 samba的配置文件在/etc" />
+<meta name="description" content="STC214的笔记" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A509/" />
+<link rel="canonical" href="https://stc214.github.io/tags/%E7%AC%94%E8%AE%B0/" />
 
 
-<meta property="og:title" content="Debian(Linux)系统Samba安装和配置" />
-<meta property="og:description" content="原文链接： https://blog.csdn.net/jinzhu1911/article/details/100592496 samba安装 root用户下直接使用以下命令 apt-get install samba 若是普通用户下使用以下命令 sudo apt-get install smaba samba配置 samba的配置文件在/etc" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A509/" />
-<meta property="article:published_time" content="2021-02-06T02:24:20+08:00" />
-<meta property="article:modified_time" content="2021-02-06T02:24:20+08:00" />
+<meta property="og:title" content="笔记" />
+<meta property="og:description" content="STC214的笔记" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://stc214.github.io/tags/%E7%AC%94%E8%AE%B0/" />
+<meta property="og:updated_time" content="2021-02-07T00:14:55+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Debian(Linux)系统Samba安装和配置"/>
-<meta name="twitter:description" content="原文链接： https://blog.csdn.net/jinzhu1911/article/details/100592496 samba安装 root用户下直接使用以下命令 apt-get install samba 若是普通用户下使用以下命令 sudo apt-get install smaba samba配置 samba的配置文件在/etc"/>
+<meta name="twitter:title" content="笔记"/>
+<meta name="twitter:description" content="STC214的笔记"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -73,17 +72,7 @@
   
 </style>
 
-    
-
-
-  
-    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
-  
-
-
-
-
-
+     
   </head>
 
   <body class="default">
@@ -112,162 +101,7 @@
           <div class="dream-max-width">
             
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
-    
-    <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0060.jpg);"></div>
-    </section>
-    
-    <section class="ui attached segment">
-      <header>
-        <h1 class="ui large header">
-          Debian(Linux)系统Samba安装和配置
-          <div class="sub header">
-            @
-            
-              STC214
-            
-
-            | 
-                星期六，二月 6 日，2021 年
-              
-
-            | 2 分钟阅读
-
-            | 更新于
-              
-                星期六，二月 6 日，2021 年
-              
-          </div>
-        </h1>
-      </header>
-
-      <article class="main"><p>原文链接： <a href="https://blog.csdn.net/jinzhu1911/article/details/100592496">https://blog.csdn.net/jinzhu1911/article/details/100592496</a></p>
-<p>samba安装</p>
-<pre><code>root用户下直接使用以下命令  
-
- apt-get install samba  
-
-
-若是普通用户下使用以下命令  
-
- sudo apt-get install smaba  
-</code></pre>
-<p>samba配置</p>
-<p>samba的配置文件在/etc/samba/路径下，文件名为smb.conf，注意需要root用户权限才能编辑该文件，我是用root用户下使用vim进行编辑修改的。<br>
-在文件末尾添加以下内容</p>
-<p>[test]<br>
-comment = samba test<br>
-path = /home/d/share //共享文件路径<br>
-browseable = yes<br>
-read only = no<br>
-guest ok = yes<br>
-writable = yes</p>
-<p>添加samba用户</p>
-<p>smbpasswd -a 用户名<br>
-接着需要两次输入密码<br>
-此处设置的用户和密码，是用来登录用的</p>
-<p>可能出现的错误</p>
-<pre><code>执行smbpasswd有可能会出现以下错误：  
-
- bash: smbpasswd: command not found  
-
-
-解决办法：出现该错误表示samba-client没有安装  
-
- 执行命令apt-get install samba-client  
-
-
-执行samba-client命令可能会出现以下错误：  
-
- smbclient: Depends: libwbclient0 (= 2:4.5.16+dfsg-1+deb9u1) but 2:4.5.16+dfsg-1+deb9u2 is to be installed  
-
-
-解决办法：  
-
- 执行命令 apt-get autoremove libwbclient0 //卸载之前安装的版本  
- 执行命令 apt-get install libwbclient0=2:4.5.16+dfsg-1+deb9u1 //安装所需要的版本  
-
-
-通过以上命令即可解决问题，此时可以执行apt-get install samba-client，将成功安装samba-client  
-</code></pre>
-<p>起动samba服务</p>
-<p>使用命令 systemctl start smb<br>
-执行以上命令会报错：Failed to start smb.service: Unit smb.service not found<br>
-到目录/etc/init.d目录下可以发现没有smb文件，但可以发现smnd和nmbd文件，使用这两个执行文件来起动samba服务，执行以下命令：</p>
-<p>systemctl restart smbd.service nmbd.service</p>
-<p>若执行上述命令时，出现以下错误：</p>
-<p>Failed to restart smbd.service: Unit smbd.sercvice not found<br>
-Failed to restart nmbd.service: Unit nmbd.service not found</p>
-<p>出现上述错误的原因是因为samba没有安装成功，因此需要执行apt-get install samba，重新安装samba，安装完成以后，再执行以上命令，即可成功起动samba服务</p>
-<p>若要查看samba服务是否起动成功，只需要执行命令systemctl status smbd.service，执行该命令后，可以在终端上看到active(running)，表明samba服务已经起动成功。</p>
-</article>
-    </section>
-
-    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
-      
-        
-          <a class="ui label" href="/tags/note" title="Note">Note</a>
-        
-          <a class="ui label" href="/tags/%E7%AC%94%E8%AE%B0" title="笔记">笔记</a>
-        
-      
-      <div
-        class="ui label"
-        style="float: right; cursor: pointer;"
-        onclick="savePostAsImg()">
-        <i class="save icon"></i>保存为图片
-      </div>
-    </footer>
-
-    
-      <footer class="ui attached segment" data-html2canvas-ignore>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
-      </footer>
-    
-
-    
-      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A509\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A509\/'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + 'STC214' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    
-    
-    
-      <div class="ui segment utterances-comments" data-html2canvas-ignore>
-        <script src="https://utteranc.es/client.js"
-          repo="g1eny0ung/g1eny0ung.github.io"
-          issue-term="og:title"
-          theme="github-light"
-          crossorigin="anonymous"
-          async>
-        </script>
-      </div>
-    
-
-    
-
-  </div>
-  <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
-    
-    
-
+  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -867,7 +701,56 @@ Failed to restart nmbd.service: Unit nmbd.service not found</p>
   </section>
 </article>
 
-  </aside>
+  </div>
+
+  
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A502/">
+    
+      <img src="/img/0005.jpg" alt="给hugo增加搜索功能" />
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A502/">给hugo增加搜索功能</a>
+    </h2>
+    <div class="meta">
+      <p class="date">星期二，一月 12 日，2021 年</p>
+    </div>
+    <div class="description">
+      原文： https://blog.humblepg.com/post/2019/06/hugo-search.html Hugo 这种静态站点默认没有搜索功能，大概因为没了数据库实现反而不方便。Search for your Hugo Website 列出了一些可选项，要么自己生成索引用开源的工具
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;STC214</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>3 分钟阅读</div>
+  </div>
+</article>
+
+    </div>
+  
+
+  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+    
+<article class="ui attached center aligned segment card dream-card">
+  <div class="content">
+    <div class="ui medium header">
+      <a href="/tags/%E7%AC%94%E8%AE%B0/page/4/" title="上一页">
+        上一页
+      </a>
+    </div>
+  </div>
+</article>
+
+
+
+
+  </div>
 </div>
 
           </div>
@@ -986,6 +869,30 @@ Failed to restart nmbd.service: Unit nmbd.service not found</p>
   </section>
 
   
+    
+      <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
+        <footer class="ui segment">
+          <div id="disqus_thread"></div>
+          <script>
+            
+
+
+            var disqus_config = function () {
+              this.page.url = 'https:\/\/stc214.github.io\/tags\/%E7%AC%94%E8%AE%B0\/';  
+              this.page.identifier = '/'; 
+            };
+
+            (function() { 
+              var d = document, s = d.createElement('script');
+              s.src = 'https://' + 'STC214' + '.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </footer>
+      </section>
+    
   
 </div>
 
@@ -1030,37 +937,9 @@ Failed to restart nmbd.service: Unit nmbd.service not found</p>
 <script src="/js/theme.js"></script>
 
     
-<script src="/js/html2canvas.min.js"></script>
-<script src="/js/post.js"></script>
-
-
-  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
-
-  
-    
-      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
-     
-  
-
-  <script>
-  hljs.initHighlightingOnLoad()
-  setHighlightTheme()
-
-  function setHighlightTheme() {
-    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
-    isDark = isDark ? isDark : window.defaultDark ? 'y' : isDark
-
-    var lightTheme = "gruvbox-light"
-    var darkTheme = "gruvbox-dark"
-    var theme = isDark === 'y' ? darkTheme : lightTheme
-
-    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
-    $('pre').css('background', isDark === 'y' ? '#333' : '')
-  }
-</script>
-
-
-
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/grid.js"></script>
 
 
     
