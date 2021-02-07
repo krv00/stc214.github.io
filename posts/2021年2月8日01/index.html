@@ -12,7 +12,7 @@
 
 
 
-<meta name="author" content="Author Name" />
+<meta name="author" content="STC214" />
 <meta name="description" content="在Windows上使用qemu虚拟机，通过此配置，可以使qemu中的虚拟机能连接互联网，并且也可以和Windows主机通信。此方式类似于Vm" />
 
 
@@ -125,9 +125,7 @@
           <div class="sub header">
             @
             
-              
-                Author Name
-              
+              STC214
             
 
             | 
@@ -161,15 +159,55 @@
 <p>通过SMB等方法可以访问内网资源。方便进行资源交换。</p>
 </li>
 </ul>
-<p>在win10安装qemu程序。
-使用win10的 cmd进入qemu程序的目录
+<p>在win10安装qemu程序。 <br>
+使用win10的 cmd进入qemu程序的目录 <br>
 使用类似如下命令打开树莓派虚拟机进行操作：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
-cd /&lt;qemu_path&gt;/
-
-.<span style="color:#ae81ff">\q</span>emu-system-arm -kernel kernel-qemu-4.19.50-buster -cpu arm1176 -m <span style="color:#ae81ff">256</span> -M versatilepb -dtb versatile-pb-buster.dtb -no-reboot -append “root<span style="color:#f92672">=</span>/dev/sda2 panic<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> rootfstype<span style="color:#f92672">=</span>ext4 rw” -net nic -net tap,ifname<span style="color:#f92672">=</span>tap0 -hda 2021-01-11-raspios-buster-armhf-lite.img
-
-</code></pre></div><h3 id="ps-必须要用cmd-其他的shell或者终端程序在win10中运行同样的指令反而不能运行原因未知">PS： 必须要用cmd 其他的shell或者终端程序在win10中运行同样的指令反而不能运行。原因未知。</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    
+cd /&lt;qemu_path&gt;/    
+    
+.<span style="color:#ae81ff">\q</span>emu-system-arm -kernel kernel-qemu-4.19.50-buster -cpu arm1176 -m <span style="color:#ae81ff">256</span> -M versatilepb -dtb versatile-pb-buster.dtb -no-reboot -append “root<span style="color:#f92672">=</span>/dev/sda2 panic<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> rootfstype<span style="color:#f92672">=</span>ext4 rw” -net nic -net tap,ifname<span style="color:#f92672">=</span>tap0 -hda 2021-01-11-raspios-buster-armhf-lite.img    
+    
+</code></pre></div><h3 id="ps-必须要用cmd-其他的shell或者终端程序在win10中运行同样的指令反而不能运行原因未知同时还有一个奇怪的现象就是其他debian镜像用这个指令也无法打开">PS： 必须要用cmd 其他的shell或者终端程序在win10中运行同样的指令反而不能运行。原因未知。同时还有一个奇怪的现象就是其他debian镜像用这个指令也无法打开。。</h3>
+<ul>
+<li>正常启动之后最好直接通过</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+sudo passwd pi  
+...  
+  
+sudo passwd root  
+...  
+  
+sudo passwd --unlock root  
+  
+</code></pre></div><p>打开root权限和账号</p>
+<ul>
+<li>第二部是通过</li>
+</ul>
+<blockquote>
+<p>raspi-config</p>
+</blockquote>
+<p>来修改系统的语言、地区、键盘布局</p>
+<ul>
+<li>
+<p>第三步通过更换系统软件的国内源来增加使用体验</p>
+</li>
+<li>
+<p>第四步是安装</p>
+</li>
+</ul>
+<blockquote>
+<p>apt install vim openssh-server</p>
+</blockquote>
+<ul>
+<li>
+<p>第五步是打开ssh远程连接权限</p>
+</li>
+<li>
+<p>之后再通过ssh进行指令操作会方便很多</p>
+</li>
+</ul>
+<h2 id="之所以使用ssh来方便操作是因为测试使用一些可以共享剪贴板的工具无效并且最新版的win10并不支持对应的程序版本导致无法安装使用">之所以使用ssh来方便操作是因为测试使用一些可以共享剪贴板的工具无效，并且最新版的win10并不支持对应的程序版本导致无法安装使用。</h2>
 </article>
     </section>
 
@@ -241,9 +279,10 @@ cd /&lt;qemu_path&gt;/
   <ul>
     <li>
       <ul>
-        <li><a href="#ps-必须要用cmd-其他的shell或者终端程序在win10中运行同样的指令反而不能运行原因未知">PS： 必须要用cmd 其他的shell或者终端程序在win10中运行同样的指令反而不能运行。原因未知。</a></li>
+        <li><a href="#ps-必须要用cmd-其他的shell或者终端程序在win10中运行同样的指令反而不能运行原因未知同时还有一个奇怪的现象就是其他debian镜像用这个指令也无法打开">PS： 必须要用cmd 其他的shell或者终端程序在win10中运行同样的指令反而不能运行。原因未知。同时还有一个奇怪的现象就是其他debian镜像用这个指令也无法打开。。</a></li>
       </ul>
     </li>
+    <li><a href="#之所以使用ssh来方便操作是因为测试使用一些可以共享剪贴板的工具无效并且最新版的win10并不支持对应的程序版本导致无法安装使用">之所以使用ssh来方便操作是因为测试使用一些可以共享剪贴板的工具无效，并且最新版的win10并不支持对应的程序版本导致无法安装使用。</a></li>
   </ul>
 </nav>
       </div>
@@ -352,6 +391,12 @@ cd /&lt;qemu_path&gt;/
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B42%E6%9C%888%E6%97%A502/">ubuntu 20.10&#43;系统默认占用磁盘空间</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">

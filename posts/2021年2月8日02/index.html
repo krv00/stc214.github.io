@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>使用schedule模块定时执行任务 | STC214</title>
+    <title>ubuntu 20.10&#43;系统默认占用磁盘空间 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,27 +13,27 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="原文： https://blog.csdn.net/liao392781/article/details/80521194 python中有一个轻量级的定时任务调度的库：schedule。他可以完成每分钟，每小时，每天，周几，特定日期的定时任务。因此十分方" />
+<meta name="description" content="ubuntu 20.10&#43;系统默认占用磁盘空间约为 10GB不到 通常虚拟机分配20GB空间足以运行大多数任务。" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%883%E6%97%A502/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%888%E6%97%A502/" />
 
 
-<meta property="og:title" content="使用schedule模块定时执行任务" />
-<meta property="og:description" content="原文： https://blog.csdn.net/liao392781/article/details/80521194 python中有一个轻量级的定时任务调度的库：schedule。他可以完成每分钟，每小时，每天，周几，特定日期的定时任务。因此十分方" />
+<meta property="og:title" content="ubuntu 20.10&#43;系统默认占用磁盘空间" />
+<meta property="og:description" content="ubuntu 20.10&#43;系统默认占用磁盘空间约为 10GB不到 通常虚拟机分配20GB空间足以运行大多数任务。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%883%E6%97%A502/" />
-<meta property="article:published_time" content="2021-02-03T02:06:49+08:00" />
-<meta property="article:modified_time" content="2021-02-03T02:06:49+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%888%E6%97%A502/" />
+<meta property="article:published_time" content="2021-02-08T01:49:56+08:00" />
+<meta property="article:modified_time" content="2021-02-08T01:49:56+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用schedule模块定时执行任务"/>
-<meta name="twitter:description" content="原文： https://blog.csdn.net/liao392781/article/details/80521194 python中有一个轻量级的定时任务调度的库：schedule。他可以完成每分钟，每小时，每天，周几，特定日期的定时任务。因此十分方"/>
+<meta name="twitter:title" content="ubuntu 20.10&#43;系统默认占用磁盘空间"/>
+<meta name="twitter:description" content="ubuntu 20.10&#43;系统默认占用磁盘空间约为 10GB不到 通常虚拟机分配20GB空间足以运行大多数任务。"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -115,13 +115,13 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0037.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0071.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          使用schedule模块定时执行任务
+          ubuntu 20.10&#43;系统默认占用磁盘空间
           <div class="sub header">
             @
             
@@ -129,73 +129,26 @@
             
 
             | 
-                星期三，二月 3 日，2021 年
+                星期一，二月 8 日，2021 年
               
 
-            | 2 分钟阅读
+            | 1 分钟阅读
 
             | 更新于
               
-                星期三，二月 3 日，2021 年
+                星期一，二月 8 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>原文： <a href="https://blog.csdn.net/liao392781/article/details/80521194">https://blog.csdn.net/liao392781/article/details/80521194</a></p>
-<p>python中有一个轻量级的定时任务调度的库：schedule。他可以完成每分钟，每小时，每天，周几，特定日期的定时任务。因此十分方便我们执行一些轻量级的定时任务。</p>
-<p>代码如下：</p>
-<pre><code>import schedule  
-import time  
-   
-def job():  
-    print(&quot;I'm working...&quot;)  
-   
-schedule.every(10).minutes.do(job)  
-schedule.every().hour.do(job)  
-schedule.every().day.at(&quot;10:30&quot;).do(job)  
-schedule.every(5).to(10).days.do(job)  
-schedule.every().monday.do(job)  
-schedule.every().wednesday.at(&quot;13:15&quot;).do(job)  
-   
-while True:  
-    schedule.run_pending()  
-    time.sleep(1)  
-</code></pre>
-<p>上面的意思就是：</p>
-<p>每隔十分钟执行一次任务</p>
-<p>每隔一小时执行一次任务</p>
-<p>每天的10:30执行一次任务</p>
-<p>每隔5到10天执行一次任务</p>
-<p>每周一的这个时候执行一次任务</p>
-<p>每周三13:15执行一次任务</p>
-<p>run_pending：运行所有可以运行的任务</p>
-<p>当然，如果函数中带有参数怎么办呢？</p>
-<p>很简单，如下所示：</p>
-<pre><code>import schedule  
-import time  
-   
-def job(name):  
-    print(&quot;her name is : &quot;, name)  
-   
-name = xiaona  
-schedule.every(10).minutes.do(job, name)  
-schedule.every().hour.do(job, name)  
-schedule.every().day.at(&quot;10:30&quot;).do(job, name)  
-schedule.every(5).to(10).days.do(job, name)  
-schedule.every().monday.do(job, name)  
-schedule.every().wednesday.at(&quot;13:15&quot;).do(job, name)  
-   
-while True:  
-    schedule.run_pending()  
-    time.sleep(1)  
-</code></pre>
-<p>疑问解答：</p>
-<p>最近有人问我while True之类的是什么意思，很简单，如果你去掉while True这个死循环的话，schedule.run_pending()是没有办法持续运行的，那么schedule.run_pending()是个什么东西呢——</p>
-<p>schedule其实就只是个定时器。在while True死循环中，schedule.run_pending()是保持schedule一直运行，去查询上面那一堆的任务，在任务中，就可以设置不同的时间去运行。跟linux中设置crontab定时任务是类似的。</p>
-<p>所以，schedule有一定的局限性，所以只能用来执行一些小型的定时任务，它的局限性在哪呢——</p>
-<p>1.需要定时运行的函数job不应当是死循环类型的，也就是说，这个线程应该有一个执行完毕的出口。一是因为线程万一僵死，会是非常棘手的问题；二是下一次定时任务还会开启一个新的线程，执行次数多了就会演变成灾难。</p>
-<p>2.如果schedule的时间间隔设置得比job执行的时间短，一样会线程堆积形成灾难，也就是说，我job的执行时间是1个小时，但是我定时任务设置的是5分钟一次，那就会一直堆积线程。</p>
+      <article class="main"><p>ubuntu 20.10+系统默认占用磁盘空间约为</p>
+<blockquote>
+<p>10GB不到</p>
+</blockquote>
+<ul>
+<li>通常虚拟机分配20GB空间足以运行大多数任务。</li>
+</ul>
 </article>
     </section>
 
@@ -229,8 +182,8 @@ while True:
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%883%E6%97%A502\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%883%E6%97%A502\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%888%E6%97%A502\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%888%E6%97%A502\/'; 
           };
 
           (function() { 
