@@ -13,7 +13,7 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="原文链接：https://blog.csdn.net/talkxin/article/details/81264605 https://blog.csdn.net/weixin_34124939/article/details/92783554 前言 当我们使用qem" />
+<meta name="description" content="原文链接： https://blog.csdn.net/talkxin/article/details/81264605 https://blog.csdn.net/weixin_34124939/article/details/92783554 前言 当我们使用qemu加载了一个树莓派官方镜像时，因为官方在构建镜像的时候人为的控制了root分区的大小，如果我们加载完镜像需" />
 
 
 
@@ -23,7 +23,7 @@
 
 
 <meta property="og:title" content="使用QEMU扩展树莓派镜像增加剩余使用空间" />
-<meta property="og:description" content="原文链接：https://blog.csdn.net/talkxin/article/details/81264605 https://blog.csdn.net/weixin_34124939/article/details/92783554 前言 当我们使用qem" />
+<meta property="og:description" content="原文链接： https://blog.csdn.net/talkxin/article/details/81264605 https://blog.csdn.net/weixin_34124939/article/details/92783554 前言 当我们使用qemu加载了一个树莓派官方镜像时，因为官方在构建镜像的时候人为的控制了root分区的大小，如果我们加载完镜像需" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A507/" />
 <meta property="article:published_time" content="2021-02-06T02:02:39+08:00" />
@@ -33,7 +33,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用QEMU扩展树莓派镜像增加剩余使用空间"/>
-<meta name="twitter:description" content="原文链接：https://blog.csdn.net/talkxin/article/details/81264605 https://blog.csdn.net/weixin_34124939/article/details/92783554 前言 当我们使用qem"/>
+<meta name="twitter:description" content="原文链接： https://blog.csdn.net/talkxin/article/details/81264605 https://blog.csdn.net/weixin_34124939/article/details/92783554 前言 当我们使用qemu加载了一个树莓派官方镜像时，因为官方在构建镜像的时候人为的控制了root分区的大小，如果我们加载完镜像需"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -142,14 +142,17 @@
         </h1>
       </header>
 
-      <article class="main"><p>原文链接：https://blog.csdn.net/talkxin/article/details/81264605</p>
-<pre><code>     https://blog.csdn.net/weixin_34124939/article/details/92783554    
+      <article class="main"><p>原文链接：</p>
+<pre><code>https://blog.csdn.net/talkxin/article/details/81264605             
+https://blog.csdn.net/weixin_34124939/article/details/92783554    
 </code></pre>
 <p>前言</p>
 <p>  当我们使用qemu加载了一个树莓派官方镜像时，因为官方在构建镜像的时候人为的控制了root分区的大小，如果我们加载完镜像需要进行一些自己的操作时，就需要使用qemu-img工具来扩容空间啦。<br>
 1、检查树莓派镜像</p>
 <p>  首先，我们检查一下现有树莓派镜像的空间，使用qemu-img的info命令:</p>
+<blockquote>
 <p>qemu-img info 2017-11-29-raspbian-stretch.img</p>
+</blockquote>
 <p>如果找不到qemu-img命令的话需要安装对应的qemu版本</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
  通过 sudo apt-get install qemu 命令安装过qemu后，在terminal输入qemu显示如下：  
@@ -177,11 +180,13 @@
   
 使用qemu-system-i386或qemu-system-x86_64指令替换qemu指令。  
 可以建立一条软链接，这样就还可以使用qemu命令了：  
-+ sudo ln -s /usr/bin/qemu-system-i386 /usr/bin/qemu   
+&gt; sudo ln -s /usr/bin/qemu-system-i386 /usr/bin/qemu   
   
 </code></pre></div><p>经过如上设置之后就可以正常使用命令了</p>
 <p>首先，我们检查一下现有树莓派镜像的空间，使用qemu-img的info命令:</p>
+<blockquote>
 <p>qemu-img info 2017-11-29-raspbian-stretch.img</p>
+</blockquote>
 <p>  输出可以看到如下信息：</p>
 <p>image: 2017-11-29-raspbian-stretch.img//img镜像名称 <br>
 file format: raw//文件格式类型 <br>
@@ -189,7 +194,9 @@ virtual size: 4.6G (4919918592 bytes)//实际镜像文件大小 <br>
 disk size: 4.6G//系统空间大小</p>
 <p>2、扩容IMG镜像文件</p>
 <p>  使用qemu-img的resize命令对镜像文件进行扩展。</p>
+<blockquote>
 <p>qemu-img resize 2017-11-29-raspbian-stretch.img +1G</p>
+</blockquote>
 <p>  再通过info命令检查当前镜像文件：</p>
 <p>file format: raw<br>
 virtual size: 5.6G (5993660416 bytes)//实际镜像文件大小已经扩容1G空间<br>
@@ -210,14 +217,18 @@ tmpfs           124M     0  124M   0% /sys/fs/cgroup<br>
 /dev/sda1        41M   21M   21M  51% /boot<br>
 tmpfs            25M     0   25M   0% /run/user/1000</p>
 <p>  使用fdisk命令查看当前分区的起始位与结束位：</p>
+<blockquote>
 <p>sudo fdisk -l</p>
+</blockquote>
 <p>  可以看到如下内容：</p>
 <p>Device     Boot Start     End Sectors  Size Id Type<br>
 /dev/sda1        8192   93236   85045 41.5M  c W95 FAT32 (LBA)<br>
 /dev/sda2       94208 9609215 9515008  4.6G 83 Linux</p>
 <p>  需要记录sda2（Linux分区）的start位置的sector。</p>
 <p>  使用fdisk对sda设备进行分区：</p>
+<blockquote>
 <p>sudo fdisk /dev/sda</p>
+</blockquote>
 <pre><code>可以输入m来进行查看fdisk的命令，如果想退出可以输入q  
 </code></pre>
 <p>Welcome to fdisk (util-linux 2.29.2).<br>
@@ -244,7 +255,9 @@ Re-reading the partition table failed.: Device or resource busy</p>
 <p>The kernel still uses the old table. The new table will be used at the next reboot or after you run partprobe(8) or kpartx(8).</p>
 <p>4、重启检查系统剩余空间</p>
 <p>  此时已经完成了对Linux分区的扩展，使用sudo reboot命令重启qemu。重启完成后使用resize2fs命令来时我们扩展的空间生效。</p>
+<blockquote>
 <p>sudo resize2fs /dev/sda2</p>
+</blockquote>
 <p>  然后通过df -h命令来检查系统剩余空间：</p>
 <p>Filesystem      Size  Used Avail Use% Mounted on <br>
 /dev/root       5.4G  4.1G  1.1G  80% / <br>
@@ -426,6 +439,12 @@ tmpfs            25M     0   25M   0% /run/user/1000</p>
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B42%E6%9C%888%E6%97%A501/">Win10桥接网卡使得qemu虚拟机可以正常访问内网</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>把图片放入markdown文档中 | STC214</title>
+    <title>Win10桥接网卡使得qemu虚拟机可以正常访问内网 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -12,28 +12,28 @@
 
 
 
-<meta name="author" content="STC214" />
-<meta name="description" content="原文链接： https://www.jianshu.com/p/280c6a6f2594 插图最基础的格式就是： ![Alt text](图片链接 &amp;quot;optional title&amp;quot;) Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片" />
+<meta name="author" content="Author Name" />
+<meta name="description" content="在Windows上使用qemu虚拟机，通过此配置，可以使qemu中的虚拟机能连接互联网，并且也可以和Windows主机通信。此方式类似于Vm" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%888%E6%97%A501/" />
 
 
-<meta property="og:title" content="把图片放入markdown文档中" />
-<meta property="og:description" content="原文链接： https://www.jianshu.com/p/280c6a6f2594 插图最基础的格式就是： ![Alt text](图片链接 &quot;optional title&quot;) Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片" />
+<meta property="og:title" content="Win10桥接网卡使得qemu虚拟机可以正常访问内网" />
+<meta property="og:description" content="在Windows上使用qemu虚拟机，通过此配置，可以使qemu中的虚拟机能连接互联网，并且也可以和Windows主机通信。此方式类似于Vm" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8812%E6%97%A503/" />
-<meta property="article:published_time" content="2021-01-12T23:47:12+08:00" />
-<meta property="article:modified_time" content="2021-01-12T23:47:12+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%888%E6%97%A501/" />
+<meta property="article:published_time" content="2021-02-08T01:37:06+08:00" />
+<meta property="article:modified_time" content="2021-02-08T01:37:06+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="把图片放入markdown文档中"/>
-<meta name="twitter:description" content="原文链接： https://www.jianshu.com/p/280c6a6f2594 插图最基础的格式就是： ![Alt text](图片链接 &quot;optional title&quot;) Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片"/>
+<meta name="twitter:title" content="Win10桥接网卡使得qemu虚拟机可以正常访问内网"/>
+<meta name="twitter:description" content="在Windows上使用qemu虚拟机，通过此配置，可以使qemu中的虚拟机能连接互联网，并且也可以和Windows主机通信。此方式类似于Vm"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -115,80 +115,62 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0002.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0070.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          把图片放入markdown文档中
+          Win10桥接网卡使得qemu虚拟机可以正常访问内网
           <div class="sub header">
             @
             
               
-                STC214
+                Author Name
               
             
 
             | 
-                星期二，一月 12 日，2021 年
+                星期一，二月 8 日，2021 年
               
 
             | 2 分钟阅读
 
             | 更新于
               
-                星期二，一月 12 日，2021 年
+                星期一，二月 8 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>原文链接： <a href="https://www.jianshu.com/p/280c6a6f2594">https://www.jianshu.com/p/280c6a6f2594</a></p>
-<h2 id="插图最基础的格式就是">插图最基础的格式就是：</h2>
-<pre><code>![Alt text](图片链接 &quot;optional title&quot;)  
+      <article class="main"><p>在Windows上使用qemu虚拟机，通过此配置，可以使qemu中的虚拟机能连接互联网，并且也可以和Windows主机通信。此方式类似于Vmware和VitrualBox中的桥接网卡。配置方法如下：</p>
+<ul>
+<li>在Windows主机上安装TAP网卡驱动: 可下载openvpn客户端软件，只安装其中的TAP驱动；在网络连接中，会看到一个新的网卡，属性类似于TAP-Win32 Adapter&hellip;，将其名称修改为tap0。</li>
+<li>将tap0虚拟网卡和Windows上连接互联网的真实网卡桥接: 选中这两块网卡，右键，桥接。此时，Windows主机将不能连接互联网，需要在网桥上配置IP地址和域名等信息，才能使Windows主机连接互联网。</li>
+<li>qemu配置: 在虚拟机启动命令行添加以下参数：</li>
+</ul>
+<blockquote>
+<p>-net nic -net tap,ifname=tap0</p>
+</blockquote>
+<ul>
+<li>
+<p>启动虚拟机，并配置虚拟机中的网卡，则虚拟机也可以和Windows主机一样，连接互联网和Windows主机。</p>
+</li>
+<li>
+<p>通过SMB等方法可以访问内网资源。方便进行资源交换。</p>
+</li>
+</ul>
+<p>在win10安装qemu程序。
+使用win10的 cmd进入qemu程序的目录
+使用类似如下命令打开树莓派虚拟机进行操作：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+cd /&lt;qemu_path&gt;/
 
-Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 图片链接：可以是图片的本地地址或者是网址。&quot;optional title&quot;：鼠标悬置于图片上会出现的标题文字，可以不写。  
-</code></pre>
-<h3 id="插入本地图片">插入本地图片</h3>
-<p>只需要在基础语法的括号中填入图片的位置路径即可，支持绝对路径和相对路径。<br>
-例如：</p>
-<pre><code>![avatar](/home/picture/1.png)  
+.<span style="color:#ae81ff">\q</span>emu-system-arm -kernel kernel-qemu-4.19.50-buster -cpu arm1176 -m <span style="color:#ae81ff">256</span> -M versatilepb -dtb versatile-pb-buster.dtb -no-reboot -append “root<span style="color:#f92672">=</span>/dev/sda2 panic<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> rootfstype<span style="color:#f92672">=</span>ext4 rw” -net nic -net tap,ifname<span style="color:#f92672">=</span>tap0 -hda 2021-01-11-raspios-buster-armhf-lite.img
 
-不灵活不好分享，本地图片的路径更改或丢失都会造成markdown文件调不出图。  
-</code></pre>
-<h3 id="插入网络图片">插入网络图片</h3>
-<p>只需要在基础语法的括号中填入图片的网络链接即可，现在已经有很多免费/收费图床和方便传图的小工具可选。<br>
-例如：</p>
-<pre><code>![avatar](http://baidu.com/pic/doge.png)  
-
-将图片存在网络服务器上，非常依赖网络。  
-</code></pre>
-<h3 id="把图片存入markdown文件">把图片存入markdown文件</h3>
-<p>用base64转码工具把图片转成一段字符串，然后把字符串填到基础格式中链接的那个位置。</p>
-<pre><code>基础用法：  
-![avatar](data:image/png;base64,iVBORw0......)  
-这个时候会发现插入的这一长串字符串会把整个文章分割开，非常影响编写文章时的体验。如果能够把大段的base64字符串放在文章末尾，然后在文章中通过一个id来调用，文章就不会被分割的这么乱了。  
-高级用法  
-比如：  
-![avatar][base64str]  
-[base64str]:data:image/png;base64,iVBORw0......  
-</code></pre>
-<p>最后，base64的图片编码如何得来？</p>
-<h3 id="使用python将图片转化为base64字符串">使用python将图片转化为base64字符串</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> base64  
-f<span style="color:#f92672">=</span>open(<span style="color:#e6db74">&#39;723.png&#39;</span>,<span style="color:#e6db74">&#39;rb&#39;</span>) <span style="color:#75715e">#二进制方式打开图文件  </span>
-ls_f<span style="color:#f92672">=</span>base64<span style="color:#f92672">.</span>b64encode(f<span style="color:#f92672">.</span>read()) <span style="color:#75715e">#读取文件内容，转换为base64编码  </span>
-f<span style="color:#f92672">.</span>close()  
-<span style="color:#66d9ef">print</span>(ls_f)  
-</code></pre></div><h3 id="base64字符串转化为图片">base64字符串转化为图片</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> base64  
-bs<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;iVBORw0KGgoAAAANSUhEUg....&#39;</span> <span style="color:#75715e"># 太长了省略  </span>
-imgdata<span style="color:#f92672">=</span>base64<span style="color:#f92672">.</span>b64decode(bs)  
-file<span style="color:#f92672">=</span>open(<span style="color:#e6db74">&#39;2.jpg&#39;</span>,<span style="color:#e6db74">&#39;wb&#39;</span>)  
-file<span style="color:#f92672">.</span>write(imgdata)  
-file<span style="color:#f92672">.</span>close()  
-</code></pre></div></article>
+</code></pre></div><h3 id="ps-必须要用cmd-其他的shell或者终端程序在win10中运行同样的指令反而不能运行原因未知">PS： 必须要用cmd 其他的shell或者终端程序在win10中运行同样的指令反而不能运行。原因未知。</h3>
+</article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
@@ -221,8 +203,8 @@ file<span style="color:#f92672">.</span>close()
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B41%E6%9C%8812%E6%97%A503\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B41%E6%9C%8812%E6%97%A503\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%888%E6%97%A501\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%888%E6%97%A501\/'; 
           };
 
           (function() { 
@@ -257,13 +239,9 @@ file<span style="color:#f92672">.</span>close()
       <div class="ui segment toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#插图最基础的格式就是">插图最基础的格式就是：</a>
+    <li>
       <ul>
-        <li><a href="#插入本地图片">插入本地图片</a></li>
-        <li><a href="#插入网络图片">插入网络图片</a></li>
-        <li><a href="#把图片存入markdown文件">把图片存入markdown文件</a></li>
-        <li><a href="#使用python将图片转化为base64字符串">使用python将图片转化为base64字符串</a></li>
-        <li><a href="#base64字符串转化为图片">base64字符串转化为图片</a></li>
+        <li><a href="#ps-必须要用cmd-其他的shell或者终端程序在win10中运行同样的指令反而不能运行原因未知">PS： 必须要用cmd 其他的shell或者终端程序在win10中运行同样的指令反而不能运行。原因未知。</a></li>
       </ul>
     </li>
   </ul>
