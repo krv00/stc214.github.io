@@ -144,86 +144,125 @@
 
       <article class="main"><p>原文： <a href="https://www.runoob.com/docker/debian-docker-install.html">https://www.runoob.com/docker/debian-docker-install.html</a></p>
 <p>Docker 支持以下的 Debian 版本：</p>
-<pre><code>Buster 10  
-Stretch 9 (stable) / Raspbian Stretch  
-</code></pre>
+<blockquote>
+<p>Buster 10<br>
+Stretch 9 (stable) / Raspbian Stretch</p>
+</blockquote>
 <p>Docker Engine-Community 在 x86_64（或 amd64 ）armhf，和 arm64 体系结构上受支持。<br>
 使用官方安装脚本自动安装</p>
 <p>安装命令如下：</p>
+<blockquote>
 <p>curl -fsSL <a href="https://get.docker.com">https://get.docker.com</a> | bash -s docker &ndash;mirror Aliyun</p>
+</blockquote>
 <p>也可以使用国内 daocloud 一键安装命令：</p>
+<blockquote>
 <p>curl -sSL <a href="https://get.daocloud.io/docker">https://get.daocloud.io/docker</a> | sh</p>
+</blockquote>
 <p>手动安装<br>
 卸载旧版本</p>
 <p>Docker 的旧版本被称为 docker，docker.io 或 docker-engine，如果已安装，请卸载它们：</p>
+<blockquote>
 <p>$ sudo apt-get remove docker docker-engine docker.io containerd runc</p>
+</blockquote>
 <p>安装 Docker Engine-Community<br>
 使用 Docker 仓库进行安装</p>
 <p>在新主机上首次安装 Docker Engine-Community 之前，需要设置 Docker 仓库。之后，您可以从仓库安装和更新 Docker。</p>
 <p>Raspbian 用户不能使用此方法！</p>
 <p>对于 Raspbian，尚不支持使用仓库进行安装。您必须改为使用 shell 脚本方式。<br>
 设置仓库</p>
-<p>更新 apt 包索引。</p>
-<p>$ sudo apt-get update</p>
-<p>安装 apt 依赖包，用于通过 HTTPS 来获取仓库。<br>
-$ sudo apt-get install \<br>
-apt-transport-https \<br>
-ca-certificates \<br>
-curl \<br>
-gnupg2 \<br>
-software-properties-common</p>
-<p>添加 Docker 的官方 GPG 密钥：</p>
-<p>$ curl -fsSL <a href="https://mirrors.ustc.edu.cn/docker-ce/linux/debian/gpg">https://mirrors.ustc.edu.cn/docker-ce/linux/debian/gpg</a> | sudo apt-key add -</p>
-<p>9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88 通过搜索指纹的后8个字符，验证您现在是否拥有带有指纹的密钥。<br>
-$ sudo apt-key fingerprint 0EBFCD88</p>
-<p>pub   4096R/0EBFCD88 2017-02-22<br>
-Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88<br>
-uid                  Docker Release (CE deb) <a href="mailto:docker@docker.com">docker@docker.com</a><br>
-sub   4096R/F273FCD8 2017-02-22</p>
-<p>使用以下指令设置稳定版仓库：<br>
-$ sudo add-apt-repository \<br>
-&ldquo;deb [arch=amd64] <a href="https://mirrors.ustc.edu.cn/docker-ce/linux/debian">https://mirrors.ustc.edu.cn/docker-ce/linux/debian</a> \<br>
-$(lsb_release -cs) \<br>
-stable&rdquo;<br>
-安装 Docker Engine-Community</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+更新 apt 包索引。  
+  
+$ sudo apt-get update  
+  
+安装 apt 依赖包，用于通过 HTTPS 来获取仓库。  
+$ sudo apt-get install <span style="color:#ae81ff">\ </span> 
+    apt-transport-https <span style="color:#ae81ff">\ </span> 
+    ca-certificates <span style="color:#ae81ff">\ </span> 
+    curl <span style="color:#ae81ff">\ </span> 
+    gnupg2 <span style="color:#ae81ff">\ </span> 
+    software-properties-common  
+  
+添加 Docker 的官方 GPG 密钥：  
+  
+$ curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux/debian/gpg | sudo apt-key add -  
+
+</code></pre></div><p>9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88 通过搜索指纹的后8个字符，验证您现在是否拥有带有指纹的密钥。</p>
+<blockquote>
+<p>$ sudo apt-key fingerprint 0EBFCD88</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+pub   4096R/0EBFCD88 2017-02-22  
+      Key fingerprint <span style="color:#f92672">=</span> 9DC8 <span style="color:#ae81ff">5822</span> 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88  
+uid                  Docker Release <span style="color:#f92672">(</span>CE deb<span style="color:#f92672">)</span> &lt;docker@docker.com&gt;  
+sub   4096R/F273FCD8 2017-02-22  
+
+</code></pre></div><p>使用以下指令设置稳定版仓库：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+$ sudo add-apt-repository <span style="color:#ae81ff">\ </span> 
+   <span style="color:#e6db74">&#34;deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/debian \  
+</span><span style="color:#e6db74">  </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> \  
+</span><span style="color:#e6db74">  stable&#34;</span>  
+
+</code></pre></div><p>安装 Docker Engine-Community</p>
 <p>更新 apt 包索引：</p>
+<blockquote>
 <p>$ sudo apt-get update</p>
+</blockquote>
 <p>安装最新版本的 Docker Engine-Community 和 containerd ，或者转到下一步安装特定版本：</p>
+<blockquote>
 <p>$ sudo apt-get install docker-ce docker-ce-cli containerd.io</p>
-<p>要安装特定版本的 Docker Engine-Community，请在仓库中列出可用版本，然后选择一种安装。列出您的仓库中可用的版本：<br>
-$ apt-cache madison docker-ce</p>
-<p>docker-ce | 5:18.09.1~3-0~debian-stretch | <a href="https://mirrors.ustc.edu.cn/docker-ce/linux/debian">https://mirrors.ustc.edu.cn/docker-ce/linux/debian</a> stretch/stable amd64 Packages<br>
-docker-ce | 5:18.09.0~3-0~debian-stretch | <a href="https://mirrors.ustc.edu.cn/docker-ce/linux/debian">https://mirrors.ustc.edu.cn/docker-ce/linux/debian</a> stretch/stable amd64 Packages<br>
-docker-ce | 18.06.1~ce~3-0~debian        | <a href="https://mirrors.ustc.edu.cn/docker-ce/linux/debian">https://mirrors.ustc.edu.cn/docker-ce/linux/debian</a> stretch/stable amd64 Packages<br>
-docker-ce | 18.06.0~ce~3-0~debian        | <a href="https://mirrors.ustc.edu.cn/docker-ce/linux/debian">https://mirrors.ustc.edu.cn/docker-ce/linux/debian</a> stretch/stable amd64 Packages<br>
-&hellip;</p>
-<p>使用第二列中的版本字符串安装特定版本，例如 5:18.09.1~3-0~debian-stretch 。</p>
+</blockquote>
+<p>要安装特定版本的 Docker Engine-Community，请在仓库中列出可用版本，然后选择一种安装。列出您的仓库中可用的版本：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+$ apt-cache madison docker-ce  
+  
+  docker-ce | 5:18.09.1~3-0~debian-stretch | https://mirrors.ustc.edu.cn/docker-ce/linux/debian stretch/stable amd64 Packages  
+  docker-ce | 5:18.09.0~3-0~debian-stretch | https://mirrors.ustc.edu.cn/docker-ce/linux/debian stretch/stable amd64 Packages  
+  docker-ce | 18.06.1~ce~3-0~debian        | https://mirrors.ustc.edu.cn/docker-ce/linux/debian stretch/stable amd64 Packages  
+  docker-ce | 18.06.0~ce~3-0~debian        | https://mirrors.ustc.edu.cn/docker-ce/linux/debian stretch/stable amd64 Packages  
+  ...  
+
+</code></pre></div><p>使用第二列中的版本字符串安装特定版本，例如 5:18.09.1~3-0~debian-stretch 。</p>
+<blockquote>
 <p>$ sudo apt-get install docker-ce=&lt;VERSION_STRING&gt; docker-ce-cli=&lt;VERSION_STRING&gt; containerd.io</p>
-<p>测试 Docker 是否安装成功，输入以下指令，打印出以下信息则安装成功：<br>
-$ sudo docker run hello-world</p>
-<p>Unable to find image &lsquo;hello-world:latest&rsquo; locally<br>
-latest: Pulling from library/hello-world<br>
-1b930d010525: Pull complete                                                                                                                                  Digest: sha256:c3b4ada4687bbaa170745b3e4dd8ac3f194ca95b2d0518b417fb47e5879d9b5f<br>
-Status: Downloaded newer image for hello-world:latest</p>
-<p>Hello from Docker!<br>
-This message shows that your installation appears to be working correctly.</p>
-<p>To generate this message, Docker took the following steps:</p>
-<ol>
-<li>The Docker client contacted the Docker daemon.</li>
-<li>The Docker daemon pulled the &ldquo;hello-world&rdquo; image from the Docker Hub.<br>
-(amd64)</li>
-<li>The Docker daemon created a new container from that image which runs the<br>
-executable that produces the output you are currently reading.</li>
-<li>The Docker daemon streamed that output to the Docker client, which sent it<br>
-to your terminal.</li>
-</ol>
-<p>To try something more ambitious, you can run an Ubuntu container with:<br>
-$ docker run -it ubuntu bash</p>
-<p>Share images, automate workflows, and more with a free Docker ID:<br>
-<a href="https://hub.docker.com/">https://hub.docker.com/</a></p>
-<p>For more examples and ideas, visit:<br>
-<a href="https://docs.docker.com/get-started/">https://docs.docker.com/get-started/</a></p>
-</article>
+</blockquote>
+<p>测试 Docker 是否安装成功，输入以下指令，打印出以下信息则安装成功：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+$ sudo docker run hello-world  
+  
+Unable to find image <span style="color:#e6db74">&#39;hello-world:latest&#39;</span> locally  
+latest: Pulling from library/hello-world  
+1b930d010525: Pull complete                                                                                                                                  Digest: sha256:c3b4ada4687bbaa170745b3e4dd8ac3f194ca95b2d0518b417fb47e5879d9b5f  
+Status: Downloaded newer image <span style="color:#66d9ef">for</span> hello-world:latest  
+  
+  
+Hello from Docker!  
+This message shows that your installation appears to be working correctly.  
+  
+  
+To generate this message, Docker took the following steps:  
+ 1. The Docker client contacted the Docker daemon.  
+ 2. The Docker daemon pulled the <span style="color:#e6db74">&#34;hello-world&#34;</span> image from the Docker Hub.  
+    <span style="color:#f92672">(</span>amd64<span style="color:#f92672">)</span>  
+ 3. The Docker daemon created a new container from that image which runs the  
+    executable that produces the output you are currently reading.  
+ 4. The Docker daemon streamed that output to the Docker client, which sent it  
+    to your terminal.  
+  
+  
+To try something more ambitious, you can run an Ubuntu container with:  
+ $ docker run -it ubuntu bash  
+  
+  
+Share images, automate workflows, and more with a free Docker ID:  
+ https://hub.docker.com/  
+  
+  
+For more examples and ideas, visit:  
+ https://docs.docker.com/get-started/  
+
+</code></pre></div></article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
