@@ -50,7 +50,7 @@
       <pubDate>Sat, 06 Feb 2021 23:37:54 +0800</pubDate>
       
       <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A517/</guid>
-      <description>原文链接： https://blog.csdn.net/weixin_39465823/article/details/103111263 1，安装pip3 sudo apt install python3-pip 验证安装是否成功 pip3 &amp;ndash;version guoyz@debian:~/pip-9.0.1$ pip3 --version pip 18.1 from /usr/lib/python3/dist-packages/pip (python 3.7) 然后安装构建python 模块所需的开发工具， sudo apt install build-essential python3-dev python3-setuptools 2，新建p</description>
+      <description>原文链接： https://blog.csdn.net/weixin_39465823/article/details/103111263 1，安装pip3 sudo apt install python3-pip 验证安装是否成功 pip3 &amp;ndash;version guoyz@debian:~/pip-9.0.1$ pip3 &amp;ndash;version pip 18.1 from /usr/lib/python3/dist-packages/pip (python 3.7) 然后安装构建python 模块所需的开发工具， sudo apt install build-essential python3-dev python3-setuptools 2，新建p</description>
     </item>
     
     <item>
