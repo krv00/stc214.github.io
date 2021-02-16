@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>树莓派备份系统镜像并压缩 | STC214</title>
+    <title>使用Portainer管理Docker容器 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,27 +13,27 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="原文：https://cloud.tencent.com/developer/article/1731767 前言 手上的pi zero w用了一段时间," />
+<meta name="description" content="官网：https://portainer.io/ Portainer Portainer和Shipyard一样，同样是一个给予Swarm技术衍生出来的负责管理D" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A511/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8817%E6%97%A503/" />
 
 
-<meta property="og:title" content="树莓派备份系统镜像并压缩" />
-<meta property="og:description" content="原文：https://cloud.tencent.com/developer/article/1731767 前言 手上的pi zero w用了一段时间," />
+<meta property="og:title" content="使用Portainer管理Docker容器" />
+<meta property="og:description" content="官网：https://portainer.io/ Portainer Portainer和Shipyard一样，同样是一个给予Swarm技术衍生出来的负责管理D" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A511/" />
-<meta property="article:published_time" content="2021-02-06T03:14:51+08:00" />
-<meta property="article:modified_time" content="2021-02-06T03:14:51+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8817%E6%97%A503/" />
+<meta property="article:published_time" content="2021-02-17T02:58:25+08:00" />
+<meta property="article:modified_time" content="2021-02-17T02:58:25+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="树莓派备份系统镜像并压缩"/>
-<meta name="twitter:description" content="原文：https://cloud.tencent.com/developer/article/1731767 前言 手上的pi zero w用了一段时间,"/>
+<meta name="twitter:title" content="使用Portainer管理Docker容器"/>
+<meta name="twitter:description" content="官网：https://portainer.io/ Portainer Portainer和Shipyard一样，同样是一个给予Swarm技术衍生出来的负责管理D"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -115,13 +115,13 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0062.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0075.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          树莓派备份系统镜像并压缩
+          使用Portainer管理Docker容器
           <div class="sub header">
             @
             
@@ -129,61 +129,46 @@
             
 
             | 
-                星期六，二月 6 日，2021 年
+                星期三，二月 17 日，2021 年
               
 
             | 2 分钟阅读
 
             | 更新于
               
-                星期六，二月 6 日，2021 年
+                星期三，二月 17 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>原文：https://cloud.tencent.com/developer/article/1731767</p>
-<p>前言</p>
-<pre><code>手上的pi zero w用了一段时间,上面也部署了相当多的服务应用,都是心血啊,可不想啥时候系统损坏了重装一遍,于是想到备份一波系统镜像    
+      <article class="main"><pre><code>官网：https://portainer.io/
 </code></pre>
-<p>备份</p>
-<p>1.本地新建一个文件,将格式改为.img2.如 pizero.img3.树莓派系统内存卡插上电脑4.打开win32 disk imager,镜像文件选择好刚才新建的镜像,驱动选择插上的内存卡5.点击 read (读取)!!!!,千万不要选错.6.这样算是备份好了,但是有个问题,这样相当于将内存卡复制了一份,大小会和原先内存卡一样大.因此我们需要进行压缩 <br>
-压缩</p>
-<p>PiShrink压缩脚本是GitHub的一位大佬写的</p>
-<p>(需要Linux环境,将以上的镜像文件将其挂载至Linux)</p>
-<p><a href="https://github.com/Drewsif/PiShrink">https://github.com/Drewsif/PiShrink</a></p>
-<p>下载脚本,移动到bin目录是为了全局都可以直接使用脚本</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh  
-chmod +x pishrink.sh  
-sudo mv pishrink.sh /usr/local/bin      
-</code></pre></div><p>用法也相当简单</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pishrink.sh pizero.img    
-    
-e2fsck 1.42.9 <span style="color:#f92672">(</span>28-Dec-2013<span style="color:#f92672">)</span>
-Pass 1: Checking inodes, blocks, and sizes
-Pass 2: Checking directory structure
-Pass 3: Checking directory connectivity
-Pass 4: Checking reference counts
-Pass 5: Checking group summary information
-/dev/loop1: 88262/1929536 files <span style="color:#f92672">(</span>0.2% non-contiguous<span style="color:#f92672">)</span>, 842728/7717632 blocks
-resize2fs 1.42.9 <span style="color:#f92672">(</span>28-Dec-2013<span style="color:#f92672">)</span>
-resize2fs 1.42.9 <span style="color:#f92672">(</span>28-Dec-2013<span style="color:#f92672">)</span>
-Resizing the filesystem on /dev/loop1 to <span style="color:#ae81ff">773603</span> <span style="color:#f92672">(</span>4k<span style="color:#f92672">)</span> blocks.
-Begin pass <span style="color:#ae81ff">2</span> <span style="color:#f92672">(</span>max <span style="color:#f92672">=</span> 100387<span style="color:#f92672">)</span>
-Relocating blocks             XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-Begin pass <span style="color:#ae81ff">3</span> <span style="color:#f92672">(</span>max <span style="color:#f92672">=</span> 236<span style="color:#f92672">)</span>
-Scanning inode table          XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-Begin pass <span style="color:#ae81ff">4</span> <span style="color:#f92672">(</span>max <span style="color:#f92672">=</span> 7348<span style="color:#f92672">)</span>
-Updating inode references     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-The filesystem on /dev/loop1 is now <span style="color:#ae81ff">773603</span> blocks long.
-
-Shrunk pi.img from 30G to 3.1G
-</code></pre></div><p>效果相当明显,直接将30G的镜像压缩成4.8G,同时在恢复镜像时,还会自动扩容.</p>
-<p>如果想压缩成一个新文件呢?</p>
-<p>加上-s</p>
-<p>sudo pishrink.sh -s pizero.img newpi.img</p>
-<p>参考</p>
-<p><a href="https://shumeipai.nxez.com/2020/09/11/pishrink-make-raspberry-pi-images-smaller.html">https://shumeipai.nxez.com/2020/09/11/pishrink-make-raspberry-pi-images-smaller.html</a></p>
+<p>Portainer</p>
+<p>Portainer和Shipyard一样，同样是一个给予Swarm技术衍生出来的负责管理Docker容器的Web UI界面.
+演示Live：<img src="https://portainer.io/overview.html#demo" alt="">
+<img src="http://upload-images.jianshu.io/upload_images/5765738-e7e91d75b507024f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
+Github地址：<img src="https://github.com/portainer/portainer" alt="">
+官方文档：https://portainer.readthedocs.io/
+部署教程：https://portainer.readthedocs.io/en/latest/deployment.html
+Installation</p>
+<p>首先你得安装好docker,这个可以看看我之前的那篇文章.</p>
+<p>我们创建一个属于我们自己的数据卷
+docker volume create portainer_data</p>
+<p>运行容器</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+</code></pre></div><p>View On http://serverip:9000
+没错 就是这么简单
+使用</p>
+<p>首次登录会让你设置一个管理员账号
+[图片上传失败&hellip;(image-f17c-1510939718923)]</p>
+<p>接着会询问你管理的主机是本地的Local还是远程的Remote
+[图片上传失败&hellip;(image-c7c08-1510939718923)]</p>
+<p>然后就进入到主界面
+[图片上传失败&hellip;(image-4ddab3-1510939718923)]</p>
+<p>可以尝试体验一下这个Portainer平台.</p>
+<h1 id="换源选择registries-点击add-registry-custom-registry-输入你的url镜像源即可">换源：选择Registries-&gt;点击Add registry-&gt;Custom registry 输入你的URL镜像源即可.</h1>
+<p>原文链接：https://www.jianshu.com/p/aff1512746b4</p>
 </article>
     </section>
 
@@ -217,8 +202,8 @@ Shrunk pi.img from 30G to 3.1G
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A511\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A511\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%8817%E6%97%A503\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%8817%E6%97%A503\/'; 
           };
 
           (function() { 
