@@ -159,7 +159,7 @@ Ubuntu14.04、Debian7Wheezy</p>
 <p>$ sudo service docker restart</p>
 <p>Ubuntu16.04+、Debian8+、CentOS7</p>
 <p>对于使用 systemd 的系统，请在 /etc/docker/daemon.json 中写入如下内容（如果文件不存在请新建该文件）：</p>
-<p>{&ldquo;registry-mirrors&rdquo;:[&ldquo;https://reg-mirror.qiniu.com/&quot;]}</p>
+<p>{&ldquo;registry-mirrors&rdquo;: [&ldquo;https://docker.mirrors.ustc.edu.cn&rdquo;]}</p>
 <p>之后重新启动服务：<br>
 $ sudo systemctl daemon-reload<br>
 $ sudo systemctl restart docker<br>
