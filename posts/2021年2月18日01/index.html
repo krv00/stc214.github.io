@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>OpenWrt 挂载FAT32 / exFat 硬盘 | STC214</title>
+    <title>openwrt设置samba | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,27 +13,27 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="更新列表，安装必要到依赖包 # opkg update # opkg install kmod-usb-storage block-mount kmod-fs-vfat kmod-nls-cp437 kmod-nls-iso8859-1 kmod-fs-exfat usbutils 连接USB设备，用以下命令确认链接 lsusb -t 如果连接正常，会出现类似以下数据 /: Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci-mtk/1p, 5000M" />
+<meta name="description" content="1. 安装Samba服务(当前步骤最新版固件一般都可以省略) 执行如下命令安装Samba服务： opkg update opkg install samba36-server 2. 配置全局共享参数 配置文件路径为 /etc/samba/smb.conf.template 将 [global] 中的" />
 
 
 
 <meta name="generator" content="Hugo 0.80.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8817%E6%97%A501/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8818%E6%97%A501/" />
 
 
-<meta property="og:title" content="OpenWrt 挂载FAT32 / exFat 硬盘" />
-<meta property="og:description" content="更新列表，安装必要到依赖包 # opkg update # opkg install kmod-usb-storage block-mount kmod-fs-vfat kmod-nls-cp437 kmod-nls-iso8859-1 kmod-fs-exfat usbutils 连接USB设备，用以下命令确认链接 lsusb -t 如果连接正常，会出现类似以下数据 /: Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci-mtk/1p, 5000M" />
+<meta property="og:title" content="openwrt设置samba" />
+<meta property="og:description" content="1. 安装Samba服务(当前步骤最新版固件一般都可以省略) 执行如下命令安装Samba服务： opkg update opkg install samba36-server 2. 配置全局共享参数 配置文件路径为 /etc/samba/smb.conf.template 将 [global] 中的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8817%E6%97%A501/" />
-<meta property="article:published_time" content="2021-02-17T02:37:51+08:00" />
-<meta property="article:modified_time" content="2021-02-17T02:37:51+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8818%E6%97%A501/" />
+<meta property="article:published_time" content="2021-02-18T14:57:05+08:00" />
+<meta property="article:modified_time" content="2021-02-18T14:57:05+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="OpenWrt 挂载FAT32 / exFat 硬盘"/>
-<meta name="twitter:description" content="更新列表，安装必要到依赖包 # opkg update # opkg install kmod-usb-storage block-mount kmod-fs-vfat kmod-nls-cp437 kmod-nls-iso8859-1 kmod-fs-exfat usbutils 连接USB设备，用以下命令确认链接 lsusb -t 如果连接正常，会出现类似以下数据 /: Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci-mtk/1p, 5000M"/>
+<meta name="twitter:title" content="openwrt设置samba"/>
+<meta name="twitter:description" content="1. 安装Samba服务(当前步骤最新版固件一般都可以省略) 执行如下命令安装Samba服务： opkg update opkg install samba36-server 2. 配置全局共享参数 配置文件路径为 /etc/samba/smb.conf.template 将 [global] 中的"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -115,13 +115,13 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0073.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0076.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          OpenWrt 挂载FAT32 / exFat 硬盘
+          openwrt设置samba
           <div class="sub header">
             @
             
@@ -129,73 +129,98 @@
             
 
             | 
-                星期三，二月 17 日，2021 年
+                星期四，二月 18 日，2021 年
               
 
-            | 1 分钟阅读
+            | 2 分钟阅读
 
             | 更新于
               
-                星期三，二月 17 日，2021 年
+                星期四，二月 18 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>更新列表，安装必要到依赖包</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># opkg update  </span>
-<span style="color:#75715e"># opkg install kmod-usb-storage block-mount  kmod-fs-vfat kmod-nls-cp437  kmod-nls-iso8859-1 kmod-fs-exfat usbutils </span>
-</code></pre></div><p>连接USB设备，用以下命令确认链接</p>
+      <article class="main"><h2 id="1-安装samba服务当前步骤最新版固件一般都可以省略">1. 安装Samba服务(当前步骤最新版固件一般都可以省略)</h2>
+<p>执行如下命令安装Samba服务：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">opkg update  
+opkg install samba36-server  
+</code></pre></div><h2 id="2-配置全局共享参数">2. 配置全局共享参数</h2>
+<p>配置文件路径为</p>
 <blockquote>
-<h1 id="lsusb--t">lsusb -t</h1>
+<p>/etc/samba/smb.conf.template</p>
 </blockquote>
-<p>如果连接正常，会出现类似以下数据</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/:  Bus 02.Port 1: Dev 1, Class<span style="color:#f92672">=</span>root_hub, Driver<span style="color:#f92672">=</span>xhci-mtk/1p, 5000M  
-/:  Bus 01.Port 1: Dev 1, Class<span style="color:#f92672">=</span>root_hub, Driver<span style="color:#f92672">=</span>xhci-mtk/2p, 480M  
-    |** Port 1: Dev 5, If 0, Class<span style="color:#f92672">=</span>Mass Storage, Driver<span style="color:#f92672">=</span>usb-storage, 480M  
-</code></pre></div><p>查看系统已知的块设备（block devices）列表</p>
+<p>将 [global] 中的 invalid users = root 注掉，像下面的样子：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>global<span style="color:#f92672">]</span>  
+  
+netbios name <span style="color:#f92672">=</span> |NAME|  
+display charset <span style="color:#f92672">=</span> |CHARSET|  
+interfaces <span style="color:#f92672">=</span> |INTERFACES|  
+server string <span style="color:#f92672">=</span> |DESCRIPTION|  
+unix charset <span style="color:#f92672">=</span> |CHARSET|  
+workgroup <span style="color:#f92672">=</span> |WORKGROUP|  
+browseable <span style="color:#f92672">=</span> yes  
+deadtime <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>  
+domain master <span style="color:#f92672">=</span> yes  
+encrypt passwords <span style="color:#f92672">=</span> true  
+enable core files <span style="color:#f92672">=</span> no  
+guest account <span style="color:#f92672">=</span> nobody  
+guest ok <span style="color:#f92672">=</span> yes  
+<span style="color:#75715e"># invalid users = root  </span>
+local master <span style="color:#f92672">=</span> yes  
+load printers <span style="color:#f92672">=</span> no  
+map to guest <span style="color:#f92672">=</span> Bad User  
+max protocol <span style="color:#f92672">=</span> SMB2  
+min receivefile size <span style="color:#f92672">=</span> <span style="color:#ae81ff">16384</span>  
+null passwords <span style="color:#f92672">=</span> yes  
+obey pam restrictions <span style="color:#f92672">=</span> yes  
+os level <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>  
+passdb backend <span style="color:#f92672">=</span> smbpasswd  
+preferred master <span style="color:#f92672">=</span> yes  
+printable <span style="color:#f92672">=</span> no  
+security <span style="color:#f92672">=</span> user  
+smb encrypt <span style="color:#f92672">=</span> disabled  
+smb passwd file <span style="color:#f92672">=</span> /etc/samba/smbpasswd  
+socket options <span style="color:#f92672">=</span> TCP_NODELAY IPTOS_LOWDELAY  
+syslog <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>  
+use sendfile <span style="color:#f92672">=</span> yes  
+writeable <span style="color:#f92672">=</span> yes  
+</code></pre></div><h2 id="3设置etcconfigsamba">3.设置/etc/config/samba</h2>
+<p>设置：</p>
+<p>复制代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">config sambashare  
+  
+option <span style="color:#e6db74">&#39;name&#39;</span> <span style="color:#e6db74">&#39;tmp&#39;</span>  
+option <span style="color:#e6db74">&#39;path&#39;</span> <span style="color:#e6db74">&#39;/tmp&#39;</span>  
+option <span style="color:#e6db74">&#39;workgroup&#39;</span> <span style="color:#e6db74">&#39;WORKGROUP&#39;</span>  
+option <span style="color:#e6db74">&#39;description&#39;</span> <span style="color:#e6db74">&#39;OpenWrt&#39;</span>  
+option <span style="color:#e6db74">&#39;homes&#39;</span> <span style="color:#e6db74">&#39;1&#39;</span>  
+option <span style="color:#e6db74">&#39;read_only&#39;</span> <span style="color:#e6db74">&#39;no&#39;</span>  
+option <span style="color:#e6db74">&#39;guest_ok&#39;</span> <span style="color:#e6db74">&#39;yes&#39;</span>  
+option <span style="color:#e6db74">&#39;create_mask&#39;</span> <span style="color:#e6db74">&#39;0750&#39;</span>  
+option <span style="color:#e6db74">&#39;dir_mask&#39;</span> <span style="color:#e6db74">&#39;0750&#39;</span>  
+option <span style="color:#e6db74">&#39;users&#39;</span> <span style="color:#960050;background-color:#1e0010">&#39;</span>root  
+</code></pre></div><p>复制代码</p>
+<p>设置完此配置后，samba服务启动后在 /etc/samba/smb.conf中会显示，其中，name是外面设备访问用的路径，path是本设备的真实路径</p>
+<h2 id="4--启动服务">4.  启动服务</h2>
+<p>配置完成后，启动Samba服务即可。</p>
 <blockquote>
-<h1 id="ls--l-devsd">ls -l /dev/sd*</h1>
+<p>/etc/init.d/samba start</p>
 </blockquote>
-<p>正常清情况会出现以下类似数据。这里挂载了一个硬盘，分别有sda1 与 sda1两个块</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brw-------    <span style="color:#ae81ff">1</span> root     root        8,   <span style="color:#ae81ff">0</span> Mar  <span style="color:#ae81ff">6</span> 17:19 /dev/sda  
-brw-------    <span style="color:#ae81ff">1</span> root     root        8,   <span style="color:#ae81ff">1</span> Mar  <span style="color:#ae81ff">6</span> 17:19 /dev/sda1  
-brw-------    <span style="color:#ae81ff">1</span> root     root        8,   <span style="color:#ae81ff">2</span> Mar  <span style="color:#ae81ff">6</span> 17:19 /dev/sda2  
-</code></pre></div><p>用 block工具获取更多已存在分区的信息</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ block info | grep <span style="color:#e6db74">&#34;/dev/sd&#34;</span>  
-</code></pre></div><p>会显示已经识别出来到分区，我这里到硬盘分区类型分别是vfat与exfat。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/dev/sda1: UUID<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;67E3-17ED&#34;</span> LABEL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;EFI        &#34;</span> VERSION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;FAT32&#34;</span> MOUNT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/mnt/sda1&#34;</span> TYPE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vfat&#34;</span>  
-/dev/sda2: UUID<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5DB5-B19D&#34;</span> LABEL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;My Passport&#34;</span> MOUNT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/mnt/sda2&#34;</span> TYPE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;exfat&#34;</span>  
-</code></pre></div><p>修改挂载配置文件</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># block detect &gt; /etc/config/fstab  </span>
-<span style="color:#75715e"># vim /etc/config/fstab  </span>
-</code></pre></div><p>把 option enabled 的值从'0' 改成 &lsquo;1&rsquo;,以下是例子</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
-config global  
-    option anon_swap <span style="color:#e6db74">&#39;0&#39;</span>  
-    option anon_mount <span style="color:#e6db74">&#39;0&#39;</span>  
-    option auto_swap <span style="color:#e6db74">&#39;1&#39;</span>  
-    option auto_mount <span style="color:#e6db74">&#39;1&#39;</span>  
-    option delay_root <span style="color:#e6db74">&#39;5&#39;</span>  
-    option check_fs <span style="color:#e6db74">&#39;0&#39;</span>  
-  
-config mount  
-    option target <span style="color:#e6db74">&#39;/mnt/sda1&#39;</span>  
-    option uuid <span style="color:#e6db74">&#39;67E3-17ED&#39;</span>  
-    option enabled <span style="color:#e6db74">&#39;1&#39;</span>  
-  
-config mount  
-    option target <span style="color:#e6db74">&#39;/mnt/sda2&#39;</span>  
-    option uuid <span style="color:#e6db74">&#39;5DB5-B19D&#39;</span>  
-    option enabled <span style="color:#e6db74">&#39;1&#39;</span>  
-</code></pre></div><p>运行挂载命令</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> <span style="color:#75715e"># block mount  </span>
-</code></pre></div><p>最后确认一下是否挂载成功</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># df -h  </span>
-</code></pre></div><p>系统显示已经挂载成功</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/dev/sda1               196.9M       <span style="color:#ae81ff">512</span>    196.9M   0% /mnt/sda1  
-/dev/sda2                 1.8T    858.1G   1004.6G  46% /mnt/sda2  
-</code></pre></div><p>原文链接：https://www.jianshu.com/p/3d9cd81d5207</p>
+<p>设置开机启动：</p>
+<blockquote>
+<p>/etc/init.d/samba enable</p>
+</blockquote>
+<h2 id="4-设置root用户密码">4. 设置root用户密码：</h2>
+<p>Samba的共享用户密码是单独配置的，执行下面的命令将root添加为共享用户，同时按照命令提示设置共享密码。</p>
+<blockquote>
+<p>smbpasswd -a root</p>
+</blockquote>
+<p>====================补充说明＝＝＝＝＝＝＝＝＝＝＝＝<br>
+openwrt samba使用的端口号：</p>
+<p>139<br>
+445</p>
 </article>
     </section>
 
@@ -229,8 +254,8 @@ config mount
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%8817%E6%97%A501\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%8817%E6%97%A501\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%8818%E6%97%A501\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%8818%E6%97%A501\/'; 
           };
 
           (function() { 
@@ -261,6 +286,18 @@ config mount
   </div>
   <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
     
+    
+      <div class="ui segment toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-安装samba服务当前步骤最新版固件一般都可以省略">1. 安装Samba服务(当前步骤最新版固件一般都可以省略)</a></li>
+    <li><a href="#2-配置全局共享参数">2. 配置全局共享参数</a></li>
+    <li><a href="#3设置etcconfigsamba">3.设置/etc/config/samba</a></li>
+    <li><a href="#4--启动服务">4.  启动服务</a></li>
+    <li><a href="#4-设置root用户密码">4. 设置root用户密码：</a></li>
+  </ul>
+</nav>
+      </div>
     
 
     <article class="dream-header">

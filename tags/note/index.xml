@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Wed, 17 Feb 2021 02:58:25 +0800</lastBuildDate><atom:link href="https://stc214.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 16:15:35 +0800</lastBuildDate><atom:link href="https://stc214.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>目前已经验证过的在树莓派ubuntu中安装docker的脚本和方法</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8818%E6%97%A502/</link>
+      <pubDate>Thu, 18 Feb 2021 16:15:35 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8818%E6%97%A502/</guid>
+      <description>原文链接：https://yq.aliyun.com/articles/576056 概述 其实树莓派安装docker和平时安装docker没什</description>
+    </item>
+    
+    <item>
+      <title>openwrt设置samba</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8818%E6%97%A501/</link>
+      <pubDate>Thu, 18 Feb 2021 14:57:05 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8818%E6%97%A501/</guid>
+      <description>1. 安装Samba服务(当前步骤最新版固件一般都可以省略) 执行如下命令安装Samba服务： opkg update opkg install samba36-server 2. 配置全局共享参数 配置文件路径为 /etc/samba/smb.conf.template 将 [global] 中的</description>
+    </item>
+    
     <item>
       <title>使用Portainer管理Docker容器</title>
       <link>https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8817%E6%97%A503/</link>
