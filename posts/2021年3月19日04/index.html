@@ -163,34 +163,61 @@
 <p>Cinnamon Translations：Cinnamon翻译是一个包装，其中包含Cinnamon中使用的翻译。</p>
 <p>在Ubuntu 20.04上安装Cinnamon桌面环境</p>
 <p>操作系统存储库中提供了适用于Ubuntu 20.04的Cinnamon Desktop Environment软件包，您只需要更新缓存并开始安装即可：</p>
-<p>sudo apt update</p>
-<p>sudo apt install cinnamon-desktop-environment</p>
-<p>有数十个软件包要安装，如果您的互联网速度不是很好，您可能需要耐心等待才行，会返回如下信息，请按y键安装：</p>
-<p>mate-icon-theme mate-themes media-player-info mesa-utils mesa-va-drivers</p>
-<p>mesa-vdpau-drivers metacity-common muffin muffin-common</p>
-<p>nautilus-extension-brasero nemo nemo-data nemo-fileroller netpbm</p>
-<p>ocl-icd-libopencl1 patchutils pidgin pidgin-data policykit-1-gnome</p>
-<p>python-backports.functools-lru-cache python-bs4 python-chardet</p>
-<p>python-html5lib python-lxml python-numpy python-pkg-resources python-six</p>
-<p>python-soupsieve python-webencodings python2 python2-minimal python2.7</p>
-<p>python2.7-minimal python3-mako python3-markupsafe python3-pampy</p>
-<p>python3-psutil python3-pyinotify python3-setproctitle python3-tinycss</p>
-<p>python3-uno python3-xapp python3-xlib quadrapassel rake rhythmbox</p>
-<p>rhythmbox-data rhythmbox-plugin-alternative-toolbar</p>
-<p>rhythmbox-plugin-cdrecorder rhythmbox-plugins ruby ruby-json ruby-minitest</p>
-<p>ruby-net-telnet ruby-power-assert ruby-test-unit ruby-xmlrpc ruby2.7</p>
-<p>rubygems-integration shotwell shotwell-common simple-scan sound-juicer</p>
-<p>spice-client-glib-usb-acl-helper swell-foop synaptic t1utils tali</p>
-<p>thunderbird timgm6mb-soundfont totem totem-common totem-plugins</p>
-<p>transmission-common transmission-gtk tree uno-libs-private ure va-driver-all</p>
-<p>vdpau-driver-all vinagre vino wodim xapps-common</p>
-<p>0 upgraded, 582 newly installed, 0 to remove and 123 not upgraded.</p>
-<p>Need to get 669 MB of archives.</p>
-<p>After this operation, 2,391 MB of additional disk space will be used.</p>
-<p>Do you want to continue? [Y/n] y</p>
-<p>参考：<a href="https://ywnz.com/linuxjc/3201.html">在Ubuntu系统中安装最新Cinnamon桌面环境，包括启用及卸载。</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+sudo apt update  
+  
+sudo apt install cinnamon-desktop-environment  
+
+</code></pre></div><p>有数十个软件包要安装，如果您的互联网速度不是很好，您可能需要耐心等待才行，会返回如下信息，请按y键安装：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mate-icon-theme mate-themes media-player-info mesa-utils mesa-va-drivers  
+  
+mesa-vdpau-drivers metacity-common muffin muffin-common  
+  
+nautilus-extension-brasero nemo nemo-data nemo-fileroller netpbm  
+  
+ocl-icd-libopencl1 patchutils pidgin pidgin-data policykit-1-gnome  
+  
+python-backports.functools-lru-cache python-bs4 python-chardet  
+  
+python-html5lib python-lxml python-numpy python-pkg-resources python-six  
+  
+python-soupsieve python-webencodings python2 python2-minimal python2.7  
+  
+python2.7-minimal python3-mako python3-markupsafe python3-pampy  
+  
+python3-psutil python3-pyinotify python3-setproctitle python3-tinycss  
+  
+python3-uno python3-xapp python3-xlib quadrapassel rake rhythmbox  
+  
+rhythmbox-data rhythmbox-plugin-alternative-toolbar  
+  
+rhythmbox-plugin-cdrecorder rhythmbox-plugins ruby ruby-json ruby-minitest  
+  
+ruby-net-telnet ruby-power-assert ruby-test-unit ruby-xmlrpc ruby2.7  
+  
+rubygems-integration shotwell shotwell-common simple-scan sound-juicer  
+  
+spice-client-glib-usb-acl-helper swell-foop synaptic t1utils tali  
+  
+thunderbird timgm6mb-soundfont totem totem-common totem-plugins  
+  
+transmission-common transmission-gtk tree uno-libs-private ure va-driver-all  
+  
+vdpau-driver-all vinagre vino wodim xapps-common  
+  
+<span style="color:#ae81ff">0</span> upgraded, <span style="color:#ae81ff">582</span> newly installed, <span style="color:#ae81ff">0</span> to remove and <span style="color:#ae81ff">123</span> not upgraded.  
+  
+Need to get <span style="color:#ae81ff">669</span> MB of archives.  
+  
+After this operation, 2,391 MB of additional disk space will be used.  
+  
+Do you want to <span style="color:#66d9ef">continue</span>? <span style="color:#f92672">[</span>Y/n<span style="color:#f92672">]</span> y  
+
+</code></pre></div><p>参考：<a href="https://ywnz.com/linuxjc/3201.html">在Ubuntu系统中安装最新Cinnamon桌面环境，包括启用及卸载。</a></p>
 <p>安装后重新引导系统：</p>
+<blockquote>
 <p>reboot</p>
+</blockquote>
 <p>在登录屏幕中，在可用的桌面环境列表中选择“Cinnamon”：</p>
 <p>在Ubuntu 20.04系统上安装Cinnamon桌面环境的方法</p>
 <p>提供访问密码，以在Ubuntu 20.04 Desktop上使用Cinnamon Desktop Environment：</p>
@@ -731,6 +758,54 @@
             
               <div class="item">
                 <div class="content">
+                  <a class="item" href="/posts/2020_08_25_19_29_02/">数据清理 分手吧 毒瘤的垃圾</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_08_18_17_24_27/">K30U答疑暂定</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a class="item" href="/posts/2020_08_02_23_59_12/">推推乐脚本</a>
                 </div>
               </div>
@@ -750,6 +825,12 @@
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             
