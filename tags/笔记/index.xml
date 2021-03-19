@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Fri, 19 Mar 2021 21:21:31 +0800</lastBuildDate><atom:link href="https://stc214.github.io/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Mar 2021 21:46:01 +0800</lastBuildDate><atom:link href="https://stc214.github.io/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Ubuntu 20.04系统上安装Cinnamon桌面环境的方法</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B43%E6%9C%8819%E6%97%A504/</link>
+      <pubDate>Fri, 19 Mar 2021 21:46:01 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B43%E6%9C%8819%E6%97%A504/</guid>
+      <description>原文：https://ywnz.com/linuxmh/7348.html 本文介绍在Ubuntu 20.04系统上安装Cinnamon桌面环境</description>
+    </item>
+    
     <item>
       <title>在Ubuntu操作系统上禁用IPv6和重新启用IPv6的方法</title>
       <link>https://stc214.github.io/posts/2021%E5%B9%B43%E6%9C%8819%E6%97%A503/</link>
@@ -32,7 +41,7 @@
       <pubDate>Fri, 19 Mar 2021 19:33:32 +0800</pubDate>
       
       <guid>https://stc214.github.io/posts/2021%E5%B9%B43%E6%9C%8819%E6%97%A501/</guid>
-      <description>1.下载脚本 wget https://raw.githubusercontent.com/sneeuw8/Linux_scripts/master/Ubuntu_source.sh 运行脚本 bash Ubntu_source.sh 一键命令 bash &amp;lt;(curl -sL https://gitee.com/SuperManito/LinuxMirrors/raw/main/ChangeMirror.sh) 1 附：如果提示Command &#39;curl&#39; not found则说明当前未安装curl软件包，安装命令如下 apt install -y curl 1</description>
+      <description>这脚本在对于非x86平台的支持并不一定友好，如果出现update各种无法get到的情况 则需要使用其他方法 1.下载脚本 wget https://raw.githubusercontent.com/sneeuw8/Linux_scripts/master/Ubuntu_source.sh 运行脚本 bash Ubntu_source.sh 一键命令</description>
     </item>
     
     <item>

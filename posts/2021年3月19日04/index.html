@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>docker 更换镜像源地址 | STC214</title>
+    <title>在Ubuntu 20.04系统上安装Cinnamon桌面环境的方法 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,28 +13,28 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="好像国内的镜像好多都访问不了，可以试试这个 { “registry-mirrors”: [“https://docker.mirrors.ustc" />
+<meta name="description" content="原文：https://ywnz.com/linuxmh/7348.html 本文介绍在Ubuntu 20.04系统上安装Cinnamon桌面环境" />
 
 
 
 <meta name="generator" content="Hugo 0.81.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8817%E6%97%A502/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B43%E6%9C%8819%E6%97%A504/" />
 
 
-<meta property="og:title" content="docker 更换镜像源地址" />
-<meta property="og:description" content="好像国内的镜像好多都访问不了，可以试试这个 { “registry-mirrors”: [“https://docker.mirrors.ustc" />
+<meta property="og:title" content="在Ubuntu 20.04系统上安装Cinnamon桌面环境的方法" />
+<meta property="og:description" content="原文：https://ywnz.com/linuxmh/7348.html 本文介绍在Ubuntu 20.04系统上安装Cinnamon桌面环境" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8817%E6%97%A502/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-02-17T02:42:18&#43;08:00" />
-<meta property="article:modified_time" content="2021-02-17T02:42:18&#43;08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B43%E6%9C%8819%E6%97%A504/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-19T21:46:01&#43;08:00" />
+<meta property="article:modified_time" content="2021-03-19T21:46:01&#43;08:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="docker 更换镜像源地址"/>
-<meta name="twitter:description" content="好像国内的镜像好多都访问不了，可以试试这个 { “registry-mirrors”: [“https://docker.mirrors.ustc"/>
+<meta name="twitter:title" content="在Ubuntu 20.04系统上安装Cinnamon桌面环境的方法"/>
+<meta name="twitter:description" content="原文：https://ywnz.com/linuxmh/7348.html 本文介绍在Ubuntu 20.04系统上安装Cinnamon桌面环境"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -116,13 +116,13 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0074.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0085.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          docker 更换镜像源地址
+          在Ubuntu 20.04系统上安装Cinnamon桌面环境的方法
           <div class="sub header">
             @
             
@@ -130,131 +130,75 @@
             
 
             | 
-                星期三，二月 17 日，2021 年
+                星期五，三月 19 日，2021 年
               
 
-            | 4 分钟阅读
+            | 3 分钟阅读
 
             | 更新于
               
-                星期三，二月 17 日，2021 年
+                星期五，三月 19 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>好像国内的镜像好多都访问不了，可以试试这个</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">  
-{  
-<span style="color:#960050;background-color:#1e0010">“registry-mirrors”:</span> <span style="color:#960050;background-color:#1e0010">[“https://docker.mirrors.ustc.edu.cn/”]</span>  
-}  
-  
-</code></pre></div><p>然后还发一个规律就是第一次下载很慢，可以ctrl+c暂停掉，然后再下载一次，就变快了很多。</p>
-<p>文章参考:<br>
-Docker 中国官方镜像加速</p>
-<p>参考链接：</p>
-<blockquote>
-<p><a href="https://www.docker-cn.com/registry-mirror">https://www.docker-cn.com/registry-mirror</a></p>
-</blockquote>
-<blockquote>
-<p><a href="https://blog.csdn.net/Mr_OOO/article/details/67016309">https://blog.csdn.net/Mr_OOO/article/details/67016309</a></p>
-</blockquote>
-<p>不同版本的docker更换镜像的方法不一样</p>
-<p>这里用的docker18版本</p>
-<p>查看版本命令</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>root@localhost docker<span style="color:#f92672">]</span><span style="color:#75715e"># docker --version  </span>
-Docker version 18.04.0-ce-rc1, build 0c7f7c6  
-</code></pre></div><p>在/etc/docker/目录下新建daemon.json文件，如果有就修改</p>
-<blockquote>
-<p>/etc/docker/daemon.json</p>
-</blockquote>
-<p>在daemon.json文件添加如下内容：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
-  <span style="color:#f92672">&#34;registry-mirrors&#34;</span>: [<span style="color:#e6db74">&#34;https://registry.docker-cn.com&#34;</span>]  
-}  
-</code></pre></div><p>然后重启</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  
-<span style="color:#f92672">[</span>root@localhost docker<span style="color:#f92672">]</span><span style="color:#75715e"># service docker restart  </span>
-  
-</code></pre></div><p>试试pull是不是变快了…</p>
-<p>直接设置docker的daemon进程的默认镜像地址…,可以试试…</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  
-$ docker --registry-mirror<span style="color:#f92672">=</span>https://registry.docker-cn.com daemon  
-</code></pre></div><p>直接指定镜像地址下载image也是可以的</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ docker pull registry.docker-cn.com/library/ubuntu:16.04  
-</code></pre></div><p>后面的library/ubuntu:16.04就是</p>
-<hr>
-<p>原文链接：链接：https://www.jianshu.com/p/34d3b4568059</p>
-<p>不得不说 docker的火爆程度已经达到的地步，</p>
-<p>由于国外docker搭建太慢，国外的安装文档也很全面，这里就不在详述，详情可以点击这里：</p>
-<p>正主：Docker 官方镜像加速：http://www.docker-cn.com/registry-mirror</p>
-<p>在这里打算记录下使用国内源快速搭建docker的方法：Daocloud极速下载真的是快啊～～～<br>
-在 Linux上 安装 Docker</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL https://get.daocloud.io/docker | sh   
-</code></pre></div><p>适用于Ubuntu，Debian,Centos等大部分Linux，会3小时同步一次Docker官方资源</p>
-<p>当然有时候不知道为什么daocloud响应不了，用阿里云的：</p>
-<p>用阿里云的：</p>
-<p>安装最新版本的Docker Engine</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet| sh -  
-</code></pre></div><p>安装1.9.1版本的Docker Engine</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet| sh /dev/stdin 1.9.1  
-</code></pre></div><p>如果你的机器是阿里云主机，那么可以通过以下脚本，通过内网地址进行安装。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/intranet| sh -  
-</code></pre></div><p>安装 Docker Compose</p>
-<p>Docker Compose存放在Git Hub，不太稳定。</p>
-<p>你可以也通过执行下面的命令，高速安装Docker Compose。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -L https://get.daocloud.io/docker/compose/releases/download/1.14.0/docker-compose-<span style="color:#e6db74">`</span>uname -s<span style="color:#e6db74">`</span>-<span style="color:#e6db74">`</span>uname -m<span style="color:#e6db74">`</span> &gt; /usr/local/bin/docker-compose  
-  
-chmod  +x  /usr/local/bin/docker-compose  
-</code></pre></div><p>你可以通过修改URL中的版本，可以自定义您的需要的版本。<br>
-Docker更换镜像源</p>
-<p>有位博主说的好，国内有4家感觉还可以的镜像源.<br>
-选择一：老东家的  daocloud：</p>
-<p>老东家提供的daocloud加速器，需要用户注册，每个用户每个月限制10GB</p>
-<p>不过也感觉非常快，注册也相当容器，不需要验证邮箱噢～～～&gt;-&lt;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://67e93489.m.daocloud.io  
-  
-curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f7291398.m.daocloud.io  
-</code></pre></div><p>具体来说  daocloud的模式就是将你的id也就是shell123转化成67e93489，其格式为：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl-sSL https://get.daocloud.io/daotools/set_mirror.sh | sh-shttp://<span style="color:#f92672">{</span>your_id<span style="color:#f92672">}</span>.m.daocloud.io  
-</code></pre></div><p>事实上，实际改的是</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
-ExecStart<span style="color:#f92672">=</span>/usr/bin/docker-current daemon --registry-mirror<span style="color:#f92672">=</span>http://<span style="color:#f92672">{</span>your_id<span style="color:#f92672">}</span>.m.daocloud.io<span style="color:#ae81ff">\ </span> 
-
-</code></pre></div><p>记得设置后，需要重新启动  sudo service docker restart<br>
-选择二：ustc 中科大的docker源 也是超级好的</p>
-<p>官方文档也写的非常好，有兴趣可以看看</p>
-<p>配置方法：</p>
-<p>新版的 Docker 使用 /etc/docker/daemon.json（Linux） 或者 %programdata%\docker\config\daemon.json（Windows） 来配置 Daemon。</p>
-<p>请在该配置文件中加入（没有该文件的话，请先建一个）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
-  
-<span style="color:#f92672">&#34;registry-mirrors&#34;</span>: [<span style="color:#e6db74">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span>]  
-  
-}  
-</code></pre></div><p>亦即：</p>
-<blockquote>
-<p>$~ sudo vim /etc/docker/daemon.json<br>
-写入：</p>
-</blockquote>
-<blockquote>
-<p>{&ldquo;registry-mirrors&rdquo;: [&ldquo;https://docker.mirrors.ustc.edu.cn&rdquo;]}</p>
-</blockquote>
-<p>这一行 然后重启docker服务即可.</p>
-<p>选择三：网易蜂巢的镜像源，个人感觉上面的镜像好少，而且有时候pull他们的镜像还会失败，不过如果要写dockerfile的话，可以到上面参考参考，dockerfile他们到时写的很详细噢～</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$~ sudo echo<span style="color:#e6db74">&#34;DOCKER_OPTS=\&#34;--registry-mirror=http://hub-mirror.c.163.com\&#34;&#34;</span>&gt;&gt;/etc/default/docker  
-  
-$~ service docker restart  
-</code></pre></div><p>最后一个选择：阿里的alicloud</p>
-<p>个人感觉繁琐的是在注册上：不光要注册为阿里云的用户，还得加入开发者平台。不过提着眼睛做完这些以后，它的服务还真是不错，基本1MB/s的pull速度(部分原因可能是因为我也在杭州吧)。配置方法跟daocloud类似，也是开通加速器以后给一个url。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ExecStart<span style="color:#f92672">=</span>/usr/bin/docker-current daemon --registry-mirror<span style="color:#f92672">=</span>https://<span style="color:#f92672">{</span>your_id<span style="color:#f92672">}</span>.mirror.aliyuncs.com<span style="color:#ae81ff">\ </span> 
-</code></pre></div><p>阿里的你们可以去尝试，如果不是阿里云的EMS用户的话，个人不太推荐。<br>
-所以本人 强烈推荐！！强烈推荐！！使用ustc的！！！！<br>
-#Docker-machine安装</p>
-<p>参照官网的教程：https://docs.docker.com/machine/install-machine/</p>
-<p>linux用户安装方式为：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$~  curl-L https://github.com/docker/machine/releases/download/v0.10.0/docker-machine-<span style="color:#e6db74">`</span>uname -s<span style="color:#e6db74">`</span>-<span style="color:#e6db74">`</span>uname -m<span style="color:#e6db74">`</span> &gt;/tmp/docker-machine <span style="color:#f92672">&amp;&amp;</span>chmod +x /tmp/docker-machine <span style="color:#f92672">&amp;&amp;</span>  sudo cp /tmp/docker-machine /usr/local/bin/docker-machine  
-</code></pre></div></article>
+      <article class="main"><p>原文：https://ywnz.com/linuxmh/7348.html</p>
+<p>本文介绍在Ubuntu 20.04系统上安装Cinnamon桌面环境（Cinnamon Desktop Environment）的方法。Cinnamon桌面布局与Gnome 2相似，并通过易于使用和舒适的桌面体验使用户感到宾至如归。</p>
+<p>前言</p>
+<p>Cinnamon是X Window系统的免费使用的桌面环境，最初是从GNOME桌面派生的，它是Linux桌面的最佳桌面环境之一，该桌面环境旨在实现速度、灵活性和高级创新功能，具有基于GNOME核心应用程序的X-Apps。</p>
+<p>Cinnamon Desktop Environment由许多较小的相互关联的项目组成：</p>
+<p>Cinnamon：这是Cinnamon的“shell”，可提供用户界面，例如面板、菜单等。</p>
+<p>CJS：它通过GObject Introspection提供对GNOME库的绑定。</p>
+<p>Cinnamon Control Center：从GNOME控制中心派生的Cinnamon设置中的Cinnamon官方控制中心。</p>
+<p>Cinnamon Desktop：这是GNOME桌面的一个分支，为Cinnamon提供了某些有用的资源。</p>
+<p>MDM：Cinnamon显示管理器。</p>
+<p>Cinnamon Menus：它包含libcinnamon-menu，Cinnamon菜单的布局配置文件以及一个简单的菜单编辑器。</p>
+<p>Muffin：Cinnamon的窗口管理器。</p>
+<p>Nemo：从Nautilus分叉的Cinnamon的文件管理器。</p>
+<p>Cinnamon Screensaver：长时间保持会话空闲时看到的屏幕锁。</p>
+<p>Cinnamon Session：负责启动Cinnamon会议。</p>
+<p>Cinnamon Settings Daemon：它提供了许多会话范围的服务和功能，需要长时间运行。</p>
+<p>Cinnamon Spices：修改您的Cinnamon桌面环境，并使用Cinnamon Spices扩展其功能。</p>
+<p>Cinnamon Translations：Cinnamon翻译是一个包装，其中包含Cinnamon中使用的翻译。</p>
+<p>在Ubuntu 20.04上安装Cinnamon桌面环境</p>
+<p>操作系统存储库中提供了适用于Ubuntu 20.04的Cinnamon Desktop Environment软件包，您只需要更新缓存并开始安装即可：</p>
+<p>sudo apt update</p>
+<p>sudo apt install cinnamon-desktop-environment</p>
+<p>有数十个软件包要安装，如果您的互联网速度不是很好，您可能需要耐心等待才行，会返回如下信息，请按y键安装：</p>
+<p>mate-icon-theme mate-themes media-player-info mesa-utils mesa-va-drivers</p>
+<p>mesa-vdpau-drivers metacity-common muffin muffin-common</p>
+<p>nautilus-extension-brasero nemo nemo-data nemo-fileroller netpbm</p>
+<p>ocl-icd-libopencl1 patchutils pidgin pidgin-data policykit-1-gnome</p>
+<p>python-backports.functools-lru-cache python-bs4 python-chardet</p>
+<p>python-html5lib python-lxml python-numpy python-pkg-resources python-six</p>
+<p>python-soupsieve python-webencodings python2 python2-minimal python2.7</p>
+<p>python2.7-minimal python3-mako python3-markupsafe python3-pampy</p>
+<p>python3-psutil python3-pyinotify python3-setproctitle python3-tinycss</p>
+<p>python3-uno python3-xapp python3-xlib quadrapassel rake rhythmbox</p>
+<p>rhythmbox-data rhythmbox-plugin-alternative-toolbar</p>
+<p>rhythmbox-plugin-cdrecorder rhythmbox-plugins ruby ruby-json ruby-minitest</p>
+<p>ruby-net-telnet ruby-power-assert ruby-test-unit ruby-xmlrpc ruby2.7</p>
+<p>rubygems-integration shotwell shotwell-common simple-scan sound-juicer</p>
+<p>spice-client-glib-usb-acl-helper swell-foop synaptic t1utils tali</p>
+<p>thunderbird timgm6mb-soundfont totem totem-common totem-plugins</p>
+<p>transmission-common transmission-gtk tree uno-libs-private ure va-driver-all</p>
+<p>vdpau-driver-all vinagre vino wodim xapps-common</p>
+<p>0 upgraded, 582 newly installed, 0 to remove and 123 not upgraded.</p>
+<p>Need to get 669 MB of archives.</p>
+<p>After this operation, 2,391 MB of additional disk space will be used.</p>
+<p>Do you want to continue? [Y/n] y</p>
+<p>参考：<a href="https://ywnz.com/linuxjc/3201.html">在Ubuntu系统中安装最新Cinnamon桌面环境，包括启用及卸载。</a></p>
+<p>安装后重新引导系统：</p>
+<p>reboot</p>
+<p>在登录屏幕中，在可用的桌面环境列表中选择“Cinnamon”：</p>
+<p>在Ubuntu 20.04系统上安装Cinnamon桌面环境的方法</p>
+<p>提供访问密码，以在Ubuntu 20.04 Desktop上使用Cinnamon Desktop Environment：</p>
+<p>在Ubuntu 20.04系统上安装Cinnamon桌面环境的方法</p>
+<p>到了Ubuntu 20.04系统中，可使用screenfetch命令查看输出结果：</p>
+<p>在Ubuntu 20.04系统上安装Cinnamon桌面环境的方法</p>
+<p>如上图所示，所安装的版本是Cinnamon 4.4.8。</p>
+</article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
@@ -287,8 +231,8 @@ $~ service docker restart
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%8817%E6%97%A502\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%8817%E6%97%A502\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B43%E6%9C%8819%E6%97%A504\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B43%E6%9C%8819%E6%97%A504\/'; 
           };
 
           (function() { 
