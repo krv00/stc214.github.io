@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Fri, 19 Mar 2021 21:46:01 +0800</lastBuildDate><atom:link href="https://stc214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 19:10:12 +0800</lastBuildDate><atom:link href="https://stc214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker修改镜像存放目录三方法（推荐1）</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8820%E6%97%A502/</link>
+      <pubDate>Tue, 20 Apr 2021 19:10:12 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8820%E6%97%A502/</guid>
+      <description>原文链接：https://www.cnblogs.com/zmdComeOn/p/11977649.html docker info ：查看docker的存储等相</description>
+    </item>
+    
+    <item>
+      <title>树莓派使用移动硬盘当系统盘启动需要注意设置的一个点</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8820%E6%97%A501/</link>
+      <pubDate>Tue, 20 Apr 2021 18:54:12 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8820%E6%97%A501/</guid>
+      <description>1. 系统刷入 树莓派更新eeprom和frameware固件之后,直接按照刷入sd卡的方式将目标系统刷入移动硬盘即可（PS:清空警告） 官方刷写工</description>
+    </item>
+    
     <item>
       <title>在Ubuntu 20.04系统上安装Cinnamon桌面环境的方法</title>
       <link>https://stc214.github.io/posts/2021%E5%B9%B43%E6%9C%8819%E6%97%A504/</link>
@@ -594,78 +612,6 @@
     </item>
     
     <item>
-      <title>数据清理 分手吧 毒瘤的垃圾</title>
-      <link>https://stc214.github.io/posts/2020_08_25_19_29_02/</link>
-      <pubDate>Tue, 25 Aug 2020 19:29:20 +0800</pubDate>
-      
-      <guid>https://stc214.github.io/posts/2020_08_25_19_29_02/</guid>
-      <description>小明独自走在街上。 看着身边一对对年轻人结伴而过。 或异性结伴，或同性执手。 在恋爱的酸臭味中，小明渐感不适。。。 没错，今天是2020年8月25日</description>
-    </item>
-    
-    <item>
-      <title>K30U答疑暂定</title>
-      <link>https://stc214.github.io/posts/2020_08_18_17_24_27/</link>
-      <pubDate>Tue, 18 Aug 2020 17:24:30 +0800</pubDate>
-      
-      <guid>https://stc214.github.io/posts/2020_08_18_17_24_27/</guid>
-      <description>K30至尊版 热不热 跑游戏怎么样 续航如何 (暂定下个视频) 001 小米手机为什么难抢 首先要明白为什么小米可以这么有性价比。 不是因为便宜没好货，小米的所</description>
-    </item>
-    
-    <item>
-      <title>K30U 从小米之家入手开箱</title>
-      <link>https://stc214.github.io/posts/2020_08_15_17_10_52/</link>
-      <pubDate>Sat, 15 Aug 2020 17:10:56 +0800</pubDate>
-      
-      <guid>https://stc214.github.io/posts/2020_08_15_17_10_52/</guid>
-      <description>00 片头1 2 01 发布会视频 K30至尊纪念版对很多小伙伴来说都相当香了~ 辣么肯定看上的小伙伴们都经历了一波血拼抢货。 02 购机小票 而我，作为除了媒体之</description>
-    </item>
-    
-    <item>
-      <title>朱孝天患基因疾病，朱孝天目前身体状况如何？</title>
-      <link>https://stc214.github.io/posts/2020_08_13_16_44_25/</link>
-      <pubDate>Thu, 13 Aug 2020 16:44:28 +0800</pubDate>
-      
-      <guid>https://stc214.github.io/posts/2020_08_13_16_44_25/</guid>
-      <description>如何防止盗窃？ 入室行窃在生活中很普遍，是一种让人措手不及的犯罪，常发生于夜晚。那么在生活中，就以下几点希望对大家有用 二、增强防盗意识 1、离家</description>
-    </item>
-    
-    <item>
-      <title>百度长回答000003</title>
-      <link>https://stc214.github.io/posts/2020_08_13_16_03_33/</link>
-      <pubDate>Thu, 13 Aug 2020 16:03:37 +0800</pubDate>
-      
-      <guid>https://stc214.github.io/posts/2020_08_13_16_03_33/</guid>
-      <description>家长陪伴青春期孩子有以下几个要点 以身作则。枯燥说教会让敏感青春少年出现逆反心理，家长以身作则，自律才是最好教材和老师。 以诚相待。诚实、及时沟</description>
-    </item>
-    
-    <item>
-      <title>给孩子购买童书时，是否有必要买带拼音的？</title>
-      <link>https://stc214.github.io/posts/2020_08_13_15_08_22/</link>
-      <pubDate>Thu, 13 Aug 2020 15:08:26 +0800</pubDate>
-      
-      <guid>https://stc214.github.io/posts/2020_08_13_15_08_22/</guid>
-      <description>如果儿童已经上了小学三年级，答案是没必要。如果是三年级以下，那么有必要。 孩子最佳识字年龄 一般来说，孩子在三四岁的时候（加粗），词汇量会显著增</description>
-    </item>
-    
-    <item>
-      <title>小米十周年K30U</title>
-      <link>https://stc214.github.io/posts/2020_08_11_15_33_40/</link>
-      <pubDate>Tue, 11 Aug 2020 15:33:44 +0800</pubDate>
-      
-      <guid>https://stc214.github.io/posts/2020_08_11_15_33_40/</guid>
-      <description>各位小伙伴们大家好啊,8月11日也就是昨天是小米10周年的演讲，相信很多小伙伴已经看了直播。 风风雨雨十年才迎来了今天的小米。那么雷军雷总这个</description>
-    </item>
-    
-    <item>
-      <title>PS系列01</title>
-      <link>https://stc214.github.io/posts/2020_08_08_16_18_09/</link>
-      <pubDate>Sat, 08 Aug 2020 16:18:27 +0800</pubDate>
-      
-      <guid>https://stc214.github.io/posts/2020_08_08_16_18_09/</guid>
-      <description>PS系列 PS吧九级小哥帮朋友求女友的后果 001: https://tieba.baidu.com/p/6866007036 002: https://tieba.baidu.com/p/6860264129 003: https://tieba.baidu.com/p/6866259646 004: https://tieba.baidu.com/p/6862977101 005: https://tieba.baidu.com/p/6854968997</description>
-    </item>
-    
-    <item>
       <title>推推乐脚本</title>
       <link>https://stc214.github.io/posts/2020_08_02_23_59_12/</link>
       <pubDate>Sun, 02 Aug 2020 23:59:16 +0800</pubDate>
@@ -699,15 +645,6 @@
       
       <guid>https://stc214.github.io/posts/2020_07_01_22_13_49/</guid>
       <description>环境准备 1. hugo环境 https://github.com/gohugoio/hugo/releases 如上地址下载对系统所需要的二进制文件 当然如果系统部署了包管理环境的话则可以直接使用工具安装 2. 配置系统环境变量（win</description>
-    </item>
-    
-    <item>
-      <title>Ubuntu - crontab 命令定时执行任务</title>
-      <link>https://stc214.github.io/posts/2020_06_30_15_03_34/</link>
-      <pubDate>Tue, 30 Jun 2020 15:03:37 +0800</pubDate>
-      
-      <guid>https://stc214.github.io/posts/2020_06_30_15_03_34/</guid>
-      <description>处理大规模数据集时，需要等待的时间有时会很久，为了能充分利用晚上时间，发现 Ubuntu 的 crontab 服务是可以定时执行任务的. crontab 服务启动 Ubuntu 16.04 默认有 cron，如果</description>
     </item>
     
     <item>

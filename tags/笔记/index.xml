@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Fri, 19 Mar 2021 21:46:01 +0800</lastBuildDate><atom:link href="https://stc214.github.io/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 19:10:12 +0800</lastBuildDate><atom:link href="https://stc214.github.io/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker修改镜像存放目录三方法（推荐1）</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8820%E6%97%A502/</link>
+      <pubDate>Tue, 20 Apr 2021 19:10:12 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8820%E6%97%A502/</guid>
+      <description>原文链接：https://www.cnblogs.com/zmdComeOn/p/11977649.html docker info ：查看docker的存储等相</description>
+    </item>
+    
+    <item>
+      <title>树莓派使用移动硬盘当系统盘启动需要注意设置的一个点</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8820%E6%97%A501/</link>
+      <pubDate>Tue, 20 Apr 2021 18:54:12 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8820%E6%97%A501/</guid>
+      <description>1. 系统刷入 树莓派更新eeprom和frameware固件之后,直接按照刷入sd卡的方式将目标系统刷入移动硬盘即可（PS:清空警告） 官方刷写工</description>
+    </item>
+    
     <item>
       <title>在Ubuntu 20.04系统上安装Cinnamon桌面环境的方法</title>
       <link>https://stc214.github.io/posts/2021%E5%B9%B43%E6%9C%8819%E6%97%A504/</link>
