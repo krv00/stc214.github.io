@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>80or443等端口被占用解决方法 | STC214</title>
+    <title>Python中CSV文件读写 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,28 +13,28 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="运行 cmd/powershell,执行 netstat -aon|findstr :80|findstr LISTEN 同理,查找占用443端口的进程也是相同操作,将80换成443即可 得到返回,最右一列为进程PID" />
+<meta name="description" content="首先读写csv文件需要引入官方库 import csv 读文件： 普通编写的csv文件和wps、word编写的csv文件编码可能不同。 按照习惯从空白文件编写的一般" />
 
 
 
 <meta name="generator" content="Hugo 0.84.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8813%E6%97%A502/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A501/" />
 
 
-<meta property="og:title" content="80or443等端口被占用解决方法" />
-<meta property="og:description" content="运行 cmd/powershell,执行 netstat -aon|findstr :80|findstr LISTEN 同理,查找占用443端口的进程也是相同操作,将80换成443即可 得到返回,最右一列为进程PID" />
+<meta property="og:title" content="Python中CSV文件读写" />
+<meta property="og:description" content="首先读写csv文件需要引入官方库 import csv 读文件： 普通编写的csv文件和wps、word编写的csv文件编码可能不同。 按照习惯从空白文件编写的一般" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B41%E6%9C%8813%E6%97%A502/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-01-13T22:25:48&#43;08:00" />
-<meta property="article:modified_time" content="2021-01-13T22:25:48&#43;08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A501/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-21T18:21:57&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-21T18:21:57&#43;08:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="80or443等端口被占用解决方法"/>
-<meta name="twitter:description" content="运行 cmd/powershell,执行 netstat -aon|findstr :80|findstr LISTEN 同理,查找占用443端口的进程也是相同操作,将80换成443即可 得到返回,最右一列为进程PID"/>
+<meta name="twitter:title" content="Python中CSV文件读写"/>
+<meta name="twitter:description" content="首先读写csv文件需要引入官方库 import csv 读文件： 普通编写的csv文件和wps、word编写的csv文件编码可能不同。 按照习惯从空白文件编写的一般"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -116,68 +116,92 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0024.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0095.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          80or443等端口被占用解决方法
+          Python中CSV文件读写
           <div class="sub header">
             @
             
-              
-                STC214
-              
+              STC214
             
 
             | 
-                星期三，一月 13 日，2021 年
+                星期一，六月 21 日，2021 年
               
 
             | 2 分钟阅读
 
             | 更新于
               
-                星期三，一月 13 日，2021 年
+                星期一，六月 21 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>运行<br>
-cmd/powershell,执行</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">netstat -aon|findstr :80|findstr LISTEN  
-</code></pre></div><p>同理,查找占用443端口的进程也是相同操作,将80换成443即可</p>
-<p>得到返回,最右一列为进程PID 19892.接下来打开任务管理器</p>
-<p>可以看到进程PID为19892的进程即为占用该端口的进程,将其结束</p>
-<p>有时候会遇到比较棘手的情况,就是占用的进程为PID 4 即系统服务(SYSTEM)</p>
-<p>可以自行搜索并查找出相关服务,或者干脆直接用以下命令直接停用常见的相关服务</p>
-<p>管理员权限运行cmd/powershell,直接粘贴进去运行即可</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">net stop ReportServer /y  
-net stop MsDepSvc /y  
-net stop PeerDistSvc /y  
-net stop SyncShareSvc /y  
-net stop W3SVC /y  
-net stop WAS /y  
-net stop IISADMIN /y  
-net stop http /y  
-  
+      <article class="main"><p>首先读写csv文件需要引入官方库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> csv
 </code></pre></div><hr>
-<p>443端口若被vmware-hostd.exe占用,可以直接打开vmwre-&gt;首选项-&gt;共享虚拟机-&gt;禁用共享,或者自行修改为其他端口<br>
-针对VMWARE16/更新版本,可以编辑C:\ProgramData\VMware\hostd\proxy.xml<br>
-httpsPort改成非443/80即可</p>
-<h3 id="手动排查端口占用可参考">手动排查端口占用可参考:</h3>
-<p><a href="https://www.devside.net/wamp-server/opening-up-port-80-for-apache-to-use-on-windows">https://www.devside.net/wamp-server/opening-up-port-80-for-apache-to-use-on-windows</a></p>
-<p>若使用</p>
-<blockquote>
-<p>netstat -aon|findstr :80|findstr LISTEN</p>
-</blockquote>
-<p>查询不到端口被任何进程占用,且仍然无法监听,可能是LSP被劫持的原因</p>
-<p>管理员权限运行cmd/powershell , 输入netsh winsock reset<br>
-回车后一般就OK了.如果出现断网重启电脑即可</p>
-<h3 id="原文地址">原文地址：</h3>
-<p><a href="https://www.dogfight360.com/blog/knowledge-base/%e8%a7%a3%e5%86%b3%e5%b8%b8%e8%a7%81%e7%9a%8480-443%e7%ab%af%e5%8f%a3%e8%a2%ab%e5%8d%a0%e7%94%a8%e9%97%ae%e9%a2%98/">https://www.dogfight360.com/blog/knowledge-base/%e8%a7%a3%e5%86%b3%e5%b8%b8%e8%a7%81%e7%9a%8480-443%e7%ab%af%e5%8f%a3%e8%a2%ab%e5%8d%a0%e7%94%a8%e9%97%ae%e9%a2%98/</a></p>
+<h3 id="读文件">读文件：</h3>
+<p>普通编写的csv文件和wps、word编写的csv文件编码可能不同。</p>
+<p>按照习惯从空白文件编写的一般为utf-8编码。</p>
+<p>word之类的文字办公软件通常如果为中文的话。</p>
+<p>会选择gbk或者gb2312编码。</p>
+<p>这种时候读写时需要标注对应编码。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+f1 <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;py_ssv/test.csv&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>)
+
+<span style="color:#66d9ef">with</span> f1:
+    reader <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>reader(f1)
+
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> reader:
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> i:
+            print(j)
+            print(type(j))
+
+print(<span style="color:#e6db74">&#39;#&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">50</span>)
+
+f1 <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;py_ssv/工作簿1.csv&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gbk&#39;</span>)
+
+<span style="color:#66d9ef">with</span> f1:
+    reader <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>reader(f1)
+
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> reader:
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> i:
+            print(j)
+            print(type(j))
+
+
+</code></pre></div><hr>
+<h3 id="写文件">写文件：</h3>
+<p>使用csv.writer.writerow可以写一行，通过可迭代的字典或者列表等对象形式，每个元素占用一个格子。</p>
+<p>使用csv.writer.writerow可以写多行，通过可迭代的字典或者列表等对象形式，每一行的元素必须是可迭代对象，可迭代对象中的每个元素占一格。每一个可迭代对象占一行。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">nms <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
+ [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>], 
+ [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>]]
+
+f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;py_ssv/工作簿1.csv&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>,encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>,newline<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+
+<span style="color:#66d9ef">with</span> f:
+
+    writer <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>writer(f)
+    writer<span style="color:#f92672">.</span>writerows(nms)
+
+nms <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]
+
+f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;py_ssv/工作簿1.csv&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>,encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>,newline<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+
+<span style="color:#66d9ef">with</span> f:
+
+    writer <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>writer(f)
+    writer<span style="color:#f92672">.</span>writerow(nms)
+
+
+</code></pre></div><h4 id="可以根据需求构造列表生成式或者合通过其他方法构造可迭代对象对csv文件进行读写操作至于增加和减少只是对原文内容进行增删替换操作等根据需求处理即可">可以根据需求构造列表生成式或者合通过其他方法构造可迭代对象对csv文件进行读写操作。至于增加和减少只是对原文内容进行增删替换操作等。根据需求处理即可</h4>
 </article>
     </section>
 
@@ -211,8 +235,8 @@ httpsPort改成非443/80即可</p>
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B41%E6%9C%8813%E6%97%A502\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B41%E6%9C%8813%E6%97%A502\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B46%E6%9C%8821%E6%97%A501\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B46%E6%9C%8821%E6%97%A501\/'; 
           };
 
           (function() { 
@@ -249,8 +273,8 @@ httpsPort改成非443/80即可</p>
   <ul>
     <li>
       <ul>
-        <li><a href="#手动排查端口占用可参考">手动排查端口占用可参考:</a></li>
-        <li><a href="#原文地址">原文地址：</a></li>
+        <li><a href="#读文件">读文件：</a></li>
+        <li><a href="#写文件">写文件：</a></li>
       </ul>
     </li>
   </ul>
