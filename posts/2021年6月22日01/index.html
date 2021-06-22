@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>linux搭建smb、挂载smb、Windows共享 | STC214</title>
+    <title>Python使用pandas处理csv文件 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,28 +13,28 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="原文地址： https://www.cnblogs.com/-xuan/p/10293859.html 安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器 smbclient //{smbserverip}/{foldername} sudo mount -t cifs //ip地址/path/to/share path/to/mount 命" />
+<meta name="description" content="原文：https://blog.csdn.net/weixin_39126107/article/details/105737387 ytho" />
 
 
 
 <meta name="generator" content="Hugo 0.84.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A510/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/" />
 
 
-<meta property="og:title" content="linux搭建smb、挂载smb、Windows共享" />
-<meta property="og:description" content="原文地址： https://www.cnblogs.com/-xuan/p/10293859.html 安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器 smbclient //{smbserverip}/{foldername} sudo mount -t cifs //ip地址/path/to/share path/to/mount 命" />
+<meta property="og:title" content="Python使用pandas处理csv文件" />
+<meta property="og:description" content="原文：https://blog.csdn.net/weixin_39126107/article/details/105737387 ytho" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%886%E6%97%A510/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-02-06T02:45:32&#43;08:00" />
-<meta property="article:modified_time" content="2021-02-06T02:45:32&#43;08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-22T16:43:08&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-22T16:43:08&#43;08:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="linux搭建smb、挂载smb、Windows共享"/>
-<meta name="twitter:description" content="原文地址： https://www.cnblogs.com/-xuan/p/10293859.html 安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器 smbclient //{smbserverip}/{foldername} sudo mount -t cifs //ip地址/path/to/share path/to/mount 命"/>
+<meta name="twitter:title" content="Python使用pandas处理csv文件"/>
+<meta name="twitter:description" content="原文：https://blog.csdn.net/weixin_39126107/article/details/105737387 ytho"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -116,13 +116,13 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0061.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0096.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          linux搭建smb、挂载smb、Windows共享
+          Python使用pandas处理csv文件
           <div class="sub header">
             @
             
@@ -130,229 +130,82 @@
             
 
             | 
-                星期六，二月 6 日，2021 年
+                星期二，六月 22 日，2021 年
               
 
-            | 6 分钟阅读
+            | 2 分钟阅读
 
             | 更新于
               
-                星期六，二月 6 日，2021 年
+                星期二，六月 22 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>原文地址： <a href="https://www.cnblogs.com/-xuan/p/10293859.html">https://www.cnblogs.com/-xuan/p/10293859.html</a></p>
-<h2 id="安装完成smb相关的软件和依赖之后-只需要通过如下命令即可访问smb服务器">安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器</h2>
-<blockquote>
-<p>smbclient //{smbserverip}/{foldername}</p>
-</blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
-sudo mount -t cifs //ip地址/path/to/share path/to/mount  
-  
-  
-命令行解释：  
-  
-mount：挂载命令  
--t cifs： 用cifs文件系统挂载samba共享文件，如果提示错误的文件系统的话，可能是没有cifs，需要自己安装。【centos：  
-yum install nfs-utils】  
-  
-//ip地址/path/to/share：共享目录路径  
-path/to/mount：要挂载的路径，需要自己创建一个  
-  
-</code></pre></div><p>实现Linux系统之间共享文件资源以及在Linux系统与Windows系统之间共享文件   <br>
-Samba软件包的构成</p>
-<pre><code>服务端：samba      
-客户端：samba-client      
-公共组件：samba-common      
-Smbd：负责为客户机提供服务器中共享资源（目录和文件）的访问，监听139端口（smb协议）,445端口（cifs协议）      
-Nmbd：负责提供基于netblos协议的主机名称解析，以便为windows网络中的主机进行查询服务，监听137-138端口（netblos协议）      
-</code></pre>
-<p>Samba服务的程序组件   <br>
-主配置文件路径</p>
-<p>/etc/samba/smb.conf</p>
-<p>配置文件参数解释</p>
-<p>[global]</p>
-<p>#全局参数。</p>
-<p>workgroup = MYGROUP</p>
-<p>#工作组名称</p>
-<p>server string = Samba Server Version %v</p>
-<p>#服务器介绍信息，参数%v为显示</p>
-<p>SMB版本号</p>
-<p>log file = /var/log/samba/log.%m</p>
-<p>#定义日志文件的存放位置与名称，</p>
-<p>参数%m为来访的主机名</p>
-<p>max log size = 50</p>
-<p>#定义日志文件的最大容量为50KB</p>
-<p>security = user</p>
-<p>#安全验证的方式，总共有4种</p>
-<p>#share：来访主机无需验证口令；比较方便，但安全性很差，7.0以上系统不支持share，</p>
-<p>使用user模式，map to guest=bad user代替</p>
-<p>#user：需验证来访主机提供的口令后才可以访问；提升了安全性</p>
-<p>#server：使用独立的远程主机验证来访主机提供的口令（集中管理账户）</p>
-<p>#domain：使用域控制器进行身份验证</p>
-<p>passdb backend = tdbsam</p>
-<p>#定义用户后台的类型，共有3种</p>
-<p>#smbpasswd：使用smbpasswd命令为系统用户设置Samba服务程序的密码</p>
-<p>#tdbsam：创建数据库文件并使用pdbedit命令建立Samba服务程序的用户</p>
-<p>#ldapsam：基于LDAP服务进行账户验证</p>
-<p>load printers = yes</p>
-<p>#设置在Samba服务启动时是否共享</p>
-<p>打印机设备</p>
-<p>cups options = raw</p>
-<p>#打印机的选项</p>
-<p>[homes]</p>
-<p>#共享参数</p>
-<p>comment = Home Directories</p>
-<p>#描述信息</p>
-<p>browseable = no</p>
-<p>#指定共享信息是否在“网上邻居”中可见</p>
-<p>writable = yes</p>
-<p>#定义是否可以执行写入操作，</p>
-<p>与“read only”相反</p>
-<p>[printers]</p>
-<p>#打印机共享参数</p>
-<p>comment = All Printers</p>
-<p>path = /var/spool/samba</p>
-<p>#共享文件的实际路径(重要)。</p>
-<p>browseable = no</p>
-<p>#网络发现是否可见</p>
-<p>guest ok = no</p>
-<p>#是否所有人可见，等同于&quot;public&quot;参数。</p>
-<p>writable = no</p>
-<p>#是否允许写入</p>
-<p>printable = yes</p>
-<p>u  部署samba服务   <br>
-匿名方式访问</p>
-<p>准备环境</p>
-<p>setenforce 0                      //关闭selinux</p>
-<p>systemctl stop firewalld          //关闭防火墙</p>
-<p>1.搭建本地yum源。</p>
-<p>2.使用yum方式安装samba服务程序</p>
-<p>yum install -y samba*             //yum方式安装samba服务</p>
-<pre><code>创建共享的目录      
-编辑主配置文件设置匿名共享，设置共享目录      
-重启服务，使用windos访问验证，无法访问请检查iptable 防火墙      
-</code></pre>
-<p>mkdir -p /var/public              //创建要共享目录</p>
-<p>vim /etc/samba/smb.conf                   //编辑samba主配置文件</p>
-<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;添加或者修改红色部分的参数&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
-<p>[global]</p>
-<pre><code>    workgroup = SAMBA      
-  
-    security = user            //7.0以下系统将user改为share      
-  
-    passdb backend = tdbsam      
-  
-    map to guest = bad user            //7.0以上匿名访问必加      
-</code></pre>
-<p>[public]                                  //共享目录名称</p>
-<pre><code>    comment = public                  //共享描述      
-  
-    path = /var/public                //共享目录路径      
-  
-    guest ok = yes                     //共享目录是否所有人可见      
-  
-    read only = yes                    //是否只读      
-  
-    browseable = yes                   //网络发现是否可见      
-</code></pre>
-<p>systemctl restart smb                     //重启samba服务</p>
-<p>用户验证的共享</p>
-<p>案例：创建一个共享目录/var/yonghu/，只有zhangsan和lisi可以访问共享，只有zhangsan有可以写入的权限</p>
-<p>注意：创建共享用户前需要有对应的系统用户</p>
-<pre><code>创建共享用户zhangsan、lisi，创建共享的目录      
-修改smb配置文件，设置共享目录      
-</code></pre>
-<p>Useradd zhangsan          //创建系统用户zhangsan</p>
-<p>Useradd lisi              //创建系统用户lisi</p>
-<p>Pdbedit -a -u zhangsan     //创建共享用户zhangsan，-a添加-u指定用户</p>
-<p>Pdbedit -a -u lisi         //创建共享用户lisi，-a添加-u指定用户</p>
-<p>Mkdir /var/yonghu         //创建共享目录</p>
-<p>vim /etc/samba/smb.conf           //编辑samba主配置文件</p>
-<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;添加或修改红色部分参数&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
-<p>[global]</p>
-<pre><code>    workgroup = MYGROUP      
-  
-    security = user      
-  
-    passdb backend = tdbsam      
-  
-    map to guest = bad user    //匿名访问必加，否则需要密码      
-</code></pre>
-<p>[public]</p>
-<pre><code>    comment = public      
-  
-    path = /var/public      
-  
-    guest ok = yes      
-</code></pre>
-<p>[yonghu]                          //共享目录名称</p>
-<pre><code>    comment = yonghu           //描述      
-  
-    path = /var/yonghu         //共享目录路径      
-  
-    public = no        //是否所有人可见      
-  
-    read only = yes            //是否只读      
-  
-    valid users = zhangsan,lisi       //哪些用户可以访问      
-  
-    write list = zhangsan      //哪些用户可以写入，组加“@组名”      
-  
-    directory mask = 0755      //用户上传目录权限为755      
-  
-    create mask = 0644         //用户上传文件权限为644      
-</code></pre>
-<p>3.给予共享目录777权限</p>
-<p>Chmod -R 777 /var/yonghu          //更改共享目录的权限为777</p>
-<p>4.重启smb服务验证权限</p>
-<p>systemctl restart smb             //重启samba服务</p>
-<p>windows清除smb的连接会话</p>
-<p>net use                           //查看连接会话</p>
-<p>net use * /del                    //清除连接会话</p>
-<p>用户映射的共享(安全性高)</p>
-<p>正常情况下，一个共享账号都有一个同名的系统账号很不安全，可以使用映射的方式，将一个共享用户映射为多个不同的名称(别名)，只需要通过共享用户的别名和密码就能访问资源了，而不需要知道真正的共享用户(系统用户)名称</p>
-<p>默认的共享账号映射文件位于：/etc/samba/smbusers</p>
-<p>启用映射功能，需要修改主配置文件，在全局配置加入：</p>
-<p>username map=/etc/samba/smbusers</p>
-<p>重启服务即可生效</p>
-<p>访问地址限制</p>
-<p>在global或者配置里面添加hosts allow或者hosts deny即可</p>
-<p>Hosts allow = 192.168.2.  172.16.      //允许192.168.2.0,172.16.0.0网段访问</p>
-<p>Hosts deny = 192.168.3.  172.14.      //拒绝192.168.3.0,172.14.0.0网段访问</p>
-<p>使用smbclient访问共享</p>
-<p>查询共享资源列表</p>
-<p>smbclient -L 192.168.2.162 -U administrator</p>
-<p>匿名访问共享文件夹</p>
-<p>smbclient //192.168.2.223/public</p>
-<p>使用用户名、别名访问共享</p>
-<p>smbclient -U ls //192.168.2.223/zhangsan</p>
-<p>挂载共享目录</p>
-<p>Linux下挂载samba共享目录</p>
-<p>1.使用yum安装cifs-utils工具</p>
-<p>yum install -y cifs-utils                 //yum安装cifs-utils工具</p>
-<p>2.使用smbclient工具查询共享目录</p>
-<p>smbclient -L 192.168.2.224                //查询2.224的共享目录</p>
-<p>匿名挂载方法</p>
-<p>mount.cifs //192.168.2.223/public /ceshi</p>
-<pre><code>                      //将public目录挂载到本地ceshi目录      
-</code></pre>
-<p>指定用户挂载</p>
-<p>mount.cifs //192.168.2.223/yonghu /ceshi/ -o username=zhangsan,password=aaa</p>
-<pre><code>       //将yonghu目录挂载到本地ceshi目录，指定用户名zhangsan      
-</code></pre>
-<p>Linux下挂载windos共享目录</p>
-<p>1.使用smbclient工具查询共享目录</p>
-<p>smbclient -L 192.168.2.224                //查询2.224的共享目录</p>
-<p>2.挂载windos共享目录</p>
-<p>　　①mount -t cifs -o username=administrator,password=123 //192.168.2.162/d /ceshi/                 //将d盘挂载到本地的ceshi目录</p>
-<p>　　②mount -t cifs -o username=administrator,password=666,vers=2.0 //192.168.9.1/test /media/windows</p>
-<p>smb常见故障</p>
-<p>注意：如果windows无法访问，先使用其他客户端或者linux测试是否能访问，然后在排除故障</p>
-<p>1.win7访问Linux Samba的共享目录提示“登录失败：用户名或密码错误”解决方法：</p>
-<p>单击”开始“-“运行”，输入secpol.msc，打开“本地安全策略”，在本地安全策略窗口中依次打开“本地策略”&ndash;&gt;“安全选项”，然后再右侧的列表中找到“网络安全：LAN管理器身份验证级别”，把这个选项的值改为“发送 LM 和 NTLM – 如果已协商，则使用 NTLMv2会话安全”，最后应用确定，然后重新连接测试</p>
+      <article class="main"><h4 id="原文httpsblogcsdnnetweixin_39126107articledetails105737387">原文：https://blog.csdn.net/weixin_39126107/article/details/105737387</h4>
+<p>ython中引入pandas包可以很方便的对csv格式的数据进行处理</p>
+<p>import pandas as pd</p>
+<p>csv文件的读写</p>
+<p>data = pd.read_csv(&lsquo;D:\data\train.scv&rsquo;,names=[&lsquo;ID&rsquo;,&lsquo;index&rsquo;],dtype={&lsquo;ID&rsquo;:pd.np.string_},index_col=0) <br>
+#names指定列名，dtype指定读取的格式，index_col指定索引的位置</p>
+<p>data.columns = [&lsquo;ID&rsquo;,&lsquo;index&rsquo;]<br>
+#读入后指定列名
+data.rename(columns={&lsquo;ID&rsquo;:&lsquo;name&rsquo;,&lsquo;index&rsquo;:&lsquo;goal&rsquo;}, inplace = True)<br>
+#读入后更改列名</p>
+<p>data.to_csv(&lsquo;D:\data\train.scv&rsquo;,encoding=&lsquo;utf-8&rsquo;)<br>
+#写入文件</p>
+<p>csv文件的拼接</p>
+<p>对记录相同类型数据的csv文件进行简单的内容拼接</p>
+<p>df3 = pd.concat([df1,df2],axis=0)<br>
+#axis=0表示行拼接，axis=1表示列拼接</p>
+<p>concat只是进行简单的内容拼接，比如df1有100行，df2有100行，那么拼接后的df3有200行
+csv文件的合并</p>
+<p>两个csv文件按照某一列的值进行合并，例如相同ID号的数据进行合并</p>
+<p>df3 = pd.merge(df1,df2,on=[&lsquo;ID&rsquo;],how=&lsquo;left&rsquo;)<br>
+#将df1和df2中ID号相同的行进行合并</p>
+<p>删除某些列</p>
+<p>将csv文件中的某些列删除</p>
+<p>df1 = df1.drop([&lsquo;grid_x&rsquo;,&lsquo;grid_y&rsquo;],axis=1)<br>
+#grid_x,grid_y是要删除的列，axis=1表示列删除</p>
+<p>删除重复行</p>
+<p>删除指定列值相同的行</p>
+<p>df1= df1.drop_duplicates(subset=[&lsquo;ID&rsquo;,&lsquo;index&rsquo;],keep=&lsquo;first&rsquo;)<br>
+#删除ID，index的值相同的行，重复行保留第一个</p>
+<p>改变列值的数据类型</p>
+<p>df1[&lsquo;hour&rsquo;] = df1[&lsquo;hour&rsquo;].astype(str)<br>
+##将df1中的hour属性的类型改为str</p>
+<p>数据特定长度截断</p>
+<p>对某一列的数据的长度进行截取</p>
+<p>df1[&lsquo;time&rsquo;] = round(df1[&lsquo;time&rsquo;],6)<br>
+#将time的数据保留6位，例如从20200424保留6位为202004</p>
+<p>数据分组操作</p>
+<p>根据某一列数据的值对其分组并进行求和，求平均，求方差等操作</p>
+<p>dict_mean = dict(df1.groupby([&lsquo;ID&rsquo;]).mean()[&lsquo;index&rsquo;])<br>
+#按照ID号进行分组，将具有相同ID号的行分到一组并求index的均值
+#并保存到一个字典中</p>
+<p>dict_std = dict(df1.groupby([&lsquo;ID&rsquo;]).std()[&lsquo;index&rsquo;])<br>
+#按照ID号进行分组，将具有相同ID号的行分到一组并求index的方差
+#并保存到一个字典中</p>
+<p>选择特定行</p>
+<p>根据条件选择特定行</p>
+<p>df1 = data[data[&lsquo;ID&rsquo;].isin([&lsquo;3&rsquo;])]<br>
+#将ID值为3的行选出</p>
+<p>df1 = data[data[&lsquo;ID&rsquo;].~isin([&lsquo;3&rsquo;])]<br>
+#选择ID值不为3的行</p>
+<p>df1=data[data[&lsquo;index&rsquo;]&gt;=7]<br>
+#选择index值大于等于7的行</p>
+<p>对某列的值进行操作</p>
+<p>df1[&lsquo;new_ID&rsquo;]=df1.ID.apply(lambda x:x-10 if x&gt;=10 else x)<br>
+#对df1的ID值进行操作，当值大于10时减10，否则保持原值
+#对字符串或者其他类型的值也可以类似的进行操作</p>
+<p>空缺值填零</p>
+<p>df1[&lsquo;Index&rsquo;] = df1[&lsquo;Index&rsquo;].fillna(0.0)<br>
+#index中的空缺值补零</p>
+<p>匹配字典</p>
+<p>#dict_id: key是ID，values是name
+df1[&lsquo;name&rsquo;]=df1[&lsquo;ID&rsquo;].map(dict_id)<br>
+#每行的name值等于其ID值在字典中对应的name值</p>
 </article>
     </section>
 
@@ -386,8 +239,8 @@ Nmbd：负责提供基于netblos协议的主机名称解析，以便为windows�
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A510\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B42%E6%9C%886%E6%97%A510\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B46%E6%9C%8822%E6%97%A501\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B46%E6%9C%8822%E6%97%A501\/'; 
           };
 
           (function() { 
@@ -422,7 +275,11 @@ Nmbd：负责提供基于netblos协议的主机名称解析，以便为windows�
       <div class="ui segment toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#安装完成smb相关的软件和依赖之后-只需要通过如下命令即可访问smb服务器">安装完成SMB相关的软件和依赖之后 只需要通过如下命令即可访问smb服务器</a></li>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
