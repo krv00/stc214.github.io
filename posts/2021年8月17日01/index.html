@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Python中CSV文件读写 | STC214</title>
+    <title>VSCode 与 Cmder 配合使用 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,28 +13,28 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="首先读写csv文件需要引入官方库 import csv 本文使用的csv文件随便建立一个即可，使用wps等办公软件或者手撸一个utf-8格式的文件都可以 读文件：" />
+<meta name="description" content="原文链接： https://blog.csdn.net/xcl13014673050/article/details/103118401 https://zhuanlan.zhihu.com/p/82348252 链接1: #设置最终效果 在这里插入图片描述 步骤 复制本地 Cmder路径 D:\0DevSoftware\cmder\Cmder.exe 打开vscode,如下; 在这里插入图片描述 3.输入 terminal.integrated.shell.windows ,如下" />
 
 
 
 <meta name="generator" content="Hugo 0.87.0" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A501/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B48%E6%9C%8817%E6%97%A501/" />
 
 
-<meta property="og:title" content="Python中CSV文件读写" />
-<meta property="og:description" content="首先读写csv文件需要引入官方库 import csv 本文使用的csv文件随便建立一个即可，使用wps等办公软件或者手撸一个utf-8格式的文件都可以 读文件：" />
+<meta property="og:title" content="VSCode 与 Cmder 配合使用" />
+<meta property="og:description" content="原文链接： https://blog.csdn.net/xcl13014673050/article/details/103118401 https://zhuanlan.zhihu.com/p/82348252 链接1: #设置最终效果 在这里插入图片描述 步骤 复制本地 Cmder路径 D:\0DevSoftware\cmder\Cmder.exe 打开vscode,如下; 在这里插入图片描述 3.输入 terminal.integrated.shell.windows ,如下" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A501/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-06-21T18:21:57+08:00" />
-<meta property="article:modified_time" content="2021-06-21T18:21:57+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B48%E6%9C%8817%E6%97%A501/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-17T22:13:58+08:00" />
+<meta property="article:modified_time" content="2021-08-17T22:13:58+08:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Python中CSV文件读写"/>
-<meta name="twitter:description" content="首先读写csv文件需要引入官方库 import csv 本文使用的csv文件随便建立一个即可，使用wps等办公软件或者手撸一个utf-8格式的文件都可以 读文件："/>
+<meta name="twitter:title" content="VSCode 与 Cmder 配合使用"/>
+<meta name="twitter:description" content="原文链接： https://blog.csdn.net/xcl13014673050/article/details/103118401 https://zhuanlan.zhihu.com/p/82348252 链接1: #设置最终效果 在这里插入图片描述 步骤 复制本地 Cmder路径 D:\0DevSoftware\cmder\Cmder.exe 打开vscode,如下; 在这里插入图片描述 3.输入 terminal.integrated.shell.windows ,如下"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -116,13 +116,13 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0095.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0098.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          Python中CSV文件读写
+          VSCode 与 Cmder 配合使用
           <div class="sub header">
             @
             
@@ -130,79 +130,79 @@
             
 
             | 
-                星期一，六月 21 日，2021 年
+                星期二，八月 17 日，2021 年
               
 
-            | 2 分钟阅读
+            | 1 分钟阅读
 
             | 更新于
               
-                星期一，六月 21 日，2021 年
+                星期二，八月 17 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>首先读写csv文件需要引入官方库</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> csv
-</code></pre></div><hr>
-<h2 id="本文使用的csv文件随便建立一个即可使用wps等办公软件或者手撸一个utf-8格式的文件都可以">本文使用的csv文件随便建立一个即可，使用wps等办公软件或者手撸一个utf-8格式的文件都可以</h2>
-<h3 id="读文件">读文件：</h3>
-<p>普通编写的csv文件和wps、word编写的csv文件编码可能不同。</p>
-<p>按照习惯从空白文件编写的一般为utf-8编码。</p>
-<p>word之类的文字办公软件通常如果为中文的话。</p>
-<p>会选择gbk或者gb2312编码。</p>
-<p>这种时候读写时需要标注对应编码。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-f1 <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;py_ssv/test.csv&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>)
-
-<span style="color:#66d9ef">with</span> f1:
-    reader <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>reader(f1)
-
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> reader:
-        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> i:
-            print(j)
-            print(type(j))
-
-print(<span style="color:#e6db74">&#39;#&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">50</span>)
-
-f1 <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;py_ssv/工作簿1.csv&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gbk&#39;</span>)
-
-<span style="color:#66d9ef">with</span> f1:
-    reader <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>reader(f1)
-
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> reader:
-        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> i:
-            print(j)
-            print(type(j))
-
-
-</code></pre></div><hr>
-<h3 id="写文件">写文件：</h3>
-<p>使用csv.writer.writerow可以写一行，通过可迭代的字典或者列表等对象形式，每个元素占用一个格子。</p>
-<p>使用csv.writer.writerow可以写多行，通过可迭代的字典或者列表等对象形式，每一行的元素必须是可迭代对象，可迭代对象中的每个元素占一格。每一个可迭代对象占一行。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">nms <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
- [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>], 
- [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>]]
-
-f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;py_ssv/工作簿1.csv&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>,encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>,newline<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
-
-<span style="color:#66d9ef">with</span> f:
-
-    writer <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>writer(f)
-    writer<span style="color:#f92672">.</span>writerows(nms)
-
-nms <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]
-
-f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;py_ssv/工作簿1.csv&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>,encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>,newline<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
-
-<span style="color:#66d9ef">with</span> f:
-
-    writer <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>writer(f)
-    writer<span style="color:#f92672">.</span>writerow(nms)
-
-
-</code></pre></div><h4 id="可以根据需求构造列表生成式或者合通过其他方法构造可迭代对象对csv文件进行读写操作至于增加和减少只是对原文内容进行增删替换操作等根据需求处理即可">可以根据需求构造列表生成式或者合通过其他方法构造可迭代对象对csv文件进行读写操作。至于增加和减少只是对原文内容进行增删替换操作等。根据需求处理即可</h4>
+      <article class="main"><p>原文链接：</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/xcl13014673050/article/details/103118401">https://blog.csdn.net/xcl13014673050/article/details/103118401</a>
+<a href="https://zhuanlan.zhihu.com/p/82348252">https://zhuanlan.zhihu.com/p/82348252</a></p>
+</blockquote>
+<h2 id="链接1">链接1:</h2>
+<p>#设置最终效果
+在这里插入图片描述
+步骤</p>
+<ol>
+<li>复制本地 Cmder路径 D:\0DevSoftware\cmder\Cmder.exe</li>
+<li>打开vscode,如下;</li>
+</ol>
+<p>在这里插入图片描述
+3.输入 terminal.integrated.shell.windows ,如下图:</p>
+<p>在这里插入图片描述
+4.添加如下配置信息</p>
+<p>&ldquo;terminal.integrated.shell.windows&rdquo;: &ldquo;D:\0DevSoftware\cmder\Cmder.exe&rdquo;
+在这里插入图片描述
+在这里插入图片描述</p>
+<p>over!</p>
+<hr>
+<hr>
+<hr>
+<h2 id="链接2">链接2：</h2>
+<p>总结了一下配置的流程</p>
+<p>安装文件搜索工具：Everything</p>
+<p>在 VSCode 中 ctrl + shift + P 打开命令 搜索 settings</p>
+<p>选择 打开设置 (json) ，如图：</p>
+<p>然后打开这个连接：</p>
+<blockquote>
+<p><a href="https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration#use-cmder-embedded-git-in-vscode">https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration#use-cmder-embedded-git-in-vscode</a></p>
+</blockquote>
+<p>找到 Use Cmder Embedded Git in VSCode ，如图：</p>
+<p>将 三行代码复制到 VSCode 的 settings.json 文件中，如图：</p>
+<p>复制后需要将上面所有带有 [cmder_root] 的路径替换为 Cmder 的根目录</p>
+<p>打开 Everything 搜索 Cmder 找到 Cmder 的安装根目录文件夹</p>
+<p>然后右键复制完整路径和文件名，如图：</p>
+<p>注意：粘贴后需要将目录添加为双斜杠 ，配置后的三行命令应如下所示：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;xxx&#34;</span>: <span style="color:#960050;background-color:#1e0010">xxx</span>,
+    <span style="color:#f92672">&#34;xxx&#34;</span>: <span style="color:#960050;background-color:#1e0010">xxx</span>,
+    <span style="color:#f92672">&#34;git.enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+    <span style="color:#f92672">&#34;git.path&#34;</span>: <span style="color:#e6db74">&#34;D:\\Software\\cmder\\vendor\\git-for-windows\\cmd\\git.exe&#34;</span>,
+    <span style="color:#f92672">&#34;terminal.integrated.shell.windows&#34;</span>: <span style="color:#e6db74">&#34;D:\\Software\\cmder\\vendor\\git-for-windows\\bin\\bash.exe&#34;</span>,
+}
+</code></pre></div><pre><code>&quot;xxx&quot;: xxx 代表已有的其他属性
+</code></pre>
+<p>Cmder 操作快捷键</p>
+<p>复制：选中需要复制的代码即可。</p>
+<p>取消选中状态：Esc 键</p>
+<p>粘贴</p>
+<pre><code>鼠标右键Shift + Insert
+</code></pre>
+<p>Git Bash 操作快捷键</p>
+<p>粘贴</p>
+<pre><code>单击鼠标中键Shift + Insert
+</code></pre>
+<p>复制</p>
+<pre><code>鼠标选中，然后右键鼠标选中，然后按下 Ctrl + Insert</code></pre>
 </article>
     </section>
 
@@ -236,8 +236,8 @@ f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;py_
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B46%E6%9C%8821%E6%97%A501\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B46%E6%9C%8821%E6%97%A501\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B48%E6%9C%8817%E6%97%A501\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B48%E6%9C%8817%E6%97%A501\/'; 
           };
 
           (function() { 
@@ -272,12 +272,8 @@ f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;py_
       <div class="ui segment toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#本文使用的csv文件随便建立一个即可使用wps等办公软件或者手撸一个utf-8格式的文件都可以">本文使用的csv文件随便建立一个即可，使用wps等办公软件或者手撸一个utf-8格式的文件都可以</a>
-      <ul>
-        <li><a href="#读文件">读文件：</a></li>
-        <li><a href="#写文件">写文件：</a></li>
-      </ul>
-    </li>
+    <li><a href="#链接1">链接1:</a></li>
+    <li><a href="#链接2">链接2：</a></li>
   </ul>
 </nav>
       </div>
