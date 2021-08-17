@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 <link rel="canonical" href="https://stc214.github.io/posts/2020_06_30_14_57_42/" />
 
@@ -157,30 +157,30 @@
 <p>PS.这儿请务必注意，不能直接配0.0.0.0，因为如果不做ACL或者TLS认证会导致你的Docker被人扫到后直接控制，有可能被远程创建挖矿容器</p>
 <p>先确认你的机器中是否存在/etc/sysconfig/docker这个配置文件，如果存在的话请修改，在其中的配置选项中加入如下内容<br>
 #这个仅允许本地连接，如果要远程的话改成0.0.0.0，但是如果是公网中远程请你自己配TLS认证或者防火墙加白名单</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">-Htcp://127.0.0.1:2375 -H unix:///var/run/docker.sock  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">-Htcp://127.0.0.1:2375 -H unix:///var/run/docker.sock  
 </code></pre></div><p>但是，很多情况下我们会不存在这个文件(较高版本的Docker不会自动创建这个)，所以我们可以选择另外一种方法，参照Docker文档——&gt;传送门</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vi /etc/docker/daemon.json  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vi /etc/docker/daemon.json  
 </code></pre></div><p>#添加如下，这个仅允许本地连接，如果要远程的话改成0.0.0.0，如果添加的不在最后一行请在末尾加上逗号</p>
 <pre><code>&quot;hosts&quot;: [&quot;tcp://127.0.0.1:2375&quot;, &quot;unix:///var/run/docker.sock&quot;]  
 </code></pre><p>#如果deamon.json不存在请添加完整的json格式</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
  <span style="color:#f92672">&#34;hosts&#34;</span>: [<span style="color:#e6db74">&#34;tcp://127.0.0.1:2375&#34;</span>, <span style="color:#e6db74">&#34;unix:///var/run/docker.sock&#34;</span>]  
 }  
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vi /etc/docker/daemon.json  
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vi /etc/docker/daemon.json  
 </code></pre></div><p>#添加如下，这个仅允许本地连接，如果要远程的话改成0.0.0.0，如果添加的不在最后一行请在末尾加上逗号</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#e6db74">&#34;hosts&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;tcp://127.0.0.1:2375&#34;</span>, <span style="color:#e6db74">&#34;unix:///var/run/docker.sock&#34;</span><span style="color:#f92672">]</span>  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#e6db74">&#34;hosts&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;tcp://127.0.0.1:2375&#34;</span>, <span style="color:#e6db74">&#34;unix:///var/run/docker.sock&#34;</span><span style="color:#f92672">]</span>  
 </code></pre></div><p>#如果deamon.json不存在请添加完整的json格式</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
  <span style="color:#f92672">&#34;hosts&#34;</span>: [<span style="color:#e6db74">&#34;tcp://127.0.0.1:2375&#34;</span>, <span style="color:#e6db74">&#34;unix:///var/run/docker.sock&#34;</span>]  
 }  
 </code></pre></div><p>虽然其实你修改启动脚本在dockerd命令之后添加 -H unix:///var/run/docker.sock -H tcp://127.0.0.1 也可以，但是这样终归不怎么优雅。</p>
 <p>准备工作做完，然后开始安装，使用Docker安装有三种连接方式</p>
 <p>首先是全部都需要做的操作，添加一个数据卷，当然你也可以在docker run的时候手动指定数据挂载路径，效果是一样的，将下面docker run命令中的portainer_data换成宿主机上的具体路径就OK</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker volume create portainer_data  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker volume create portainer_data  
 </code></pre></div><ol>
 <li>使用Unix套接字连接单个Docker(本地)</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">	docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">	docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer  
 	     
 	     
 	docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer  
@@ -203,7 +203,7 @@ docker run -d -p 9000:9000 portainer/portainer -H tcp://127.0.0.1:2375
 </code></pre></div><ol start="3">
 <li>使用Unix套接字或TCP连接Swarm集群(本地或远程)</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">	docker run -d -p 9000:9000 portainer/portainer -H tcp://SWARM集群管理IP:2375  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">	docker run -d -p 9000:9000 portainer/portainer -H tcp://SWARM集群管理IP:2375  
 	  
 	docker run -d -p 9000:9000 portainer/portainer -H tcp://SWARM集群管理IP:2375  
 	<span style="color:#e6db74">```</span>  
@@ -224,7 +224,7 @@ docker service create <span style="color:#ae81ff">\ </span>
 --mount type<span style="color:#f92672">=</span>bind,src<span style="color:#f92672">=</span>//opt/portainer,dst<span style="color:#f92672">=</span>/data <span style="color:#ae81ff">\ </span> 
 portainer/portainer <span style="color:#ae81ff">\ </span> 
 -H unix:///var/run/docker.sock  
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker service create <span style="color:#ae81ff">\ </span> 
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker service create <span style="color:#ae81ff">\ </span> 
 --name portainer <span style="color:#ae81ff">\ </span> 
 --publish 9000:9000 <span style="color:#ae81ff">\ </span> 
 --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">\ </span> 
@@ -414,13 +414,19 @@ portainer/portainer <span style="color:#ae81ff">\ </span>
             
               <div class="item">
                 <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B48%E6%9C%8815%E6%97%A501/">miui12.5 最简单快捷root刷面具&#43;线刷降级&#43;卡米解决教程（测试机小米10至尊版）</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/">Python使用pandas处理csv文件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">2021年6月21日02</a>
+                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">一段js加密处理程序</a>
                 </div>
               </div>
             
@@ -840,54 +846,6 @@ portainer/portainer <span style="color:#ae81ff">\ </span>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020_08_25_19_29_02/">数据清理 分手吧 毒瘤的垃圾</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_18_17_24_27/">K30U答疑暂定</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
                   <a class="item" href="/posts/2020_08_02_23_59_12/">推推乐脚本</a>
                 </div>
               </div>
@@ -907,12 +865,6 @@ portainer/portainer <span style="color:#ae81ff">\ </span>
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             

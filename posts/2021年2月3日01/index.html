@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 <link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%883%E6%97%A501/" />
 
@@ -26,8 +26,8 @@
 <meta property="og:description" content="准备工作 一个可以正常执行的py文件 docker环境 python环境 进入项目文件夹 运行一次py文件对程序进行打包前的测试 在项目主目录下编写Do" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%883%E6%97%A501/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-02-03T01:14:03&#43;08:00" />
-<meta property="article:modified_time" content="2021-02-03T01:14:03&#43;08:00" />
+<meta property="article:published_time" content="2021-02-03T01:14:03+08:00" />
+<meta property="article:modified_time" content="2021-02-03T01:14:03+08:00" />
 
 
 
@@ -162,7 +162,7 @@
 <blockquote>
 <p>需要注意的是这个文件的写法并非如此固定，根据需要可以自行编辑</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  
 # Use an official Python runtime as a parent image  
 FROM python:3.7.6  
   
@@ -191,7 +191,7 @@ CMD [&#34;python&#34;, &#34;Run_all.py&#34;]
 </code></pre></div><ol start="3">
 <li>对项目使用的库进行备份</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 pip freeze &gt; requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple  
   
 </code></pre></div><ol start="4">
@@ -199,7 +199,7 @@ pip freeze &gt; requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 </ol>
 <h2 id="制作镜像">制作镜像</h2>
 <p>1.在项目根目录运行：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 docker build -t imagename Dockerfilepath   
   
 <span style="color:#75715e"># Dockerfilepath：Dockerfile 所在文件夹名称，当前名录为 “.”   </span>
@@ -208,7 +208,7 @@ docker build -t imagename Dockerfilepath
 docker build -t ccpy .  
   
 </code></pre></div><h2 id="对镜像进行运行测试">对镜像进行运行测试</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 <span style="color:#75715e"># 仅仅是本地运行的程序无需联网任务简单如此运行即可  </span>
 docker run -d --name c_name imagename  
   
@@ -428,13 +428,19 @@ docker import xxx.tar containr:v1 <br>
             
               <div class="item">
                 <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B48%E6%9C%8815%E6%97%A501/">miui12.5 最简单快捷root刷面具&#43;线刷降级&#43;卡米解决教程（测试机小米10至尊版）</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/">Python使用pandas处理csv文件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">2021年6月21日02</a>
+                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">一段js加密处理程序</a>
                 </div>
               </div>
             
@@ -854,54 +860,6 @@ docker import xxx.tar containr:v1 <br>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020_08_25_19_29_02/">数据清理 分手吧 毒瘤的垃圾</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_18_17_24_27/">K30U答疑暂定</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
                   <a class="item" href="/posts/2020_08_02_23_59_12/">推推乐脚本</a>
                 </div>
               </div>
@@ -921,12 +879,6 @@ docker import xxx.tar containr:v1 <br>
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             

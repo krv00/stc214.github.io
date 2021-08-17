@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 <link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%885%E6%97%A504/" />
 
@@ -26,8 +26,8 @@
 <meta property="og:description" content="原帖链接：https://blog.csdn.net/zhshh123/article/details/85063916 系统备份步骤 简述 全卡" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%885%E6%97%A504/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-02-05T22:46:52&#43;08:00" />
-<meta property="article:modified_time" content="2021-02-05T22:46:52&#43;08:00" />
+<meta property="article:published_time" content="2021-02-05T22:46:52+08:00" />
+<meta property="article:modified_time" content="2021-02-05T22:46:52+08:00" />
 
 
 
@@ -196,13 +196,13 @@ root分区：ext4格式，挂载点/，存放一些安装的软件和库文件�
 dosfstools：fat32分区格式化工具<br>
 parted &amp; kpartx：虚拟磁盘工具<br>
 pv：显示进度</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 sudo apt-get -y install rsync dosfstools parted kpartx pv  
   
 </code></pre></div><p>存储镜像到U盘</p>
 <p>img备份完成后反正是要拷贝出来的，所以直接将img文件创建在U盘上。并且避免了备份时自己备份自己，可能带来的问题。<br>
 下面这段脚本，可以直接带上u盘参数，也可以直接默认/dev/sda1。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 <span style="color:#75715e">#mount USB device  </span>
 usbmount<span style="color:#f92672">=</span>/mnt  
 mkdir -p $usbmount  
@@ -230,7 +230,7 @@ echo <span style="color:#e6db74">&#34;备份文件位置：</span>$img<span styl
 在这里插入图片描述</p>
 <p>先读取当前系统分区的大小，获取boot size和root size，并计算总空间。因为需要留一部分空间，供备份过程中临时使用，以及开机后需要的正常运行和执行命令的空间。所有总大小扩大1.3倍。<br>
 dd命令用来创建img镜像，pv命令用来显示进度，该过程需要等待较长的一段时间。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 bootsz<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>df -P | grep /boot | awk <span style="color:#e6db74">&#39;{print $2}&#39;</span><span style="color:#e6db74">`</span>  
 rootsz<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>df -P | grep /dev/root | awk <span style="color:#e6db74">&#39;{print $3}&#39;</span><span style="color:#e6db74">`</span>  
 totalsz<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>echo $bootsz $rootsz | awk <span style="color:#e6db74">&#39;{print int(($1+$2)*1.3)}&#39;</span><span style="color:#e6db74">`</span>  
@@ -239,7 +239,7 @@ echo <span style="color:#e6db74">&#34;start create img，total size=</span><span
 pv -tpreb /dev/zero |sudo dd of<span style="color:#f92672">=</span>$img bs<span style="color:#f92672">=</span>1K count<span style="color:#f92672">=</span>$totalsz  
   
 </code></pre></div><p>对img文件分区</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 bootstart<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sudo fdisk -l /dev/mmcblk0 | grep mmcblk0p1 | awk <span style="color:#e6db74">&#39;{print $2}&#39;</span><span style="color:#e6db74">`</span>  
 bootend<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sudo fdisk -l /dev/mmcblk0 | grep mmcblk0p1 | awk <span style="color:#e6db74">&#39;{print $3}&#39;</span><span style="color:#e6db74">`</span>  
 rootstart<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sudo fdisk -l /dev/mmcblk0 | grep mmcblk0p2 | awk <span style="color:#e6db74">&#39;{print $2}&#39;</span><span style="color:#e6db74">`</span>  
@@ -250,7 +250,7 @@ sudo parted $img --script -- mkpart primary fat32 <span style="color:#e6db74">${
 sudo parted $img --script -- mkpart primary ext4 <span style="color:#e6db74">${</span>rootstart<span style="color:#e6db74">}</span>s -1  
   
 </code></pre></div><p>格式化img文件中的分区</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 loopdevice<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>sudo losetup -f --show $img<span style="color:#e6db74">`</span>  
 device<span style="color:#f92672">=</span>/dev/mapper/<span style="color:#e6db74">`</span>sudo kpartx -va $loopdevice | sed -E <span style="color:#e6db74">&#39;s/.*(loop[0-9])p.*/\1/g&#39;</span> | head -1<span style="color:#e6db74">`</span>  
 sleep <span style="color:#ae81ff">5</span>  
@@ -259,7 +259,7 @@ sudo mkfs.ext4 <span style="color:#e6db74">${</span>device<span style="color:#e6
 echo <span style="color:#e6db74">&#34;format finish&#34;</span>  
   
 </code></pre></div><p>备份boot分区</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 mountb<span style="color:#f92672">=</span>$usbmount/backup_boot/  
 mkdir -p $mountb   
 sudo mount -t vfat <span style="color:#e6db74">${</span>device<span style="color:#e6db74">}</span>p1 $mountb  
@@ -268,7 +268,7 @@ sync
 echo <span style="color:#e6db74">&#34;...Boot partition done&#34;</span>  
   
 </code></pre></div><p>备份root分区</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 mountr<span style="color:#f92672">=</span>$usbmount/backup_root/    
 mkdir -p $mountr     
 sudo mount -t ext4 <span style="color:#e6db74">${</span>device<span style="color:#e6db74">}</span>p2 $mountr  
@@ -336,7 +336,7 @@ rm -rf $mountb $mountr
 echo <span style="color:#e6db74">&#34;==== All done. You can un-plug the backup device&#34;</span>  
   
 </code></pre></div><p>完整的压缩备份脚本</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 <span style="color:#75715e">#!/bin/sh  </span>
   
 echo <span style="color:#f92672">=====================</span> part 1, install tools <span style="color:#f92672">===============================</span>  
@@ -648,13 +648,19 @@ echo <span style="color:#e6db74">&#34;==== All done. You can un-plug the backup 
             
               <div class="item">
                 <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B48%E6%9C%8815%E6%97%A501/">miui12.5 最简单快捷root刷面具&#43;线刷降级&#43;卡米解决教程（测试机小米10至尊版）</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/">Python使用pandas处理csv文件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">2021年6月21日02</a>
+                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">一段js加密处理程序</a>
                 </div>
               </div>
             
@@ -1074,54 +1080,6 @@ echo <span style="color:#e6db74">&#34;==== All done. You can un-plug the backup 
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020_08_25_19_29_02/">数据清理 分手吧 毒瘤的垃圾</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_18_17_24_27/">K30U答疑暂定</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
                   <a class="item" href="/posts/2020_08_02_23_59_12/">推推乐脚本</a>
                 </div>
               </div>
@@ -1141,12 +1099,6 @@ echo <span style="color:#e6db74">&#34;==== All done. You can un-plug the backup 
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             

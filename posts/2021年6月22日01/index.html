@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 <link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/" />
 
@@ -26,8 +26,8 @@
 <meta property="og:description" content="原文：https://blog.csdn.net/weixin_39126107/article/details/105737387 ytho" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-06-22T16:43:08&#43;08:00" />
-<meta property="article:modified_time" content="2021-06-22T16:43:08&#43;08:00" />
+<meta property="article:published_time" content="2021-06-22T16:43:08+08:00" />
+<meta property="article:modified_time" content="2021-06-22T16:43:08+08:00" />
 
 
 
@@ -145,9 +145,9 @@
 
       <article class="main"><h4 id="原文httpsblogcsdnnetweixin_39126107articledetails105737387">原文：https://blog.csdn.net/weixin_39126107/article/details/105737387</h4>
 <p>ython中引入pandas包可以很方便的对csv格式的数据进行处理</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
 </code></pre></div><p>csv文件的读写</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;D:\data</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">rain.scv&#39;</span>,names<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;ID&#39;</span>,<span style="color:#e6db74">&#39;index&#39;</span>],dtype<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;ID&#39;</span>:pd<span style="color:#f92672">.</span>np<span style="color:#f92672">.</span>string_},index_col<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;D:\data</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">rain.scv&#39;</span>,names<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;ID&#39;</span>,<span style="color:#e6db74">&#39;index&#39;</span>],dtype<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;ID&#39;</span>:pd<span style="color:#f92672">.</span>np<span style="color:#f92672">.</span>string_},index_col<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)    
 <span style="color:#75715e">#names指定列名，dtype指定读取的格式，index_col指定索引的位置</span>
   
   
@@ -162,31 +162,31 @@ data<span style="color:#f92672">.</span>to_csv(<span style="color:#e6db74">&#39;
   
 </code></pre></div><p>csv文件的拼接</p>
 <p>对记录相同类型数据的csv文件进行简单的内容拼接</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df3 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([df1,df2],axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df3 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([df1,df2],axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)  
 <span style="color:#75715e">#axis=0表示行拼接，axis=1表示列拼接</span>
 </code></pre></div><p>concat只是进行简单的内容拼接，比如df1有100行，df2有100行，那么拼接后的df3有200行
 csv文件的合并</p>
 <p>两个csv文件按照某一列的值进行合并，例如相同ID号的数据进行合并</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df3 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(df1,df2,on<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;ID&#39;</span>],how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df3 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(df1,df2,on<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;ID&#39;</span>],how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)  
 <span style="color:#75715e">#将df1和df2中ID号相同的行进行合并</span>
 </code></pre></div><p>删除某些列</p>
 <p>将csv文件中的某些列删除</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1 <span style="color:#f92672">=</span> df1<span style="color:#f92672">.</span>drop([<span style="color:#e6db74">&#39;grid_x&#39;</span>,<span style="color:#e6db74">&#39;grid_y&#39;</span>],axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1 <span style="color:#f92672">=</span> df1<span style="color:#f92672">.</span>drop([<span style="color:#e6db74">&#39;grid_x&#39;</span>,<span style="color:#e6db74">&#39;grid_y&#39;</span>],axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)  
 <span style="color:#75715e">#grid_x,grid_y是要删除的列，axis=1表示列删除</span>
 </code></pre></div><p>删除重复行</p>
 <p>删除指定列值相同的行</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1<span style="color:#f92672">=</span> df1<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;ID&#39;</span>,<span style="color:#e6db74">&#39;index&#39;</span>],keep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>)  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1<span style="color:#f92672">=</span> df1<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;ID&#39;</span>,<span style="color:#e6db74">&#39;index&#39;</span>],keep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>)  
 <span style="color:#75715e">#删除ID，index的值相同的行，重复行保留第一个</span>
 </code></pre></div><p>改变列值的数据类型</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1[<span style="color:#e6db74">&#39;hour&#39;</span>] <span style="color:#f92672">=</span> df1[<span style="color:#e6db74">&#39;hour&#39;</span>]<span style="color:#f92672">.</span>astype(str)  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1[<span style="color:#e6db74">&#39;hour&#39;</span>] <span style="color:#f92672">=</span> df1[<span style="color:#e6db74">&#39;hour&#39;</span>]<span style="color:#f92672">.</span>astype(str)  
 <span style="color:#75715e">##将df1中的hour属性的类型改为str</span>
 </code></pre></div><p>数据特定长度截断</p>
 <p>对某一列的数据的长度进行截取</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1[<span style="color:#e6db74">&#39;time&#39;</span>] <span style="color:#f92672">=</span> round(df1[<span style="color:#e6db74">&#39;time&#39;</span>],<span style="color:#ae81ff">6</span>)  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1[<span style="color:#e6db74">&#39;time&#39;</span>] <span style="color:#f92672">=</span> round(df1[<span style="color:#e6db74">&#39;time&#39;</span>],<span style="color:#ae81ff">6</span>)  
 <span style="color:#75715e">#将time的数据保留6位，例如从20200424保留6位为202004</span>
 </code></pre></div><p>数据分组操作</p>
 <p>根据某一列数据的值对其分组并进行求和，求平均，求方差等操作</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dict_mean <span style="color:#f92672">=</span> dict(df1<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#39;ID&#39;</span>])<span style="color:#f92672">.</span>mean()[<span style="color:#e6db74">&#39;index&#39;</span>])  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dict_mean <span style="color:#f92672">=</span> dict(df1<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#39;ID&#39;</span>])<span style="color:#f92672">.</span>mean()[<span style="color:#e6db74">&#39;index&#39;</span>])  
 <span style="color:#75715e">#按照ID号进行分组，将具有相同ID号的行分到一组并求index的均值</span>
 <span style="color:#75715e">#并保存到一个字典中</span>
   
@@ -195,7 +195,7 @@ dict_std <span style="color:#f92672">=</span> dict(df1<span style="color:#f92672
 <span style="color:#75715e">#并保存到一个字典中</span>
 </code></pre></div><p>选择特定行</p>
 <p>根据条件选择特定行</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1 <span style="color:#f92672">=</span> data[data[<span style="color:#e6db74">&#39;ID&#39;</span>]<span style="color:#f92672">.</span>isin([<span style="color:#e6db74">&#39;3&#39;</span>])]  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1 <span style="color:#f92672">=</span> data[data[<span style="color:#e6db74">&#39;ID&#39;</span>]<span style="color:#f92672">.</span>isin([<span style="color:#e6db74">&#39;3&#39;</span>])]  
 <span style="color:#75715e">#将ID值为3的行选出</span>
   
 df1 <span style="color:#f92672">=</span> data[data[<span style="color:#e6db74">&#39;ID&#39;</span>]<span style="color:#f92672">.~</span>isin([<span style="color:#e6db74">&#39;3&#39;</span>])]  
@@ -204,14 +204,14 @@ df1 <span style="color:#f92672">=</span> data[data[<span style="color:#e6db74">&
 df1<span style="color:#f92672">=</span>data[data[<span style="color:#e6db74">&#39;index&#39;</span>]<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">7</span>]  
 <span style="color:#75715e">#选择index值大于等于7的行</span>
 </code></pre></div><p>对某列的值进行操作</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1[<span style="color:#e6db74">&#39;new_ID&#39;</span>]<span style="color:#f92672">=</span>df1<span style="color:#f92672">.</span>ID<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x:x<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span> <span style="color:#66d9ef">if</span> x<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">10</span> <span style="color:#66d9ef">else</span> x)  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1[<span style="color:#e6db74">&#39;new_ID&#39;</span>]<span style="color:#f92672">=</span>df1<span style="color:#f92672">.</span>ID<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x:x<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span> <span style="color:#66d9ef">if</span> x<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">10</span> <span style="color:#66d9ef">else</span> x)  
 <span style="color:#75715e">#对df1的ID值进行操作，当值大于10时减10，否则保持原值</span>
 <span style="color:#75715e">#对字符串或者其他类型的值也可以类似的进行操作</span>
 </code></pre></div><p>空缺值填零</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1[<span style="color:#e6db74">&#39;Index&#39;</span>] <span style="color:#f92672">=</span> df1[<span style="color:#e6db74">&#39;Index&#39;</span>]<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">0.0</span>)  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1[<span style="color:#e6db74">&#39;Index&#39;</span>] <span style="color:#f92672">=</span> df1[<span style="color:#e6db74">&#39;Index&#39;</span>]<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">0.0</span>)  
 <span style="color:#75715e">#index中的空缺值补零</span>
 </code></pre></div><p>匹配字典</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#dict_id: key是ID，values是name</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#dict_id: key是ID，values是name</span>
 df1[<span style="color:#e6db74">&#39;name&#39;</span>]<span style="color:#f92672">=</span>df1[<span style="color:#e6db74">&#39;ID&#39;</span>]<span style="color:#f92672">.</span>map(dict_id)  
 <span style="color:#75715e">#每行的name值等于其ID值在字典中对应的name值</span>
 </code></pre></div></article>
@@ -405,13 +405,19 @@ df1[<span style="color:#e6db74">&#39;name&#39;</span>]<span style="color:#f92672
             
               <div class="item">
                 <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B48%E6%9C%8815%E6%97%A501/">miui12.5 最简单快捷root刷面具&#43;线刷降级&#43;卡米解决教程（测试机小米10至尊版）</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/">Python使用pandas处理csv文件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">2021年6月21日02</a>
+                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">一段js加密处理程序</a>
                 </div>
               </div>
             
@@ -831,54 +837,6 @@ df1[<span style="color:#e6db74">&#39;name&#39;</span>]<span style="color:#f92672
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020_08_25_19_29_02/">数据清理 分手吧 毒瘤的垃圾</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_18_17_24_27/">K30U答疑暂定</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
                   <a class="item" href="/posts/2020_08_02_23_59_12/">推推乐脚本</a>
                 </div>
               </div>
@@ -898,12 +856,6 @@ df1[<span style="color:#e6db74">&#39;name&#39;</span>]<span style="color:#f92672
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             

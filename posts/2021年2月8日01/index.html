@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 <link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%888%E6%97%A501/" />
 
@@ -26,8 +26,8 @@
 <meta property="og:description" content="在Windows上使用qemu虚拟机，通过此配置，可以使qemu中的虚拟机能连接互联网，并且也可以和Windows主机通信。此方式类似于Vm" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%888%E6%97%A501/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-02-08T01:37:06&#43;08:00" />
-<meta property="article:modified_time" content="2021-02-08T01:37:06&#43;08:00" />
+<meta property="article:published_time" content="2021-02-08T01:37:06+08:00" />
+<meta property="article:modified_time" content="2021-02-08T01:37:06+08:00" />
 
 
 
@@ -163,7 +163,7 @@
 <p>在win10安装qemu程序。 <br>
 使用win10的 cmd进入qemu程序的目录 <br>
 使用类似如下命令打开树莓派虚拟机进行操作：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    
 cd /&lt;qemu_path&gt;/    
     
 .<span style="color:#ae81ff">\q</span>emu-system-arm -kernel kernel-qemu-4.19.50-buster -cpu arm1176 -m <span style="color:#ae81ff">256</span> -M versatilepb -dtb versatile-pb-buster.dtb -no-reboot -append “root<span style="color:#f92672">=</span>/dev/sda2 panic<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> rootfstype<span style="color:#f92672">=</span>ext4 rw” -net nic -net tap,ifname<span style="color:#f92672">=</span>tap0 -hda 2021-01-11-raspios-buster-armhf-lite.img    
@@ -172,7 +172,7 @@ cd /&lt;qemu_path&gt;/
 <ul>
 <li>正常启动之后最好直接通过</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  
 sudo passwd pi  
 ...  
   
@@ -401,13 +401,19 @@ sudo passwd --unlock root
             
               <div class="item">
                 <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B48%E6%9C%8815%E6%97%A501/">miui12.5 最简单快捷root刷面具&#43;线刷降级&#43;卡米解决教程（测试机小米10至尊版）</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/">Python使用pandas处理csv文件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">2021年6月21日02</a>
+                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">一段js加密处理程序</a>
                 </div>
               </div>
             
@@ -827,54 +833,6 @@ sudo passwd --unlock root
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020_08_25_19_29_02/">数据清理 分手吧 毒瘤的垃圾</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_18_17_24_27/">K30U答疑暂定</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
                   <a class="item" href="/posts/2020_08_02_23_59_12/">推推乐脚本</a>
                 </div>
               </div>
@@ -894,12 +852,6 @@ sudo passwd --unlock root
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             

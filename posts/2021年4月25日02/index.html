@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 <link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8825%E6%97%A502/" />
 
@@ -26,8 +26,8 @@
 <meta property="og:description" content="原文链接：https://zhuanlan.zhihu.com/p/314727150 iperf3是一款带宽测试工具，它支持调节各种参数，比" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8825%E6%97%A502/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-04-25T15:50:02&#43;08:00" />
-<meta property="article:modified_time" content="2021-04-25T15:50:02&#43;08:00" />
+<meta property="article:published_time" content="2021-04-25T15:50:02+08:00" />
+<meta property="article:modified_time" content="2021-04-25T15:50:02+08:00" />
 
 
 
@@ -148,7 +148,7 @@
 <h3 id="一安装">一、安装</h3>
 <p>操作系统：Ubuntu20.04LTS</p>
 <p>打开终端，直接输入</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#sudo apt install iperf3</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#sudo apt install iperf3</span>
 </code></pre></div><h3 id="二使用方法">二、使用方法</h3>
 <p><strong>环境假设：</strong></p>
 <p>假设两台云服务器A（内）和B（外），我们通过笔记本电脑终端分别ssh远程连接上云服务器A和B。</p>
@@ -156,10 +156,10 @@
 <p>B（外）IP地址：10.10.0.2</p>
 <p><strong>目的一：测试TCP吞吐量</strong></p>
 <p>1、先让B（外）做server端，开启iperf服务器模式，指定TCP端口1314：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -s -i 1 -p 1314</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -s -i 1 -p 1314</span>
 </code></pre></div><p><img src="https://pic2.zhimg.com/80/v2-cad8b476092dd23e9eecb4a9ba67f3b5_720w.jpg" alt=""></p>
 <p>2、然后打开A（内）做client端，连接服务器端1314端口：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -c 10.10.0.2 -i 1 -t 60 -p 1314</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -c 10.10.0.2 -i 1 -t 60 -p 1314</span>
 </code></pre></div><p><img src="https://pic3.zhimg.com/80/v2-f2bf47489388bb30221c9ba8e3b10a5a_720w.png" alt=""></p>
 <p>经过60秒后，A（内）client端得到结果如下图：</p>
 <p><img src="https://pic4.zhimg.com/80/v2-923a9d74082ec5faa1ea359049b489d7_720w.png" alt=""></p>
@@ -171,24 +171,24 @@
 <p>③ Bandwidth是时间间隔里的传输速率。</p>
 <p><strong>目的二：测试UDP吞吐量</strong></p>
 <p>1、B（外）server端开启iperf的服务器模式：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -s -i 1 -p 1314</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -s -i 1 -p 1314</span>
 </code></pre></div><p>2、A（内）client端启动iperf的客户端模式，连接服务器端：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -u -c 10.10.0.2 -b 100m -t 60 -p 1314</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -u -c 10.10.0.2 -b 100m -t 60 -p 1314</span>
 </code></pre></div><p>A(内)客户端模式测得到数据如下：</p>
 <p><img src="https://pic4.zhimg.com/80/v2-13ee3a116c7e1f62cddf0aa63938dfaf_720w.jpg" alt=""></p>
 <hr>
 <p>B（外）服务器模式监听得到结果如下：</p>
 <p><img src="https://pic2.zhimg.com/80/v2-ebd0fee1f6cf6efb611d1ee4a4db31e1_720w.jpg" alt=""></p>
 <p><strong>目的三：进行上下行带宽测试（TCP双向传输）</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -c 192.168.0.120 -d -t 60</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -c 192.168.0.120 -d -t 60</span>
 </code></pre></div><p><strong>目的四：测试多线程TCP吞吐量</strong></p>
 <p>如果没有指定发送方式，iPerf客户端只会使用单线程。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -c 192.168.0.120 -P 30 -t 60</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -c 192.168.0.120 -P 30 -t 60</span>
 </code></pre></div><p><strong>目的五：测试多线程UDP吞吐量</strong></p>
 <p>如果没有指定发送方式，iPerf客户端只会使用单线程。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -u -c  192.168.1.1 -b 5M -P 30 -t 60</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -u -c  192.168.1.1 -b 5M -P 30 -t 60</span>
 </code></pre></div><p><strong>目的六：测试上下行带宽（UDP双向传输）</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -u -c  192.168.1.1 -b 100M -d -t 60</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#iperf3 -u -c  192.168.1.1 -b 100M -d -t 60</span>
 </code></pre></div><p><strong>三、iperf3常用参数（测试足够了）</strong></p>
 <p>（1）-s,&ndash;server：iperf服务器模式，默认启动的监听端口为5201，eg：iperf -s</p>
 <p>（2）-c,&ndash;client host：iperf客户端模式，host是server端地址，eg：iperf -c 222.35.11.23</p>
@@ -391,13 +391,19 @@
             
               <div class="item">
                 <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B48%E6%9C%8815%E6%97%A501/">miui12.5 最简单快捷root刷面具&#43;线刷降级&#43;卡米解决教程（测试机小米10至尊版）</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/">Python使用pandas处理csv文件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">2021年6月21日02</a>
+                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">一段js加密处理程序</a>
                 </div>
               </div>
             
@@ -817,54 +823,6 @@
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020_08_25_19_29_02/">数据清理 分手吧 毒瘤的垃圾</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_18_17_24_27/">K30U答疑暂定</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
                   <a class="item" href="/posts/2020_08_02_23_59_12/">推推乐脚本</a>
                 </div>
               </div>
@@ -884,12 +842,6 @@
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             

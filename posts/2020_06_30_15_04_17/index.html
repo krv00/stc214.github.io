@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 <link rel="canonical" href="https://stc214.github.io/posts/2020_06_30_15_04_17/" />
 
@@ -140,7 +140,7 @@
       </header>
 
       <article class="main"><h2 id="apt换源">apt换源</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 备份源地址文件  </span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 备份源地址文件  </span>
 cp /etc/apt/sources.list /etc/apt/sources.list.bak  
 <span style="color:#75715e"># 编辑源地址文件  </span>
 vim /etc/apt/sources.list  
@@ -151,12 +151,12 @@ mirrors.aliyun.com  阿里云  <br>
 mirrors.tuna.tsinghua.edu.cn  清华 <br>
 mirrors.ustc.edu.cn  中科大<br>
 mirrors.163.com  163</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">apt update  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">apt update  
 apt upgrade -y  
 </code></pre></div><h5 id="设定静态ip">设定静态ip</h5>
 <p>默认情况下 网络配置文件内容如下<br>
 ubuntu1804:~$ cat /etc/netplan/50-cloud-init.yaml</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">network:</span>  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">network:</span>  
     <span style="color:#960050;background-color:#1e0010">ethernets:</span>  
         <span style="color:#960050;background-color:#1e0010">eth</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">:</span>  
             <span style="color:#960050;background-color:#1e0010">dhcp</span><span style="color:#ae81ff">4</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">true</span>  
@@ -165,13 +165,13 @@ ubuntu1804:~$ cat /etc/netplan/50-cloud-init.yaml</p>
     <span style="color:#960050;background-color:#1e0010">version:</span> <span style="color:#ae81ff">2</span>  
   
 </code></pre></div><p>复制一份文件备份以防万一</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bak  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bak  
 </code></pre></div><p>修改文件内容</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /etc/netplan/50-cloud-init.yaml  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /etc/netplan/50-cloud-init.yaml  
 </code></pre></div><p>关闭dhcp4</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">dhcp4: false  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">dhcp4: false  
 </code></pre></div><p>设置静态ip 掩码网关和dns服务器（一定要填dns服务器，否则会导致docker出现莫名其妙的500错误）成品为：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">network:</span>  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">network:</span>  
     <span style="color:#960050;background-color:#1e0010">ethernets:</span>  
         <span style="color:#960050;background-color:#1e0010">eth</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">:</span>  
             <span style="color:#960050;background-color:#1e0010">dhcp</span><span style="color:#ae81ff">4</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">false</span>  
@@ -184,18 +184,18 @@ ubuntu1804:~$ cat /etc/netplan/50-cloud-init.yaml</p>
     <span style="color:#960050;background-color:#1e0010">version:</span> <span style="color:#ae81ff">2</span>  
 </code></pre></div><p>不报错的话<br>
 保存后重启网络服务</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">netplan apply  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">netplan apply  
   
 <span style="color:#75715e"># 可以通过以下命令或者重新链接终端确定是否修改成功  </span>
 ifconfig -a  
 </code></pre></div><h2 id="设置开机启动脚本">设置开机启动脚本</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /etc/rc.local  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /etc/rc.local  
 <span style="color:#75715e"># 在 exit 0这一行之前添加内容即可 如：  </span>
 sudo docker images   
 <span style="color:#75715e"># 或者挂载磁盘的命令  </span>
 </code></pre></div><p>启动脚本扩展：</p>
 <h5 id="如果没有rcloacl文件">如果没有rc.loacl文件</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">       <span style="color:#960050;background-color:#1e0010">ubuntu</span> <span style="color:#ae81ff">18.04</span> <span style="color:#960050;background-color:#1e0010">不再使用</span> <span style="color:#960050;background-color:#1e0010">inited</span> <span style="color:#960050;background-color:#1e0010">管理系统，改用</span> <span style="color:#960050;background-color:#1e0010">systemd</span>   
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">       <span style="color:#960050;background-color:#1e0010">ubuntu</span> <span style="color:#ae81ff">18.04</span> <span style="color:#960050;background-color:#1e0010">不再使用</span> <span style="color:#960050;background-color:#1e0010">inited</span> <span style="color:#960050;background-color:#1e0010">管理系统，改用</span> <span style="color:#960050;background-color:#1e0010">systemd</span>   
        <span style="color:#960050;background-color:#1e0010">虽然是进步，但很多人（包括我）还是喜欢用原本简单方便的</span> <span style="color:#960050;background-color:#1e0010">rc.local</span> <span style="color:#960050;background-color:#1e0010">作为系统启动脚本</span>  
        <span style="color:#960050;background-color:#1e0010">systemd</span> <span style="color:#960050;background-color:#1e0010">里面有个</span> <span style="color:#960050;background-color:#1e0010">rc-local.service</span> <span style="color:#960050;background-color:#1e0010">文件，里面有写到</span> <span style="color:#960050;background-color:#1e0010">rc.local</span> <span style="color:#960050;background-color:#1e0010">的启动顺序和行为，但是没用写加载这个</span> <span style="color:#960050;background-color:#1e0010">rc-local.service</span> <span style="color:#960050;background-color:#1e0010">。也就是说我们需要给它写上这个。</span>  
   
@@ -228,7 +228,7 @@ sudo docker images
 <span style="color:#960050;background-color:#1e0010">到此为止，和以前一样的</span> <span style="color:#960050;background-color:#1e0010">`rc.local`</span> <span style="color:#960050;background-color:#1e0010">就完成了！</span>  
   
 </code></pre></div><h2 id="设置定时重启">设置定时重启</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp /etc/crontab /etc/crontab.bak  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp /etc/crontab /etc/crontab.bak  
 <span style="color:#75715e"># 在文件最后一行之前的部分添加内容即可  </span>
 <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">2</span> * * * reboot /bin/sh  
 </code></pre></div><p>定时重启扩展内容<br>
@@ -429,13 +429,19 @@ sudo docker images
             
               <div class="item">
                 <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B48%E6%9C%8815%E6%97%A501/">miui12.5 最简单快捷root刷面具&#43;线刷降级&#43;卡米解决教程（测试机小米10至尊版）</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/">Python使用pandas处理csv文件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">2021年6月21日02</a>
+                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">一段js加密处理程序</a>
                 </div>
               </div>
             
@@ -855,54 +861,6 @@ sudo docker images
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020_08_25_19_29_02/">数据清理 分手吧 毒瘤的垃圾</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_18_17_24_27/">K30U答疑暂定</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
                   <a class="item" href="/posts/2020_08_02_23_59_12/">推推乐脚本</a>
                 </div>
               </div>
@@ -922,12 +880,6 @@ sudo docker images
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             

@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 <link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8817%E6%97%A502/" />
 
@@ -26,8 +26,8 @@
 <meta property="og:description" content="好像国内的镜像好多都访问不了，可以试试这个 { “registry-mirrors”: [“https://docker.mirrors.ustc" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B42%E6%9C%8817%E6%97%A502/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-02-17T02:42:18&#43;08:00" />
-<meta property="article:modified_time" content="2021-02-17T02:42:18&#43;08:00" />
+<meta property="article:published_time" content="2021-02-17T02:42:18+08:00" />
+<meta property="article:modified_time" content="2021-02-17T02:42:18+08:00" />
 
 
 
@@ -144,7 +144,7 @@
       </header>
 
       <article class="main"><p>好像国内的镜像好多都访问不了，可以试试这个</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">  
 {  
 <span style="color:#960050;background-color:#1e0010">“registry-mirrors”:</span> <span style="color:#960050;background-color:#1e0010">[“https://docker.mirrors.ustc.edu.cn/”]</span>  
 }  
@@ -162,26 +162,26 @@ Docker 中国官方镜像加速</p>
 <p>不同版本的docker更换镜像的方法不一样</p>
 <p>这里用的docker18版本</p>
 <p>查看版本命令</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>root@localhost docker<span style="color:#f92672">]</span><span style="color:#75715e"># docker --version  </span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>root@localhost docker<span style="color:#f92672">]</span><span style="color:#75715e"># docker --version  </span>
 Docker version 18.04.0-ce-rc1, build 0c7f7c6  
 </code></pre></div><p>在/etc/docker/目录下新建daemon.json文件，如果有就修改</p>
 <blockquote>
 <p>/etc/docker/daemon.json</p>
 </blockquote>
 <p>在daemon.json文件添加如下内容：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
   <span style="color:#f92672">&#34;registry-mirrors&#34;</span>: [<span style="color:#e6db74">&#34;https://registry.docker-cn.com&#34;</span>]  
 }  
 </code></pre></div><p>然后重启</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  
 <span style="color:#f92672">[</span>root@localhost docker<span style="color:#f92672">]</span><span style="color:#75715e"># service docker restart  </span>
   
 </code></pre></div><p>试试pull是不是变快了…</p>
 <p>直接设置docker的daemon进程的默认镜像地址…,可以试试…</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  
 $ docker --registry-mirror<span style="color:#f92672">=</span>https://registry.docker-cn.com daemon  
 </code></pre></div><p>直接指定镜像地址下载image也是可以的</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ docker pull registry.docker-cn.com/library/ubuntu:16.04  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ docker pull registry.docker-cn.com/library/ubuntu:16.04  
 </code></pre></div><p>后面的library/ubuntu:16.04就是</p>
 <hr>
 <p>原文链接：链接：https://www.jianshu.com/p/34d3b4568059</p>
@@ -190,20 +190,20 @@ $ docker --registry-mirror<span style="color:#f92672">=</span>https://registry.d
 <p>正主：Docker 官方镜像加速：http://www.docker-cn.com/registry-mirror</p>
 <p>在这里打算记录下使用国内源快速搭建docker的方法：Daocloud极速下载真的是快啊～～～<br>
 在 Linux上 安装 Docker</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL https://get.daocloud.io/docker | sh   
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL https://get.daocloud.io/docker | sh   
 </code></pre></div><p>适用于Ubuntu，Debian,Centos等大部分Linux，会3小时同步一次Docker官方资源</p>
 <p>当然有时候不知道为什么daocloud响应不了，用阿里云的：</p>
 <p>用阿里云的：</p>
 <p>安装最新版本的Docker Engine</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet| sh -  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet| sh -  
 </code></pre></div><p>安装1.9.1版本的Docker Engine</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet| sh /dev/stdin 1.9.1  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet| sh /dev/stdin 1.9.1  
 </code></pre></div><p>如果你的机器是阿里云主机，那么可以通过以下脚本，通过内网地址进行安装。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/intranet| sh -  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/intranet| sh -  
 </code></pre></div><p>安装 Docker Compose</p>
 <p>Docker Compose存放在Git Hub，不太稳定。</p>
 <p>你可以也通过执行下面的命令，高速安装Docker Compose。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -L https://get.daocloud.io/docker/compose/releases/download/1.14.0/docker-compose-<span style="color:#e6db74">`</span>uname -s<span style="color:#e6db74">`</span>-<span style="color:#e6db74">`</span>uname -m<span style="color:#e6db74">`</span> &gt; /usr/local/bin/docker-compose  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -L https://get.daocloud.io/docker/compose/releases/download/1.14.0/docker-compose-<span style="color:#e6db74">`</span>uname -s<span style="color:#e6db74">`</span>-<span style="color:#e6db74">`</span>uname -m<span style="color:#e6db74">`</span> &gt; /usr/local/bin/docker-compose  
   
 chmod  +x  /usr/local/bin/docker-compose  
 </code></pre></div><p>你可以通过修改URL中的版本，可以自定义您的需要的版本。<br>
@@ -212,13 +212,13 @@ Docker更换镜像源</p>
 选择一：老东家的  daocloud：</p>
 <p>老东家提供的daocloud加速器，需要用户注册，每个用户每个月限制10GB</p>
 <p>不过也感觉非常快，注册也相当容器，不需要验证邮箱噢～～～&gt;-&lt;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://67e93489.m.daocloud.io  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://67e93489.m.daocloud.io  
   
 curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f7291398.m.daocloud.io  
 </code></pre></div><p>具体来说  daocloud的模式就是将你的id也就是shell123转化成67e93489，其格式为：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl-sSL https://get.daocloud.io/daotools/set_mirror.sh | sh-shttp://<span style="color:#f92672">{</span>your_id<span style="color:#f92672">}</span>.m.daocloud.io  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl-sSL https://get.daocloud.io/daotools/set_mirror.sh | sh-shttp://<span style="color:#f92672">{</span>your_id<span style="color:#f92672">}</span>.m.daocloud.io  
 </code></pre></div><p>事实上，实际改的是</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
 ExecStart<span style="color:#f92672">=</span>/usr/bin/docker-current daemon --registry-mirror<span style="color:#f92672">=</span>http://<span style="color:#f92672">{</span>your_id<span style="color:#f92672">}</span>.m.daocloud.io<span style="color:#ae81ff">\ </span> 
 
 </code></pre></div><p>记得设置后，需要重新启动  sudo service docker restart<br>
@@ -227,7 +227,7 @@ ExecStart<span style="color:#f92672">=</span>/usr/bin/docker-current daemon --re
 <p>配置方法：</p>
 <p>新版的 Docker 使用 /etc/docker/daemon.json（Linux） 或者 %programdata%\docker\config\daemon.json（Windows） 来配置 Daemon。</p>
 <p>请在该配置文件中加入（没有该文件的话，请先建一个）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
   
 <span style="color:#f92672">&#34;registry-mirrors&#34;</span>: [<span style="color:#e6db74">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span>]  
   
@@ -242,18 +242,18 @@ ExecStart<span style="color:#f92672">=</span>/usr/bin/docker-current daemon --re
 </blockquote>
 <p>这一行 然后重启docker服务即可.</p>
 <p>选择三：网易蜂巢的镜像源，个人感觉上面的镜像好少，而且有时候pull他们的镜像还会失败，不过如果要写dockerfile的话，可以到上面参考参考，dockerfile他们到时写的很详细噢～</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$~ sudo echo<span style="color:#e6db74">&#34;DOCKER_OPTS=\&#34;--registry-mirror=http://hub-mirror.c.163.com\&#34;&#34;</span>&gt;&gt;/etc/default/docker  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$~ sudo echo<span style="color:#e6db74">&#34;DOCKER_OPTS=\&#34;--registry-mirror=http://hub-mirror.c.163.com\&#34;&#34;</span>&gt;&gt;/etc/default/docker  
   
 $~ service docker restart  
 </code></pre></div><p>最后一个选择：阿里的alicloud</p>
 <p>个人感觉繁琐的是在注册上：不光要注册为阿里云的用户，还得加入开发者平台。不过提着眼睛做完这些以后，它的服务还真是不错，基本1MB/s的pull速度(部分原因可能是因为我也在杭州吧)。配置方法跟daocloud类似，也是开通加速器以后给一个url。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ExecStart<span style="color:#f92672">=</span>/usr/bin/docker-current daemon --registry-mirror<span style="color:#f92672">=</span>https://<span style="color:#f92672">{</span>your_id<span style="color:#f92672">}</span>.mirror.aliyuncs.com<span style="color:#ae81ff">\ </span> 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ExecStart<span style="color:#f92672">=</span>/usr/bin/docker-current daemon --registry-mirror<span style="color:#f92672">=</span>https://<span style="color:#f92672">{</span>your_id<span style="color:#f92672">}</span>.mirror.aliyuncs.com<span style="color:#ae81ff">\ </span> 
 </code></pre></div><p>阿里的你们可以去尝试，如果不是阿里云的EMS用户的话，个人不太推荐。<br>
 所以本人 强烈推荐！！强烈推荐！！使用ustc的！！！！<br>
 #Docker-machine安装</p>
 <p>参照官网的教程：https://docs.docker.com/machine/install-machine/</p>
 <p>linux用户安装方式为：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$~  curl-L https://github.com/docker/machine/releases/download/v0.10.0/docker-machine-<span style="color:#e6db74">`</span>uname -s<span style="color:#e6db74">`</span>-<span style="color:#e6db74">`</span>uname -m<span style="color:#e6db74">`</span> &gt;/tmp/docker-machine <span style="color:#f92672">&amp;&amp;</span>chmod +x /tmp/docker-machine <span style="color:#f92672">&amp;&amp;</span>  sudo cp /tmp/docker-machine /usr/local/bin/docker-machine  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$~  curl-L https://github.com/docker/machine/releases/download/v0.10.0/docker-machine-<span style="color:#e6db74">`</span>uname -s<span style="color:#e6db74">`</span>-<span style="color:#e6db74">`</span>uname -m<span style="color:#e6db74">`</span> &gt;/tmp/docker-machine <span style="color:#f92672">&amp;&amp;</span>chmod +x /tmp/docker-machine <span style="color:#f92672">&amp;&amp;</span>  sudo cp /tmp/docker-machine /usr/local/bin/docker-machine  
 </code></pre></div></article>
     </section>
 
@@ -433,13 +433,19 @@ $~ service docker restart
             
               <div class="item">
                 <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B48%E6%9C%8815%E6%97%A501/">miui12.5 最简单快捷root刷面具&#43;线刷降级&#43;卡米解决教程（测试机小米10至尊版）</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8822%E6%97%A501/">Python使用pandas处理csv文件</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">2021年6月21日02</a>
+                  <a class="item" href="/posts/2021%E5%B9%B46%E6%9C%8821%E6%97%A502/">一段js加密处理程序</a>
                 </div>
               </div>
             
@@ -859,54 +865,6 @@ $~ service docker restart
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020_08_25_19_29_02/">数据清理 分手吧 毒瘤的垃圾</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_18_17_24_27/">K30U答疑暂定</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_15_17_10_52/">K30U 从小米之家入手开箱</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_11_15_33_40/">小米十周年K30U</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
                   <a class="item" href="/posts/2020_08_02_23_59_12/">推推乐脚本</a>
                 </div>
               </div>
@@ -926,12 +884,6 @@ $~ service docker restart
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
-                </div>
-              </div>
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             
