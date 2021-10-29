@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.87.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 <link rel="canonical" href="https://stc214.github.io/posts/2020_06_30_14_57_42/" />
 
@@ -161,7 +161,7 @@
 </code></pre></div><p>但是，很多情况下我们会不存在这个文件(较高版本的Docker不会自动创建这个)，所以我们可以选择另外一种方法，参照Docker文档——&gt;传送门</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vi /etc/docker/daemon.json  
 </code></pre></div><p>#添加如下，这个仅允许本地连接，如果要远程的话改成0.0.0.0，如果添加的不在最后一行请在末尾加上逗号</p>
-<pre><code>&quot;hosts&quot;: [&quot;tcp://127.0.0.1:2375&quot;, &quot;unix:///var/run/docker.sock&quot;]  
+<pre tabindex="0"><code>&quot;hosts&quot;: [&quot;tcp://127.0.0.1:2375&quot;, &quot;unix:///var/run/docker.sock&quot;]  
 </code></pre><p>#如果deamon.json不存在请添加完整的json格式</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
  <span style="color:#f92672">&#34;hosts&#34;</span>: [<span style="color:#e6db74">&#34;tcp://127.0.0.1:2375&#34;</span>, <span style="color:#e6db74">&#34;unix:///var/run/docker.sock&#34;</span>]  
@@ -411,6 +411,18 @@ portainer/portainer <span style="color:#ae81ff">\ </span>
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B410%E6%9C%8829%E6%97%A501/">树莓派官方系统安装docker</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B410%E6%9C%8826%E6%97%A501/">树莓派用U盘安装openwrt并使用U盘引导（无需SD卡）</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">

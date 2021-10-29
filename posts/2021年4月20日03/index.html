@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.87.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 <link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8820%E6%97%A503/" />
 
@@ -154,34 +154,34 @@
 <p>上面是可以安装的版本。那么我肯定是安装latest的。</p>
 <h2 id="安装">安装</h2>
 <p>那么执行代码如下:</p>
-<pre><code>docker pull mysql/mysql-server
+<pre tabindex="0"><code>docker pull mysql/mysql-server
 </code></pre><p>如果想要安装5.7版本的，可以执行以下命令：</p>
-<pre><code>docker pull mysql/mysql-server:5.7
+<pre tabindex="0"><code>docker pull mysql/mysql-server:5.7
 </code></pre><p>好了等待之后，就安装成功了，接下来，我们看看我们在本地存储的镜像。</p>
-<pre><code>$ docker image ls
+<pre tabindex="0"><code>$ docker image ls
 REPOSITORY                                      TAG                 IMAGE ID            CREATED             SIZE
 mysql/mysql-server                              latest              1fdf3806e715        5 weeks ago         309MB
 </code></pre><p>接下来执行创建容器的命令。</p>
-<pre><code>docker run --name mysql1 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql/mysql-server:latest
+<pre tabindex="0"><code>docker run --name mysql1 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql/mysql-server:latest
 </code></pre><p>在这里要注意的是最后的<code>:latest</code>，这个是可省略的。如果刚才安装的是指定版本，比如5.7，那么我们就需要执行以下命令了：</p>
-<pre><code>docker run --name mysql1 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql/mysql-server:5.7
+<pre tabindex="0"><code>docker run --name mysql1 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql/mysql-server:5.7
 </code></pre><p>好了，安装完成，就可以使用PHP进行连接测试了。</p>
-<pre><code>$pdo = new \PDO(&quot;mysql:host=127.0.0.1;dbname=mysql&quot;, &quot;root&quot;, &quot;123456&quot;);
+<pre tabindex="0"><code>$pdo = new \PDO(&quot;mysql:host=127.0.0.1;dbname=mysql&quot;, &quot;root&quot;, &quot;123456&quot;);
 $data = $pdo-&gt;query(&quot;select version()&quot;);
 foreach($data as $item) {
     var_dump($item);
 }
 </code></pre><p>会提示如下错误：</p>
-<pre><code>Host '172.17.0.1' is not allowed to connect to this MySQL server
+<pre tabindex="0"><code>Host '172.17.0.1' is not allowed to connect to this MySQL server
 </code></pre><p>那么我们只能登录mysql进行修改数据了，首先是登录mysql，密码就是我们设置的123456：</p>
-<pre><code>$ docker exec -it mysql1 mysql -uroot -p
+<pre tabindex="0"><code>$ docker exec -it mysql1 mysql -uroot -p
 Enter password:
 </code></pre><p>然后执行如下命令：</p>
-<pre><code>use mysql;
+<pre tabindex="0"><code>use mysql;
 update user set host = '%' where user = &quot;root&quot;;
 flush privileges;
 </code></pre><p>我们继续测试PHP脚本，发现链接就正常了：</p>
-<pre><code>$ php ./demo.php
+<pre tabindex="0"><code>$ php ./demo.php
 /Users/baoguoxiao/demo.php:5:
 array(2) {
   'version()' =&gt;
@@ -190,17 +190,17 @@ array(2) {
   string(6) &quot;8.0.12&quot;
 }
 </code></pre><h2 id="查询日志">查询日志</h2>
-<pre><code>docker logs mysql1
+<pre tabindex="0"><code>docker logs mysql1
 </code></pre><h2 id="登录shell">登录shell</h2>
-<pre><code>docker exec -it mysql1 bash
+<pre tabindex="0"><code>docker exec -it mysql1 bash
 </code></pre><h2 id="停止容器">停止容器</h2>
-<pre><code>docker stop mysql1
+<pre tabindex="0"><code>docker stop mysql1
 </code></pre><h2 id="开启容器">开启容器</h2>
-<pre><code>docker start mysql1
+<pre tabindex="0"><code>docker start mysql1
 </code></pre><h2 id="重启容器">重启容器</h2>
-<pre><code>docker restart mysql1
+<pre tabindex="0"><code>docker restart mysql1
 </code></pre><h2 id="删除容器">删除容器</h2>
-<pre><code>docker stop mysql1
+<pre tabindex="0"><code>docker stop mysql1
 docker rm mysql1
 </code></pre><h2 id="从另外的容器中连接mysql">从另外的容器中连接mysql</h2>
 <p>暂无</p>
@@ -417,6 +417,18 @@ $ docker logs mysql1 2&gt;&amp;1 | grep GENERATED GENERATED ROOT PASSWORD: Axegh
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B410%E6%9C%8829%E6%97%A501/">树莓派官方系统安装docker</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B410%E6%9C%8826%E6%97%A501/">树莓派用U盘安装openwrt并使用U盘引导（无需SD卡）</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">

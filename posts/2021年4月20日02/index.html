@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.87.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 <link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B44%E6%9C%8820%E6%97%A502/" />
 
@@ -149,15 +149,15 @@
 <p>前提：磁盘已挂载成功</p>
 <p><strong>方法一：</strong></p>
 <p>1、停止docker 服务</p>
-<pre><code>service docker stop
+<pre tabindex="0"><code>service docker stop
 </code></pre><p>2、备份数据到新的存放路径</p>
-<pre><code>cp -r /var/lib/docker/* /mnt/docker
+<pre tabindex="0"><code>cp -r /var/lib/docker/* /mnt/docker
 </code></pre><p>3、备份 /var/lib/docker 路径</p>
-<pre><code>mv /var/lib/docker  /var/lib/dockerbak}
+<pre tabindex="0"><code>mv /var/lib/docker  /var/lib/dockerbak}
 </code></pre><p>4、创建软连接</p>
-<pre><code>ln -s /mnt/docker /var/lib/docker
+<pre tabindex="0"><code>ln -s /mnt/docker /var/lib/docker
 </code></pre><p>5、启动docker</p>
-<pre><code>service docker start
+<pre tabindex="0"><code>service docker start
 </code></pre><p>如果docker完整，并可用，可删除原来的备份文件</p>
 <p>此方法，启动Docker时发现存储目录依旧是/var/lib/docker，但是实际上是存储在数据盘的，你可以在数据盘上看到容量变化。</p>
 <p><strong>方法二：</strong></p>
@@ -354,6 +354,18 @@
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B410%E6%9C%8829%E6%97%A501/">树莓派官方系统安装docker</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2021%E5%B9%B410%E6%9C%8826%E6%97%A501/">树莓派用U盘安装openwrt并使用U盘引导（无需SD卡）</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">
