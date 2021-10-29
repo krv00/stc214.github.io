@@ -154,18 +154,18 @@ $ sudo sh get-docker.sh</p>
 <p>原文： <a href="https://blog.csdn.net/duanhwonline/article/details/107702731">https://blog.csdn.net/duanhwonline/article/details/107702731</a></p>
 <p>配置Docker 中国官方镜像加速</p>
 <p>（1） 创建或修改 /etc/docker/daemon.json 文件</p>
-<p>vi /etc/docker/daemon.json
-{
-&ldquo;registry-mirrors&rdquo;: [
-&ldquo;http://hub-mirror.c.163.com&rdquo;,
-&ldquo;https://dockerhub.azk8s.cn&rdquo;,
-&ldquo;https://docker.mirrors.ustc.edu.cn&rdquo;,
-&ldquo;https://registry.docker-cn.com&rdquo;,
-&ldquo;https://090yfl9h.mirror.aliyuncs.com&rdquo;</p>
-<pre><code> ]
-</code></pre>
-<p>}</p>
-<p>保存以上内容后，reload该json文件
+<blockquote>
+<p>vi /etc/docker/daemon.json</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
+    <span style="color:#f92672">&#34;registry-mirrors&#34;</span>: [  
+         <span style="color:#e6db74">&#34;http://hub-mirror.c.163.com&#34;</span>,  
+         <span style="color:#e6db74">&#34;https://dockerhub.azk8s.cn&#34;</span>,  
+    	<span style="color:#e6db74">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span>,  
+    	<span style="color:#e6db74">&#34;https://registry.docker-cn.com&#34;</span>,  
+     ]  
+}
+</code></pre></div><p>保存以上内容后，reload该json文件
 systemctl daemon-reload</p>
 <p>重启docker
 systemctl restart docker.service</p>
@@ -801,6 +801,30 @@ systemctl restart docker.service</p>
             
               <div class="item">
                 <div class="content">
+                  <a class="item" href="/posts/2020_08_13_16_44_25/">朱孝天患基因疾病，朱孝天目前身体状况如何？</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_08_13_16_03_33/">百度长回答000003</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_08_13_15_08_22/">给孩子购买童书时，是否有必要买带拼音的？</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_08_08_16_18_09/">PS系列01</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a class="item" href="/posts/2020_07_13_22_21_50/">topaz全家桶_等软件汇总</a>
                 </div>
               </div>
@@ -814,6 +838,12 @@ systemctl restart docker.service</p>
               <div class="item">
                 <div class="content">
                   <a class="item" href="/posts/2020_07_01_22_13_49/">用hugo把个人博客建立到gitpages上</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="/posts/2020_06_30_15_03_34/">Ubuntu - crontab 命令定时执行任务</a>
                 </div>
               </div>
             
