@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Fri, 29 Oct 2021 15:07:26 +0800</lastBuildDate><atom:link href="https://stc214.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Oct 2021 15:15:40 +0800</lastBuildDate><atom:link href="https://stc214.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lanrargi docker版架设</title>
+      <link>https://stc214.github.io/posts/2021%E5%B9%B410%E6%9C%8831%E6%97%A501/</link>
+      <pubDate>Sun, 31 Oct 2021 15:15:40 +0800</pubDate>
+      
+      <guid>https://stc214.github.io/posts/2021%E5%B9%B410%E6%9C%8831%E6%97%A501/</guid>
+      <description>原文为B站网友提供的思路 使用命令和镜像如下： docker run -d -p 3000:3000 \ -v /mnt/sda3/lanraragi/database:/root/lanraragi/database \ -v /mnt/sdb1/SHOTA/COMIC:/root/lanraragi/content \ --name lanraragi_cn \ dezhao/lanraragi_cn 缺点： 1.排序不变的情况下需要手动搜索想看的档案 2.移动端的io</description>
+    </item>
+    
     <item>
       <title>树莓派官方系统安装docker</title>
       <link>https://stc214.github.io/posts/2021%E5%B9%B410%E6%9C%8829%E6%97%A501/</link>
