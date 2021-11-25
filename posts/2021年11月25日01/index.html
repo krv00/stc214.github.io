@@ -156,8 +156,8 @@
 <h2 id="拉取镜像">拉取镜像</h2>
 <p>docekr pull dezhao/ubooquity</p>
 <h1 id="使用镜像">使用镜像</h1>
-<p>1.文件夹配置<br>
-需要配置config 和漫画文件夹<br>
+<h3 id="1文件夹配置">1.文件夹配置</h3>
+<p>需要配置config 和漫画文件夹<br>
 根据个人需求可以配置电子书目录</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 -v /&lt;docker外路径&gt; : /&lt;docker内路径&gt;
@@ -168,8 +168,8 @@
 -v /home/ubooquity/comics:/comics
 </code></pre></div><p>更换主题只需要在config/themes文件夹中解压即可识别。</p>
 <hr>
-<p>2.端口配置
-2202 2203</p>
+<h3 id="2端口配置">2.端口配置</h3>
+<p>2202 2203</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 -p /&lt;docker外端口&gt; : /&lt;docker内端口&gt;
 
@@ -179,8 +179,8 @@
 
 </code></pre></div><p>其他配置可以根据个人需求微调</p>
 <hr>
-<p>3.运行命令：<br>
-如有图形界面仅需要根据个人情况配置即可完成</p>
+<h3 id="3运行命令">3.运行命令：</h3>
+<p>如有图形界面仅需要根据个人情况配置即可完成</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 docker run -d -t <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>--restart unless-stopped <span style="color:#ae81ff">\
@@ -194,7 +194,23 @@ docker run -d -t <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>-e MAXMEM<span style="color:#f92672">=</span>1.5G <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>dezhao/ubooquity
 
-</code></pre></div></article>
+</code></pre></div><hr>
+<h1 id="使用配置">使用配置</h1>
+<h3 id="1-后台">1. 后台</h3>
+<blockquote>
+<p>https://&lt;host_ip&gt;:2203/admin</p>
+</blockquote>
+<p>1&gt; 进入后首先配置漫画选项卡<br>
+2&gt; 将配置为漫画存放目录的路径点击分享<br>
+3&gt; 勾选页面最上方的分享选项<br>
+4&gt; 保存并重启</p>
+<h3 id="2-扫描">2. 扫描</h3>
+<p>等待一般选项卡中扫描完全部内容后方可改变主题（未扫描完时改变主题后点击应用并重启会导致扫重头再来）</p>
+<h3 id="3-正常使用">3. 正常使用</h3>
+<blockquote>
+<p>https://&lt;host_ip&gt;:2202</p>
+</blockquote>
+</article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
@@ -264,6 +280,26 @@ docker run -d -t <span style="color:#ae81ff">\
         <nav id="TableOfContents">
   <ul>
     <li><a href="#拉取镜像">拉取镜像</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1文件夹配置">1.文件夹配置</a></li>
+        <li><a href="#2端口配置">2.端口配置</a></li>
+        <li><a href="#3运行命令">3.运行命令：</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-后台">1. 后台</a></li>
+        <li><a href="#2-扫描">2. 扫描</a></li>
+        <li><a href="#3-正常使用">3. 正常使用</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
