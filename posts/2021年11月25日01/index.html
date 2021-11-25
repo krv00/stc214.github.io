@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>lanrargi docker版架设 | STC214</title>
+    <title>docker 架设汉化版ubooquity | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,28 +13,28 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="原文为B站网友提供的思路 使用命令和镜像如下： docker run -d -p 3000:3000 \ -v /mnt/sda3/lanraragi/database:/root/lanraragi/database \ -v /mnt/sdb1/SHOTA/COMIC:/root/lanraragi/content \ --name lanraragi_cn \ dezhao/lanraragi_cn 缺点： 1.排序不变的情况下需要手动搜索想看的档案 2.移动端的io" />
+<meta name="description" content="原文： https://www.bilibili.com/read/cv10595812/ http://yuanfangblog.xyz/technology/236.html 视频： https://www.bilibili.com/video/BV16z4y1Z7xu/ docker镜像：dezhao/ubooquity 拉取镜像 docekr pull dezhao/ubooquity 使用镜像 1.文件夹配置 需要配置config 和漫画文件夹 根据" />
 
 
 
 <meta name="generator" content="Hugo 0.88.1" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B410%E6%9C%8831%E6%97%A501/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B411%E6%9C%8825%E6%97%A501/" />
 
 
-<meta property="og:title" content="lanrargi docker版架设" />
-<meta property="og:description" content="原文为B站网友提供的思路 使用命令和镜像如下： docker run -d -p 3000:3000 \ -v /mnt/sda3/lanraragi/database:/root/lanraragi/database \ -v /mnt/sdb1/SHOTA/COMIC:/root/lanraragi/content \ --name lanraragi_cn \ dezhao/lanraragi_cn 缺点： 1.排序不变的情况下需要手动搜索想看的档案 2.移动端的io" />
+<meta property="og:title" content="docker 架设汉化版ubooquity" />
+<meta property="og:description" content="原文： https://www.bilibili.com/read/cv10595812/ http://yuanfangblog.xyz/technology/236.html 视频： https://www.bilibili.com/video/BV16z4y1Z7xu/ docker镜像：dezhao/ubooquity 拉取镜像 docekr pull dezhao/ubooquity 使用镜像 1.文件夹配置 需要配置config 和漫画文件夹 根据" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B410%E6%9C%8831%E6%97%A501/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-10-31T15:15:40+08:00" />
-<meta property="article:modified_time" content="2021-10-31T15:15:40+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B411%E6%9C%8825%E6%97%A501/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-25T18:22:46+08:00" />
+<meta property="article:modified_time" content="2021-11-25T18:22:46+08:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="lanrargi docker版架设"/>
-<meta name="twitter:description" content="原文为B站网友提供的思路 使用命令和镜像如下： docker run -d -p 3000:3000 \ -v /mnt/sda3/lanraragi/database:/root/lanraragi/database \ -v /mnt/sdb1/SHOTA/COMIC:/root/lanraragi/content \ --name lanraragi_cn \ dezhao/lanraragi_cn 缺点： 1.排序不变的情况下需要手动搜索想看的档案 2.移动端的io"/>
+<meta name="twitter:title" content="docker 架设汉化版ubooquity"/>
+<meta name="twitter:description" content="原文： https://www.bilibili.com/read/cv10595812/ http://yuanfangblog.xyz/technology/236.html 视频： https://www.bilibili.com/video/BV16z4y1Z7xu/ docker镜像：dezhao/ubooquity 拉取镜像 docekr pull dezhao/ubooquity 使用镜像 1.文件夹配置 需要配置config 和漫画文件夹 根据"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -116,13 +116,13 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0102.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0103.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          lanrargi docker版架设
+          docker 架设汉化版ubooquity
           <div class="sub header">
             @
             
@@ -130,38 +130,71 @@
             
 
             | 
-                星期日，十月 31 日，2021 年
+                星期四，十一月 25 日，2021 年
               
 
             | 1 分钟阅读
 
             | 更新于
               
-                星期日，十月 31 日，2021 年
+                星期四，十一月 25 日，2021 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><p>原文为B站网友提供的思路</p>
-<p>使用命令和镜像如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-docker run -d -p 3000:3000 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-v /mnt/sda3/lanraragi/database:/root/lanraragi/database <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-v /mnt/sdb1/SHOTA/COMIC:/root/lanraragi/content   <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>--name lanraragi_cn <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>dezhao/lanraragi_cn
-
-</code></pre></div><p>缺点：</p>
+      <article class="main"><p>原文：</p>
 <blockquote>
-<p>1.排序不变的情况下需要手动搜索想看的档案<br>
-2.移动端的ios版本需要14+ 老的苹果手机不可以安装<br>
-3.ios移动端chrom网页查看会导致一些奇怪的bug<br>
-4.正确点击翻页需要设置无限卷动模式（可用夸克浏览器）</p>
+<p><a href="https://www.bilibili.com/read/cv10595812/">https://www.bilibili.com/read/cv10595812/</a><br>
+<a href="http://yuanfangblog.xyz/technology/236.html">http://yuanfangblog.xyz/technology/236.html</a></p>
 </blockquote>
+<p>视频：</p>
+<blockquote>
+<p><a href="https://www.bilibili.com/video/BV16z4y1Z7xu/">https://www.bilibili.com/video/BV16z4y1Z7xu/</a></p>
+</blockquote>
+<p>docker镜像：dezhao/ubooquity</p>
+<h2 id="拉取镜像">拉取镜像</h2>
+<p>docekr pull dezhao/ubooquity</p>
+<h1 id="使用镜像">使用镜像</h1>
+<p>1.文件夹配置<br>
+需要配置config 和漫画文件夹<br>
+根据个人需求可以配置电子书目录</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+-v /&lt;docker外路径&gt; : /&lt;docker内路径&gt;
+
+如：
+
+-v /home/ubooquity/config:/config
+-v /home/ubooquity/comics:/comics
+</code></pre></div><p>更换主题只需要在config/themes文件夹中解压即可识别。</p>
 <hr>
-<p>考虑如何使用时间顺序排序</p>
-</article>
+<p>2.端口配置
+2202 2203</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+-p /&lt;docker外端口&gt; : /&lt;docker内端口&gt;
+
+如：
+
+-p 2202:2202
+
+</code></pre></div><p>其他配置可以根据个人需求微调</p>
+<hr>
+<p>3.运行命令：<br>
+如有图形界面仅需要根据个人情况配置即可完成</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+docker run -d -t <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--restart unless-stopped <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--name ubooquity <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-p 2202:2202 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-p 2203:2203 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-v &lt;path to data&gt;:/config <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-v &lt;path to books&gt;:/books <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-v &lt;path to comics&gt;:/comics <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-e TZ<span style="color:#f92672">=</span>Asia/Shanghai <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-e MAXMEM<span style="color:#f92672">=</span>1.5G <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>dezhao/ubooquity
+
+</code></pre></div></article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
@@ -194,8 +227,8 @@ docker run -d -p 3000:3000 <span style="color:#ae81ff">\
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B410%E6%9C%8831%E6%97%A501\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B410%E6%9C%8831%E6%97%A501\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B411%E6%9C%8825%E6%97%A501\/';  
+            this.page.identifier = '\/posts\/2021%E5%B9%B411%E6%9C%8825%E6%97%A501\/'; 
           };
 
           (function() { 
@@ -226,6 +259,14 @@ docker run -d -p 3000:3000 <span style="color:#ae81ff">\
   </div>
   <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
     
+    
+      <div class="ui segment toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#拉取镜像">拉取镜像</a></li>
+  </ul>
+</nav>
+      </div>
     
 
     <article class="dream-header">
