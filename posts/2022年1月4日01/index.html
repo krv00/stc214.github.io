@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>树莓派官方系统安装docker | STC214</title>
+    <title>2022年1月4日01 | STC214</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,28 +13,28 @@
 
 
 <meta name="author" content="STC214" />
-<meta name="description" content="安装docker 原文： https://blog.csdn.net/crxk_/article/details/109755321 两行代码即可 $ curl -fsSL https://get.docker.com -o get-docker.sh $ sudo sh get-docker.sh 给docker换源 原文： https://blog.csdn.net/duanhwonline/article/details/107702731 配置Docker 中国官方镜像加速 （1） 创建或修改 /etc/docker/daemon.json 文件 vi /etc/docker/daemon.json" />
+<meta name="description" content="本文转载自辣椒酱的个人主页和B站频道，仅用作自我记录，方便查询。 辣椒酱个人网站：http://www.blendermagic.cn 配套文件" />
 
 
 
 <meta name="generator" content="Hugo 0.91.2" />
 
-<link rel="canonical" href="https://stc214.github.io/posts/2021%E5%B9%B410%E6%9C%8829%E6%97%A501/" />
+<link rel="canonical" href="https://stc214.github.io/posts/2022%E5%B9%B41%E6%9C%884%E6%97%A501/" />
 
 
-<meta property="og:title" content="树莓派官方系统安装docker" />
-<meta property="og:description" content="安装docker 原文： https://blog.csdn.net/crxk_/article/details/109755321 两行代码即可 $ curl -fsSL https://get.docker.com -o get-docker.sh $ sudo sh get-docker.sh 给docker换源 原文： https://blog.csdn.net/duanhwonline/article/details/107702731 配置Docker 中国官方镜像加速 （1） 创建或修改 /etc/docker/daemon.json 文件 vi /etc/docker/daemon.json" />
+<meta property="og:title" content="2022年1月4日01" />
+<meta property="og:description" content="本文转载自辣椒酱的个人主页和B站频道，仅用作自我记录，方便查询。 辣椒酱个人网站：http://www.blendermagic.cn 配套文件" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://stc214.github.io/posts/2021%E5%B9%B410%E6%9C%8829%E6%97%A501/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-10-29T15:07:26+08:00" />
-<meta property="article:modified_time" content="2021-10-29T15:07:26+08:00" />
+<meta property="og:url" content="https://stc214.github.io/posts/2022%E5%B9%B41%E6%9C%884%E6%97%A501/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-04T17:28:19+08:00" />
+<meta property="article:modified_time" content="2022-01-04T17:28:19+08:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="树莓派官方系统安装docker"/>
-<meta name="twitter:description" content="安装docker 原文： https://blog.csdn.net/crxk_/article/details/109755321 两行代码即可 $ curl -fsSL https://get.docker.com -o get-docker.sh $ sudo sh get-docker.sh 给docker换源 原文： https://blog.csdn.net/duanhwonline/article/details/107702731 配置Docker 中国官方镜像加速 （1） 创建或修改 /etc/docker/daemon.json 文件 vi /etc/docker/daemon.json"/>
+<meta name="twitter:title" content="2022年1月4日01"/>
+<meta name="twitter:description" content="本文转载自辣椒酱的个人主页和B站频道，仅用作自我记录，方便查询。 辣椒酱个人网站：http://www.blendermagic.cn 配套文件"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -116,13 +116,13 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/img/0101.jpg);"></div>
+      <div class="cover-img" style="background-image: url(/img/0104.jpg);"></div>
     </section>
     
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          树莓派官方系统安装docker
+          2022年1月4日01
           <div class="sub header">
             @
             
@@ -130,45 +130,31 @@
             
 
             | 
-                星期五，十月 29 日，2021 年
+                星期二，一月 4 日，2022 年
               
 
-            | 1 分钟阅读
+            | 2 分钟阅读
 
             | 更新于
               
-                星期五，十月 29 日，2021 年
+                星期二，一月 4 日，2022 年
               
           </div>
         </h1>
       </header>
 
-      <article class="main"><h2 id="安装docker">安装docker</h2>
-<p>原文： <a href="https://blog.csdn.net/crxk_/article/details/109755321">https://blog.csdn.net/crxk_/article/details/109755321</a></p>
-<p>两行代码即可</p>
-<blockquote>
-<p>$ curl -fsSL <a href="https://get.docker.com">https://get.docker.com</a> -o get-docker.sh<br>
-$ sudo sh get-docker.sh</p>
-</blockquote>
-<h2 id="给docker换源">给docker换源</h2>
-<p>原文： <a href="https://blog.csdn.net/duanhwonline/article/details/107702731">https://blog.csdn.net/duanhwonline/article/details/107702731</a></p>
-<p>配置Docker 中国官方镜像加速</p>
-<p>（1） 创建或修改 /etc/docker/daemon.json 文件</p>
-<blockquote>
-<p>vi /etc/docker/daemon.json</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
-    <span style="color:#f92672">&#34;registry-mirrors&#34;</span>: [  
-         <span style="color:#e6db74">&#34;http://hub-mirror.c.163.com&#34;</span>,  
-         <span style="color:#e6db74">&#34;https://dockerhub.azk8s.cn&#34;</span>,  
-    	<span style="color:#e6db74">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span>,  
-    	<span style="color:#e6db74">&#34;https://registry.docker-cn.com&#34;</span>,  
-     ]  
-}
-</code></pre></div><p>保存以上内容后，reload该json文件
-systemctl daemon-reload</p>
-<p>重启docker
-systemctl restart docker.service</p>
+      <article class="main"><p>本文转载自辣椒酱的个人主页和B站频道，仅用作自我记录，方便查询。</p>
+<p>辣椒酱个人网站：http://www.blendermagic.cn
+配套文件与交流：https://shimo.im/docs/ckYQ8xq6JhVtrGjh
+视频教程地址：https://www.bilibili.com/video/BV1zh411Y7LX</p>
+<hr>
+<h2 id="黑铁骑士物品清单">黑铁骑士Ⅱ物品清单</h2>
+<p>声明以下内容均为根据开源协议进行的无偿分享，请勿用于商业售卖。
+-课程配套文件链接：https://pan.baidu.com/s/13mBMXIn8uz54yY85asPslA 提取码：2333 <br>
+·Machin3工具中文手册（最新 0.9 辣椒分支下载）https://www.blendermagic.cn/#/article/5311ab7b-481b-11eb-95ed-0242ac110004 <br>
+-Blender2.9快捷键合集在线版https://shimo.im/sheets/oSMugmKgw2M9nFCn/MODOC/<br>
+交流群：733128283(有一些QQ异地登陆等原因，发送的申请会被腾讯标记为风险账号并过滤，所以如果长时间没通过，请写信给辣椒酱：1132692358@qq.com)-常见问题搜索因为封印和机器人的高频调用会影响到用户体验。<br>
+所以在这里将搜索服务放到了辣椒的网站上网站地址：https://www.blendermagic.cn/#/</p>
 </article>
     </section>
 
@@ -202,8 +188,8 @@ systemctl restart docker.service</p>
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/stc214.github.io\/posts\/2021%E5%B9%B410%E6%9C%8829%E6%97%A501\/';  
-            this.page.identifier = '\/posts\/2021%E5%B9%B410%E6%9C%8829%E6%97%A501\/'; 
+            this.page.url = 'https:\/\/stc214.github.io\/posts\/2022%E5%B9%B41%E6%9C%884%E6%97%A501\/';  
+            this.page.identifier = '\/posts\/2022%E5%B9%B41%E6%9C%884%E6%97%A501\/'; 
           };
 
           (function() { 
@@ -238,8 +224,7 @@ systemctl restart docker.service</p>
       <div class="ui segment toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#安装docker">安装docker</a></li>
-    <li><a href="#给docker换源">给docker换源</a></li>
+    <li><a href="#黑铁骑士物品清单">黑铁骑士Ⅱ物品清单</a></li>
   </ul>
 </nav>
       </div>
